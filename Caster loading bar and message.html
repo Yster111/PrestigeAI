@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Financial Statements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f8f9fa; /* Light background for contrast */
+        }
+
+        .message-box {
+            max-width: 700px;
+            margin: auto;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #081a56; /* Dark blue border */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .progress-container {
+            width: 100%;
+            max-width: 600px;
+            height: 30px;
+            background-color: #b0b0b0; /* Gray background */
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 1px solid #999;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #16d1f2; /* Light blue progress bar */
+            text-align: center;
+            line-height: 30px;
+            color: #081a56; /* Dark blue text */
+            font-weight: bold;
+            transition: width linear;
+        }
+
+        #progress-text {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #081a56; /* Dark blue text */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message-box">
+        <p><strong>Thank you for your patience while we verify the casts and calculations on the financial statements you provided.</strong> This process typically takes between <strong>5 to 10 minutes</strong>. Please click <strong>"Next"</strong> to proceed while we complete the checks. The progress bar below indicates the current status. In the meantime, feel free to explore our latest newsletter.</p>
+    </div>
+
+    <h2 style="color: #081a56;">Processing, please wait...</h2>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar">0%</div>
+    </div>
+    <p id="progress-text">Estimated Time Remaining: 5:00</p>
+
+    <script>
+        let totalTime = 300; // 5 minutes in seconds
+        let intervalTime = 1000; // Update every second
+        let elapsedTime = 0;
+        let progressBar = document.getElementById("progress-bar");
+        let progressText = document.getElementById("progress-text");
+
+        function updateProgress() {
+            elapsedTime++;
+            let percentage = (elapsedTime / totalTime) * 100;
+            progressBar.style.width = percentage + "%";
+            progressBar.innerHTML = Math.round(percentage) + "%";
+
+            // Calculate remaining time
+            let remainingTime = totalTime - elapsedTime;
+            let minutes = Math.floor(remainingTime / 60);
+            let seconds = remainingTime % 60;
+            progressText.innerHTML = `Estimated Time Remaining: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+            if (elapsedTime >= totalTime) {
+                clearInterval(progressInterval);
+                progressText.innerHTML = "Processing Complete!";
+                progressBar.innerHTML = "100%";
+            }
+        }
+
+        let progressInterval = setInterval(updateProgress, intervalTime);
+    </script>
+
+</body>
+</html>
