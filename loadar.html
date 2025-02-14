@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined HTML Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .loading-bar {
+            width: 100%;
+            background-color: #f3f3f3;
+            position: relative;
+            height: 30px;
+        }
+        .loading {
+            height: 100%;
+            background-color: #4caf50;
+            width: 0;
+            animation: loadingAnimation 2s forwards;
+        }
+        @keyframes loadingAnimation {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .newsletter {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin: 20px;
+        }
+        .newsletter h2 {
+            margin-top: 0;
+        }
+        .newsletter input[type="email"] {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        .newsletter input[type="submit"] {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loading-bar">
+        <div class="loading"></div>
+    </div>
+
+    <div class="newsletter">
+        <h2>Subscribe to our Newsletter</h2>
+        <p>Stay updated with our latest news and offers. Enter your email below to subscribe:</p>
+        <form action="#" method="post">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="submit" value="Subscribe">
+        </form>
+    </div>
+
+</body>
+</html>
