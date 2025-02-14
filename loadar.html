@@ -52,30 +52,76 @@
             margin: 10px auto;
         }
 
-        .newsletter {
+        table {
+            width: 100%;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 0;
             background-color: #f4f4f4;
-            color: #333;
-            margin: 20px auto;
-            padding: 20px;
+        }
+
+        .newsletter-table {
+            width: 600px;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 20;
+            background-color: #ffffff;
+            margin-top: 20px;
+            margin-bottom: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .newsletter h1, .newsletter h2, .newsletter h3, .newsletter h4 {
+        .newsletter-title {
             color: #081a56;
+            font-size: 24px;
+            margin-bottom: 5px;
         }
 
-        .newsletter p {
-            color: #555;
-        }
-
-        .newsletter a {
+        .newsletter-date {
             color: #16d1f2;
-            text-decoration: none;
+            font-size: 16px;
+            margin-top: 0;
         }
 
-        .newsletter img {
+        .top-stories {
+            color: #081a56;
+            font-size: 18px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #16d1f2;
+        }
+
+        .news-story img {
             border-radius: 4px;
+        }
+
+        .news-story-title {
+            font-size: 16px;
+            margin-top: 0;
+        }
+
+        .news-story-description {
+            color: #555555;
+            font-size: 14px;
+        }
+
+        .footer {
+            color: #081a56;
+            font-size: 14px;
+            padding-top: 20px;
+            border-top: 1px solid #b0b0b0;
+        }
+
+        .joke {
+            color: #081a56;
+            font-size: 16px;
+            padding-top: 20px;
+            font-style: italic;
+            border-top: 1px solid #b0b0b0;
+        }
+
+        .joke-title {
+            color: #081a56;
         }
     </style>
 </head>
@@ -120,91 +166,186 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f4f4f4;">
-            <tr>
-                <td align="center">
-                    <table width="600" border="0" cellspacing="0" cellpadding="20" style="background-color: #ffffff; margin: 20px auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <tr>
-                            <td align="center">
-                                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="200" style="display: block; margin-bottom: 20px;">
-                                <h1 style="font-size: 24px; margin-bottom: 5px;">Prestige AI - Daily Newsletter</h1>
-                                <p style="font-size: 16px; margin-bottom: 5px;">
-                                    <script>
-                                        const today = new Date();
-                                        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                                        document.write(today.toLocaleDateString('en-US', options));
-                                    </script>
-                                </p>
-                                <p style="font-size: 14px; margin-bottom: 20px;">Sunrise Edition</p>
-                                <p style="font-size:14px; margin-bottom:20px">Estimated reading time: 12-20 minutes</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h2 style="font-size: 20px; margin-bottom:15px; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Today's Top Stories</h2>
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td style="padding-bottom:15px;">
-                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/1fa3a51d-f93f-49b8-9c80-613433476604/83c00160-78b5-4404-a8ae-0b44cfb77329/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump and Putin" width=100 style="float:left; margin-right:10px;">
-                                            <h3 style="font-size: 16px; margin: 0 0 10px;"><a href="https://www.foxnews.com/video/6368781779112">Trump Floats Summit with Xi and Putin</a></h3>
-                                            <p style="font-size: 14px; line-height: 1.5;">President Trump discussed a potential summit with Presidents Xi and Putin. The talks aim to address global issues and potentially ease ongoing tensions.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-bottom:15px;">
-                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/2854422c-8847-491e-bf26-2a105c79fad6/78e06bfd-1370-494a-af7e-d3e518b5cb8b/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Modi" width=100 style="float:left; margin-right:10px;">
-                                            <h3 style="font-size: 16px; margin: 0 0 10px;"><a href="https://www.foxnews.com/video/6368791729112">Indian PM Modi Aims to Make India Great Again (MIGA)</a></h3>
-                                            <p style="font-size: 14px; line-height: 1.5;">Indian Prime Minister Modi has declared his mission to "Make India Great Again," echoing sentiments of national revitalization and growth.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-bottom: 15px;">
-                                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/munich-car-1.jpg?ve=1&tl=1" alt="Munich Car Incident" width="100" style="float: left; margin-right: 10px;">
-                                            <h3 style="font-size: 16px; margin: 0 0 10px;"><a href="https://www.foxnews.com/video/6368758084112">Car Plows Into Crowd in Munich</a></h3>
-                                            <p style="font-size: 14px; line-height: 1.5;">A car drove into a crowd in Munich, Germany, injuring at least 28 people. The incident is being treated as a suspected attack, occurring a day before the Munich Security Conference.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-bottom: 15px;">
-                                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/10/1200/675/china-coast-guard-2.jpg?ve=1&tl=1" alt="Taiwan Coast Guard" width="100" style="float: left; margin-right: 10px;">
-                                            <h3 style="font-size: 16px; margin: 0 0 10px;"><a href="https://www.foxnews.com/video/6363235850112">Taiwan and US Relations Strengthened</a></h3>
-                                            <p style="font-size: 14px; line-height: 1.5;">A delegation from the Ronald Reagan Presidential Foundation and Institute visited Taiwan, emphasizing the need for increased defense spending and cooperation. They discussed strategies to counter Chinese aggression.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-bottom: 15px;">
-                                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/11/1200/675/trump-sheinbaum-2.jpg?ve=1&tl=1" alt="Trump and Sheinbaum" width="100" style="float: left; margin-right: 10px;">
-                                            <h3 style="font-size: 16px; margin: 0 0 10px;"><a href="https://www.foxnews.com/world/mexican-president-signals-possible-lawsuit-against-google-over-gulf-america-name-change#">Mexico Considers Lawsuit Against Google Over Gulf Name Change</a></h3>
-                                            <p style="font-size: 14px; line-height: 1.5;">Mexican President Claudia Sheinbaum is considering legal action against Google for renaming the Gulf of Mexico to the "Gulf of America" on Google Maps in the US.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-bottom:15px;">
-                                            <img src="https://www.firstpost.com/tech/apple-ceo-tim-cook-teases-new-product-launch-on-february-19th-iphone-se-4-likely-to-be-unveiled/type=normal" alt="Generic Tech Image" width=100 style="float:left; margin-right:10px;">
-                                            <h3 style="font-size: 16px; margin: 0 0 10px;"><a href="https://www.firstpost.com/">Trump’s Maga + Modi’s Miga</a></h3>
-                                            <p style="font-size: 14px; line-height: 1.5;">An explanation of the merging of the MAGA and MIGA movements.</p>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p style="color: #b0b0b0; font-size: 12px; margin-top: 20px;">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/">Fox News</a>, <a href="https://www.bbc.com/">BBC</a>, and <a href="https://www.firstpost.com/">Firstpost</a>.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center" style="border-top:1px solid #b0b0b0; padding-top:15px;">
-                                <h4 style="font-size: 16px; margin-bottom:10px;">Joke of the Day</h4>
-                                <p style="font-size: 14px; font-style: italic;">Why don't scientists trust atoms? Because they make up everything!</p>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <table>
+        <tr>
+            <td align="center">
+                <table class="newsletter-table">
+                    <tr>
+                        <td align="center">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEX///8AAAC/v78/Pz/8/PxeXl5QUFCnp6eDg4P19fV4eHhvb28gICBhYWFJSUmLi4tBQUFvb2+ysrKbm5saGhpcXFyampqsrKxWVlZtbW08PDzAwMDc3NzKysrPz8+8vLyoqKi/v7+enp59fX3H5uXRAAAEbElEQVR4nO3dW3ObMBCFYcAEFBBkQEVB0f3f/1Z2Ag5REBIEzI7tvP+B2tqNhiYyQkI7Mg4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgHwnp6tOde9Z/Lxl/81j+u4O07fxxnH1s5r95/569vWlqP7y61WbY+uJfn7+QvT9/f2I7c755t4717x37vUfS+6z/9d/37fvm99bF1z/y+67+g2U/7dJ7q/iJd4b/b/0/l0L6n6d71fVP+37+3tP+P6G2Xm+V9xY/76lfONvkvfS+n7+e9jWf/0+7r3F/l/u5/L33fnE+/z7yHybf/f808d57Hw5725+w3M/8V3X+J+f7L5V3zXg/rPuR2/t729+779+71792373Uf7tO7p8qve+/ve9//u21/V/4n7u38N9//t+36X6+bUeTz39X/l9/g31x+b+7v/Ea+d3F+//1fQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgEfQx23E9mRuy6/07UjG9mSmI3tnJ55B7t1J+N6288N+1fbfz+0/4frHbbH5+/mX2/8P+V+5Ntv0s8h+j+66r9b23031+LffNf1jV9z/3/5/23xP599h930/s//j+v8r/C/j0/rX4H9rO77157f9X9r945v7/v598Z5X0P91T9e/1r5/2z1v6v/Z7z+p779b339/n39/k34P99397/v9l/N/k34j8WfnH971n7v/b9P/tvXvwHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwe0AGdp5sVbZ9+Gln1L65s+JafyM6r/4+rE9685/pufX7pTf+y94fOqf/2+g+/vV9f57q93d0vf7a87L/8P9039l1/v9r9rff271V7nL+f3r+xHv4u56frnv33c36j8O5/jvnz7vfX2u5X/u49j6f5f133u73Xk0f5v73+u/fv9F/tJ/72x7j+B/l/N/39+/3ff4/7P4fHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVOAH1W/s6H7/v57Vj29lB1J39jI/0V/07UjU3b2MP1RePe/1f/i4096/06/X7/Pvv/39h/u+e+m/3/4f+v5H76f/369f5/8/5fxfJv7f/7z+9+9//94/5/Y/u9/6/+H75/9v//fn38AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABs4A+sO/uPf/2y736Ufy/X/3H5h57/s+5H93H17H0+y+3f/K/Wfj/uP/8+v7R/+/179T/w/W/uAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBsHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgbQY+3E+rG9vf/4J597+J+wMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDb/wEQrZt6wJ3Y6AAAAABJRU5ErkJggg==" alt="Prestige AI Logo" width="150" style="margin-bottom: 10px;">
+                            <h1 class="newsletter-title">Prestige AI - Daily Newsletter</h1>
+                            <p class="newsletter-date"><?php echo date("F j, Y"); ?> - Afternoon Edition</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="top-stories">Top Stories</td>
+                    </tr>
+
+                    <!-- News Story 1 -->
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" class="news-story">
+                                <tr>
+                                    <td valign="top" width="120">
+                                        <a href="https://www.foxnews.com/video/6368819145112" style="text-decoration: none;">
+                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/cf334728-c33f-49e8-85e4-be4ae5f59005/87472c73-aea6-4a49-b7d7-cc1a6d7298fe/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Former US ambassador to NATO predicts imminent ceasefire in Ukraine" width="110" style="border-radius: 4px;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <a href="https://www.foxnews.com/video/6368819145112" style="text-decoration: none; color: #081a56;">
+                                            <h3 class="news-story-title">Former US ambassador to NATO predicts imminent ceasefire in Ukraine</h3>
+                                        </a>
+                                        <p class="news-story-description">Former US ambassador discusses potential for peace talks resolution.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- News Story 2 -->
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" class="news-story">
+                                <tr>
+                                    <td valign="top" width="120">
+                                        <a href="https://www.foxnews.com/video/6368781779112" style="text-decoration: none;">
+                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/1fa3a51d-f93f-49b8-9c80-613433476604/83c00160-78b5-4404-a8ae-0b44cfb77329/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump floats idea of possible summit with Xi and Putin in wide-ranging press conference" width="110" style="border-radius: 4px;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <a href="https://www.foxnews.com/video/6368781779112" style="text-decoration: none; color: #081a56">
+                                            <h3 class="news-story-title">Trump floats idea of possible summit with Xi and Putin in wide-ranging press conference</h3>
+                                        </a>
+                                        <p class="news-story-description">President Donald Trump discusses foreign policy and more.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- News Story 3 -->
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" class="news-story">
+                                <tr>
+                                    <td valign="top" width="120">
+                                        <a href="https://www.foxnews.com/video/6368779742112" style="text-decoration: none;">
+                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/bfc6398a-816d-4493-91c7-c959676d2ee9/b51fe04b-f79e-4c55-92a1-ace7360b8456/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Vance visits Dachau concentration camp" width="110" style="border-radius: 4px;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <a href="https://www.foxnews.com/video/6368779742112" style="text-decoration: none; color: #081a56">
+                                            <h3 class="news-story-title">Vance visits Dachau concentration camp</h3>
+                                        </a>
+                                        <p class="news-story-description">Vice President JD Vance visits the Dachau concentration camp in Germany.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- News Story 4 -->
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" class="news-story">
+                                <tr>
+                                    <td valign="top" width="120">
+                                        <a href="https://www.firstpost.com/tech/apple-to-add-two-classic-fan-favourite-titles-and-bring-other-games-to-apple-arcade-in-march-2025-13863331.html" style="text-decoration: none;">
+                                            <img src="https://images.firstpost.com/uploads/2025/02/Apple-to-add-two-classic-fan-favourite-titles-and-bring-other-games-to-Apple-Arcade-In-March-2025-2025-02-5321a7edb72ad4734ad594899cde04ed-1200x675.jpg?im=FitAndFill=(596,336)" alt="Apple to add two classic fan-favourite titles and bring other games to Apple Arcade In March 2025" width="110" style="border-radius: 4px;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <a href="https://www.firstpost.com/tech/apple-to-add-two-classic-fan-favourite-titles-and-bring-other-games-to-apple-arcade-in-march-2025-13863331.html" style="text-decoration: none; color: #081a56">
+                                            <h3 class="news-story-title">Apple to add two classic fan-favourite titles and bring other games to Apple Arcade In March 2025</h3>
+                                        </a>
+                                        <p class="news-story-description">Apple Arcade introduces Piano Tiles 2+ and Crazy Eights: Card Games+ for March 2025, enhancing its ad-free gaming library.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- News Story 5 -->
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" class="news-story">
+                                <tr>
+                                    <td valign="top" width="120">
+                                        <a href="https://www.foxnews.com/world/russia-launches-fresh-drone-attack-against-ukraine-shortly-after-trump-putin-phone-call" style="text-decoration: none;">
+                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/3795751f-93a5-4856-83a6-94ecc3247057/86af3f71-d95c-4fd3-85b7-d5864d826129/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="Trump expresses optimism after calls with Putin and Zelenskyy" width="110" style="border-radius: 4px;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <a href="https://www.foxnews.com/world/russia-launches-fresh-drone-attack-against-ukraine-shortly-after-trump-putin-phone-call" style="text-decoration: none; color: #081a56;">
+                                            <h3 class="news-story-title">Trump expresses optimism after calls with Putin and Zelenskyy</h3>
+                                        </a>
+                                        <p class="news-story-description">Fox News report on peace talk updates, following a new drone attack in Eastern Europe.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- News Story 6 -->
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" class="news-story">
+                                <tr>
+                                    <td valign="top" width="120">
+                                        <a href="https://www.foxnews.com/world/ukraine-blames-russia-drone-attack-chernobyls-protective-shell-zelenskyy-says-damage-significant" style="text-decoration: none;">
+                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/4aa65a9f-0563-4887-91ee-83ef96b9ce70/f8c4cbb3-064b-4763-a40c-a646fd5601d1/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="Chernobyl shelter struck by Russian drone, Ukraine says" width="110" style="border-radius: 4px;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <a href="https://www.foxnews.com/world/ukraine-blames-russia-drone-attack-chernobyls-protective-shell-zelenskyy-says-damage-significant" style="text-decoration: none; color: #081a56;">
+                                            <h3 class="news-story-title">Chernobyl shelter struck by Russian drone, Ukraine says</h3>
+                                        </a>
+                                        <p class="news-story-description">A drone allegedly hit Chernobyl's protective shell; significant damage reported but radiation levels stable. International investigation ongoing.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- News Story 7 -->
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" class="news-story">
+                                <tr>
+                                    <td valign="top" width="120">
+                                        <a href="https://www.foxnews.com/world/mexican-president-signals-possible-lawsuit-against-google-over-gulf-america-name-change" style="text-decoration: none;">
+                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/1fa3a51d-f93f-49b8-9c80-613433476604/83c00160-78b5-4404-a8ae-0b44cfb77329/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="Mexican President signals possible lawsuit against Google over Gulf of 'America' name change" width="110" style="border-radius: 4px;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <a href="https://www.foxnews.com/world/mexican-president-signals-possible-lawsuit-against-google-over-gulf-america-name-change" style="text-decoration: none; color: #081a56;">
+                                            <h3 class="news-story-title">Mexican President signals possible lawsuit against Google over Gulf of 'America' name change</h3>
+                                        </a>
+                                        <p class="news-story-description">Mexico considers legal action against Google for renaming the Gulf of Mexico to the "Gulf of America" on Google Maps.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="footer">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
+                            <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="joke">
+                            <h4 class="joke-title">Joke of the Day:</h4>
+                            <p>Why don't scientists trust atoms? Because they make up everything!</p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
 
 </body>
 </html>
