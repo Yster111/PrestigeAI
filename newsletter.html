@@ -1,134 +1,116 @@
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prestige AI - Daily Newsletter</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #081a56;
-            text-align: center;
-        }
-        h2 {
-            color: #081a56;
-            border-bottom: 2px solid #b0b0b0;
-            padding-bottom: 5px;
-        }
-        a {
-            color: #16d1f2;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            display: block;
-        }
-        .article {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-		.footer {
-            text-align: center;
-            margin-top: 20px;
-			color: #777;
-        }
-		.reading-time {
-			font-style: italic;
-			color: #777;
-			margin-bottom: 10px;
-		}
-    </style>
 </head>
-<body>
-    <div class="container">
-        <table style="width: 100%; background-color: #081a56; color: #fff; padding: 10px 0; border-radius: 8px;">
-            <tr>
-                <td style="text-align: center; padding: 10px;">
-                <img src="data:image/png;base64,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" alt="Prestige AI Logo" style="max-height: 50px; margin: 0 auto;">
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align: center; padding: 5px;">
-                    <h1 style="font-size: 24px; margin: 0;">Prestige AI - Daily Newsletter</h1>
-                </td>
-            </tr>
-        </table>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333;">
 
-        <p style="text-align: center; color: #777;">
-            <span style="font-weight: bold;">Date:</span> February 15, 2025 | <span style="font-weight: bold;">Edition:</span> Sunrise Edition
-        </p>
-		<p class="reading-time">Estimated reading time: 15 minutes</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f4f4f4;">
+    <tr>
+        <td align="center">
+            <table width="600" border="0" cellspacing="0" cellpadding="20" style="background-color: #ffffff; margin: 20px auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <tr>
+                    <td align="center">
+                        <!-- Company Logo (Base64 Encoded) -->
+                        <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="200" style="display: block; margin-bottom: 20px;">
 
-        <h2>Top News Stories</h2>
-        <p style="font-style: italic; color: #555;">Compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2;">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2;">BBC</a>, and <a href="https://www.firstpost.com/" style="color: #16d1f2;">Firstpost</a>.</p>
+                        <!-- Header -->
+                        <h1 style="color: #081a56; font-size: 24px; margin-bottom: 5px;">Prestige AI - Daily Newsletter</h1>
+                        <p style="color: #16d1f2; font-size: 16px; margin-bottom: 5px;">
+                            <script>
+                                const today = new Date();
+                                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                                document.write(today.toLocaleDateString('en-US', options));
+                            </script>
+                        </p>
+                        <p style="color: #b0b0b0; font-size: 14px; margin-bottom: 20px;">Sunrise Edition</p>
+                        <p style="color: #081a56; font-size:14px; margin-bottom:20px">Estimated reading time: 12-20 minutes</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <h2 style="color: #081a56; font-size: 20px; margin-bottom:15px; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Today's Top Stories</h2>
+                      <!-- News Stories -->
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <!-- News Item 1 -->
+                          <tr>
+                            <td style="padding-bottom:15px;">
+                              <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/1fa3a51d-f93f-49b8-9c80-613433476604/83c00160-78b5-4404-a8ae-0b44cfb77329/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump and Putin" width=100 style="float:left; margin-right:10px; border-radius:4px;">
+                                <h3 style="color: #081a56; font-size: 16px; margin: 0 0 10px;"><a href="https://www.foxnews.com/video/6368781779112" style="color: #081a56; text-decoration: none;">Trump Floats Summit with Xi and Putin</a></h3>
+                                <p style="color: #555; font-size: 14px; line-height: 1.5;">President Trump discussed a potential summit with Presidents Xi and Putin. The talks aim to address global issues and potentially ease ongoing tensions.</p>
 
-        <div class="article">
-            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/2854422c-8847-491e-bf26-2a105c79fad6/78e06bfd-1370-494a-af7e-d3e518b5cb8b/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Indian PM Modi says he wants to make India great again, or MIGA">
-            <h3><a href="https://www.foxnews.com/video/6368791729112" style="color: #081a56;">Indian PM Modi says he wants to make India great again, or MIGA</a></h3>
-            <p>Summary: Indian Prime Minister Narendra Modi outlines his vision for India, aiming for significant advancements across various sectors.</p>
-        </div>
+                            </td>
+                          </tr>
+                          <!-- News Item 2 -->
+                          <tr>
+                            <td style="padding-bottom:15px;">
+                              <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/2854422c-8847-491e-bf26-2a105c79fad6/78e06bfd-1370-494a-af7e-d3e518b5cb8b/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Modi" width=100 style="float:left; margin-right:10px; border-radius:4px;">
+                                <h3 style="color: #081a56; font-size: 16px; margin: 0 0 10px;"><a href="https://www.foxnews.com/video/6368791729112" style="color: #081a56; text-decoration: none;">Indian PM Modi Aims to Make India Great Again (MIGA)</a></h3>
+                                <p style="color: #555; font-size: 14px; line-height: 1.5;">Indian Prime Minister Modi has declared his mission to "Make India Great Again," echoing sentiments of national revitalization and growth.</p>
 
-        <div class="article">
-            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/b24bad89-7871-4944-a52a-5e3856aa1ed6/f7c3cf37-c0e6-4d7c-8c46-f365659eb3f4/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Video shows the moment a kayaker was briefly swallowed by whale off Chile">
-            <h3><a href="https://www.foxnews.com/video/6368783276112" style="color: #081a56;">Video shows the moment a kayaker was briefly swallowed by whale off Chile</a></h3>
-            <p>Summary: Shocking footage captures the moment a kayaker is briefly swallowed by a whale off the coast of Chile, highlighting the unpredictable nature of wildlife encounters.</p>
-        </div>
+                            </td>
+                          </tr>
+                          <!-- News Item 3 -->
+                          <tr>
+                              <td style="padding-bottom: 15px;">
+                                  <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/munich-car-1.jpg?ve=1&tl=1" alt="Munich Car Incident" width="100" style="float: left; margin-right: 10px; border-radius: 4px;">
+                                  <h3 style="color: #081a56; font-size: 16px; margin: 0 0 10px;"><a href="https://www.foxnews.com/video/6368758084112" style="color: #081a56; text-decoration: none;">Car Plows Into Crowd in Munich</a></h3>
+                                  <p style="color: #555; font-size: 14px; line-height: 1.5;">A car drove into a crowd in Munich, Germany, injuring at least 28 people.  The incident is being treated as a suspected attack, occurring a day before the Munich Security Conference.</p>
+                              </td>
+                          </tr>
 
-        <div class="article">
-            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/1fa3a51d-f93f-49b8-9c80-613433476604/83c00160-78b5-4404-a8ae-0b44cfb77329/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt=="Trump floats idea of possible summit with Xi and Putin in wide-ranging press conference.">
-            <h3><a href="https://www.foxnews.com/video/6368781779112" style="color: #081a56;">Trump floats idea of possible summit with Xi and Putin in wide-ranging press conference</a></h3>
-            <p>Summary: Former President Donald Trump suggests the possibility of a summit with Xi Jinping and Vladimir Putin to discuss pressing global issues.</p>
-        </div>
+                          <!-- News Item 4 -->
+                          <tr>
+                              <td style="padding-bottom: 15px;">
+                                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/10/1200/675/china-coast-guard-2.jpg?ve=1&tl=1" alt="Taiwan Coast Guard" width="100" style="float: left; margin-right: 10px; border-radius: 4px;">
+                                  <h3 style="color: #081a56; font-size: 16px; margin: 0 0 10px;"><a href="https://www.foxnews.com/video/6363235850112" style="color: #081a56; text-decoration: none;">Taiwan and US Relations Strengthened</a></h3>
+                                <p style="color: #555; font-size: 14px; line-height: 1.5;">A delegation from the Ronald Reagan Presidential Foundation and Institute visited Taiwan, emphasizing the need for increased defense spending and cooperation. They discussed strategies to counter Chinese aggression.</p>
+                              </td>
+                          </tr>
 
-         <div class="article">
-            <img src="https://images.firstpost.com/uploads/2025/02/Firstpost-2025-02-07T202001.613-2025-02-c6d70b094def2db1e214d3f43396bcb8.jpg?im=FitAndFill=(596,336)" alt="Trump eyes $1 trillion from reciprocal tariffs, risks sowing uncertainty & widening trade conflict">
-            <h3><a href="https://www.firstpost.com/world/trump-eyes-1-trillion-from-reciprocal-tariffs-risks-sowing-uncertainty-widening-trade-conflict-13863205.html"style="color: #081a56;">Trump eyes $1 trillion from reciprocal tariffs, risks sowing uncertainty & widening trade conflict</a></h3>
-            <p>Summary: President Trump considers imposing reciprocal tariffs to boost the economy, but critics warn of potential uncertainty and trade conflicts if negotiations fail.</p>
-        </div>
+                          <!-- News Item 5 -->
+                          <tr>
+                              <td style="padding-bottom: 15px;">
+                                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/11/1200/675/trump-sheinbaum-2.jpg?ve=1&tl=1" alt="Trump and Sheinbaum" width="100" style="float: left; margin-right: 10px; border-radius: 4px;">
+                                  <h3 style="color: #081a56; font-size: 16px; margin: 0 0 10px;"><a href="https://www.foxnews.com/world/mexican-president-signals-possible-lawsuit-against-google-over-gulf-america-name-change#" style="color: #081a56; text-decoration: none;">Mexico Considers Lawsuit Against Google Over Gulf Name Change</a></h3>
+                                  <p style="color: #555; font-size: 14px; line-height: 1.5;">Mexican President Claudia Sheinbaum is considering legal action against Google for renaming the Gulf of Mexico to the "Gulf of America" on Google Maps in the US.</p>
+                              </td>
+                          </tr>
+                          <!-- News Item 6 -->
+                          <tr>
+                               <td style="padding-bottom:15px;">
 
-         <div class="article">
-            <img src="https://images.firstpost.com/uploads/2025/02/Apple-CEO-Tim-Cook-teases-new-product-launch-on-February-19th-iPhone-SE-4-likely-to-be-unveiled-2025-02-288678182a81413ef65a46bc06e35e9f-1200x675.jpg?im=FitAndFill=(596,336)" alt="Apple CEO Tim Cook teases new product launch on February 19th, iPhone SE 4 likely to be unveiled">
-            <h3><a href="https://www.firstpost.com/tech/apple-ceo-tim-cook-teases-new-product-launch-on-february-19th-iphone-se-4-likely-to-be-unveiled-13863195.html" style="color: #081a56;">Apple CEO Tim Cook teases new product launch on February 19th, iPhone SE 4 likely to be unveiled</a></h3>
-            <p>Summary: Tim Cook hints at a product reveal on February 19, speculated to be the iPhone SE 4 with a modern design and upgraded specs to attract Android users.</p>
-        </div>
-		<div class="article">
-            <img src="https://images.firstpost.com/uploads/2025/02/Over-70-Indians-are-targeted-by-AI-romance-scams-61-may-develop-feelings-for-AI-bots-McAfee-2025-02-8a398e037bc0c2c593b709683c43163d-1200x675.jpg?im=FitAndFill=(596,336)" alt="Over 70% Indians are targeted by AI dating scams, 61% may develop feelings for AI bots: McAfee">
-            <h3><a href="https://www.firstpost.com/tech/over-70-per-cent-indians-are-targeted-by-ai-dating-scams-61-per-cent-may-develop-feelings-for-ai-bots-mcafee-13863173.html" style="color: #081a56;">Over 70% Indians are targeted by AI dating scams, 61% may develop feelings for AI bots: McAfee</a></h3>
-            <p>Summary: McAfee reports a rise in AI romance scams in India, with many people unaware that they are interacting with sophisticated bots impersonating real people</p>
-        </div>
+                                 <img src="https://www.firstpost.com/tech/apple-ceo-tim-cook-teases-new-product-launch-on-february-19th-iphone-se-4-likely-to-be-unveiled/type=normal" alt="Generic Tech Image" width=100 style="float:left; margin-right:10px; border-radius:4px;">
 
-        <div class="footer">
-            <h3>Joke of the Day</h3>
-            <p>Why don't scientists trust atoms? Because they make up everything!</p>
-			<p>&copy; 2025 Prestige AI. All rights reserved.</p>
-        </div>
-    </div>
+                                    <h3 style="color: #081a56; font-size: 16px; margin: 0 0 10px;"><a href="https://www.firstpost.com/" style="color: #081a56; text-decoration: none;">Trump’s Maga + Modi’s Miga</a></h3>
+                                      <p style="color: #555; font-size: 14px; line-height: 1.5;">An explanation of the merging of the MAGA and MIGA movements.</p>
+
+                                </td>
+                           </tr>
+                      </table>
+                    </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="color: #b0b0b0; font-size: 12px; margin-top: 20px;">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration:none;">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration:none;">BBC</a>, and <a href="https://www.firstpost.com/" style="color:#16d1f2; text-decoration:none">Firstpost</a>.</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center" style="border-top:1px solid #b0b0b0; padding-top:15px;">
+                    <!-- Joke of the Day -->
+                        <h4 style="color: #081a56; font-size: 16px; margin-bottom:10px;">Joke of the Day</h4>
+                        <p style="color: #555; font-size: 14px; font-style: italic;">Why don't scientists trust atoms?  Because they make up everything!</p>
+                  </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>
 ```
