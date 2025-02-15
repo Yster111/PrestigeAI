@@ -53,10 +53,10 @@
         }
 
         .newsletter {
-            margin-top: 50px;
             background-color: #f4f4f4;
-            padding: 20px;
+            margin-top: 20px;
             border-radius: 5px;
+            padding: 20px;
         }
 
         .newsletter h1 {
@@ -71,20 +71,25 @@
             margin: 0;
         }
 
-        .newsletter h2 {
+        .news-story h2 {
             color: #081a56;
             font-size: 18px;
             margin-top: 20px;
         }
 
-        .newsletter a {
-            color: #16d1f2;
-            text-decoration: none;
+        .news-story p {
+            color: #333333;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
-        .newsletter td {
-            border-top: 1px solid #b0b0b0;
-            padding-top: 10px;
+        .footer {
+            color: #b0b0b0;
+            font-size: 12px;
+        }
+
+        .joke {
+            font-style: italic;
         }
     </style>
 </head>
@@ -130,107 +135,68 @@
     </script>
 
     <div class="newsletter">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f4f4">
-            <tr>
-                <td align="center">
-                    <table width="600" border="0" cellspacing="0" cellpadding="20" style="background-color: #ffffff; margin-top: 20px; border-radius: 5px;">
-                        <tr>
-                            <td align="center">
-                                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                                <h1>Prestige AI - Daily Newsletter</h1>
-                                <p>
-                                    <script>
-                                        const today = new Date();
-                                        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                                        document.write(today.toLocaleDateString('en-US', options));
-                                    </script>
-                                    - Sunrise Edition
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="border-top: 2px solid #16d1f2;"></td>
-                        </tr>
+        <h1>Prestige AI - Daily Newsletter</h1>
+        <p>
+            <script>
+                const today = new Date();
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                document.write(today.toLocaleDateString('en-US', options));
+            </script>
+            - Sunrise Edition
+        </p>
+        <hr>
 
-                        <!-- News Story 1 -->
-                        <tr>
-                            <td>
-                                <h2>‘We have to win’ AI race, says Condoleezza Rice</h2>
-                                <p>Condoleezza Rice emphasizes the critical importance of the United States winning the artificial intelligence race, highlighting the strategic implications for national security and economic competitiveness.</p>
-                                <a href="https://www.foxnews.com/video/6368844914112">Read More on Fox News</a>
-                            </td>
-                        </tr>
-                        <tr><td style="border-top: 1px solid #b0b0b0; padding-top: 10px;"></td></tr>
+        <div class="news-story">
+            <h2>‘We have to win’ AI race, says Condoleezza Rice</h2>
+            <p>Condoleezza Rice emphasizes the critical importance of the United States winning the artificial intelligence race, highlighting the strategic implications for national security and economic competitiveness.</p>
+            <a href="https://www.foxnews.com/video/6368844914112" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
+        </div>
+        <hr>
 
-                        <!-- News Story 2 -->
-                        <tr>
-                            <td>
-                                <h2>Munich Car Attack Suspect Appears Motivated by Islamic Extremism: Prosecutor</h2>
-                                <p>The suspect in the Munich car ramming attack, which injured over 30 people, appears to have been motivated by Islamic extremism. The 24-year-old Afghan suspect reportedly shouted "Allahu Akbar" after his arrest. He faces 36 counts of attempted murder.</p>
-                                <a href="https://www.foxnews.com/world/suspect-munich-car-attack-had-islamist-motivation-prosecutor-says">Read More on Fox News</a>
-                            </td>
-                        </tr>
-                        <tr><td style="border-top: 1px solid #b0b0b0; padding-top: 10px;"></td></tr>
+        <div class="news-story">
+            <h2>Munich Car Attack Suspect Appears Motivated by Islamic Extremism: Prosecutor</h2>
+            <p>The suspect in the Munich car ramming attack, which injured over 30 people, appears to have been motivated by Islamic extremism. The 24-year-old Afghan suspect reportedly shouted "Allahu Akbar" after his arrest. He faces 36 counts of attempted murder.</p>
+            <a href="https://www.foxnews.com/world/suspect-munich-car-attack-had-islamist-motivation-prosecutor-says" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
+        </div>
+        <hr>
 
-                        <!-- News Story 3 -->
-                        <tr>
-                            <td>
-                                <h2>US Citizen Detained in Moscow for Allegedly Carrying Cannabis Gummies</h2>
-                                <p>A 28-year-old American citizen was detained at Vnukovo Airport in Moscow after allegedly carrying cannabis gummies. Russian authorities claim the gummies contained cannabinoid substances. The man claims they were prescribed by a US doctor. He faces 5-10 years in prison if convicted.</p>
-                                <a href="https://www.foxnews.com/world/us-citizen-allegedly-carrying-cannabis-detained-moscow-charged-narcotics-smuggling-russia-media">Read More on Fox News</a>
-                            </td>
-                        </tr>
-                        <tr><td style="border-top: 1px solid #b0b0b0; padding-top: 10px;"></td></tr>
+        <div class="news-story">
+            <h2>US Citizen Detained in Moscow for Allegedly Carrying Cannabis Gummies</h2>
+            <p>A 28-year-old American citizen was detained at Vnukovo Airport in Moscow after allegedly carrying cannabis gummies. Russian authorities claim the gummies contained cannabinoid substances. The man claims they were prescribed by a US doctor. He faces 5-10 years in prison if convicted.</p>
+            <a href="https://www.foxnews.com/world/us-citizen-allegedly-carrying-cannabis-detained-moscow-charged-narcotics-smuggling-russia-media" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
+        </div>
+        <hr>
 
-                        <!-- News Story 4 -->
-                        <tr>
-                            <td>
-                                <h2>Israeli UN Ambassador Slams Palestinian Plan for Gaza, Demands PA First Condemn Hamas</h2>
-                                <p>Israel's UN Ambassador, Danny Danon, criticized the Palestinian Authority's "Relief and Early Recovery Plan" for Gaza, stating the PA should first condemn Hamas and address terrorism. The PA's plan, submitted to the UN Security Council, calls for an end to the Israeli "siege" of Gaza and a two-state solution.</p>
-                                <a href="https://www.foxnews.com/world/israels-un-ambassador-slams-palestinian-plan-gaza-demands-pa-first-condemn-hamas">Read More on Fox News</a>
-                            </td>
-                        </tr>
-                        <tr><td style="border-top: 1px solid #b0b0b0; padding-top: 10px;"></td></tr>
+        <div class="news-story">
+            <h2>Israeli UN Ambassador Slams Palestinian Plan for Gaza, Demands PA First Condemn Hamas</h2>
+            <p>Israel's UN Ambassador, Danny Danon, criticized the Palestinian Authority's "Relief and Early Recovery Plan" for Gaza, stating the PA should first condemn Hamas and address terrorism. The PA's plan, submitted to the UN Security Council, calls for an end to the Israeli "siege" of Gaza and a two-state solution.</p>
+            <a href="https://www.foxnews.com/world/israels-un-ambassador-slams-palestinian-plan-gaza-demands-pa-first-condemn-hamas" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
+        </div>
+        <hr>
 
-                        <!-- News Story 5 -->
-                        <tr>
-                            <td>
-                                <h2>Apple to Add Two Classic Fan-Favorite Titles to Apple Arcade in March 2025</h2>
-                                <p>Apple Arcade will add "Piano Tiles 2+" and "Crazy Eights: Card Games+" to its library on March 6, 2025. These updated versions of popular mobile games will offer ad-free gameplay and exclusive features.</p>
-                                <a href="https://www.firstpost.com/tech/apple-to-add-two-classic-fan-favourite-titles-and-bring-other-games-to-apple-arcade-in-march-2025-13863331.html">Read More on Firstpost</a>
-                            </td>
-                        </tr>
-                        <tr><td style="border-top: 1px solid #b0b0b0; padding-top: 10px;"></td></tr>
+        <div class="news-story">
+            <h2>Apple to Add Two Classic Fan-Favorite Titles to Apple Arcade in March 2025</h2>
+            <p>Apple Arcade will add "Piano Tiles 2+" and "Crazy Eights: Card Games+" to its library on March 6, 2025. These updated versions of popular mobile games will offer ad-free gameplay and exclusive features.</p>
+            <a href="https://www.firstpost.com/tech/apple-to-add-two-classic-fan-favourite-titles-and-bring-other-games-to-apple-arcade-in-march-2025-13863331.html" style="color: #16d1f2; text-decoration: none;">Read More on Firstpost</a>
+        </div>
+        <hr>
 
-                        <!-- News Story 6 -->
-                        <tr>
-                            <td>
-                                <h2>Mexican President Signals Possible Lawsuit Against Google Over Gulf of America Name Change</h2>
-                                <p>Mexican President Claudia Sheinbaum stated her government is considering a lawsuit against Google for changing the name of the Gulf of Mexico to the Gulf of America on Google Maps for US users. The change followed a declaration by President Donald Trump. Sheinbaum argues the Gulf of Mexico name is internationally recognized.</p>
-                                <a href="#dummy-link-mexico">Read More (Source Link Unavailable)</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="border-top: 2px solid #16d1f2; margin-top: 20px;"></td>
-                        </tr>
+        <div class="news-story">
+            <h2>Mexican President Signals Possible Lawsuit Against Google Over Gulf of America Name Change</h2>
+            <p>Mexican President Claudia Sheinbaum stated her government is considering a lawsuit against Google for changing the name of the Gulf of Mexico to the Gulf of America on Google Maps for US users. The change followed a declaration by President Donald Trump. Sheinbaum argues the Gulf of Mexico name is internationally recognized.</p>
+            <a href="#dummy-link-mexico" style="color: #16d1f2; text-decoration: none;">Read More (Source Link Unavailable)</a>
+        </div>
+        <hr>
 
-                        <tr>
-                            <td>
-                                <p style="color: #b0b0b0; font-size: 12px;">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com/" style="color:#16d1f2; text-decoration:none">BBC</a> and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.</p>
-                            </td>
-                        </tr>
-                        <tr><td style="border-top: 1px solid #b0b0b0; padding-top: 10px;"></td></tr>
-                        <tr>
-                            <td>
-                                <h2>Joke of the Day</h2>
-                                <p style="font-style: italic;">Why don't scientists trust atoms? <br><br> Because they make up everything!</p>
-                            </td>
-                        </tr>
+        <div class="footer">
+            <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com/" style="color:#16d1f2; text-decoration:none">BBC</a> and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.</p>
+        </div>
+        <hr>
 
-                    </table>
-                </td>
-            </tr>
-        </table>
+        <div class="joke">
+            <h2>Joke of the Day</h2>
+            <p>Why don't scientists trust atoms? <br><br> Because they make up everything!</p>
+        </div>
     </div>
 
 </body>
