@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements and Daily Newsletter</title>
+    <title>Processing Financial Statements & Prestige AI - Daily Newsletter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background-color: #f8f9fa; /* Light background for contrast */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
 
         .message-box {
             max-width: 700px;
-            margin: auto;
+            margin: 50px auto;
             padding: 15px;
             background-color: #f8f9fa;
-            border: 2px solid #081a56; /* Dark blue border all around */
-            border-radius: 8px; /* Slightly rounded corners for a modern look */
+            border: 2px solid #081a56;
+            border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
@@ -27,7 +29,7 @@
             width: 100%;
             max-width: 600px;
             height: 30px;
-            background-color: #b0b0b0; /* Gray background */
+            background-color: #b0b0b0;
             border-radius: 10px;
             overflow: hidden;
             margin: 20px auto;
@@ -37,10 +39,10 @@
         .progress-bar {
             height: 100%;
             width: 0%;
-            background-color: #16d1f2; /* Light blue progress bar */
+            background-color: #16d1f2;
             text-align: center;
             line-height: 30px;
-            color: #081a56; /* Dark blue text */
+            color: #081a56;
             font-weight: bold;
             transition: width linear;
         }
@@ -48,71 +50,128 @@
         #progress-text, h2 {
             text-align: center;
             font-size: 16px;
-            color: #081a56; /* Dark blue text */
+            color: #081a56;
             margin: 10px auto;
         }
 
-        table {
-            width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
-            background-color: #f4f4f4;
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .newsletter-table {
-            width: 600px;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
-            background-color: #ffffff;
-            margin-top: 20px;
-            border-radius: 5px;
+        .header {
+            background-color: #081a56;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
         }
 
-        .newsletter-title {
-            color: #081a56;
-            font-size: 24px;
-            margin-top: 10px;
-        }
-
-        .newsletter-date {
-            color: #16d1f2;
-            font-size: 16px;
+        .header h1 {
             margin: 0;
+            font-size: 24px;
         }
 
-        .news-story-title {
-            color: #081a56;
+        .header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #16d1f2;
+        }
+
+        .logo {
+            margin-top: 15px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .news-item h2 {
+            margin: 0 0 10px;
             font-size: 18px;
-            margin-top: 20px;
+            color: #081a56;
         }
 
-        .news-story-content {
-            color: #333333;
+        .news-item h2 a {
+            color: #081a56;
+            text-decoration: none;
+        }
+
+        .news-item p {
+            margin: 0 0 10px;
             font-size: 14px;
             line-height: 1.5;
         }
 
-        .footer-text {
+        .news-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .news-item-inner {
+            display: flex;
+            gap: 15px;
+        }
+
+        .news-item-text {
+            flex: 2;
+        }
+
+        .news-item-image {
+            flex: 1;
+        }
+
+        .footer {
+            background-color: #081a56;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #16d1f2;
+            text-decoration: none;
+        }
+
+        .sources {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .sources p {
+            font-style: italic;
             color: #b0b0b0;
             font-size: 12px;
         }
 
-        .joke-title {
-            color: #081a56;
-            font-size: 18px;
-            margin-top: 20px;
-        }
-
-        .joke-content {
-            color: #333333;
-            font-size: 14px;
-            line-height: 1.5;
-            font-style: italic;
+        .sources a {
+            color: #16d1f2;
         }
     </style>
 </head>
+
 <body>
 
     <div class="message-box">
@@ -154,107 +213,118 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table>
-        <tr>
-            <td align="center">
-                <table class="newsletter-table">
-                    <tr>
-                        <td align="center">
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                            <h1 class="newsletter-title">Prestige AI - Daily Newsletter</h1>
-                            <p class="newsletter-date">
-                                <script>
-                                    const today = new Date();
-                                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                                    document.write(today.toLocaleDateString('en-US', options));
-                                </script>
-                             - Sunrise Edition
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="border-top: 2px solid #16d1f2;"></td>
-                    </tr>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo">
+            </div>
+            <h1>Prestige AI - Daily Newsletter</h1>
+            <p>Sunrise Edition</p>
+            <p id="currentDate"></p>
+        </div>
+        <div class="content">
+            <div class="sources">
+                <p>Curated News from Fox News, BBC, and Firstpost</p>
+            </div>
+            <div class="news-item">
+                <div class="news-item-inner">
+                    <div class="news-item-text">
+                        <h2><a href="https://www.foxnews.com/video/6368897665112">Jim Walsh says ‘a lot’ will need to happen for successful Russia-Ukraine peace talks</a></h2>
+                        <p>Jim Walsh discusses the preconditions and challenges for achieving successful peace negotiations between Russia and Ukraine, emphasizing the complexity of the ongoing conflict.</p>
+                    </div>
+                    <div class="news-item-image">
+                        <a href="https://www.foxnews.com/video/6368897665112"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/c847da7b-775c-43f3-9ee5-ac2d60a6d592/5b34a6c2-c6fa-4cca-86d8-5612037d6b28/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Jim Walsh on Russia-Ukraine peace talks"></a>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- News Story 1 -->
-                    <tr>
-                        <td>
-                            <h2 class="news-story-title">‘We have to win’ AI race, says Condoleezza Rice</h2>
-                            <p class="news-story-content">Condoleezza Rice emphasizes the critical importance of the United States winning the artificial intelligence race, highlighting the strategic implications for national security and economic competitiveness.</p>
-                            <a href="https://www.foxnews.com/video/6368844914112" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
-                        </td>
-                    </tr>
-                    <tr><td style="border-top: 1px solid #b0b0b0; padding-top: 10px;"></td></tr>
+            <div class="news-item">
+                <div class="news-item-inner">
+                    <div class="news-item-text">
+                        <h2><a href="https://www.foxnews.com/video/6368892363112">Trump’s Push for Peace in Ukraine</a></h2>
+                        <p>Coverage of former President Trump's efforts and statements regarding the pursuit of peace in the ongoing conflict between Russia and Ukraine.</p>
+                    </div>
+                    <div class="news-item-image">
+                        <a href="https://www.foxnews.com/video/6368892363112"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/5f39f79d-8d85-4b14-94e2-97393113f718/22b01447-5650-4952-861b-e6c16e4b48cf/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump’s Push for Peace in Ukraine"></a>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- News Story 2 -->
-                    <tr>
-                        <td>
-                            <h2 class="news-story-title">Munich Car Attack Suspect Appears Motivated by Islamic Extremism: Prosecutor</h2>
-                            <p class="news-story-content">The suspect in the Munich car ramming attack, which injured over 30 people, appears to have been motivated by Islamic extremism. The 24-year-old Afghan suspect reportedly shouted "Allahu Akbar" after his arrest. He faces 36 counts of attempted murder.</p>
-                            <a href="https://www.foxnews.com/world/suspect-munich-car-attack-had-islamist-motivation-prosecutor-says" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
-                        </td>
-                    </tr>
-                    <tr><td style="border-top: 1px solid #b0b0b0; padding-top: 10px;"></td></tr>
+            <div class="news-item">
+                <div class="news-item-inner">
+                    <div class="news-item-text">
+                        <h2><a href="https://www.foxnews.com/video/6368844914112">‘We have to win’ AI race, says Condoleezza Rice</a></h2>
+                        <p>Former Secretary of State Condoleezza Rice emphasizes the critical importance of the United States leading in the global artificial intelligence race.</p>
+                    </div>
+                    <div class="news-item-image">
+                        <a href="https://www.foxnews.com/video/6368844914112"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/c6a7e4e4-6632-49b7-a70f-19e6cf96e65e/c6cc3e73-7118-40ad-af7d-02bed89f4daf/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Condoleezza Rice on AI race"></a>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- News Story 3 -->
-                    <tr>
-                        <td>
-                            <h2 class="news-story-title">US Citizen Detained in Moscow for Allegedly Carrying Cannabis Gummies</h2>
-                            <p class="news-story-content">A 28-year-old American citizen was detained at Vnukovo Airport in Moscow after allegedly carrying cannabis gummies. Russian authorities claim the gummies contained cannabinoid substances. The man claims they were prescribed by a US doctor. He faces 5-10 years in prison if convicted.</p>
-                            <a href="https://www.foxnews.com/world/us-citizen-allegedly-carrying-cannabis-detained-moscow-charged-narcotics-smuggling-russia-media" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
-                        </td>
-                    </tr>
-                    <tr><td style="border-top: 1px solid #b0b0b0; padding-top: 10px;"></td></tr>
+            <div class="news-item">
+                <div class="news-item-inner">
+                    <div class="news-item-text">
+                        <h2><a href="https://www.foxnews.com/world/sicilian-mafia-bosses-complain-wiretaps-about-lack-quality-recruits-reminisce-about-godfather">Sicilian Mafia Bosses Complain About Lack of Quality Recruits</a></h2>
+                        <p>Captured wiretaps reveal Sicilian mafia bosses lamenting the declining quality of new recruits and reminiscing about the "good old days" depicted in 'The Godfather.'</p>
+                    </div>
+                    <div class="news-item-image">
+                        <a href="https://www.foxnews.com/world/sicilian-mafia-bosses-complain-wiretaps-about-lack-quality-recruits-reminisce-about-godfather">
+                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/carabinieri-officers.jpg?ve=1&tl=1" alt="Carabinieri officers in Sicily">
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- News Story 4 -->
-                    <tr>
-                        <td>
-                            <h2 class="news-story-title">Israeli UN Ambassador Slams Palestinian Plan for Gaza, Demands PA First Condemn Hamas</h2>
-                            <p class="news-story-content">Israel's UN Ambassador, Danny Danon, criticized the Palestinian Authority's "Relief and Early Recovery Plan" for Gaza, stating the PA should first condemn Hamas and address terrorism. The PA's plan, submitted to the UN Security Council, calls for an end to the Israeli "siege" of Gaza and a two-state solution.</p>
-                            <a href="https://www.foxnews.com/world/israels-un-ambassador-slams-palestinian-plan-gaza-demands-pa-first-condemn-hamas" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
-                        </td>
-                    </tr>
-                    <tr><td style="border-top: 1px solid #b0b0b0; padding-top: 10px;"></td></tr>
+            <div class="news-item">
+                <div class="news-item-inner">
+                    <div class="news-item-text">
+                        <h2><a href="https://www.foxnews.com/video/6368791729112">Indian PM Modi says he wants to make India great again, or MIGA</a></h2>
+                        <p>Indian Prime Minister Narendra Modi expresses his vision for India's future, drawing parallels with the "Make America Great Again" slogan, coining "MIGA."</p>
+                    </div>
+                    <div class="news-item-image">
+                        <a href="https://www.foxnews.com/video/6368791729112"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/2854422c-8847-491e-bf26-2a105c79fad6/78e06bfd-1370-494a-af7e-d3e518b5cb8b/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Indian PM Modi says he wants to make India great again, or MIGA"></a>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- News Story 5 -->
-                    <tr>
-                        <td>
-                            <h2 class="news-story-title">Apple to Add Two Classic Fan-Favorite Titles to Apple Arcade in March 2025</h2>
-                            <p class="news-story-content">Apple Arcade will add "Piano Tiles 2+" and "Crazy Eights: Card Games+" to its library on March 6, 2025. These updated versions of popular mobile games will offer ad-free gameplay and exclusive features.</p>
-                            <a href="https://www.firstpost.com/tech/apple-to-add-two-classic-fan-favourite-titles-and-bring-other-games-to-apple-arcade-in-march-2025-13863331.html" style="color: #16d1f2; text-decoration: none;">Read More on Firstpost</a>
-                        </td>
-                    </tr>
-                    <tr><td style="border-top: 1px solid #b0b0b0; padding-top: 10px;"></td></tr>
+            <div class="news-item">
+                <div class="news-item-inner">
+                    <div class="news-item-text">
+                        <h2><a href="https://www.foxnews.com/video/6368887141112">Hamas releases more hostages, Trump defers to Israel over deadline</a></h2>
+                        <p>Reporting on the release of more hostages by Hamas and former President Trump's stance on the deadline for further releases, deferring to Israel's decision-making.</p>
+                    </div>
+                    <div class="news-item-image">
+                        <a href="https://www.foxnews.com/video/6368887141112"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/a5ab6b79-e808-4a63-9c2c-e9068cead680/a975b01d-6d4a-4b27-87e4-2a0008c6cc64/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Hamas releases more hostages"></a>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- News Story 6 -->
-                    <tr>
-                        <td>
-                            <h2 class="news-story-title">Mexican President Signals Possible Lawsuit Against Google Over Gulf of America Name Change</h2>
-                            <p class="news-story-content">Mexican President Claudia Sheinbaum stated her government is considering a lawsuit against Google for changing the name of the Gulf of Mexico to the Gulf of America on Google Maps for US users. The change followed a declaration by President Donald Trump. Sheinbaum argues the Gulf of Mexico name is internationally recognized.</p>
-                            <a href="#dummy-link-mexico" style="color: #16d1f2; text-decoration: none;">Read More (Source Link Unavailable)</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="border-top: 2px solid #16d1f2; margin-top: 20px;"></td>
-                    </tr>
+            <div class="news-item">
+                <div class="news-item-inner">
+                    <div class="news-item-text">
+                        <h2><a href="https://www.foxnews.com/video/6368840065112">Peace between Ukraine, Russia is achievable: Mike Pompeo</a></h2>
+                        <p>Former Secretary of State Mike Pompeo expresses his belief that peace between Ukraine and Russia is an attainable goal, outlining potential pathways to a resolution.</p>
+                    </div>
+                    <div class="news-item-image">
+                        <a href="https://www.foxnews.com/video/6368840065112"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/de755498-9dec-4598-bf96-bda87ecc0056/863b48b3-68b9-4af1-8b5c-a79b5dae6355/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Mike Pompeo on Ukraine-Russia peace"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                    <tr>
-                        <td>
-                            <p class="footer-text">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com/" style="color:#16d1f2; text-decoration:none">BBC</a> and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.</p>
-                        </td>
-                    </tr>
-                    <tr><td style="border-top: 1px solid #b0b0b0; padding-top: 10px;"></td></tr>
-                    <tr>
-                        <td>
-                            <h2 class="joke-title">Joke of the Day</h2>
-                            <p class="joke-content">Why don't scientists trust atoms? <br><br> Because they make up everything!</p>
-                        </td>
-                    </tr>
+        <div class="footer">
+            <p>Joke of the Day:</p>
+            <p>Why don't scientists trust atoms? <br> Because they make up everything!</p>
+            <p>&copy; 2024 Prestige AI. All rights reserved.</p>
+        </div>
+    </div>
+    <script>
+        const date = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-                </table>
-            </td>
-        </tr>
-    </table>
-
+        document.getElementById('currentDate').textContent = date.toLocaleDateString('en-US', options);
+    </script>
 </body>
+
 </html>
