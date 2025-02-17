@@ -8,11 +8,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
             text-align: center;
+            margin: 50px;
+            background-color: #f8f9fa; /* Light background for contrast */
         }
 
         .message-box {
@@ -20,8 +18,8 @@
             margin: auto;
             padding: 15px;
             background-color: #f8f9fa;
-            border: 2px solid #081a56;
-            border-radius: 8px;
+            border: 2px solid #081a56; /* Dark blue border all around */
+            border-radius: 8px; /* Slightly rounded corners for a modern look */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
@@ -30,7 +28,7 @@
             width: 100%;
             max-width: 600px;
             height: 30px;
-            background-color: #b0b0b0;
+            background-color: #b0b0b0; /* Gray background */
             border-radius: 10px;
             overflow: hidden;
             margin: 20px auto;
@@ -40,10 +38,10 @@
         .progress-bar {
             height: 100%;
             width: 0%;
-            background-color: #16d1f2;
+            background-color: #16d1f2; /* Light blue progress bar */
             text-align: center;
             line-height: 30px;
-            color: #081a56;
+            color: #081a56; /* Dark blue text */
             font-weight: bold;
             transition: width linear;
         }
@@ -51,124 +49,85 @@
         #progress-text, h2 {
             text-align: center;
             font-size: 16px;
-            color: #081a56;
+            color: #081a56; /* Dark blue text */
             margin: 10px auto;
         }
 
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        table {
+            width: 100%;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 0;
+            background-color: #f4f4f4;
         }
 
-        .header {
+        .newsletter-table {
+            width: 600px;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 20;
+            background-color: #ffffff;
+        }
+
+        .newsletter-header {
+            padding: 20px 0;
             background-color: #081a56;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
+            color: #ffffff;
         }
 
-        .header h1 {
-            margin: 0;
+        .newsletter-header img {
+            display: block;
+        }
+
+        .newsletter-header h1 {
             font-size: 24px;
+            margin: 10px 0;
         }
 
-        .header p {
-            margin: 5px 0 0;
-            font-size: 14px;
-            color: #16d1f2;
+        .newsletter-header p {
+            font-size: 16px;
+            margin: 5px 0;
         }
 
-        .logo {
-            margin-top: 15px;
-        }
-
-        .logo img {
-            width: 150px;
-            height: auto;
-        }
-
-        .content {
-            padding: 20px;
-        }
-
-        .news-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-        }
-
-        .news-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .news-item h2 {
-            margin: 0 0 10px;
-            font-size: 18px;
+        .news-title {
             color: #081a56;
-        }
-
-        .news-item h2 a {
-            color: #081a56;
-            text-decoration: none;
-        }
-
-        .news-item p {
-            margin: 0 0 10px;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .news-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-
-        .news-item-inner {
-            display: flex;
-            gap: 15px;
-        }
-
-        .news-item-text {
-            flex: 2;
-        }
-
-        .news-item-image {
-            flex: 1;
-        }
-
-        .footer {
-            background-color: #081a56;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-size: 12px;
-        }
-
-        .footer a {
-            color: #16d1f2;
-            text-decoration: none;
-        }
-
-        .sources {
-            margin-top: 15px;
+            font-size: 20px;
             margin-bottom: 15px;
         }
 
-        .sources p {
-            font-style: italic;
-            color: #b0b0b0;
-            font-size: 12px;
+        .news-story {
+            border-bottom: 1px solid #b0b0b0;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
         }
 
-        .sources a {
+        .news-story-title {
             color: #16d1f2;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .news-story-summary {
+            font-size: 14px;
+            color: #333333;
+            line-height: 1.4;
+        }
+
+        .conclusion {
+            padding: 20px;
+            background-color: #081a56;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .conclusion h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .conclusion p {
+            font-size: 14px;
+            font-style: italic;
         }
     </style>
 </head>
@@ -214,118 +173,80 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="container">
-        <div class="header">
-            <div class="logo">
-                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo">
-            </div>
-            <h1>Prestige AI - Daily Newsletter</h1>
-            <p>Sunrise Edition</p>
-            <p id="currentDate"></p>
-        </div>
-        <div class="content">
-            <div class="sources">
-                <p>Curated News from Fox News, BBC, and Firstpost</p>
-            </div>
-            <div class="news-item">
-                <div class="news-item-inner">
-                    <div class="news-item-text">
-                        <h2><a href="https://www.foxnews.com/video/6368897665112">Jim Walsh says ‘a lot’ will need to happen for successful Russia-Ukraine peace talks</a></h2>
-                        <p>Jim Walsh discusses the preconditions and challenges for achieving successful peace negotiations between Russia and Ukraine, emphasizing the complexity of the ongoing conflict.</p>
-                    </div>
-                    <div class="news-item-image">
-                        <a href="https://www.foxnews.com/video/6368897665112"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/c847da7b-775c-43f3-9ee5-ac2d60a6d592/5b34a6c2-c6fa-4cca-86d8-5612037d6b28/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Jim Walsh on Russia-Ukraine peace talks"></a>
-                    </div>
-                </div>
-            </div>
+    <table>
+        <tr>
+            <td align="center">
+                <table class="newsletter-table">
+                    <tr>
+                        <td class="newsletter-header">
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
+                            <h1>Prestige AI - Daily Newsletter</h1>
+                            <p>
+                                <script>
+                                    document.write(new Date().toLocaleDateString());
+                                </script> - Sunrise Edition
+                            </p>
+                        </td>
+                    </tr>
 
-            <div class="news-item">
-                <div class="news-item-inner">
-                    <div class="news-item-text">
-                        <h2><a href="https://www.foxnews.com/video/6368892363112">Trump’s Push for Peace in Ukraine</a></h2>
-                        <p>Coverage of former President Trump's efforts and statements regarding the pursuit of peace in the ongoing conflict between Russia and Ukraine.</p>
-                    </div>
-                    <div class="news-item-image">
-                        <a href="https://www.foxnews.com/video/6368892363112"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/5f39f79d-8d85-4b14-94e2-97393113f718/22b01447-5650-4952-861b-e6c16e4b48cf/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump’s Push for Peace in Ukraine"></a>
-                    </div>
-                </div>
-            </div>
+                    <tr>
+                        <td style="padding: 20px;">
+                            <h2 class="news-title">Today's Top Stories</h2>
+                            <p style="font-size: 14px; color: #666666; line-height: 1.5; margin-bottom:20px;">
+                                Compiled from the latest news from:
+                                <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
+                                <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and
+                                <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
+                            </p>
 
-            <div class="news-item">
-                <div class="news-item-inner">
-                    <div class="news-item-text">
-                        <h2><a href="https://www.foxnews.com/video/6368844914112">‘We have to win’ AI race, says Condoleezza Rice</a></h2>
-                        <p>Former Secretary of State Condoleezza Rice emphasizes the critical importance of the United States leading in the global artificial intelligence race.</p>
-                    </div>
-                    <div class="news-item-image">
-                        <a href="https://www.foxnews.com/video/6368844914112"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/c6a7e4e4-6632-49b7-a70f-19e6cf96e65e/c6cc3e73-7118-40ad-af7d-02bed89f4daf/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Condoleezza Rice on AI race"></a>
-                    </div>
-                </div>
-            </div>
+                            <div class="news-story">
+                                <h3 class="news-story-title">News Story Title 1</h3>
+                                <p class="news-story-summary">News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
+                            </div>
 
-            <div class="news-item">
-                <div class="news-item-inner">
-                    <div class="news-item-text">
-                        <h2><a href="https://www.foxnews.com/world/sicilian-mafia-bosses-complain-wiretaps-about-lack-quality-recruits-reminisce-about-godfather">Sicilian Mafia Bosses Complain About Lack of Quality Recruits</a></h2>
-                        <p>Captured wiretaps reveal Sicilian mafia bosses lamenting the declining quality of new recruits and reminiscing about the "good old days" depicted in 'The Godfather.'</p>
-                    </div>
-                    <div class="news-item-image">
-                        <a href="https://www.foxnews.com/world/sicilian-mafia-bosses-complain-wiretaps-about-lack-quality-recruits-reminisce-about-godfather">
-                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/carabinieri-officers.jpg?ve=1&tl=1" alt="Carabinieri officers in Sicily">
-                        </a>
-                    </div>
-                </div>
-            </div>
+                            <div class="news-story">
+                                <h3 class="news-story-title">News Story Title 2</h3>
+                                <p class="news-story-summary">News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
+                            </div>
 
-            <div class="news-item">
-                <div class="news-item-inner">
-                    <div class="news-item-text">
-                        <h2><a href="https://www.foxnews.com/video/6368791729112">Indian PM Modi says he wants to make India great again, or MIGA</a></h2>
-                        <p>Indian Prime Minister Narendra Modi expresses his vision for India's future, drawing parallels with the "Make America Great Again" slogan, coining "MIGA."</p>
-                    </div>
-                    <div class="news-item-image">
-                        <a href="https://www.foxnews.com/video/6368791729112"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/2854422c-8847-491e-bf26-2a105c79fad6/78e06bfd-1370-494a-af7e-d3e518b5cb8b/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Indian PM Modi says he wants to make India great again, or MIGA"></a>
-                    </div>
-                </div>
-            </div>
+                            <div class="news-story">
+                                <h3 class="news-story-title">News Story Title 3</h3>
+                                <p class="news-story-summary">News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
+                            </div>
 
-            <div class="news-item">
-                <div class="news-item-inner">
-                    <div class="news-item-text">
-                        <h2><a href="https://www.foxnews.com/video/6368887141112">Hamas releases more hostages, Trump defers to Israel over deadline</a></h2>
-                        <p>Reporting on the release of more hostages by Hamas and former President Trump's stance on the deadline for further releases, deferring to Israel's decision-making.</p>
-                    </div>
-                    <div class="news-item-image">
-                        <a href="https://www.foxnews.com/video/6368887141112"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/a5ab6b79-e808-4a63-9c2c-e9068cead680/a975b01d-6d4a-4b27-87e4-2a0008c6cc64/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Hamas releases more hostages"></a>
-                    </div>
-                </div>
-            </div>
+                            <div class="news-story">
+                                <h3 class="news-story-title">News Story Title 4</h3>
+                                <p class="news-story-summary">News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
+                            </div>
 
-            <div class="news-item">
-                <div class="news-item-inner">
-                    <div class="news-item-text">
-                        <h2><a href="https://www.foxnews.com/video/6368840065112">Peace between Ukraine, Russia is achievable: Mike Pompeo</a></h2>
-                        <p>Former Secretary of State Mike Pompeo expresses his belief that peace between Ukraine and Russia is an attainable goal, outlining potential pathways to a resolution.</p>
-                    </div>
-                    <div class="news-item-image">
-                        <a href="https://www.foxnews.com/video/6368840065112"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/de755498-9dec-4598-bf96-bda87ecc0056/863b48b3-68b9-4af1-8b5c-a79b5dae6355/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Mike Pompeo on Ukraine-Russia peace"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            <div class="news-story">
+                                <h3 class="news-story-title">News Story Title 5</h3>
+                                <p class="news-story-summary">News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
+                            </div>
 
-        <div class="footer">
-            <p>Joke of the Day:</p>
-            <p>Why don't scientists trust atoms? <br> Because they make up everything!</p>
-            <p>&copy; 2024 Prestige AI. All rights reserved.</p>
-        </div>
-    </div>
-    <script>
-        const date = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                            <div class="news-story">
+                                <h3 class="news-story-title">News Story Title 6</h3>
+                                <p class="news-story-summary">News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
+                            </div>
 
-        document.getElementById('currentDate').textContent = date.toLocaleDateString('en-US', options);
-    </script>
+                            <div class="news-story">
+                                <h3 class="news-story-title">News Story Title 7</h3>
+                                <p class="news-story-summary">News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="conclusion">
+                            <h3>Joke of the Day</h3>
+                            <p>Why don't scientists trust atoms? <br> Because they make up everything!</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
 </body>
 
 </html>
