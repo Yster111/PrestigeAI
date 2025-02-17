@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,96 +52,99 @@
             margin: 10px auto;
         }
 
-        table {
-            width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
-            background-color: #f4f4f4;
+        /* Inline CSS for Email Client Compatibility */
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
-        .newsletter-table {
-            width: 600px;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
-            background-color: #ffffff;
-        }
-
-        .newsletter-header {
-            padding: 20px 0;
+        .header {
             background-color: #081a56;
-            color: #ffffff;
-        }
-
-        .newsletter-header img {
-            display: block;
-        }
-
-        .newsletter-header h1 {
-            font-size: 24px;
-            margin: 10px 0;
-        }
-
-        .newsletter-header p {
-            font-size: 16px;
-            margin: 5px 0;
-        }
-
-        .newsletter-content {
+            color: #fff;
             padding: 20px;
-        }
-
-        .newsletter-content h2 {
-            color: #081a56;
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-
-        .newsletter-content p {
-            font-size: 14px;
-            color: #666666;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-
-        .news-story {
-            border-bottom: 1px solid #b0b0b0;
-            padding-bottom: 15px;
-            margin-bottom: 15px;
-        }
-
-        .news-story h3 {
-            color: #16d1f2;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .news-story p {
-            font-size: 14px;
-            color: #333333;
-            line-height: 1.4;
-        }
-
-        .newsletter-footer {
-            padding: 20px;
-            background-color: #081a56;
-            color: #ffffff;
             text-align: center;
         }
-
-        .newsletter-footer h3 {
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+        .logo {
+            margin-top: 10px;
+        }
+        .content {
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .news-item h2 {
+            color: #081a56;
             font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .news-item h2 a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .news-item h2 a:hover {
+            text-decoration: underline;
+        }
+
+        .news-item p {
+            margin: 0 0 10px;
+        }
+        .news-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block; /* Important for some email clients */
             margin-bottom: 10px;
         }
-
-        .newsletter-footer p {
+        .footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
             font-size: 14px;
-            font-style: italic;
+            color: #777;
         }
+        .footer a {
+            color: #16d1f2;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+       .date{
+        color:#16d1f2;
+       }
+      .sources-section {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #b0b0b0;
+        }
+       .sources-section a {
+           color: #081a56;
+       }
     </style>
 </head>
-
 <body>
 
     <div class="message-box">
@@ -184,79 +186,65 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table>
-        <tr>
-            <td align="center">
-                <table class="newsletter-table">
-                    <tr>
-                        <td class="newsletter-header">
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
-                            <h1>Prestige AI - Daily Newsletter</h1>
-                            <p>
-                                <script>
-                                    document.write(new Date().toLocaleDateString());
-                                </script> - Sunrise Edition
-                            </p>
-                        </td>
-                    </tr>
+    <div class="container">
+        <div class="header">
+          <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" class="logo">
+            <h1>Prestige AI - Daily Newsletter</h1>
+            <p class = "date">February 17, 2025 - Afternoon Edition</p>
+        </div>
+        <div class="content">
+            <div class="news-item">
+                <h2><a href="https://www.foxnews.com/world/austria-deadly-stabbing-suspect-syrian-migrant-who-pledged-allegiance-islamic-state-officials-say">Austrian Stabbing Suspect Pledged Allegiance to Islamic State</a></h2>
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/gettyimages-2199309721.jpg?ve=1&tl=1" alt="Austrian officials hold press conference">
+                <p>A Syrian refugee was arrested in Villach, Austria, for a stabbing attack that killed a 14-year-old and injured five others.  The suspect, who was radicalized online, pledged allegiance to the Islamic State.  The incident has sparked renewed debate on immigration and asylum policies in Austria.</p>
+            </div>
+            <div class="news-item">
+                <h2><a href="https://www.foxnews.com/world/president-trump-urged-confront-iranian-regime-over-repression-christians">Trump Urged to Confront Iranian Regime Over Repression of Christians</a></h2>
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2022/03/1200/675/iran1.jpg?ve=1&tl=1" alt="Iran">
+                <p>Iranian-Americans and dissidents are urging the Trump administration to address the persecution of Christians in Iran.  Two Christians recently released from prison were re-arrested, highlighting the ongoing repression.  A UN Special Rapporteur also expressed serious concerns.</p>
+            </div>
+            <div class="news-item">
+                <h2><a href="https://www.foxnews.com/world/reporters-notebook-ukrainian-spiritual-leader-says-russian-orthodox-church-extension-kremlin">Ukrainian Spiritual Leader Says Russian Orthodox Church an Extension of the Kremlin</a></h2>
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/ukraine-church.jpg?ve=1&tl=1" alt="Metropolitan Epiphanius conducts liturgical service">
+                <p>Leaders of the Orthodox Church of Ukraine (OCU) claim Russia is fighting a "holy war" against the West.  They accuse the Russian Orthodox Church of being a tool of the Kremlin, furthering Putin's agenda. This spiritual conflict is seen as a significant factor in the ongoing war.</p>
+            </div>
+            <div class="news-item">
+                 <h2><a href="https://www.foxnews.com/world/sicilian-mafia-bosses-complain-wiretaps-about-lack-quality-recruits-reminisce-about-godfather">Sicilian Mafia Bosses Complain About Lack of Quality Recruits</a></h2>
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/carabinieri-officers.jpg?ve=1&tl=1" alt="Carabinieri officers">
+                <p>Wiretapped conversations reveal Cosa Nostra leaders' complaints about the declining quality of new recruits.  Nearly 150 people associated with the group were arrested in recent raids.  Despite the arrests, officials warn that the Cosa Nostra remains a threat.</p>
+            </div>
+            <div class="news-item">
+                <h2><a href="https://www.foxnews.com/world/emmanuel-macron-calls-emergency-meeting-european-leaders-discuss-trump-report">Emmanuel Macron Calls Emergency Meeting to Discuss Trump</a></h2>
+                 <img src='https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/trump-macron.jpg?ve=1&tl=1' alt='President Trump and Emmanuel Macron' />
+                <p>French President Emmanuel Macron has called an "emergency meeting" of European leaders, reportedly to discuss President Donald Trump. The meeting is scheduled for Monday and comes amid increasing discussions about U.S. foreign policy under the Trump administration.</p>
+            </div>
 
-                    <tr>
-                        <td class="newsletter-content">
-                            <h2>Today's Top Stories</h2>
-                            <p>Compiled from the latest news from:
-                                <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
-                                <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and
-                                <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
-                            </p>
+             <div class="news-item">
+                <h2><a href="https://www.foxnews.com/world/marco-rubio-arrives-israel-first-trip-middle-east-u-s-secretary-state">Marco Rubio Arrives in Israel on First Trip to Middle East</a></h2>
+                 <img src='https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/marco-rubio-israel.jpg?ve=1&tl=1' alt='Marco Rubio in Israel' />
+                <p>U.S. Secretary of State Marco Rubio arrived in Israel, marking his first trip to the Middle East in his new role. The visit follows President Trump's controversial proposal regarding the displacement of Palestinians in Gaza, a plan that has drawn widespread condemnation.</p>
+            </div>
+            <div class="news-item">
+              <h2><a href="https://www.foxnews.com/world/american-detained-russia-identified-kalob-wayne-byers">American Detained in Russia Identified as Kalob Wayne Byers</a></h2>
+              <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/kalob-wayne-byers.jpg?ve=1&tl=1" alt="Kalob Wayne Byers">
+              <p>Kalob Wayne Byers, a 28-year-old American citizen, has been detained in Russia on drug smuggling charges.  He was arrested at Moscow's Vnukovo Airport after allegedly carrying cannabis gummies.  This comes just days after the release of American Marc Fogel in a prisoner exchange.</p>
+            </div>
 
-                            <div class="news-story">
-                                <h3>News Story Title 1</h3>
-                                <p>News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
-                            </div>
+              <div class="sources-section">
+                    <p>This newsletter is compiled from recent news stories published by
+                    <a href="https://www.foxnews.com/">Fox News</a>,
+                    <a href="https://www.bbc.com/">BBC</a>, and
+                    <a href="https://www.firstpost.com/">Firstpost</a>.
+                    </p>
+              </div>
 
-                            <div class="news-story">
-                                <h3>News Story Title 2</h3>
-                                <p>News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
-                            </div>
+        </div>
 
-                            <div class="news-story">
-                                <h3>News Story Title 3</h3>
-                                <p>News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
-                            </div>
-
-                            <div class="news-story">
-                                <h3>News Story Title 4</h3>
-                                <p>News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
-                            </div>
-
-                            <div class="news-story">
-                                <h3>News Story Title 5</h3>
-                                <p>News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
-                            </div>
-
-                            <div class="news-story">
-                                <h3>News Story Title 6</h3>
-                                <p>News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
-                            </div>
-
-                            <div class="news-story">
-                                <h3>News Story Title 7</h3>
-                                <p>News Story Summary. Add a brief and informative summary of the news story here. Keep it concise (3-4 sentences).</p>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="newsletter-footer">
-                            <h3>Joke of the Day</h3>
-                            <p>Why don't scientists trust atoms? <br> Because they make up everything!</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-
+        <div class="footer">
+            <p>Joke of the Day:</p>
+            <p>Why don't scientists trust atoms?  Because they make up everything!</p>
+            <p>&copy; 2025 Prestige AI. All rights reserved.</p>
+        </div>
+    </div>
 </body>
-
 </html>
