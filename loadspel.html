@@ -12,9 +12,85 @@
             background-color: #f4f4f4;
             color: #333;
         }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #081a56;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+        .news-section {
+            padding: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .news-item h2 {
+            color: #081a56;
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .news-item h2 a {
+            color: #081a56;
+            text-decoration: none;
+        }
+        .news-item p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .news-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .news-item .thumbnail-container {
+            width: 100%;
+            text-align: center;
+        }
+        .footer {
+            background-color: #081a56;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #16d1f2;
+            text-decoration: none;
+        }
+        .footer p {
+            color: #b0b0b0;
+        }
         .message-box {
             max-width: 700px;
-            margin: 50px auto;
+            margin: auto;
             padding: 15px;
             background-color: #f8f9fa;
             border: 2px solid #081a56;
@@ -47,94 +123,6 @@
             font-size: 16px;
             color: #081a56;
             margin: 10px auto;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .header {
-            background-color: #081a56;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .header p {
-            margin: 5px 0 0;
-            font-size: 14px;
-        }
-        .logo {
-            margin-top: 10px;
-        }
-        .content {
-            padding: 20px;
-            line-height: 1.6;
-        }
-        .news-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-        }
-        .news-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        .news-item h2 {
-            color: #081a56;
-            font-size: 18px;
-            margin: 0 0 10px;
-        }
-        .news-item h2 a {
-            color: inherit;
-            text-decoration: none;
-        }
-        .news-item h2 a:hover {
-            text-decoration: underline;
-        }
-        .news-item p {
-            margin: 0 0 10px;
-        }
-        .news-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .footer {
-            background-color: #f8f8f8;
-            padding: 20px;
-            text-align: center;
-            font-size: 14px;
-            color: #777;
-        }
-        .footer a {
-            color: #16d1f2;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .date {
-            color: #16d1f2;
-        }
-        .sources-section {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 12px;
-            color: #b0b0b0;
-        }
-        .sources-section a {
-            color: #081a56;
         }
     </style>
 </head>
@@ -181,59 +169,85 @@
 
     <div class="container">
         <div class="header">
-            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" class="logo">
+            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" style="width: 150px; height: auto;">
             <h1>Prestige AI - Daily Newsletter</h1>
-            <p class="date">February 17, 2025 - Afternoon Edition</p>
+            <p>
+              <?php
+                echo date("F j, Y");
+              ?>
+            </p>
+            <p>Afternoon Edition</p>
         </div>
-        <div class="content">
+
+        <div class="news-section">
+
             <div class="news-item">
-                <h2><a href="https://www.foxnews.com/world/austria-deadly-stabbing-suspect-syrian-migrant-who-pledged-allegiance-islamic-state-officials-say">Austrian Stabbing Suspect Pledged Allegiance to Islamic State</a></h2>
-                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/gettyimages-2199309721.jpg?ve=1&tl=1" alt="Austrian officials hold press conference">
-                <p>A Syrian refugee was arrested in Villach, Austria, for a stabbing attack that killed a 14-year-old and injured five others. The suspect, who was radicalized online, pledged allegiance to the Islamic State. The incident has sparked renewed debate on immigration and asylum policies in Austria.</p>
-            </div>
-            <div class="news-item">
-                <h2><a href="https://www.foxnews.com/world/president-trump-urged-confront-iranian-regime-over-repression-christians">Trump Urged to Confront Iranian Regime Over Repression of Christians</a></h2>
-                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2022/03/1200/675/iran1.jpg?ve=1&tl=1" alt="Iran">
-                <p>Iranian-Americans and dissidents are urging the Trump administration to address the persecution of Christians in Iran. Two Christians recently released from prison were re-arrested, highlighting the ongoing repression. A UN Special Rapporteur also expressed serious concerns.</p>
-            </div>
-            <div class="news-item">
-                <h2><a href="https://www.foxnews.com/world/reporters-notebook-ukrainian-spiritual-leader-says-russian-orthodox-church-extension-kremlin">Ukrainian Spiritual Leader Says Russian Orthodox Church an Extension of the Kremlin</a></h2>
-                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/ukraine-church.jpg?ve=1&tl=1" alt="Metropolitan Epiphanius conducts liturgical service">
-                <p>Leaders of the Orthodox Church of Ukraine (OCU) claim Russia is fighting a "holy war" against the West. They accuse the Russian Orthodox Church of being a tool of the Kremlin, furthering Putin's agenda. This spiritual conflict is seen as a significant factor in the ongoing war.</p>
-            </div>
-            <div class="news-item">
-                <h2><a href="https://www.foxnews.com/world/sicilian-mafia-bosses-complain-wiretaps-about-lack-quality-recruits-reminisce-about-godfather">Sicilian Mafia Bosses Complain About Lack of Quality Recruits</a></h2>
-                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/carabinieri-officers.jpg?ve=1&tl=1" alt="Carabinieri officers">
-                <p>Wiretapped conversations reveal Cosa Nostra leaders' complaints about the declining quality of new recruits. Nearly 150 people associated with the group were arrested in recent raids. Despite the arrests, officials warn that the Cosa Nostra remains a threat.</p>
-            </div>
-            <div class="news-item">
-                <h2><a href="https://www.foxnews.com/world/emmanuel-macron-calls-emergency-meeting-european-leaders-discuss-trump-report">Emmanuel Macron Calls Emergency Meeting to Discuss Trump</a></h2>
-                <img src='https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/trump-macron.jpg?ve=1&tl=1' alt='President Trump and Emmanuel Macron' />
-                <p>French President Emmanuel Macron has called an "emergency meeting" of European leaders, reportedly to discuss President Donald Trump. The meeting is scheduled for Monday and comes amid increasing discussions about U.S. foreign policy under the Trump administration.</p>
-            </div>
-            <div class="news-item">
-                <h2><a href="https://www.foxnews.com/world/marco-rubio-arrives-israel-first-trip-middle-east-u-s-secretary-state">Marco Rubio Arrives in Israel on First Trip to Middle East</a></h2>
-                <img src='https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/marco-rubio-israel.jpg?ve=1&tl=1' alt='Marco Rubio in Israel' />
-                <p>U.S. Secretary of State Marco Rubio arrived in Israel, marking his first trip to the Middle East in his new role. The visit follows President Trump's controversial proposal regarding the displacement of Palestinians in Gaza, a plan that has drawn widespread condemnation.</p>
-            </div>
-            <div class="news-item">
-                <h2><a href="https://www.foxnews.com/world/american-detained-russia-identified-kalob-wayne-byers">American Detained in Russia Identified as Kalob Wayne Byers</a></h2>
-                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/kalob-wayne-byers.jpg?ve=1&tl=1" alt="Kalob Wayne Byers">
-                <p>Kalob Wayne Byers, a 28-year-old American citizen, has been detained in Russia on drug smuggling charges. He was arrested at Moscow's Vnukovo Airport after allegedly carrying cannabis gummies. This comes just days after the release of American Marc Fogel in a prisoner exchange.</p>
-            </div>
-            <div class="sources-section">
-                <p>This newsletter is compiled from recent news stories published by
-                <a href="https://www.foxnews.com/">Fox News</a>,
-                <a href="https://www.bbc.com/">BBC</a>, and
-                <a href="https://www.firstpost.com/">Firstpost</a>.
+                <h2><a href="https://www.foxnews.com/world/us-russia-meeting-in-ukraine-peace-mediation-riyadh-saudi-arabia-lavrov-meets-marco-rubio-nsa-waltz-excluded-europe-putin-trump-13864333.html" target="_blank">US, Russia begin Ukraine talks in Saudi Arabia; Europe flags Kyiv's omission</a></h2>
+                <div class="thumbnail-container">
+                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/usrussia.png?ve=1&tl=1" alt="US and Russian officials meeting">
+                </div>
+                <p>
+                  US and Russian officials met in Saudi Arabia to discuss improving relations and ending the war in Ukraine, without Ukrainian representatives.  The meeting, led by Secretary of State Marco Rubio and Russian Foreign Minister Sergey Lavrov, marks a significant step by the Trump administration to reverse US policy on isolating Russia. Ukrainian officials were not included, and President Zelenskyy stated Kyiv will not accept the outcome without their participation. Former defense intelligence officer Rebekah Koffler noted that Zelenskyy's absence is due to his presidency "expiring in May."
                 </p>
             </div>
+
+            <div class="news-item">
+              <h2><a href="https://www.foxnews.com/video/6368994208112" target="_blank">Former FAA administrator is 'not concerned at all' about air travel safety after the Trump administration fires hundreds of FAA workers</a></h2>
+              <div class="thumbnail-container">
+                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/4d74ba5e-8bcb-4762-896f-5bf38f990d7a/275ae094-5e43-45b4-9499-0a25bedd6e57/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Former FAA administrator on air travel safety">
+              </div>
+                <p>A former FAA administrator expressed no concerns about air travel safety following the Trump administration's firing of hundreds of FAA workers.  This statement comes amid potential concerns about the impact of staff reductions on safety and operations within the agency.</p>
+            </div>
+
+           <div class="news-item">
+              <h2><a href="https://www.firstpost.com/world/as-trump-brings-putin-to-talk-ukraine-focus-is-also-on-saudi-host-mbs-13864398.html" target="_blank">As Trump brings Putin to talk Ukraine, focus is also on Saudi host MBS</a></h2>
+              <div class="thumbnail-container">
+                <img src="https://images.firstpost.com/uploads/2024/09/Frankfurt-airport-halts-flights-as-climate-activists-block-runway-24-2024-09-f4144236f88b204c37a0e0906498d7a0.jpg?im=FitAndFill=(596,336)" alt="Saudi Crown Prince Mohammed bin Salman">
+              </div>
+              <p>
+                While President Trump facilitates Ukraine peace talks, Saudi Crown Prince Mohammed bin Salman (MBS) plays a crucial role as host. MBS's leadership balances bold reforms with authoritarian tactics, reshaping Saudi Arabia's domestic and foreign policies, including closer ties with both Russia and China, while maintaining a pragmatic relationship with Israel, and mediating in international conflicts.
+              </p>
+           </div>
+
+            <div class="news-item">
+              <h2><a href="https://www.foxnews.com/world/israeli-military-experts-weigh-trumps-all-hell-threat-hamas-what-could-look-like" target="_blank">Israeli military experts weigh in on Trump’s ‘all hell’ threat to Hamas and what it could look like</a></h2>
+               <div class="thumbnail-container">
+                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/05/1200/675/IDF-operating-in-Rafah.jpeg?ve=1&tl=1" alt="IDF forces in Rafah">
+               </div>
+                <p>
+                  With the Israel-Hamas ceasefire nearing its end, Israeli military experts discuss potential responses if the agreement collapses.  President Trump's threats to unleash "hell" on Hamas suggest a full-scale military operation.  Scenarios could include intense airstrikes, expanded ground operations, and cutting off essential supplies to Gaza. The Trump administration's lifting of restrictions on heavy bombs signals a potential escalation in military action.
+                 </p>
+            </div>
+
+             <div class="news-item">
+                <h2><a href="https://www.foxnews.com/world/rwanda-backed-m23-rebels-breach-second-major-city-congos-mineral-rich-east" target="_blank">Rwanda-backed M23 rebels breach second major city in Congo's mineral-rich east</a></h2>
+                <div class="thumbnail-container">
+                  <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/congo-m23.jpg?ve=1&tl=1" alt="M23 rebels in Bukavu">
+                </div>
+                <p>Rwanda-backed M23 rebels have entered Bukavu, a major city in eastern Congo, further escalating the conflict in the mineral-rich region.  The rebels, supported by Rwandan troops, now control a significant portion of the area, raising fears of a regional conflict.  The Congolese government vows to restore order, but the situation remains volatile.</p>
+            </div>
+
+            <div class="news-item">
+                 <h2><a href="https://www.firstpost.com/tech/apple-to-dramatically-change-the-iphone-17s-design-suggests-leak-from-reputable-tipster-13864364.html" target="_blank">Apple to dramatically change the iPhone 17's design, suggests leak from reputable tipster</a></h2>
+                <div class="thumbnail-container">
+                  <img src="https://images.firstpost.com/uploads/2025/02/Apple-to-dramatically-change-the-iPhone-17s-design-says-tipster-2-2025-02-42ca407e5ed5a7eef0c6dbd6bdcd666b-1200x675.jpg?im=FitAndFill=(596,336)" alt="iPhone design concept">
+                </div>
+                <p>A reputable tipster suggests a significant redesign for the iPhone 17 series, potentially featuring a horizontal camera bar.  The iPhone 17 Air may have a compact version, while the Pro models could sport a larger horizontal bump.  Curved edges might also return.  This could be the biggest design change for iPhones in years.</p>
+
+            </div>
+             <div class="news-item">
+                 <h2><a href="https://www.firstpost.com/tech/electricity-demand-to-surge-by-4-globally-because-of-ai-will-deepseek-save-the-day-13864324.html">Electricity demand to surge by 4% globally because of AI. Will DeepSeek save the day?</a></h2>
+                <div class="thumbnail-container"><img src="https://images.firstpost.com/uploads/2025/02/Electricity-demand-to-surge-by-4-globally-because-of-AI.-Will-DeepSeek-save-the-day-2025-02-e3fdfe90c0d89584b6b659cad3b1022e-1200x675.jpg?im=FitAndFill=(596,336)" alt="Data center and AI illustration"></div>
+                        <p>Global electricity demand is set to rise by 4% annually through 2027, driven significantly by AI and data centers. However, the Chinese AI startup DeepSeek claims substantial efficiency improvements, potentially disrupting energy consumption forecasts.  The impact of AI on energy markets remains uncertain.</p>
+             </div>
+
         </div>
 
         <div class="footer">
+            <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" target="_blank">Fox News</a>, <a href="https://www.bbc.com/" target="_blank">BBC</a> and <a href="https://www.firstpost.com/" target="_blank">Firstpost</a>.</p>
+            <p>&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
             <p>Joke of the Day:</p>
             <p>Why don't scientists trust atoms? Because they make up everything!</p>
-            <p>&copy; 2025 Prestige AI. All rights reserved.</p>
         </div>
     </div>
 </body>
