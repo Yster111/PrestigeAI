@@ -7,11 +7,51 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            text-align: center;
+            margin: 50px;
+            background-color: #f8f9fa; /* Light background for contrast */
         }
+
+        .message-box {
+            max-width: 700px;
+            margin: auto;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 2px solid #081a56; /* Dark blue border all around */
+            border-radius: 8px; /* Slightly rounded corners for a modern look */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .progress-container {
+            width: 100%;
+            max-width: 600px;
+            height: 30px;
+            background-color: #b0b0b0; /* Gray background */
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 1px solid #999;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #16d1f2; /* Light blue progress bar */
+            text-align: center;
+            line-height: 30px;
+            color: #081a56; /* Dark blue text */
+            font-weight: bold;
+            transition: width linear;
+        }
+
+        #progress-text, h2 {
+            text-align: center;
+            font-size: 16px;
+            color: #081a56; /* Dark blue text */
+            margin: 10px auto;
+        }
+
         .container {
             width: 80%;
             max-width: 600px;
@@ -58,6 +98,7 @@
             color: #081a56;
             text-decoration: none;
         }
+
         .news-item p {
             font-size: 14px;
             line-height: 1.6;
@@ -68,12 +109,14 @@
             height: auto;
             border-radius: 8px;
             margin-bottom: 10px;
-            display: block;
+            display: block; /* Ensures image is treated as a block element */
         }
+
         .news-item .thumbnail-container {
-            width: 100%;
-            text-align: center;
+             width: 100%;
+             text-align: center; /* Center the image */
         }
+
         .footer {
             background-color: #081a56;
             color: #fff;
@@ -81,52 +124,17 @@
             text-align: center;
             font-size: 14px;
         }
-        .footer a {
+        .footer a{
             color: #16d1f2;
             text-decoration: none;
         }
-        .footer p {
-            color: #b0b0b0;
-        }
-        .message-box {
-            max-width: 700px;
-            margin: auto;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border: 2px solid #081a56;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        .progress-container {
-            width: 100%;
-            max-width: 600px;
-            height: 30px;
-            background-color: #b0b0b0;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 20px auto;
-            border: 1px solid #999;
-        }
-        .progress-bar {
-            height: 100%;
-            width: 0%;
-            background-color: #16d1f2;
-            text-align: center;
-            line-height: 30px;
-            color: #081a56;
-            font-weight: bold;
-            transition: width linear;
-        }
-        #progress-text, h2 {
-            text-align: center;
-            font-size: 16px;
-            color: #081a56;
-            margin: 10px auto;
+        .footer p{
+            color:#b0b0b0
         }
     </style>
 </head>
 <body>
+
     <div class="message-box">
         <p><strong>Thank you for your patience.</strong> I am busy verifying the casts and calculations of the financial statements you've provided. This process typically takes approximately <strong>6 minutes</strong>. To initiate processing, please scroll down and click <strong>"Continue"</strong>. Afterward, you may choose to continue working and await the email response, take a short break, or explore our daily newsletter. The progress bar below indicates the current status. Please note, clicking "Continue" more than once will restart the process.</p>
     </div>
@@ -179,6 +187,7 @@
         </div>
 
         <div class="news-section">
+
             <div class="news-item">
                 <h2><a href="https://www.foxnews.com/world/us-russia-meeting-in-ukraine-peace-mediation-riyadh-saudi-arabia-lavrov-meets-marco-rubio-nsa-waltz-excluded-europe-putin-trump-13864333.html" target="_blank">US, Russia begin Ukraine talks in Saudi Arabia; Europe flags Kyiv's omission</a></h2>
                 <div class="thumbnail-container">
@@ -220,7 +229,7 @@
              <div class="news-item">
                 <h2><a href="https://www.foxnews.com/world/rwanda-backed-m23-rebels-breach-second-major-city-congos-mineral-rich-east" target="_blank">Rwanda-backed M23 rebels breach second major city in Congo's mineral-rich east</a></h2>
                 <div class="thumbnail-container">
-                  <img src="https://a57.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/congo-m23.jpg?ve=1&tl=1" alt="M23 rebels in Bukavu">
+                  <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/congo-m23.jpg?ve=1&tl=1" alt="M23 rebels in Bukavu">
                 </div>
                 <p>Rwanda-backed M23 rebels have entered Bukavu, a major city in eastern Congo, further escalating the conflict in the mineral-rich region.  The rebels, supported by Rwandan troops, now control a significant portion of the area, raising fears of a regional conflict.  The Congolese government vows to restore order, but the situation remains volatile.</p>
             </div>
@@ -231,13 +240,14 @@
                   <img src="https://images.firstpost.com/uploads/2025/02/Apple-to-dramatically-change-the-iPhone-17s-design-says-tipster-2-2025-02-42ca407e5ed5a7eef0c6dbd6bdcd666b-1200x675.jpg?im=FitAndFill=(596,336)" alt="iPhone design concept">
                 </div>
                 <p>A reputable tipster suggests a significant redesign for the iPhone 17 series, potentially featuring a horizontal camera bar.  The iPhone 17 Air may have a compact version, while the Pro models could sport a larger horizontal bump.  Curved edges might also return.  This could be the biggest design change for iPhones in years.</p>
-            </div>
 
+            </div>
              <div class="news-item">
                  <h2><a href="https://www.firstpost.com/tech/electricity-demand-to-surge-by-4-globally-because-of-ai-will-deepseek-save-the-day-13864324.html">Electricity demand to surge by 4% globally because of AI. Will DeepSeek save the day?</a></h2>
                 <div class="thumbnail-container"><img src="https://images.firstpost.com/uploads/2025/02/Electricity-demand-to-surge-by-4-globally-because-of-AI.-Will-DeepSeek-save-the-day-2025-02-e3fdfe90c0d89584b6b659cad3b1022e-1200x675.jpg?im=FitAndFill=(596,336)" alt="Data center and AI illustration"></div>
                         <p>Global electricity demand is set to rise by 4% annually through 2027, driven significantly by AI and data centers. However, the Chinese AI startup DeepSeek claims substantial efficiency improvements, potentially disrupting energy consumption forecasts.  The impact of AI on energy markets remains uncertain.</p>
              </div>
+
         </div>
 
         <div class="footer">
