@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements</title>
+    <title>Processing Financial Statements & Prestige AI - Daily Newsletter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,24 +52,58 @@
             margin: 10px auto;
         }
 
-        .newsletter {
-            max-width: 700px;
+        .newsletter-body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .newsletter-header {
+            background-color: #081a56;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .newsletter-header img {
+            display: block;
             margin: auto;
-            padding: 15px;
-            background-color: #ffffff; /* White background for newsletter */
-            border: 2px solid #081a56; /* Dark blue border */
-            border-radius: 8px; /* Slightly rounded corners */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            margin-top: 30px;
         }
 
-        .newsletter h3 {
-            color: #081a56; /* Dark blue text */
+        .newsletter-header h1 {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #16d1f2;
         }
 
-        .newsletter p {
-            color: #333; /* Dark gray text */
+        .newsletter-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .newsletter-content h2 {
+            color: #081a56;
+            border-bottom: 2px solid #16d1f2;
+            padding-bottom: 5px;
+        }
+
+        .newsletter-content h3 {
+            color: #081a56;
+            margin-bottom: 5px;
+        }
+
+        .newsletter-content p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .footer {
+            background-color: #081a56;
+            color: #b0b0b0;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
@@ -114,10 +148,41 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <h3>Daily Newsletter</h3>
-        <p>Stay updated with the latest news and insights in finance. Subscribe to our daily newsletter for tips, trends, and expert advice.</p>
-        <p><strong>Subscribe now!</strong></p>
+    <div class="newsletter-body">
+        <div class="newsletter-header">
+            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
+            <h1>Prestige AI - Daily Newsletter</h1>
+            <p>
+                <script>
+                    document.write(new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+                </script> - Sunrise Edition
+            </p>
+        </div>
+
+        <div class="newsletter-content">
+            <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
+                <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
+            </p>
+            <h2>News Highlights</h2>
+            <h3><a href="https://www.foxnews.com/video/6369072237112" style="color: #081a56; text-decoration: none;">Trump's approach to Ukraine-Russia peace talks sparks unease</a></h3>
+            <p>Discussions surrounding Trump's strategy for peace talks between Ukraine and Russia are generating significant debate, with concerns about the implications for international relations.</p>
+            <h3><a href="https://www.foxnews.com/world/president-trump-can-stop-irans-march-nuclear-weapons-re-establish-credible-military-threat-report-says" style="color: #081a56; text-decoration: none;">Trump is 'deadly serious' about not allowing Iran to carry nukes</a></h3>
+            <p>A report from the Foundation for the Defense of Democracies argues that a second Trump term offers a chance to prevent Iran from developing nuclear weapons, emphasizing the need for maximum pressure and credible military threats.</p>
+            <h3><a href="https://www.bbc.com/news/articles/cjev2j70v19o" style="color: #081a56; text-decoration: none;">Trump calls Zelensky a 'dictator' as rift between two leaders deepens</a></h3>
+            <p>President Trump's comments calling Ukrainian President Zelensky a "dictator" have intensified the growing rift between the two leaders, drawing criticism from European leaders. This follows Zelensky's remarks about Trump living in a "disinformation space."</p>
+            <h3><a href="https://www.firstpost.com/tech/huaweis-revenue-jumps-22-yoy-in-2024-set-new-record-despite-us-sanctions-13860243.html" style="color:#081a56; text-decoration:none">Huawei’s revenue jumps 22% YoY in 2024, sets new record despite US sanctions</a></h3>
+            <p>Huawei reported over 860 billion yuan (US$118.3 billion) in revenue for 2024, marking a 22% increase from the previous year. This highlights the company's resilience against US sanctions and a focus on innovation.</p>
+            <h3><a href="https://www.foxnews.com/video/6369015803112" style="color:#081a56; text-decoration:none">US, Russia hold peace talks without Ukraine</a></h3>
+            <p>The US and Russia have started peace talks to end the war in Ukraine, raising concerns as neither Kyiv nor any European official has yet been present for the discussions.</p>
+            <h3><a href="https://www.foxnews.com/video/6369049893112" style="color: #081a56; text-decoration:none">Trump designates Tren de Aragua a global terrorists organization</a></h3>
+            <p>Reports indicate rising concerns about the Venezuelan gang, Tren de Aragua, and its increasing criminal activities. President Trump has officially recognized it as a global terrorist organization.</p>
+            <h2>Joke of the Day</h2>
+            <p>Why don't scientists trust atoms? Because they make up everything!</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Prestige AI. All rights reserved.</p>
+        </div>
     </div>
 
 </body>
