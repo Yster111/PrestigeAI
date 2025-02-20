@@ -7,122 +7,103 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            text-align: center;
+            margin: 50px;
+            background-color: #f8f9fa; /* Light background for contrast */
         }
+
         .message-box {
             max-width: 700px;
             margin: auto;
             padding: 15px;
             background-color: #f8f9fa;
-            border: 2px solid #081a56;
-            border-radius: 8px;
+            border: 2px solid #081a56; /* Dark blue border all around */
+            border-radius: 8px; /* Slightly rounded corners for a modern look */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
+
         .progress-container {
             width: 100%;
             max-width: 600px;
             height: 30px;
-            background-color: #b0b0b0;
+            background-color: #b0b0b0; /* Gray background */
             border-radius: 10px;
             overflow: hidden;
             margin: 20px auto;
             border: 1px solid #999;
         }
+
         .progress-bar {
             height: 100%;
             width: 0%;
-            background-color: #16d1f2;
+            background-color: #16d1f2; /* Light blue progress bar */
             text-align: center;
             line-height: 30px;
-            color: #081a56;
+            color: #081a56; /* Dark blue text */
             font-weight: bold;
             transition: width linear;
         }
+
         #progress-text, h2 {
             text-align: center;
             font-size: 16px;
-            color: #081a56;
+            color: #081a56; /* Dark blue text */
             margin: 10px auto;
         }
-        .container {
-            width: 80%;
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+        .newsletter-body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-        .header {
+
+        .newsletter-header {
             background-color: #081a56;
             color: #fff;
             padding: 20px;
-            text-align: center;
         }
-        .header h1 {
-            margin: 0;
+
+        .newsletter-header img {
+            display: block;
+            margin: auto;
+        }
+
+        .newsletter-header h1 {
             font-size: 24px;
-            font-weight: bold;
+            margin-top: 10px;
+            color: #16d1f2;
         }
-        .header p {
-            margin: 5px 0 0;
-            font-size: 14px;
-        }
-        .news-section {
+
+        .newsletter-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
             padding: 20px;
         }
-        .news-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-        }
-        .news-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        .news-item h2 {
+
+        .newsletter-content h2 {
             color: #081a56;
-            font-size: 18px;
-            margin: 0 0 10px;
+            border-bottom: 2px solid #16d1f2;
+            padding-bottom: 5px;
         }
-        .news-item h2 a {
+
+        .newsletter-content h3 {
             color: #081a56;
-            text-decoration: none;
+            margin-bottom: 5px;
         }
-        .news-item p {
+
+        .newsletter-content p {
             font-size: 14px;
-            line-height: 1.6;
-            margin: 0;
+            line-height: 1.5;
+            color: #555;
         }
-        .news-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            display: block;
-        }
-        .news-item .thumbnail-container {
-            width: 100%;
-            text-align: center;
-        }
+
         .footer {
             background-color: #081a56;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-size: 14px;
-        }
-        .footer a {
-            color: #16d1f2;
-            text-decoration: none;
-        }
-        .footer p {
             color: #b0b0b0;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
@@ -167,88 +148,42 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="container">
-        <div class="header">
-            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" style="width: 150px; height: auto;">
+    <div class="newsletter-body">
+        <div class="newsletter-header">
+            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
             <h1>Prestige AI - Daily Newsletter</h1>
             <p>
-              <?php
-                echo date("F j, Y");
-              ?>
+                <script>
+                    document.write(new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+                </script> - Sunrise Edition
             </p>
-            <p>Afternoon Edition</p>
         </div>
 
-        <div class="news-section">
-
-            <div class="news-item">
-                <h2><a href="https://www.foxnews.com/world/us-russia-meeting-in-ukraine-peace-mediation-riyadh-saudi-arabia-lavrov-meets-marco-rubio-nsa-waltz-excluded-europe-putin-trump-13864333.html" target="_blank">US, Russia begin Ukraine talks in Saudi Arabia; Europe flags Kyiv's omission</a></h2>
-                <div class="thumbnail-container">
-                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/usrussia.png?ve=1&tl=1" alt="US and Russian officials meeting">
-                </div>
-                <p>
-                  US and Russian officials met in Saudi Arabia to discuss improving relations and ending the war in Ukraine, without Ukrainian representatives.  The meeting, led by Secretary of State Marco Rubio and Russian Foreign Minister Sergey Lavrov, marks a significant step by the Trump administration to reverse US policy on isolating Russia. Ukrainian officials were not included, and President Zelenskyy stated Kyiv will not accept the outcome without their participation. Former defense intelligence officer Rebekah Koffler noted that Zelenskyy's absence is due to his presidency "expiring in May."
-                </p>
-            </div>
-
-            <div class="news-item">
-              <h2><a href="https://www.foxnews.com/video/6368994208112" target="_blank">Former FAA administrator is 'not concerned at all' about air travel safety after the Trump administration fires hundreds of FAA workers</a></h2>
-              <div class="thumbnail-container">
-                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/4d74ba5e-8bcb-4762-896f-5bf38f990d7a/275ae094-5e43-45b4-9499-0a25bedd6e57/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Former FAA administrator on air travel safety">
-              </div>
-                <p>A former FAA administrator expressed no concerns about air travel safety following the Trump administration's firing of hundreds of FAA workers.  This statement comes amid potential concerns about the impact of staff reductions on safety and operations within the agency.</p>
-            </div>
-
-           <div class="news-item">
-              <h2><a href="https://www.firstpost.com/world/as-trump-brings-putin-to-talk-ukraine-focus-is-also-on-saudi-host-mbs-13864398.html" target="_blank">As Trump brings Putin to talk Ukraine, focus is also on Saudi host MBS</a></h2>
-              <div class="thumbnail-container">
-                <img src="https://images.firstpost.com/uploads/2024/09/Frankfurt-airport-halts-flights-as-climate-activists-block-runway-24-2024-09-f4144236f88b204c37a0e0906498d7a0.jpg?im=FitAndFill=(596,336)" alt="Saudi Crown Prince Mohammed bin Salman">
-              </div>
-              <p>
-                While President Trump facilitates Ukraine peace talks, Saudi Crown Prince Mohammed bin Salman (MBS) plays a crucial role as host. MBS's leadership balances bold reforms with authoritarian tactics, reshaping Saudi Arabia's domestic and foreign policies, including closer ties with both Russia and China, while maintaining a pragmatic relationship with Israel, and mediating in international conflicts.
-              </p>
-           </div>
-
-            <div class="news-item">
-              <h2><a href="https://www.foxnews.com/world/israeli-military-experts-weigh-trumps-all-hell-threat-hamas-what-could-look-like" target="_blank">Israeli military experts weigh in on Trump’s ‘all hell’ threat to Hamas and what it could look like</a></h2>
-               <div class="thumbnail-container">
-                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/05/1200/675/IDF-operating-in-Rafah.jpeg?ve=1&tl=1" alt="IDF forces in Rafah">
-               </div>
-                <p>
-                  With the Israel-Hamas ceasefire nearing its end, Israeli military experts discuss potential responses if the agreement collapses.  President Trump's threats to unleash "hell" on Hamas suggest a full-scale military operation.  Scenarios could include intense airstrikes, expanded ground operations, and cutting off essential supplies to Gaza. The Trump administration's lifting of restrictions on heavy bombs signals a potential escalation in military action.
-                 </p>
-            </div>
-
-             <div class="news-item">
-                <h2><a href="https://www.foxnews.com/world/rwanda-backed-m23-rebels-breach-second-major-city-congos-mineral-rich-east" target="_blank">Rwanda-backed M23 rebels breach second major city in Congo's mineral-rich east</a></h2>
-                <div class="thumbnail-container">
-                  <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/congo-m23.jpg?ve=1&tl=1" alt="M23 rebels in Bukavu">
-                </div>
-                <p>Rwanda-backed M23 rebels have entered Bukavu, a major city in eastern Congo, further escalating the conflict in the mineral-rich region.  The rebels, supported by Rwandan troops, now control a significant portion of the area, raising fears of a regional conflict.  The Congolese government vows to restore order, but the situation remains volatile.</p>
-            </div>
-
-            <div class="news-item">
-                 <h2><a href="https://www.firstpost.com/tech/apple-to-dramatically-change-the-iphone-17s-design-suggests-leak-from-reputable-tipster-13864364.html" target="_blank">Apple to dramatically change the iPhone 17's design, suggests leak from reputable tipster</a></h2>
-                <div class="thumbnail-container">
-                  <img src="https://images.firstpost.com/uploads/2025/02/Apple-to-dramatically-change-the-iPhone-17s-design-says-tipster-2-2025-02-42ca407e5ed5a7eef0c6dbd6bdcd666b-1200x675.jpg?im=FitAndFill=(596,336)" alt="iPhone design concept">
-                </div>
-                <p>A reputable tipster suggests a significant redesign for the iPhone 17 series, potentially featuring a horizontal camera bar.  The iPhone 17 Air may have a compact version, while the Pro models could sport a larger horizontal bump.  Curved edges might also return.  This could be the biggest design change for iPhones in years.</p>
-
-            </div>
-             <div class="news-item">
-                 <h2><a href="https://www.firstpost.com/tech/electricity-demand-to-surge-by-4-globally-because-of-ai-will-deepseek-save-the-day-13864324.html">Electricity demand to surge by 4% globally because of AI. Will DeepSeek save the day?</a></h2>
-                <div class="thumbnail-container"><img src="https://images.firstpost.com/uploads/2025/02/Electricity-demand-to-surge-by-4-globally-because-of-AI.-Will-DeepSeek-save-the-day-2025-02-e3fdfe90c0d89584b6b659cad3b1022e-1200x675.jpg?im=FitAndFill=(596,336)" alt="Data center and AI illustration"></div>
-                        <p>Global electricity demand is set to rise by 4% annually through 2027, driven significantly by AI and data centers. However, the Chinese AI startup DeepSeek claims substantial efficiency improvements, potentially disrupting energy consumption forecasts.  The impact of AI on energy markets remains uncertain.</p>
-             </div>
-
+        <div class="newsletter-content">
+            <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
+                <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
+            </p>
+            <h2>News Highlights</h2>
+            <h3><a href="https://www.foxnews.com/video/6369072237112" style="color: #081a56; text-decoration: none;">Trump's approach to Ukraine-Russia peace talks sparks unease</a></h3>
+            <p>Discussions surrounding Trump's strategy for peace talks between Ukraine and Russia are generating significant debate, with concerns about the implications for international relations.</p>
+            <h3><a href="https://www.foxnews.com/world/president-trump-can-stop-irans-march-nuclear-weapons-re-establish-credible-military-threat-report-says" style="color: #081a56; text-decoration: none;">Trump is 'deadly serious' about not allowing Iran to carry nukes</a></h3>
+            <p>A report from the Foundation for the Defense of Democracies argues that a second Trump term offers a chance to prevent Iran from developing nuclear weapons, emphasizing the need for maximum pressure and credible military threats.</p>
+            <h3><a href="https://www.bbc.com/news/articles/cjev2j70v19o" style="color: #081a56; text-decoration: none;">Trump calls Zelensky a 'dictator' as rift between two leaders deepens</a></h3>
+            <p>President Trump's comments calling Ukrainian President Zelensky a "dictator" have intensified the growing rift between the two leaders, drawing criticism from European leaders. This follows Zelensky's remarks about Trump living in a "disinformation space."</p>
+            <h3><a href="https://www.firstpost.com/tech/huaweis-revenue-jumps-22-yoy-in-2024-set-new-record-despite-us-sanctions-13860243.html" style="color:#081a56; text-decoration:none">Huawei’s revenue jumps 22% YoY in 2024, sets new record despite US sanctions</a></h3>
+            <p>Huawei reported over 860 billion yuan (US$118.3 billion) in revenue for 2024, marking a 22% increase from the previous year. This highlights the company's resilience against US sanctions and a focus on innovation.</p>
+            <h3><a href="https://www.foxnews.com/video/6369015803112" style="color:#081a56; text-decoration:none">US, Russia hold peace talks without Ukraine</a></h3>
+            <p>The US and Russia have started peace talks to end the war in Ukraine, raising concerns as neither Kyiv nor any European official has yet been present for the discussions.</p>
+            <h3><a href="https://www.foxnews.com/video/6369049893112" style="color: #081a56; text-decoration:none">Trump designates Tren de Aragua a global terrorists organization</a></h3>
+            <p>Reports indicate rising concerns about the Venezuelan gang, Tren de Aragua, and its increasing criminal activities. President Trump has officially recognized it as a global terrorist organization.</p>
+            <h2>Joke of the Day</h2>
+            <p>Why don't scientists trust atoms? Because they make up everything!</p>
         </div>
 
         <div class="footer">
-            <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" target="_blank">Fox News</a>, <a href="https://www.bbc.com/" target="_blank">BBC</a> and <a href="https://www.firstpost.com/" target="_blank">Firstpost</a>.</p>
-            <p>&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
-            <p>Joke of the Day:</p>
-            <p>Why don't scientists trust atoms? Because they make up everything!</p>
+            <p>&copy; 2025 Prestige AI. All rights reserved.</p>
         </div>
     </div>
+
 </body>
 </html>
