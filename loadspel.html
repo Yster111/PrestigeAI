@@ -70,13 +70,17 @@
             margin-bottom: 20px;
         }
 
-        .newsletter-header {
+        .newsletter-header img {
+            max-width: 200px;
+        }
+
+        .newsletter-header h1 {
             color: #081a56;
             font-size: 24px;
             margin-top: 10px;
         }
 
-        .newsletter-date {
+        .newsletter-header p {
             color: #b0b0b0;
             font-size: 14px;
             margin-top: 5px;
@@ -87,7 +91,12 @@
             margin-bottom: 5px;
         }
 
-        .story-description {
+        .story-title a {
+            color: #081a56;
+            text-decoration: none;
+        }
+
+        .story-content {
             color: #555555;
             line-height: 1.5;
         }
@@ -98,7 +107,11 @@
             padding: 10px;
         }
 
-        .footer-joke {
+        .footer p {
+            margin: 0;
+        }
+
+        .footer p.joke {
             margin-top: 20px;
         }
     </style>
@@ -148,11 +161,11 @@
         <tr>
             <td align="center">
                 <table class="newsletter-table">
-                    <tr>
+                    <tr class="newsletter-header">
                         <td align="center">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/d7FAAAAMFBMVEX///8AAAD8/Pz5+fn29vbz8/P09PTw8PDv7+/p6enj4+Pi4uLg4ODd3d3X19e7u7s4V9YfAAAEzklEQVR4nO2d6ZKrIAyGI6Ii7///3VjZJkvVqW3Slg3G3JzJZnZ2lpV1TfPzDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/O/J6lWrrA/b/J4gK7o+W6n6L60e92wL2y3F+i8O0hWW9hR05m6JgE7J141J9Lz/3O7k+irfV8Jg7iN1tL97rN7iJm1o3lq3c2oFj0l4e14083M7f/56Xp931jS3CqYt3T5t/Nf4fXGvQ+Bmx3hQ5C0f1+W5Vv99a2841c4v6kX3g9Muf0zQ2D03+E6Mwe8u2kS4rA936dJ9D4v6F6sL83Vz/WbrYfS66xYvS6n7/xXST3Uv3KtvR+b7tO8z95wrdq83C49Y8h/K53e1e/8vT+B51735rEfpB16z9jK9o6q6zbf619N7iJm8v0W1v+J9E66p9f88/226k+C8jGzO37eXy3vH4I6O4x2I/iJo77rN3jP9N273n+B0F7fPj9oVf/Ff6X7g8/3P6/s1/xK1rTv/7K+yXhP4O24Xw3H4xOwsd/8w6C9H+l/e8x+F6O5/Q16Pz97jY7f8/23v/z1yfr5K976/4Xf3/H2z/2479i8H9Xv5+A6f8/k0Fv/p1/3/8bYPqE2wfx5E/bfA48u+p55z+b2wX7/X+e6/2+4/yC9dY20P1Jg/uF1uI+7/0lHfxw6L/q0l536e9i6n/8o+K/4vR5p3vP/l8c9+y+y/n0D0L/5v6Gg783g311n/u53j/n/o88f8w8B1P7b+7w3b51h/3/v69/6/y46/r1/59N/j+o/9/w/r/+4v4X4P4+fP+9/0f+0v/1i7/zT/O+3f/z/b9x/21H9P+/XhP4P9tX8+/9eA+7P+T6L//K7E/X/83/r2P+P/V7T//2/9/k+M/f+P69/6fVf/9M8P/h1///e+/68f//eD8/8f//x/3//////////////////f/J9V//3z/1//t///b///3///3/1z/i/////////////////f/J9V//3z/1//t///b///3///3/1z/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgH94BhgLbbPblb5UAAAAAElFTkSuQmCC" alt="Prestige AI Logo" style="max-width: 200px;">
-                            <h1 class="newsletter-header">Prestige AI - Daily Newsletter</h1>
-                            <p class="newsletter-date"><?php echo date("F j, Y"); ?> - Afternoon Edition</p>
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/d7FAAAAMFBMVEX///8AAAD8/Pz5+fn29vbz8/P09PTw8PDv7+/p6enj4+Pi4uLg4ODd3d3X19e7u7s4V9YfAAAEzklEQVR4nO2d6ZKrIAyGI6Ii7///3VjZJkvVqW3Slg3G3JzJZnZ2lpV1TfPzDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/O/J6lWrrA/b/J4gK7o+W6n6L60e92wL2y3F+i8O0hWW9hR05m6JgE7J141J9Lz/3O7k+irfV8Jg7iN1tL97rN7iJm1o3lq3c2oFj0l4e14083M7f/56Xp931jS3CqYt3T5t/Nf4fXGvQ+Bmx3hQ5C0f1+W5Vv99a2841c4v6kX3g9Muf0zQ2D03+E6Mwe8u2kS4rA936dJ9D4v6F6sL83Vz/WbrYfS66xYvS6n7/xXST3Uv3KtvR+b7tO8z95wrdq83C49Y8h/K53e1e/8vT+B51735rEfpB16z9jK9o6q6zbf619N7iJm8v0W1v+J9E66p9f88/226k+C8jGzO37eXy3vH4I6O4x2I/iJo77rN3jP9N273n+B0F7fPj9oVf/Ff6X7g8/3P6/s1/xK1rTv/7K+yXhP4O24Xw3H4xOwsd/8w6C9H+l/e8x+F6O5/Q16Pz97jY7f8/23v/z1yfr5K976/4Xf3/H2z/2479i8H9Xv5+A6f8/k0Fv/p1/3/8bYPqE2wfx5E/bfA48u+p55z+b2wX7/X+e6/2+4/yC9dY20P1Jg/uF1uI+7/0lHfxw6L/q0l536e9i6n/8o+K/4vR5p3vP/l8c9+y+y/n0D0L/5v6Gg783g311n/u53j/n/o88f8w8B1P7b+7w3b51h/3/v69/6/y46/r1/59N/j+o/9/w/r/+4v4X4P4+fP+9/0f+0v/1i7/zT/O+3f/z/b9x/21H9P+/XhP4P9tX8+/9eA+7P+T6L//K7E/X/83/r2P+P/V7T//2/9/k+M/f+P69/6fVf/9M8P/h1///e+/68f//eD8/8f//x/3//////////////////f/J9V//3z/1//t///b///3///3/1z/i/////////////////f/J9V//3z/1//t///b///3///3/1z/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgH94BhgLbbPblb5UAAAAAElFTkSuQmCC" alt="Prestige AI Logo">
+                            <h1>Prestige AI - Daily Newsletter</h1>
+                            <p><?php echo date("F j, Y"); ?> - Afternoon Edition</p>
                         </td>
                     </tr>
 
@@ -161,38 +174,38 @@
                             <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top Stories</h2>
 
                             <div style="margin-bottom: 20px;">
-                                <h3 class="story-title"><a href="https://www.foxnews.com/video/6369090268112" style="color: #081a56; text-decoration: none;" target="_blank">Hamas releases bodies of four murdered hostages</a></h3>
-                                <p class="story-description">Hamas released the bodies of four Israeli hostages, including Shiri Bibas and her two young children, after being held captive since October 7, 2023. Their identities will be confirmed in Israel.</p>
+                                <h3 class="story-title"><a href="https://www.foxnews.com/video/6369090268112" target="_blank">Hamas releases bodies of four murdered hostages</a></h3>
+                                <p class="story-content">Hamas released the bodies of four Israeli hostages, including Shiri Bibas and her two young children, after being held captive since October 7, 2023. Their identities will be confirmed in Israel.</p>
                             </div>
 
                             <div style="margin-bottom: 20px;">
-                                <h3 class="story-title"><a href="https://www.firstpost.com/tech/google-unveils-new-bot-to-help-scientists-with-researching-and-analysing-new-medical-treatments-13865076.html" style="color: #081a56; text-decoration: none;" target="_blank">Google unveils new bot to help scientists with researching and analysing new medical treatments</a></h3>
-                                <p class="story-description">Google introduces an AI tool designed to assist biomedical researchers in analyzing data and developing new treatments. This virtual research assistant processes scientific information, providing insights.</p>
+                                <h3 class="story-title"><a href="https://www.firstpost.com/tech/google-unveils-new-bot-to-help-scientists-with-researching-and-analysing-new-medical-treatments-13865076.html" target="_blank">Google unveils new bot to help scientists with researching and analysing new medical treatments</a></h3>
+                                <p class="story-content">Google introduces an AI tool designed to assist biomedical researchers in analyzing data and developing new treatments. This virtual research assistant processes scientific information, providing insights.</p>
                             </div>
 
                             <div style="margin-bottom: 20px;">
-                                <h3 class="story-title"><a href="https://www.foxnews.com/video/6369062916112" style="color: #081a56; text-decoration: none;" target="_blank">California sheriff touts success on 'To Catch a Predator' as biggest career win</a></h3>
-                                <p class="story-description">A California sheriff highlights his success on 'To Catch a Predator' as the most significant accomplishment of his career.</p>
+                                <h3 class="story-title"><a href="https://www.foxnews.com/video/6369062916112" target="_blank">California sheriff touts success on 'To Catch a Predator' as biggest career win</a></h3>
+                                <p class="story-content">A California sheriff highlights his success on 'To Catch a Predator' as the most significant accomplishment of his career.</p>
                             </div>
 
                             <div style="margin-bottom: 20px;">
-                                <h3 class="story-title"><a href="https://www.foxnews.com/video/6369072237112" style="color: #081a56; text-decoration: none;" target="_blank">Trump's approach to Ukraine-Russia peace talks sparks unease</a></h3>
-                                <p class="story-description">President Trump's strategy for negotiating peace between Ukraine and Russia is causing concern and uncertainty.</p>
+                                <h3 class="story-title"><a href="https://www.foxnews.com/video/6369072237112" target="_blank">Trump's approach to Ukraine-Russia peace talks sparks unease</a></h3>
+                                <p class="story-content">President Trump's strategy for negotiating peace between Ukraine and Russia is causing concern and uncertainty.</p>
                             </div>
 
                             <div style="margin-bottom: 20px;">
-                                <h3 class="story-title"><a href="https://www.foxnews.com/world/two-britons-detained-iran-charged-spying-iranian-judiciary-says" style="color: #081a56; text-decoration: none;" target="_blank">Two Britons detained in Iran charged with spying, Iranian judiciary says</a></h3>
-                                <p class="story-description">Two British nationals have been detained in Iran and charged with espionage for allegedly gathering sensitive information. The British Foreign Office is deeply concerned.</p>
+                                <h3 class="story-title"><a href="https://www.foxnews.com/world/two-britons-detained-iran-charged-spying-iranian-judiciary-says" target="_blank">Two Britons detained in Iran charged with spying, Iranian judiciary says</a></h3>
+                                <p class="story-content">Two British nationals have been detained in Iran and charged with espionage for allegedly gathering sensitive information. The British Foreign Office is deeply concerned.</p>
                             </div>
 
                             <div style="margin-bottom: 20px;">
                                 <h3 class="story-title"><a href="https://www.foxnews.com/world/president-trump-can-stop-irans-march-nuclear-weapons-re-establish-credible-military-threat-report-says" style="text-decoration:none;">Trump has a 'historic chance' to prevent Iran from developing nuclear weapons</a></h3>
-                                <p class="story-description">A new report outlines a pathway to using the full weight of the U.S. national security establishment to stop Iran's nuclear weapons program.</p>
+                                <p class="story-content">A new report outlines a pathway to using the full weight of the U.S. national security establishment to stop Iran's nuclear weapons program.</p>
                             </div>
 
                             <div style="margin-bottom: 20px;">
-                                <h3 class="story-title"><a href="https://www.foxnews.com/world/china-iran-russia-condemned-dissidents-un-watchdogs-geneva-summit#" style="color: #081a56; text-decoration: none;" target="_blank">China, Iran and Russia condemned by dissidents at UN watchdog's Geneva Summit</a></h3>
-                                <p class="story-description">Dissidents from around the world gathered to expose human rights violations at the Geneva Summit for Human Rights and Democracy.</p>
+                                <h3 class="story-title"><a href="https://www.foxnews.com/world/china-iran-russia-condemned-dissidents-un-watchdogs-geneva-summit#" target="_blank">China, Iran and Russia condemned by dissidents at UN watchdog's Geneva Summit</a></h3>
+                                <p class="story-content">Dissidents from around the world gathered to expose human rights violations at the Geneva Summit for Human Rights and Democracy.</p>
                             </div>
                         </td>
                     </tr>
@@ -206,8 +219,8 @@
                     <tr>
                         <td class="footer">
                             <p>Joke of the Day:</p>
-                            <p class="footer-joke">Why don't scientists trust atoms? Because they make up everything!</p>
-                            <p style="margin-top:20px;">&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
+                            <p>Why don't scientists trust atoms? Because they make up everything!</p>
+                            <p>&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
                         </td>
                     </tr>
                 </table>
