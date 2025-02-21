@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements & Prestige AI - Daily Newsletter</title>
+    <title>Processing Financial Statements and Daily Newsletter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,45 +52,67 @@
             margin: 10px auto;
         }
 
-        .newsletter {
+        table {
+            width: 100%;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 0;
             background-color: #f4f4f4;
-            padding: 20px;
         }
 
-        .newsletter table {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
+        .newsletter-table {
+            width: 600px;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 20;
+            background-color: #ffffff;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
-        .newsletter h1 {
+        .newsletter-header img {
+            max-width: 200px;
+        }
+
+        .newsletter-header h1 {
+            color: #081a56;
             font-size: 24px;
             margin-top: 10px;
-            color: #16d1f2;
         }
 
-        .newsletter h2 {
-            color: #081a56;
-            border-bottom: 2px solid #16d1f2;
-            padding-bottom: 5px;
+        .newsletter-header p {
+            color: #b0b0b0;
+            font-size: 14px;
+            margin-top: 5px;
         }
 
-        .newsletter h3 {
+        .story-title {
             color: #081a56;
             margin-bottom: 5px;
         }
 
-        .newsletter p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
+        .story-title a {
+            color: #081a56;
+            text-decoration: none;
+        }
+
+        .story-content {
+            color: #555555;
+            line-height: 1.5;
         }
 
         .footer {
             background-color: #081a56;
-            color: #b0b0b0;
-            text-align: center;
-            padding: 20px;
+            color: #ffffff;
+            padding: 10px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer p.joke {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -135,81 +157,76 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #081a56; color: #fff;">
-            <tr>
-                <td align="center" style="padding: 20px;">
-                    <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                    <h1>Prestige AI - Daily Newsletter</h1>
-                    <p style="margin: 5px 0 0; color: #b0b0b0;">
-                        <script>
-                            document.write(new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
-                        </script> - Sunrise Edition
-                    </p>
-                </td>
-            </tr>
-        </table>
+    <table>
+        <tr>
+            <td align="center">
+                <table class="newsletter-table">
+                    <tr>
+                        <td class="newsletter-header" align="center">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/d7FAAAAMFBMVEX///8AAAD8/Pz5+fn29vbz8/P09PTw8PDv7+/p6enj4+Pi4uLg4ODd3d3X19e7u7s4V9YfAAAEzklEQVR4nO2d6ZKrIAyGI6Ii7///3VjZJkvVqW3Slg3G3JzJZnZ2lpV1TfPzDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/O/J6lWrrA/b/J4gK7o+W6n6L60e92wL2y3F+i8O0hWW9hR05m6JgE7J141J9Lz/3O7k+irfV8Jg7iN1tL97rN7iJm1o3lq3c2oFj0l4e14083M7f/56Xp931jS3CqYt3T5t/Nf4fXGvQ+Bmx3hQ5C0f1+W5Vv99a2841c4v6kX3g9Muf0zQ2D03+E6Mwe8u2kS4rA936dJ9D4v6F6sL83Vz/WbrYfS66xYvS6n7/xXST3Uv3KtvR+b7tO8z95wrdq83C49Y8h/K53e1e/8vT+B51735rEfpB16z9jK9o6q6zbf619N7iJm8v0W1v+J9E66p9f88/226k+C8jGzO37eXy3vH4I6O4x2I/iJo77rN3jP9N273n+B0F7fPj9oVf/Ff6X7g8/3P6/s1/xK1rTv/7K+yXhP4O24Xw3H4xOwsd/8w6C9H+l/e8x+F6O5/Q16Pz97jY7f8/23v/z1yfr5K976/4Xf3/H2z/2479i8H9Xv5+A6f8/k0Fv/p1/3/8bYPqE2wfx5E/bfA48u+p55z+b2wX7/X+e6/2+4/yC9dY20P1Jg/uF1uI+7/0lHfxw6L/q0l536e9i6n/8o+K/4vR5p3vP/l8c9+y+y/n0D0L/5v6Gg783g311n/u53j/n/o88f8w8B1P7b+7w3b51h/3/v69/6/y46/r1/59N/j+o/9/w/r/+4v4X4P4+fP+9/0f+0v/1i7/zT/O+3f/z/b9x/21H9P+/XhP4P9tX8+/9eA+7P+T6L//K7E/X/83/r2P+P/V7T//2/9/k+M/f+P69/6fVf/9M8P/h1///e+/68f//eD8/8f//x/3//////////////////f/J9V//3z/1//t///b///3///3/1z/i/////////////////f/J9V//3z/1//t///b///3///3/1z/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgH94BhgLbbPblb5UAAAAAElFTkSuQmCC" alt="Prestige AI Logo">
+                            <h1>Prestige AI - Daily Newsletter</h1>
+                            <p><?php echo date("F j, Y"); ?> - Afternoon Edition</p>
+                        </td>
+                    </tr>
 
-        <table width="100%" border="0" cellspacing="20" cellpadding="20">
-            <tr>
-                <td style="padding-top:20px;">
-                    <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
-                    <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h2>News Highlights</h2>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3><a href="https://www.foxnews.com/video/6369072237112" style="color: #081a56; text-decoration: none;">Trump's approach to Ukraine-Russia peace talks sparks unease</a></h3>
-                    <p>Discussions surrounding Trump's strategy for peace talks between Ukraine and Russia are generating significant debate, with concerns about the implications for international relations.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3><a href="https://www.foxnews.com/world/president-trump-can-stop-irans-march-nuclear-weapons-re-establish-credible-military-threat-report-says" style="color: #081a56; text-decoration: none;">Trump is 'deadly serious' about not allowing Iran to carry nukes</a></h3>
-                    <p>A report from the Foundation for the Defense of Democracies argues that a second Trump term offers a chance to prevent Iran from developing nuclear weapons, emphasizing the need for maximum pressure and credible military threats.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3><a href="https://www.bbc.com/news/articles/cjev2j70v19o" style="color: #081a56; text-decoration: none;">Trump calls Zelensky a 'dictator' as rift between two leaders deepens</a></h3>
-                    <p>President Trump's comments calling Ukrainian President Zelensky a "dictator" have intensified the growing rift between the two leaders, drawing criticism from European leaders. This follows Zelensky's remarks about Trump living in a "disinformation space."</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3><a href="https://www.firstpost.com/tech/huaweis-revenue-jumps-22-yoy-in-2024-set-new-record-despite-us-sanctions-13860243.html" style="color:#081a56; text-decoration:none">Huawei’s revenue jumps 22% YoY in 2024, sets new record despite US sanctions</a></h3>
-                    <p>Huawei reported over 860 billion yuan (US$118.3 billion) in revenue for 2024, marking a 22% increase from the previous year. This highlights the company's resilience against US sanctions and a focus on innovation.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3><a href="https://www.foxnews.com/video/6369015803112" style="color:#081a56; text-decoration:none">US, Russia hold peace talks without Ukraine</a></h3>
-                    <p>The US and Russia have started peace talks to end the war in Ukraine, raising concerns as neither Kyiv nor any European official has yet been present for the discussions.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3><a href="https://www.foxnews.com/video/6369049893112" style="color:#081a56; text-decoration:none">Trump designates Tren de Aragua a global terrorists organization</a></h3>
-                    <p>Reports indicate rising concerns about the Venezuelan gang, Tren de Aragua, and its increasing criminal activities. President Trump has officially recognized it as a global terrorist organization.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h2>Joke of the Day</h2>
-                    <p>Why don't scientists trust atoms?  Because they make up everything!</p>
-                </td>
-            </tr>
-        </table>
+                    <tr>
+                        <td style="padding: 20px;">
+                            <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top Stories</h2>
 
-        <div class="footer">
-            <p>&copy; 2025 Prestige AI. All rights reserved.</p>
-        </div>
-    </div>
+                            <div style="margin-bottom: 20px;">
+                                <h3 class="story-title"><a href="https://www.foxnews.com/video/6369090268112" target="_blank">Hamas releases bodies of four murdered hostages</a></h3>
+                                <p class="story-content">Hamas released the bodies of four Israeli hostages, including Shiri Bibas and her two young children, after being held captive since October 7, 2023. Their identities will be confirmed in Israel.</p>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <h3 class="story-title"><a href="https://www.firstpost.com/tech/google-unveils-new-bot-to-help-scientists-with-researching-and-analysing-new-medical-treatments-13865076.html" target="_blank">Google unveils new bot to help scientists with researching and analysing new medical treatments</a></h3>
+                                <p class="story-content">Google introduces an AI tool designed to assist biomedical researchers in analyzing data and developing new treatments. This virtual research assistant processes scientific information, providing insights.</p>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <h3 class="story-title"><a href="https://www.foxnews.com/video/6369062916112" target="_blank">California sheriff touts success on 'To Catch a Predator' as biggest career win</a></h3>
+                                <p class="story-content">A California sheriff highlights his success on 'To Catch a Predator' as the most significant accomplishment of his career.</p>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <h3 class="story-title"><a href="https://www.foxnews.com/video/6369072237112" target="_blank">Trump's approach to Ukraine-Russia peace talks sparks unease</a></h3>
+                                <p class="story-content">President Trump's strategy for negotiating peace between Ukraine and Russia is causing concern and uncertainty.</p>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <h3 class="story-title"><a href="https://www.foxnews.com/world/two-britons-detained-iran-charged-spying-iranian-judiciary-says" target="_blank">Two Britons detained in Iran charged with spying, Iranian judiciary says</a></h3>
+                                <p class="story-content">Two British nationals have been detained in Iran and charged with espionage for allegedly gathering sensitive information. The British Foreign Office is deeply concerned.</p>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <h3 class="story-title"><a href="https://www.foxnews.com/world/president-trump-can-stop-irans-march-nuclear-weapons-re-establish-credible-military-threat-report-says" target="_blank">Trump has a 'historic chance' to prevent Iran from developing nuclear weapons</a></h3>
+                                <p class="story-content">A new report outlines a pathway to using the full weight of the U.S. national security establishment to stop Iran's nuclear weapons program.</p>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <h3 class="story-title"><a href="https://www.foxnews.com/world/china-iran-russia-condemned-dissidents-un-watchdogs-geneva-summit#" target="_blank">China, Iran and Russia condemned by dissidents at UN watchdog's Geneva Summit</a></h3>
+                                <p class="story-content">Dissidents from around the world gathered to expose human rights violations at the Geneva Summit for Human Rights and Democracy.</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 20px;">
+                            <p style="color: #555555; font-size:12px;">This newsletter is compiled from published news stories from <a style="color: #16d1f2;" href="https://www.foxnews.com">Fox News</a>, <a style="color: #16d1f2;" href="https://www.bbc.com">BBC</a>, and <a style="color: #16d1f2;" href="https://www.firstpost.com">Firstpost</a>.</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="footer" align="center">
+                            <p>Joke of the Day:</p>
+                            <p>Why don't scientists trust atoms? Because they make up everything!</p>
+                            <p>&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
 </body>
 </html>
