@@ -54,54 +54,50 @@
 
         table {
             width: 100%;
-            margin-top: 20px;
+            background-color: #f4f4f4;
         }
 
-        .newsletter-header {
-            background-color: #081a56;
-            padding: 20px;
+        .newsletter-table {
+            width: 600px;
+            background-color: #ffffff;
+            margin: 20px 0;
         }
 
-        .newsletter-header img {
-            display: block;
-            margin: auto;
-        }
-
-        .newsletter-header h1 {
-            color: #16d1f2;
-            margin-top: 10px;
-            font-size: 24px;
-        }
-
-        .newsletter-header p {
-            color: #b0b0b0;
-            margin-bottom: 0;
-        }
-
-        .newsletter-content {
-            width: 80%;
-            margin: auto;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 20px;
-        }
-
-        .newsletter-content h2 {
+        .newsletter-title {
             color: #081a56;
-            font-size: 1.2em;
+            margin-top: 10px;
         }
 
-        .newsletter-content p {
-            font-size: 0.9em;
-            line-height: 1.4;
+        .newsletter-date {
+            color: #16d1f2;
         }
 
-        .footer {
-            background-color: #081a56;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
+        .news-story-title {
+            color: #081a56;
+            margin-bottom: 5px;
+        }
+
+        .news-story-link {
+            color: #16d1f2;
+            text-decoration: none;
+        }
+
+        .news-story-content {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .footer-text {
+            color: #b0b0b0;
+            font-size: 0.8em;
+        }
+
+        .joke-title {
+            color: #081a56;
+        }
+
+        .joke-content {
+            color: #333;
         }
     </style>
 </head>
@@ -146,74 +142,97 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table class="newsletter-header">
+    <table>
         <tr>
             <td align="center">
-                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
-                <h1>Prestige AI - Daily Newsletter</h1>
-                <p>
-                    <span style="color: white;">
-                        <?php echo date("F j, Y"); ?>
-                    </span>
-                    | <span style="color:#16d1f2;">Sunrise Edition</span>
-                </p>
-            </td>
-        </tr>
-    </table>
+                <table class="newsletter-table" cellspacing="0" cellpadding="20">
+                    <tr>
+                        <td align="center">
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
+                            <h1 class="newsletter-title">Prestige AI - Daily Newsletter</h1>
+                            <p class="newsletter-date">
+                                <script>
+                                    const today = new Date();
+                                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                                    document.write(today.toLocaleDateString('en-US', options));
+                                </script>
+                                 - Afternoon Edition
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr style="border-top: 2px solid #081a56;">
+                        </td>
+                    </tr>
 
-    <div class="newsletter-content">
-        <p style="color: #555; font-size: smaller; margin-bottom: 35px;">
-            This newsletter is compiled from published news stories from
-            <a href="https://www.foxnews.com" style="color: #081a56; text-decoration: none;">Fox News</a>,
-            <a href="https://www.bbc.com" style="color: #081a56; text-decoration: none;">BBC</a>, and
-            <a href="https://www.firstpost.com" style="color: #081a56; text-decoration: none;">Firstpost</a>.
-        </p>
+                    <tr>
+                        <td>
+                          <h2 class="news-story-title">Top Stories</h2>
+                          <!-- News Story 1 -->
+                          <h3 class="news-story-title">
+                              <a href="https://www.foxnews.com/world/economy-immigration-elon-musk-center-german-election-conservative-candidate-favorite-win"
+                                 class="news-story-link">Economy, immigration, Elon Musk take center stage in German election</a>
+                          </h3>
+                          <p class="news-story-content">Germany's upcoming election sees the conservative CDU, led by Friedrich Merz, poised to oust Chancellor Olaf Scholz.  Elon Musk has endorsed the right-wing AfD party as a solution to Germany's economic and immigration challenges, sparking controversy and accusations of election interference.  The AfD is expected to significantly increase its vote share, though Merz has stated he will not form a coalition with them.  Key issues include migration, economic stability, and security, with the CDU, even as it reorients towards the right, will likely maintain strong support for Ukraine.</p>
 
-        <!-- News Story 1 -->
-        <h2>Israeli Prime Minister Benjamin Netanyahu vows to bring 'the savages who executed our hostages' to justice</h2>
-        <p>Hamas returned the bodies of multiple hostages, but discrepancies arose regarding the remains of Shiri Bibas. Two of the bodies were identified as her children, Ariel and Kfir. A fourth body was also returned. Netanyahu and other Israeli officials have vowed to continue efforts to bring the remaining, and properly identified, hostages and remains, home, and to hold Hamas accountable. The IDF stated that the young Bibas children weren't shot, but killed by hand.</p>
-        <p>Further, Hamas said it delivered an additional body to the Red Cross and says it is Shiri Bibas. This follows the earlier delivery of a body claimed to be Bibis, but later identified as a different woman.</p>
-        <p>Source: <a href="https://www.foxnews.com/video/6369142988112" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com/news/articles/cjw20d3l4jpo" style="color: #16d1f2; text-decoration: none;">BBC</a></p>
+                          <!-- News Story 2 -->
+                          <h3 class="news-story-title">
+                              <a href="https://www.foxnews.com/world/iran-tests-trump-regime-general-says-wipe-israel-off-map"
+                                 class="news-story-link">Iranian General Threatens to 'Wipe Israel Off the Map'</a>
+                          </h3>
+                          <p class="news-story-content">Following President Trump's reimposition of sanctions, a high-ranking Iranian general vowed to launch an attack to destroy Israel.  Israeli Foreign Minister Gideon Sa'ar responded, emphasizing the seriousness of such threats.  The Iranian Revolutionary Guard Corps (IRGC) General stated that "Operation True Promise 3" would be executed to "raze Tel Aviv and Haifa to the ground."  The comments are seen as a potential challenge to Trump, who previously ordered the strike that killed IRGC General Qassem Soleimani.</p>
 
-        <!-- News Story 2 -->
-        <h2>Trump says Starmer and Macron 'haven't done anything' to end Ukraine war</h2>
-        <p>Ahead of visits from UK Prime Minister Keir Starmer and French President Emmanuel Macron, Donald Trump criticized them for not doing enough to end the war in Ukraine. He also criticized Ukrainian President Zelensky, suggesting he had "no cards" in negotiations. Despite his criticism, Trump also praised both European leaders. This comes as European leaders met in Paris to discuss the conflict and amid concerns about being excluded from US-Russia talks.</p>
-        <p>Source: <a href="https://www.bbc.com/news/articles/c4g0mlm7zdlo" style="color: #16d1f2; text-decoration: none;">BBC</a></p>
+                          <!-- News Story 3 -->
+                          <h3 class="news-story-title">
+                              <a href="https://www.foxnews.com/world/uks-nigel-farage-says-political-revolution-sweep-europe-following-vances-munich-comments"
+                                 class="news-story-link">Nigel Farage Predicts 'Political Revolution' in Europe</a>
+                          </h3>
+                          <p class="news-story-content">Nigel Farage, leader of the UK's Reform UK party, believes a "political revolution" similar to the one that saw Donald Trump's election in the US will spread across Europe.  He praised VP JD Vance's controversial remarks at the Munich Security Conference, suggesting Vance was "speaking ahead of his time."  Farage argues that a growing anti-establishment sentiment is boosting support for parties like Reform UK, which he claims is gaining significant traction in the polls.</p>
 
-        <!-- News Story 3 -->
-        <h2>Microsoft prepares itself to host OpenAI's GPT-5 and other models</h2>
-        <p>Microsoft is increasing server capacity to host OpenAI's upcoming AI models, including GPT-4.5 (Orion) and GPT-5. GPT-4.5 is expected imminently, while GPT-5, a major milestone integrating multiple AI technologies, is anticipated around late May, coinciding with Microsoft's Build developer conference and Google I/O. GPT-5 aims for a "magic unified intelligence" experience, eliminating the need for manual model selection.</p>
-        <p>Source: <a href="https://www.firstpost.com/tech/microsoft-prepares-itself-to-host-openais-gpt-5-and-other-models-as-ai-competition-increases-13865357.html" style="color: #16d1f2; text-decoration: none;">Firstpost</a></p>
+                          <!-- News Story 4 -->
+                          <h3 class="news-story-title">
+                              <a href="https://www.foxnews.com/world/hamas-releases-more-hostages-exchange-more-than-600-palestinian-prisoners-part-ceasefire-deal"
+                                 class="news-story-link">Hamas Releases Hostages in Exchange for Palestinian Prisoners</a>
+                          </h3>
+                          <p class="news-story-content">Hamas released five Israeli hostages as part of a ceasefire agreement with Israel, in exchange for over 600 Palestinian prisoners.  The release included civilians held for over a decade, along with others captured more recently.  The IDF confirmed the hostages' arrival in Israel.  The fragile ceasefire deal continues despite recent controversies surrounding the return of hostage remains.</p>
 
-        <!-- News Story 4 -->
-        <h2>Apple finally launches its in-house modem with iPhone 16e</h2>
-        <p>Apple has unveiled its first in-house modem chip with the iPhone 16e, reducing reliance on Qualcomm. The new modem, part of the 'C1 subsystem,' is designed to improve performance, efficiency, and battery life and integrates closely with Apple's other chips. Initial limitations include the lack of millimeter-wave 5G support, an area where Qualcomm still holds an advantage. This signifies a major step towards Apple's hardware independence.</p>
-        <p>Source: <a href="https://www.firstpost.com/tech/apple-finally-launches-its-in-house-modem-with-iphone-16e-moving-away-from-qualcomm-heres-why-it-matters-13864983.html" style="color: #16d1f2; text-decoration: none;">Firstpost</a></p>
+                          <!-- News Story 5-->
+                          <h3 class="news-story-title">
+                             <a href="https://www.foxnews.com/world/suspect-arrested-stabbing-berlins-holocaust-memorial-us-embassy" class="news-story-link"> Suspect arrested in stabbing at Berlin Holocaust memorial</a>
+                          </h3>
+                             <p class="news-story-content">German police apprehended a suspect after a stabbing occurred at Berlin's Holocaust Memorial causing one serious injury. The victim, a 30-year-old Spanish Tourist, is reported to have non-life-threatening injuries. The suspect was arrested near the memory with blood on their hands.</p>
 
-        <!-- News Story 5 -->
-        <h2>Sweden investigates suspected sabotage of undersea telecoms cable</h2>
-        <p>Swedish authorities are investigating the suspected sabotage of an undersea telecoms cable in the Baltic Sea, which connects Germany and Finland. This incident follows a string of similar events in the region since Russia's invasion of Ukraine, which led to Nato deploying a monitoring mission.</p>
-        <p>Source: <a href="https://www.bbc.com/news/articles/cy5nydr9rqvo" style="color: #16d1f2; text-decoration: none;">BBC</a></p>
+                          <!-- News Story 6-->
+                          <h3 class="news-story-title">
+                             <a href="https://www.firstpost.com/world/as-us-commitment-wavers-germanys-chancellor-frontrunner-merz-backs-european-led-nuclear-defence-13865708.html" class="news-story-link"> Germany's Chancellor Frontrunner Merz Backs European-Led Nuclear Defense</a>
+                          </h3>
+                             <p class="news-story-content">Friedrich Merz, the frontrunner to become Germany's next Chancellor, stated the European continent must explore nuclear defense options that do not rely on the United States. He also suggested Germany should engage Britain and France for nuclear security guarantees.</p>
 
-        <!-- News Story 6 -->
-        <h2>Katya Adler: Far right looks for breakthrough in Germany's election</h2>
-        <p>Germany faces a potential political shift as the far-right Alternative for Germany (AfD) party is predicted to become the second-largest political force in the upcoming elections. The AfD, labeled "radical" and "anti-democratic" by opponents, shares similarities with Donald Trump's policies. Germany's economic struggles, military weakness, and concerns about migration are contributing factors to the AfD's rise in popularity.</p>
-        <p>Source: <a href="https://www.bbc.com/news/articles/cn48y8xg53lo" style="color: #16d1f2; text-decoration: none;">BBC</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <hr style="border-top: 2px solid #081a56;">
+                    </td>
+                </tr>
+                 <tr>
+                    <td class="footer-text">
+                        <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" class="news-story-link">Fox News</a>, <a href="https://www.bbc.com/" class="news-story-link">BBC</a>, and <a href="https://www.firstpost.com/" class="news-story-link">Firstpost</a>.</p>
+                    </td>
+                </tr>
 
-        <!-- News Story 7 -->
-        <h2>Fearing Trump, Mexico Moves to Reform Constitution in Response to Cartel Designation</h2>
-        <p>Mexican President Claudia Sheinbaum announced plans for constitutional reforms to protect Mexico's sovereignty after the Trump administration designated six Mexican drug cartels as foreign terrorist organizations. Mexico was not consulted about the decision. Sheinbaum stated that Mexico will not accept foreign interventions. She also proposed stricter penalties for gun trafficking.</p>
-        <p>Source: <a href="https://www.foxnews.com/world/fearing-trump-cross-border-militarily-pursue-cartels-mexico-moves-reform-constitution" style="color: #16d1f2; text-decoration: none;">Fox News</a></p>
-
-        <hr style="border: 1px solid #b0b0b0; margin-top: 20px; margin-bottom: 20px;">
-
-        <h3 style="color: #081a56; font-size: 1.1em;">Joke of the Day</h3>
-        <p style="font-size: 0.9em;">Why don't scientists trust atoms? Because they make up everything!</p>
-    </div>
-
-    <div class="footer">
-        <p style="font-size: 0.7em; margin: 5px 0;">&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
-    </div>
+                 <tr>
+                    <td>
+                        <hr style="border-top: 2px solid #081a56;">
+                        <h2 class="joke-title">Joke of the Day</h2>
+                        <p class="joke-content">Why don't scientists trust atoms?  Because they make up everything!</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 
 </body>
 </html>
