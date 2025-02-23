@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements and Daily Newsletter</title>
+    <title>Processing Financial Statements & Prestige AI - Daily Newsletter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,48 +54,56 @@
 
         table {
             width: 100%;
-            background-color: #f4f4f4;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 0;
         }
 
         .newsletter-table {
-            width: 600px;
+            max-width: 600px;
+            margin: 0 auto;
             background-color: #ffffff;
-            margin: 20px 0;
         }
 
         .newsletter-header {
-            text-align: center;
+            background-color: #081a56;
+            color: #ffffff;
+            padding: 20px;
         }
 
         .newsletter-header img {
             display: block;
-            margin: auto;
+            margin: 0 auto;
         }
 
         .newsletter-header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .newsletter-header span {
+            font-size: 16px;
+        }
+
+        .story-title {
             color: #081a56;
-            margin-top: 10px;
+            text-decoration: none;
         }
 
-        .newsletter-header p {
-            color: #16d1f2;
-        }
-
-        .newsletter-content h2, .newsletter-content h3 {
-            color: #081a56;
-        }
-
-        .newsletter-content p {
-            color: #333;
-            line-height: 1.5;
+        .story-title:hover {
+            text-decoration: underline;
         }
 
         .footer {
-            color: #b0b0b0;
-            font-size: 0.8em;
+            background-color: #081a56;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
         }
 
         .joke {
+            font-size: 14px;
+            font-style: italic;
             color: #333;
         }
     </style>
@@ -141,84 +149,149 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table>
+    <table class="newsletter-header">
         <tr>
             <td align="center">
-                <table class="newsletter-table" cellspacing="0" cellpadding="20">
+                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding-top: 10px;">
+                <h1>Prestige AI - Daily Newsletter</h1>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding-top: 5px;">
+                <span><?php echo date("F j, Y"); ?> | Sunrise Edition</span>
+            </td>
+        </tr>
+    </table>
+
+    <table class="newsletter-table">
+        <tr>
+            <td>
+                <p style="font-size: 16px; line-height: 1.6; color: #333;">
+                    This newsletter compiles top news stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
+                    <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and
+                    <a href="https://www.firstpost.com" style="color:#16d1f2; text-decoration:none;">Firstpost</a>.
+                </p>
+
+                <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top Stories</h2>
+
+                <!-- Story 1 -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="10">
                     <tr>
-                        <td class="newsletter-header">
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
-                            <h1>Prestige AI - Daily Newsletter</h1>
-                            <p>
-                                <script>
-                                    const today = new Date();
-                                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                                    document.write(today.toLocaleDateString('en-US', options));
-                                </script>
-                                 - Afternoon Edition
-                            </p>
+                         <td width="30%" valign="top">
+                            <a href="https://www.foxnews.com/video/6369202738112" style="text-decoration: none;">
+                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/80d7a3c9-c6a3-4ba9-8a7e-63b5c8b47714/76de694c-19cd-412e-9f40-dcdb9088c424/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump figures 'we're pretty close to a deal' with Ukraine over war funds" width="100%" style="display: block;">
+                            </a>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <hr style="border-top: 2px solid #081a56;">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="newsletter-content">
-                          <h2>Top Stories</h2>
-                          <h3>
-                              <a href="https://www.foxnews.com/world/economy-immigration-elon-musk-center-german-election-conservative-candidate-favorite-win" style="color: #16d1f2; text-decoration: none;">Economy, immigration, Elon Musk take center stage in German election</a>
-                          </h3>
-                          <p>Germany's upcoming election sees the conservative CDU, led by Friedrich Merz, poised to oust Chancellor Olaf Scholz.  Elon Musk has endorsed the right-wing AfD party as a solution to Germany's economic and immigration challenges, sparking controversy and accusations of election interference.  The AfD is expected to significantly increase its vote share, though Merz has stated he will not form a coalition with them.  Key issues include migration, economic stability, and security, with the CDU, even as it reorients towards the right, will likely maintain strong support for Ukraine.</p>
-
-                          <h3>
-                              <a href="https://www.foxnews.com/world/iran-tests-trump-regime-general-says-wipe-israel-off-map" style="color: #16d1f2; text-decoration: none;">Iranian General Threatens to 'Wipe Israel Off the Map'</a>
-                          </h3>
-                          <p>Following President Trump's reimposition of sanctions, a high-ranking Iranian general vowed to launch an attack to destroy Israel.  Israeli Foreign Minister Gideon Sa'ar responded, emphasizing the seriousness of such threats.  The Iranian Revolutionary Guard Corps (IRGC) General stated that "Operation True Promise 3" would be executed to "raze Tel Aviv and Haifa to the ground."  The comments are seen as a potential challenge to Trump, who previously ordered the strike that killed IRGC General Qassem Soleimani.</p>
-
-                          <h3>
-                              <a href="https://www.foxnews.com/world/uks-nigel-farage-says-political-revolution-sweep-europe-following-vances-munich-comments" style="color: #16d1f2; text-decoration: none;">Nigel Farage Predicts 'Political Revolution' in Europe</a>
-                          </h3>
-                          <p>Nigel Farage, leader of the UK's Reform UK party, believes a "political revolution" similar to the one that saw Donald Trump's election in the US will spread across Europe.  He praised VP JD Vance's controversial remarks at the Munich Security Conference, suggesting Vance was "speaking ahead of his time."  Farage argues that a growing anti-establishment sentiment is boosting support for parties like Reform UK, which he claims is gaining significant traction in the polls.</p>
-
-                          <h3>
-                              <a href="https://www.foxnews.com/world/hamas-releases-more-hostages-exchange-more-than-600-palestinian-prisoners-part-ceasefire-deal" style="color: #16d1f2; text-decoration: none;">Hamas Releases Hostages in Exchange for Palestinian Prisoners</a>
-                          </h3>
-                          <p>Hamas released five Israeli hostages as part of a ceasefire agreement with Israel, in exchange for over 600 Palestinian prisoners.  The release included civilians held for over a decade, along with others captured more recently.  The IDF confirmed the hostages' arrival in Israel.  The fragile ceasefire deal continues despite recent controversies surrounding the return of hostage remains.</p>
-
-                          <h3>
-                             <a href="https://www.foxnews.com/world/suspect-arrested-stabbing-berlins-holocaust-memorial-us-embassy" style="color:#16d1f2;text-decoration: none"> Suspect arrested in stabbing at Berlin Holocaust memorial</a>
-                          </h3>
-                          <p>German police apprehended a suspect after a stabbing occurred at Berlin's Holocaust Memorial causing one serious injury. The victim, a 30-year-old Spanish Tourist, is reported to have non-life-threatening injuries. The suspect was arrested near the memory with blood on their hands.</p>
-
-                          <h3>
-                             <a href="https://www.firstpost.com/world/as-us-commitment-wavers-germanys-chancellor-frontrunner-merz-backs-european-led-nuclear-defence-13865708.html" style="color:#16d1f2;text-decoration: none"> Germany's Chancellor Frontrunner Merz Backs European-Led Nuclear Defense</a>
-                          </h3>
-                          <p>Friedrich Merz, the frontrunner to become Germany's next Chancellor, stated the European continent must explore nuclear defense options that do not rely on the United States. He also suggested Germany should engage Britain and France for nuclear security guarantees.</p>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <hr style="border-top: 2px solid #081a56;">
-                        </td>
-                    </tr>
-                     <tr>
-                        <td class="footer">
-                            <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2;">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2;">BBC</a>, and <a href="https://www.firstpost.com/" style="color:#16d1f2">Firstpost</a>.</p>
-                        </td>
-                    </tr>
-
-                     <tr>
-                        <td>
-                            <hr style="border-top: 2px solid #081a56;">
-                            <h2>Joke of the Day</h2>
-                            <p class="joke">Why don't scientists trust atoms?  Because they make up everything!</p>
+                        <td width="70%" valign="top" style="padding-left: 10px">
+                            <h3 style="margin-top: 0; margin-bottom: 5px;font-size:18px;"><a href="https://www.foxnews.com/video/6369202738112" style="color: #081a56; text-decoration: none;">Trump figures 'we're pretty close to a deal' with Ukraine over war funds</a></h3>
+                            <p style="font-size: 14px; line-height: 1.5; color: #333;">President Trump expresses optimism about reaching a deal with Ukraine regarding war funding, focusing on access to rare minerals.</p>
                         </td>
                     </tr>
                 </table>
+
+                <!-- Story 2 -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                  <tr>
+                      <td width="30%" valign="top">
+                        <a href="https://www.foxnews.com/world/israel-delays-palestinian-prisoner-release-hamas-humiliating-treatment-hostages-netanyahu-says#" style="text-decoration:none;">
+                          <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/hamas-gaza-hostage-release.jpg?ve=1&tl=1" alt="Palestinians watch parade of Israeli hostages through Gaza" width="100%" style="display:block;">
+                        </a>
+                      </td>
+                    <td width="70%" valign="top" style="padding-left:10px;">
+                        <h3 style="margin-top:0; margin-bottom:5px; font-size:18px;"><a href="https://www.foxnews.com/world/israel-delays-palestinian-prisoner-release-hamas-humiliating-treatment-hostages-netanyahu-says#" style="color:#081a56; text-decoration:none">Israel Delays Palestinian Prisoner Release Over Hostage Treatment</a></h3>
+                        <p style="font-size:14px; line-height:1.5; color:#333">Israel postpones a prisoner exchange due to Hamas's "humiliating" treatment of hostages, including forced displays of cheerfulness and posing with militants.</p>
+                      </td>
+                  </tr>
+                </table>
+
+                <!-- Story 3 -->
+              <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                    <tr>
+                      <td width="30%" valign="top">
+                          <a href="https://www.foxnews.com/world/70-christians-beheaded-african-country-isis-aligned-militants-groups-say-world-mostly-silent#" style="text-decoration:none">
+                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/drcgettyimages-2200027797-scaled.jpg?ve=1&tl=1" alt="70 Christians Beheaded" Width="100%" style="display:block">
+                          </a>
+                      </td>
+                        <td width="70%" valign="top" style="padding-left:10px;">
+                            <h3 style="color:#081a56; margin-top:0;margin-bottom:5px; font-size:18px"><a href="https://www.foxnews.com/world/70-christians-beheaded-african-country-isis-aligned-militants-groups-say-world-mostly-silent#" style="color:#081a56; text-decoration:none">70 Christians Beheaded in DRC by ISIS-Aligned Militants</a></h3>
+                            <p style="font-size:14px; line-height:1.4; color:#333">Reports indicate that 70 Christians were beheaded in the Democratic Republic of Congo by Islamist militants affiliated with ISIS, sparking condemnation and calls for action.</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Story 4 -->
+             <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                <tr>
+                    <td width="30%" valign="top">
+                        <a href="https://www.foxnews.com/world/economy-immigration-elon-musk-center-german-election-conservative-candidate-favorite-win#" style="text-decoration:none">
+                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/scholz-and-merz-germany-debate-scaled.jpg?ve=1&tl=1" alt="German Election" width="100%" style="display:block">
+                      </a>
+                    </td>
+                    <td width="70%" valign="top" style="padding-left:10px">
+                      <h3 style="margin-top:0; margin-bottom:5px; font-size:18px"><a href="https://www.foxnews.com/world/economy-immigration-elon-musk-center-german-election-conservative-candidate-favorite-win#" style="color:#081a56; text-decoration:none">Economy and Immigration Central to German Election; Musk Endorses AfD</a></h3>
+                    <p style="font-size:14px; line-height:1.5; color:#333">Germany's upcoming election sees the conservative CDU favored to win, with debates focusing on the economy, immigration, and Elon Musk's support for the right-wing AfD party.</p>
+                    </td>
+                  </tr>
+              </table>
+
+                <!-- Story 5 -->
+             <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                <tr>
+                    <td width="30%" valign="top">
+                      <a href="https://www.foxnews.com/world/iran-tests-trump-regime-general-says-wipe-israel-off-map#" style="text-decoration:none;">
+                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/10/1200/675/Israel-attack.jpg?ve=1&tl=1" alt="Rockets over Israel" width="100%" style="display:block;">
+                      </a>
+                    </td>
+                    <td width="70%" valign="top" style="padding-left:10px;">
+                      <h3 style="margin-top:0;margin-bottom:5px; font-size:18px;"><a href="https://www.foxnews.com/world/iran-tests-trump-regime-general-says-wipe-israel-off-map#" style="color:#081a56; text-decoration:none;">Iranian General Threatens to 'Wipe Israel Off the Map'</a></h3>
+                    <p style="font-size:14px; line-height:1.5; color:#333">An Iranian general vows to attack and destroy Israel, following President Trump's reimposition of sanctions.  Israel responds, emphasizing readiness to defend itself.</p>
+                    </td>
+                </tr>
+             </table>
+                <!-- Story 6 -->
+            <table width="100%" border="0" cellspacing="0" cellpadding="10">
+              <tr>
+                <td width="30%" valign="top">
+                    <a href="https://www.foxnews.com/world/uks-nigel-farage-says-political-revolution-sweep-europe-following-vances-munich-comments#" style="text-decoration:none;">
+                      <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/farage.jpg?ve=1&tl=1" alt="Nigel Farage" width="100%" style="display:block;">
+                    </a>
+                </td>
+              <td width="70%" valign="top" style="padding-left:10px">
+                 <h3 style="margin-top:0; margin-bottom:5px; font-size:18px;"><a href="https://www.foxnews.com/world/uks-nigel-farage-says-political-revolution-sweep-europe-following-vances-munich-comments#" style="color:#081a56; font-size:18px; text-decoration:none;">Nigel Farage Predicts 'Political Revolution' in Europe</a></h3>
+                <p style="font-size:14px; line-height:1.5;color:#333">Nigel Farage, leader of Reform UK, anticipates a political shift across Europe, similar to the rise of Trump in the US, citing growing anti-establishment sentiment.</p>
+              </td>
+              </tr>
+            </table>
+
+            <!-- Story 7 -->
+            <table width="100%" border="0" cellspacing="0" cellpadding="10">
+              <tr>
+                <td width="30%" valign="top">
+                    <a href="https://www.foxnews.com/world/pope-francis-critical-condition-vatican-says#" style="text-decoration:none;">
+                          <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/pope-hospital.jpg?ve=1&tl=1" alt="Person prays outside of hospital" width="100%" style="display:block;">
+                    </a>
+                </td>
+              <td width="70%" valign="top" style="padding-left:10px">
+                <h3 style="color:#081a56; margin-top:0;margin-bottom:5px; font-size:18px;"><a href="https://www.foxnews.com/world/pope-francis-critical-condition-vatican-says#" style="color:#081a56; text-decoration:none">Pope Francis in Critical Condition, Vatican Says</a></h3>
+                <p style="font-size:14px; line-height:1.5; color:#333">Pope Francis is in critical condition after suffering a respiratory crisis. The Vatican reports he is alert but the prognosis is reserved. Prayers are being offered for his recovery.</p>
+              </td>
+              </tr>
+            </table>
+
+                <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px; margin-top: 30px;">Joke of the Day</h2>
+                <p class="joke">Why don't scientists trust atoms?  Because they make up everything!</p>
+            </td>
+        </tr>
+    </table>
+
+    <table class="footer">
+        <tr>
+            <td>
+                <p style="font-size: 12px; margin: 0;">&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
             </td>
         </tr>
     </table>
