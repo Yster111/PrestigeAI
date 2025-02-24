@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements and Daily Newsletter</title>
+    <title>Processing Financial Statements</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,77 +51,6 @@
             color: #081a56; /* Dark blue text */
             margin: 10px auto;
         }
-
-        table {
-            width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .newsletter-table {
-            width: 600px;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
-            background-color: #ffffff;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-        .newsletter-header {
-            padding: 20px 0;
-        }
-
-        .newsletter-header img {
-            display: block;
-        }
-
-        .newsletter-header h1 {
-            color: #081a56;
-            font-size: 24px;
-            margin-top: 10px;
-        }
-
-        .newsletter-header p {
-            color: #081a56;
-            font-size: 16px;
-            margin: 5px 0 0;
-        }
-
-        .news-story {
-            margin-bottom: 20px;
-        }
-
-        .news-story h3 {
-            color: #081a56;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .news-story p {
-            color: #333333;
-            font-size: 14px;
-        }
-
-        .footer {
-            background-color: #081a56;
-            color: #ffffff;
-            padding: 10px 0;
-            border-radius: 0 0 8px 8px;
-        }
-
-        .footer p {
-            font-size: 14px;
-            margin: 0;
-        }
-
-        .footer p.joke {
-            font-size: 12px;
-            margin: 5px 0 0;
-        }
     </style>
 </head>
 <body>
@@ -165,76 +94,11 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table>
-        <tr>
-            <td align="center">
-                <table class="newsletter-table">
-                    <tr>
-                        <td class="newsletter-header" align="center">
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
-                            <h1>Prestige AI - Daily Newsletter</h1>
-                            <p><span id="currentDate"></span> | Sunrise Edition</p>
-                            <script>
-                              const today = new Date();
-                              const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                              document.getElementById("currentDate").textContent = today.toLocaleDateString('en-US', options);
-                            </script>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding: 20px;">
-                            <h2 style="color: #081a56; font-size: 20px; margin-bottom: 15px; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top News Stories</h2>
-
-                            <div class="news-story">
-                                <h3><a href="https://www.foxnews.com/video/6369113713112" style="color: #081a56; text-decoration: none;" target="_blank">Central California jail providing essential tools to inmates while saving taxpayers $1M a year</a></h3>
-                                <p>A Central California jail is implementing a program that provides inmates with essential tools and resources, resulting in significant cost savings for taxpayers, estimated at $1 million annually.</p>
-                            </div>
-
-                            <div class="news-story">
-                                <h3><a href="https://www.foxnews.com/world/pope-francis-suffering-early-stage-kidney-failure-condition-remains-control-vatican#" style="color: #081a56; text-decoration: none;" target="_blank">Pope Francis in Critical Condition with Early-Stage Kidney Failure</a></h3>
-                                <p>Pope Francis is currently in critical condition at an Italian hospital, suffering from early-stage kidney failure in addition to bilateral pneumonia. He remains alert and is receiving treatment.</p>
-                            </div>
-
-                            <div class="news-story">
-                                <h3><a href="https://www.foxnews.com/world/netanyahu-shows-picture-bibas-family-combat-officers-graduation-remember-what-we-fighting-for#" style="color: #081a56; text-decoration: none;" target="_blank">Netanyahu Displays Bibas Family Photo, Reminds Officers of War's Purpose</a></h3>
-                                <p>Israeli Prime Minister Benjamin Netanyahu displayed images of Shiri Bibas and her two sons, Ariel and Kfir during a combat officers’ graduation. He reminded that Israel will continue to eliminate the threat to its existence that Hamas represents.</p>
-                            </div>
-
-                            <div class="news-story">
-                                <h3><a href="https://www.foxnews.com/world/iran-tests-trump-regime-general-says-wipe-israel-off-map#" style="color: #081a56; text-decoration: none;" target="_blank">Iranian General Threatens to 'Wipe Israel Off the Map' Amid Renewed Sanctions</a></h3>
-                                <p>Following the reimposition of economic sanctions by President Trump, a high-level Iranian general declared that Iran will launch an attack to obliterate Israel.</p>
-                            </div>
-
-                            <div class="news-story">
-                                <h3><a href="https://www.firstpost.com/tech/apple-intelligence-finally-coming-to-india-in-april-thanks-to-ios-18-4-update-beta-version-released-13865871.html" style="color: #081a56; text-decoration: none;" target="_blank">Apple Intelligence Coming to India in April with iOS 18.4</a></h3>
-                                <p>Apple's AI suite, Apple Intelligence, will be available in India with the iOS 18.4 update in April. The update expands language support and introduces new AI-powered features, including Priority Notifications.</p>
-                            </div>
-
-                            <div class="news-story">
-                                <h3><a href="https://www.foxnews.com/world/uks-nigel-farage-says-political-revolution-sweep-europe-following-vances-munich-comments#" style="color: #081a56; text-decoration: none;" target="_blank">Nigel Farage Predicts 'Political Revolution' in Europe</a></h3>
-                                <p>Nigel Farage, leader of Reform UK, believes a "political revolution" similar to that in the U.S. will sweep through Europe, commenting on JD Vance's recent statements at the Munich Security Conference.</p>
-                            </div>
-
-                            <div class="news-story">
-                                <h3><a href="https://www.foxnews.com/world/houthis-target-us-fighter-jet-drone-sam-missiles-first-time#" style="color: #081a56; text-decoration: none;" target="_blank">Houthis Target US Fighter Jet with SAMs for the First Time</a></h3>
-                                <p>Houthi rebels fired surface-to-air missiles at a U.S. F-16 fighter jet, marking the first time such an attack has occurred, according to senior U.S. defense officials.</p>
-                            </div>
-
-                            <p style="color: #b0b0b0; font-size: 12px;"><i>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;" target="_blank">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;" target="_blank">BBC</a>, and  <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;" target="_blank">Firstpost</a>.</i></p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="footer" align="center">
-                            <p>Joke of the Day:</p>
-                            <p class="joke">Why don't scientists trust atoms?  Because they make up everything!</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-
-</body>
-</html>
+    <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f4f4f4;">
+            <tr>
+                <td align="center">
+                    <table width="600" border="0" cellspacing="0" cellpadding="20" style="background-color: #ffffff; margin-top: 20px; border-radius: 5px;">
+                        <tr>
+                            <td align="center">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAAgAElEQVR4nOzdeXxU1f3/8dcE5qaQgARVqCCqiAIiqKB9U0VREBAUFfFHFBHF/8Au6qIID7roogsq6oI/4p8o4lHsoij4hRBXVFBBReSgCBQQsmHYP/bmzplztj3v7H1m7sx5Z+acGe/N3PM9M+8953zOZDpQFEVRUR9N/4yKImhW0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bK2i3i9k86z80D02d9k3w9z40h02d3n/1mD5g3/b29b9rE921+3d89tU+9+B5d66w/3W3T/w8r19+P/J/3P+C3m2+8+xY+/e6/qGvafv3rP2U/eX/h5/sPX5H3Y/5v/wH//61/i3z/6e/m2tT/6+5N/zZ9/E8Nff8eRfy66cffS7//3U5x/9m/5Bf3P+V/qf8//17f9J3XvwbfP3bf45ff/H/8//5//Gfv/e//j979+Nf6b9GyrYp6vZT97d/l7z/7A/5tffu5v8l/d//n+G37n/v7jF9/5e/4P3H3/O7zh3/7zKfvPvrv/l//H//H+ZfuuW3+Z/v/8f/J93/49/lv7//uH+W/u//L/l/+U///X/yX3zzkS7z5/sP35Xv9R/8v/53qW/l6g/9Rj//+q/mX+5f/E/n/5R9z/8D8/553X/x/fv/fUf8h/8p//p7z7yT/Ff+T9h7/8n79H//5//V/zP/+lf8p/dfcAv9R/6J/yfb3z6x9lP3//4+37/H/8+r2H/2b+X/xfz/3s//Xf8//pL9HyrYp6vZT9/92P8t/dv/B9vP3Pvf/Lfyvf+uH/85fefu/X8v//R//5fTf/1f/iX/8mYfy/z02+H7/t//7/+Q/v/3//J/u9/6D76XffjDH+c/vPe//l/+42f+L/NP/v8f5V/+/x/lf/vP//+/+/+/7/f//G/59/vPfLz/5f+B+//sP35D9//3P35C+/65H/4r9+y4D/e4Hfh/92/j95t//p5/Jv3D/48t/8P3H3f8e3rX3r5//2982v/28/4/+/f/N/3P/X/8H/P/yT77z6P/y/3z3z/9f7//rf/PfyP//n/+M/fu9//3+R/vOf/8P3n3v2X+Z/+T//R3lf/3P//v8v//f/f/N/P/vJb/V/9N+jZdtyHn154/v35P//3+TfPP/f/+P8z37/Xf+zPf/tD/WfvfW1q/+b3/43x/6n/F9W/eXf8u//f//X/L/2P/x7zL/P//b/9R/++9Jvyz/+yR/l//+mH8k/cfNhv85/+5x/K//f//X/Wf//5f8v/hP/vv83/z/+X/5X/+fJHyff+V3+PfP/tzvkH7//sP35d++P4fyH/6n//XfOPd//F//vffz//8H/9V/8X+3f/0e+mfnD7of+UfnH3wbwV94F/08//yZ/kv7//sP35T9934//kv7//1/zn/77//F/3//B/zzL/79f/BfP3/83/Lf33/gT/XffDf9R/+Y/3/82//6W/yz+9//d/kP/3Pf5l++t4/e/e/v85/+56T/0n/Wf/7/88/0/6NlW3IfvXv/t/zU/eH37f/k//k//57n5t7/87zN/zv3x//7X8m8/f/HfyX9+54P/zz//6//J//z//3f8z/+R3/9P829+87ff6X///38f8y/894L//f//k97297+/V//d/j95t/1f/Xvsv/9P3/2Lz1+fP/2479Vv3386/6f/R3/2x/lf/3//4/k//+7//7f8h/f//vf8//63P//5n77rgP91wB+4L/z+r/9V7/Vf/l//T/Lff/v/5X/+z1N/mf/6f/1V/97/63/I//7//+/5n/7v//t8z/+i/J/859+N/2v//H/WvP/tP3v/rP/9b8z/x/+q//+F/5l9e/Pv/Tf/635n/+V//1fy//v/jP8j//3/+J/yP92yobkP3r3/+7/KP/+6l/y395/+1/z//7P//t7f/bf/k/zh+8+5B//Wf+m/59//9f/WvM/9/+Wf/uWzH37f/i/p//1f5B8//09+fPz7v/+m4ff5P/9//5X92/+5X92P/278uPf/j//L8s//+4P8i++/13f8y/dM/+H9571/23zLw7XfLw7XfLwzffmP//9//x37//X/7789dfP//d/j/yT/7f/xvTv/Xz//3/+r/9V/03/+D/kv/pv/+v+b/+7/8z/L1B34f/Xuw1/04/96N//9zP//t//+//v//k/9P/5L//t//+/zF775t/xvTv/X/5l9//0/+e3/q/8V/13//ffOPvn/9Z/+5v/1f53/5n/+v+e/v//w/yv/w//5X8r9/+///Pz/6b/j/yLz79/z/576Nl2/kfPX//X/Pf/f+1f8h/8n//7/L//z//7+Wf/+f//U9723vv+e7D0/+/v+Vf/v//1/zP/v//l/yf/8/+bfmf/3f//X829//H/+/7t//4/kf3//j95t+dfPv3+Xfn5828Pf8//rL+H7z//7P959++P/5X9f/f/+PfOvP//+//3//X/L//H/8Z8y8M1L//f/7f8z/O/9f/lvzv//X/PfP//t/y7//v//sP7j3g//I/P//jP819+/9//8//HvyP+1f/6y9O/9fP//v/W//tfyP/199yNfPff9f8m//f//v8s///y/+b37//9/mv/vf//X86/95V+Ufvu3/+P+W//7T/7v87//9//+/5l/+7//7/Lvf//e/5Jff/+/+Z/+/x/lv/j/H8p/+b+X/+v9Gy7blP/7//2/k/3z7P/m3n/x//vXmf/7f/+353/6Xf57/8J//9x/kH7/7sP3z/+0/mP//3x/y/z798N/5P83fvz/WvP/P/7X/Pf3H3Xf/Nvf/uH/+vH/7f/8H+Pf3//f7z7//7/X/PfP//v/y7//v//s/+Wfve/f/m3zLz3XffLP3j3XdfPf/v/f/Lf8//+3/Nv/+3/H8p/+b/FfzP//t//L/OP/vvf8r/e//P/+P+nff8D//H/v/m3zL33+7/+/7t/1f/XvOPvvb/yf/u//8X8f//H//rfmf/tv//fy3//7/1/+2+n/mv/Tf/tf86/+e/9f+/v/t/8//+5//+/5v/zX//X/Pvvf8P/+l/6r/9//z/+bfrnv//P/+R/v/0bK9uU//v//7/LfP/+x/+afO/+//+/59//7f80/e/+P/+3zL33P/uf+nff/7f/9P829//H//l/zP/+3//U+X/7tv/lvz//yL/5f+Bfnr/9u/73vf/vf3H3X/7b//3/J/n//y//PfyP+1//7f//V/kP33vfvPvfPufw//6/X/xf5V+/+//XfPuY37L8D6/5eGz3/3//z/6v/1X/5fy/v/tP/tf8lff//v/lv/jf/5f52f/bf//P53//7/9//yT+7/+P/5P/9f/+X8v/z//3f5R++P33f8i/94//7f8+/9H/+P+Pf//X/N//P//v/8v/+f//f/8/+Pf//f82/e//P/+z/57/+P/8v+T/+n//W/M//f//r/+Wfvv//W/L/95+R/P/dv/sf+v/4P/93pP17z/+bfPvfv/z/+P9+P/+jZVtyP/x//3f4f8/f8v9f/pv/8//L//n//3/zP/X/57/M/j+/6ffS3/zH/5L+t/eXf3r8L7b//+m/zf89v85/+K9D//X/57/+/67/5t+5+6b/5P+9f/+X8u//7//7fy3/+f//f59/7/x/+z/L//p/+V/mf33r4//5H/+/4H/y5dO/z/8551fMvDM+/PfP/+v/5e//b/kX3//H//t+/N//W/5n/3v//t+ZffP//t+Rd//+/+b/mv/3v//t+f/9f/tvTv/Xf/vfmfv3/xl+R/P/9R/6p//3//3/Lf/Tv/+v87/+1/95/rf/7v/+35P/mv/+v8X/mf/7f8/+Wfvv//W/I/fefg/8j//3/+r/W/fvfv/zP/j/H/+iZdv07//H/3/y/x+/5V//X/6P/nv/fv/fP/H/+NfNvx/+w/uv+333/3+Tf+e/f/6//t/zP/9v/+vz//9f/tvTv/Xf/vfmf/3f//V8b//v//t+d//+/+b8/8++8/+r/VfP/fv/mv5H/+/4H/y5dO/z/8551fMvDM+9/+Pf//ffOvf//f8z/474//5f+B//v//v/8/zXf+b/mf/V/+7/Lf/y//9f8z/+3//V/mf/tv//v87/+T//f/Pfnf/+/+e/Pf//f89/e/+P/+T/5//v//+/P/pv+v/1//p/+Z/8//x/+W/un//b/mf/3v//s/PfP//v/zP//3h7/If/fv//f8//9//p/+Z/+/+H/+B/9+7D//A9326/G/YfW6/697+/91//7/7T+1m3r99K/O2/k/8z/+/P//5+a//+k/f/fBf+/7bZtv3Xw78feDDy988O8Pf8//rL8w//v1X5+Mv/j/H//y/+v+h+sL/t//X/5j+d/+/P/95uJ/9H/5P//3+/v+t////P5+5D/8P/4B/e/77Xv9V/+r/1f/mfz/v/jP8z/5P/+t/eX//s/1n/7/7L/N//33/5fzf///P/M/zP/j//P8/+R/8//13/7n////P5l/9/81//j/Hv8u/8G/91wy88z485///z/6v/3f/bfmf/6X/+3Z3/7n5n/7v/3P/m//mv/kf5J/+X//X/Lf3X//r/m///X/3n+r//z/+/P/nv//v+a/6/97/tvzP//3h7/If/6L//t/zL/+e/9c/ePfd//P/j//W/+Xfv//P/+X/X/8H/LP/W//r/W/Pvfn//3//7+H/6i/b//Pve/2f/u/+2/tZt6/fSvy9k//+G//5/P/Pf//X/P//f/H//rfm3//v/y78/+cvefv+/5J/97///0n/79/3/z73/+/Z/zP/5//x/yf/vX/fbMf/+//p/+d//f/p/81/95+D/y1/+i//+/y1/97/y7/lv/vH/+h/+f77737+m/7r//3/3n9rN/X6/38//B/3D49/Hvv+//+7/l/97/4X/Mfnr/+78//z/+Y/nX/3/y399/8P/+P/+P/+P+W//9//+/zP//v//WfPv//f8j9829+//X8z//v/HvyP/9f/rvzP//P/+7/L//X/7f81/8z/+P/mv/vXvX/5n/zH/+H/5H/9V/+P/Pf/u/x///+59/9///8t//z+Y/lX/2/+7/Wf//+x/6X/uv//X/LfP//p/y7//v/3P5n/Tv//v89/n/7//H/xf9N/wN+3n878feDDzP8zM//y//q/Jv/O1/95/a/f1+v9/P/wf9w9P/x/+w/uP/wP3Pf/P//v/zv//f8i++/8/+lf//8/nP/3//7/8f/Hfy/+3v////mf/L/j/5H/z//8/kX//r/nv+Y/P/6v/1f/nfyP93/6f/NP/3L8z/+P/9Pzz//7f/53/vH3/6/L/yf/5f8X/d/8r/P/9V/9Hwf//v//3+b/+z/0f5l/+1//5H57/+z/m3/r//3P/W//9Wf+e/+/7j/w/n//8/X98lP/y5dO/z/8551fMvDM+/PfP/+v/5e//b/kX3//H//t+/N//W/5n/3v//t+ZffP//t+Rd//+/+b/mv/3v//t+f/9f/tvTv/Xf/vfmfv3/xl+R/P/9R/6p//3//3/Lf/Tv/+v87/+1/95/rf/7v/+35P/mv/+v8X/mf/7f8/+Wfvv//W/I/fefg/8j//3/+r/W/fvfv/zP/j/H/+iZdv07//H/3/y/x+/5V//X/6P/nv/fv/fP/H/+NfNvx/+w/uv+333/3+Tf+e/f/6//t/zP/9v/+vz//9f/tvTv/Xf/vfmf/3f//V8b//v//t+d//+/+b8/8++8/+r/VfP/fv/mv5H/+/4H/y5dO/z/8551fMvDM+9/+Pf//ffOvf//f8z/474//5f+B//v//v/8/zXf+b/mf/V/+7/Lf/y//9f8z/+3//V/mf/tv//v87/+T//f/Pfnf/+/+e/Pf//f89/e/+P/+T/5//v//+/P/pv+v/1//p/+Z/8//x/+W/un//b/mf/3v//s/PfP//v/zP//3h7/If/fv//f8//9//p/+Z/+/+H/+B/9+7D//A9326/G/YfW6/697+/91//7/7T+1m3r99K/O2/k/8z/+/P//5+a//+k/f/fBf+/7bZtv3Xw78feDDy988O8Pf8//rL8w//v1X5+Mv/j/H//y/+v+h+sL/t//X/5j+d/+/P/95uJ/9H/5P//3+/v+t////P5+5D/8P/4B/e/77Xv9V/+r/1f/mfz/v/jP8z/5P/+t/eX//s/1n/7/7L/N//33/5fzf///P/M/zP/j//P8/+R/8//13/7n////P5l/9/81//j/Hv8u/8G/91wy88z485///z/6v/3f/bfmf/6X/+3Z3/7n5n/7v/3P/m//mv/kf5J/+X//X/Lf3X//r/m///X/3n+r//z/+/P/nv//v+a/6/97/tvzP//3h7/If/6L//t/zL/+e/9c/ePfd//P/j//W/+Xfv//P/+X/X/8H/LP/W//r/W/Pvfn//3//7+H/6i/b//Pve/2f/u/+2/tZt6/fSvy9k//+G//5/P/Pf//X/P//f/H//rfm3//v/y78/+cvefv+/5J/97///0n/79/3/z73/+/Z/zP/5//x/yf/vX/fbMf/+//p/+d//f/p/81/95+D/y1/+i//+/y1/97/y7/lv/vH/+h/+f77737+m/7r//3/3n9rN/X6/38//B/3D49/Hvv+//+7/l/97/4X/Mfnr/+78//z/+Y/nX/3/y399/8P/+P/+P/+P+W//9//+/zP//v//WfPv//f8j9829+//X8z//v/HvyP/9f/rvzP//P/+7/L//X/7f81/8z/+P/mv/vXvX/5n/zH/+H/5H/9V/+P/Pf/u/x///+59/9///8t//z+Y/lX/2/+7/Wf//+x/6X/uv//X/LfP//p/y7//v/3P5n/Tv//v89/n/7//H/xf9N/wN+3n878feDDzP8zM//y//q/Jv/O1/95/a/f1+v9/P/wf9w9P/x/+w/uP/wP3Pf/P//v/zv//f8i++/8/+lf//8/nP/3//7/8f/HfyX9+54P/zz//6//J//z//3f8z/+R3/9P829+87ff6X///38f8y/894L//f//k97297+/V//d/j95t/1f/Xvsv/9P3/2Lz1+fP/2479Vv3386/6f/R3/2x/lf/3//4/k//+7//7f8h/f//vf8//63P//5n77rgP91wB+4L/z+r/9V7/Vf/l//T/Lff/v/5X/+z1N/mf/6f/1V/97/63/I//7//+/5n/7v//t8z/+i/J/859+N/2v//H/WvP/tP3v/rP/9b8z/x/+q//+F/5l9e/Pv/Tf/635n/+V//1fy//v/jP8j//3/+J/yP92yobkP3r3/+7/KP/+6l/y395/+1/z//7P//t7f/bf/k/zh+8+5B//Wf+m/59//9f/WvM/9/+Wf/uWzH37f/i/p//1f5B8//09+fPz7v/+m4ff5P/9//5X92/+5X92P/278uPf/j//L8s//+4P8i++/13f8y/dM/+H9571/23zLw7XfLw7XfLwzffmP//9//x37//X/7789dfP//d/j/yT/7f/xvTv/Xz//3/+r/9V/03/+D/kv/pv/+v+b/+7/8z/L1B34f/Xuw1/04/96N//9zP//t//+//v//k/9P/5L//t//+/zF775t/xvTv/X/5l9//0/+e3/q/8V/13//ffOPvn/9Z/+5v/1f53/5n/+v+e/v//w/yv/w//5X8r9/+///Pz/6b/j/yLz79/z/576Nl2/kfPX//X/Pf/f+1f8h/8n//7/L//z//7+Wf/+f//U9723vv+e7D0/+/v+Vf/v//1/zP/v//l/yf/8/+bfmf/3f//X829//H/+/7t//4/kf3//j95t+dfPv3+Xfn5828Pf8//rL+H7z//7P959++P/5X9f/f/+PfOvP//+//3//X/L//H/8Z8y8M1L//f/7f8z/O/9f/lvzv//X/PfP//t/y7//v//sP7j3g//I/P//jP819+/9//8//HvyP+1f/6y9O/9fP//v/W//tfyP/199yNfPff9f8m//f//v8s///y/+b37//9/mv/vf//X86/95V+Ufvu3/+P+W//7T/7v87//9//+/5l/+7//7/Lvf//e/5Jff/+/+Z/+/x/lv/j/H8p/+b+X/+v9Gy7blP/7//2/k/3z7P/m3n/x//vXmf/7f/+353/6Xf57/8J//9x/kH7/7sP3z/+0/mP//3x/y/z798N/5P83fvz/WvP/P/7X/Pf3H3Xf/Nvf/uH/+vH/7f/8H+Pf3//f7z7//7/X/PfP//v/y7//v//s/+Wfve/f/m3zLz3XffLP3j3XdfPf/v/f/Lf8//+3/Nv/+3/H8p/+b/FfzP//t//L/OP/vvf8r/e//P/+P+nff8D//H/v/m3zL33+7/+/7t/1f/XvOPvvb/yf/u//8X8f//H//rfmf/tv//fy3//7/1/+2+n/mv/Tf/tf86/+e/9f+/v/t/8//+5//+/5v/zX//X/Pvvf8P/+l/6r/9//z/+bfrnv//P/+R/v/0bK9uU//v//7/LfP/+x/+afO/+//+/59//7f80/e/+P/+3zL33P/uf+nff/7f/9P829//H//l/zP/+3//U+X/7tv/lvz//yL/5f+Bfnr/9u/73vf/vf3H3X/7b//3/J/n//y//PfyP+1//7f//V/kP33vfvPvfPufw//6/X/xf5V+/+//XfPuY37L8D6/5eGz3/3//z/6v/1X/5fy/v/tP/tf8lff//v/lv/jf/5f52f/bf//P53//7/9//yT+7/+P/5P/9f/+X8v/z//3f5R++P33f8i/94//7f8+/9H/+P+Pf//X/N//P//v/8v/+f//f/8/+Pf//f82/e//P/+z/57/+P/8v+T/+n//W/M//f//r/+Wfvv//W/L/95+R/P/dv/sf+v/4P/93pP17z/+bfPvfv/z/+P9+P/+jZVtyP/x//3f4f8/f8v9f/pv/8//L//n//3/zP/X/57/M/j+/6ffS3/zH/5L+t/eXf3r8L7b//+m/zf89v85/+K9D//X/57/+/67/5t+5+6b/5P+9f/+X8u//7//7fy3/+f//f59/7/x/+z/L//p/+V/mf33r4//5H/+/4H/y5dO/z/8551fMvDM+/PfP/+v/5e//b/kX3//H//t+/N//W/5n/3v//t+ZffP//t+Rd//+/+b/mv/3v//t+f/9f/tvTv/Xf/vfmfv3/xl+R/P/9R/6p//3//3/Lf/Tv/+v87/+1/95/rf/7v/+35P/mv/+v8X/mf/7f8/+Wfvv//W/I/fefg/8j//3/+r/W/fvfv/zP/j/H/+iZdv07//H/3/y/x+/5V//X/6P/nv/fv/fP/H/+NfNvx/+w/uv+333/3+Tf+e/f/6//t/zP/9v/+vz//9f/tvTv/Xf/vfmf/3f//V8b//v//t+d//+/+b8/8++8/+r/VfP/fv/mv5H/+/4H/y5dO/z/8551fMvDM+9/+Pf//ffOvf//f8z/474//5f+B//v//v/8/zXf+b/mf/V/+7/Lf/y//9f8z/+3//V/mf/tv//v87/+T//f/Pfnf/+/+e/Pf//f89/e/+P/+T/5//v//+/P/pv+v/1//p/+Z/8//x/+W/un//b/mf/3v//s/PfP//v/zP//3h7/If/fv//f8//9//p/+Z/+/+H/+B/9+7D//A9326/G/YfW6/697+/91//7/7T+1m3r99K/O2/k/8z/+/P//5+a//+k/f/fBf+/7bZtv3Xw78feDDy988O8Pf8//rL8w//v1X5+Mv/j/H//y/+v+h+sL/t//X/5j+d/+/P/95uJ/9H/5P//3+/v+t////P5+5D/8P/4B/e/77Xv9V/+r/1f/mfz/v/jP8z/5P/+t/eX//s/1n/7/7L/N//33/5fzf///P/M/zP/j//P8/+R/8//13/7n////P5l/9/81//j/Hv8u/8G/91wy88z485///z/6v/3f/bfmf/6X/+3Z3/7n5n/7v/3P/m//mv/kf5J/+X//X/Lf3X//r/m///X/3n+r//z/+/P/nv//v+a/6/97/tvzP//3h7/If/6L//t/zL/+e/9c/ePfd//P/j//W/+Xfv//P/+X/X/8H/LP/W//r/W/Pvfn//3//7+H/6i/b//Pve/2f/u/+2/tZt6/fSvy9k//+G//5/P/Pf//X/P//f/H//rfm3//v/y78/+cvefv+/5J/97///0n/79/3/z73/+/Z/zP/5//x/yf/vX/fbMf/+//p/+d//f/p/81/95+D/y1/+i//+/y1/97/y7/lv/vH/+h/+f77737+m/7r//3/3n9rN/X6/38//B/3D49/Hvv+//+7/l/97/4X/Mfnr/+78//z/+Y/nX/3/y399/8P/+P/+P/+P+W//9//+/zP//v//WfPv//f8j9829+//X8z//v/HvyP/9f/rvzP//P/+7/L//X/7f81/8z/+P/mv/vXvX/5n/zH/+H/5H/9V/+P/Pf/u/x///+59/9///8t//z+Y/lX/2/+7/Wf//+x/6X/uv//X/LfP//p/y7//v/3P5n/Tv//v89/n/7//H/xf9N/wN+3n878feDDzP8zM//y//q/Jv/O1/95/a/f1+v9/P/wf9w9P/x/+w/uP/wP3Pf/P//v/zv//f8i++/8/+lf//8/nP/3//7/8f/HfyX9+54P/zz//6//J//z//3f8z/+R3/9P829+87ff6X///38f8y/894L//f//k97297+/V//d/j95t/1f/Xvsv/9P3/2Lz1+fP/2479Vv3386/6f/R3/2x/lf/3//4/k//+7//7f8h/f//vf8//63P//5n77rgP91wB+4L/z+r/9V7/Vf/l//T/Lff/v/5X/+z1N/mf/6f/1V/97/63/I//7//+/5n/7v//t8z/+i/J/859+N/2v//H/WvP/tP3v/rP/9b8z/x/+q//+F/5l9e/Pv/Tf/635n/+V//1fy//v/jP8j//3/+J/yP92yobkP3r3/+7/KP/+6l/y395/+1/z//7P//t7f/bf/k/zh+8+5B//Wf+m/59//9f/WvM/9/+Wf/uWzH37f/i/p//1f5B8//09+fPz7v/+m4ff5P/9//5X92/+5X92P/278uPf/j//L8s//+4P8i++/13f8y/dM/+H9571/23zLw7XfLw7XfLwzffmP//9//x37//X/7789dfP//d/j/yT/7f/xvTv/Xz//3/+r/9V/03/+D/kv/pv/+v+b/+7/8z/L1B34f/Xuw1/04/96N//9zP//t//+//v//k/9P/5L//t//+/zF775t/xvTv/X/5l9//0/+e3/q/8V/13//ffOPvn/9Z/+5v/1f53/5n/+v+e/v//w/yv/w//5X8r9/+///Pz/6b/j/yLz79/z/576Nl2/kfPX//X/Pf/f+1f8h/8n//7/L//z//7+Wf/+f//U9723vv+e7D0/+/v+Vf/v//1/zP/v//l/yf/8/+bfmf/3f//X829//H/+/7t//4/kf3//j95t+dfPv3+Xfn5828Pf8//rL+H7z//7P959++P/5X9f/f/+PfOvP//+//3//X/L//H/8Z8y8M1L//f/7f8z/O/9f/lvzv//X/PfP//t/y7//v//sP7j3g//I/P//jP819+/9//8//HvyP+1f/6y9O/9fP//v/W//tfyP/199yNfPff9f8m//f//v8s///y/+b37//9/mv/vf//X86/95V+Ufvu3/+P+W//7T/7v87//9//+/5l/+7//7/Lvf//e/5Jff/+/+Z/+/x/lv/j/H8p/+b+X/+v9Gy7blP/7//2/k/3z7P/m3n/x//vXmf/7f/+353/6Xf57/8J//9x/kH7/7sP3z/+0/mP//3x/y/z798N/5P83fvz/WvP/P/7X/Pf3H3Xf/Nvf/uH/+vH/7f/8H+Pf3//f7z7//7/X/PfP//v/y7//v//s/+Wfve/f/m3zLz3XffLP3j3XdfPf/v/f/Lf8//+3/Nv/+3/H8p/+b/FfzP//t//L/OP/vvf8r/e//P/+P+nff8D//H/v/m3zL33+7/+/7t/1f/XvOPvvb/yf/u//8X8f//H//rfmf/tv//fy3//7/1/+2+n/mv/Tf/tf86/+e/9f+/v/t/8//+5//+/5v/zX//X/Pvvf8P/+l/6r/9//z/+bfrnv//P/+R/v/0bK9uU//v//7/LfP/+x/+afO/+//+/59//7f80/e/+P/+3zL33P/uf+nff/7f/9P829//H//l/zP/+3//U+X/7tv/lvz//yL/5f+Bfnr/9u/73vf/vf3H3X/7b//3/J/n//y//PfyP+1//7f//V/kP33vfvPvfPufw//6/X/xf5V+/+//XfPuY37L8D6/5eGz3/3//z/6v/1X/5fy/v/tP/tf8lff//v/lv/jf/5f52f/bf//P53//7/9//yT+7/+P/5P/9f/+X8u//7//7fy3/+f//f59/7/x/+z/L//p/+V/mf33r4//5H/+/4H/y5dO/z/8551fMvDM+/PfP/+v/5e//b/kX3//H//t+/N//W/5n/3v//t+ZffP//t+Rd//+/+b/mv/3v//t+f/9f/tvTv/Xf/vfmfv3/xl+R/P/9R/6p//3//3/Lf/Tv/+v87/+1/95/rf/7v/+35P/mv/+v8X/mf/7f8/+Wfvv//W/I/fefg/8j//3/+r/W/fvfv/zP/j/H/+iZdv07//H/3/y/x+/5V//X/6P/nv/fv/fP/H/+NfNvx/+w/uv+333/3+Tf+e/f/6//t/zP/9v/+vz//9f/tvTv/Xf/vfmf/3f//V8b//v//t+d//+/+b8/8++8/+r/VfP/fv/mv5H/+/4H/y5dO/z/8551fMvDM+9/+Pf//ffOvf//f8z/474//5f+B//v//v/8/zXf+b/mf/V/+7/Lf/y//9f8z/+3//V/mf/tv//v87/+T//f/Pfnf/+/+e/Pf//f89/e/+P/+T/5//v//+/P/pv+v/1//p/+Z/8//x/+W/un//b/mf/3v//s/PfP//v/zP//3h7/If/fv//f8//9//p/+Z/+/+H/+B/9+7D//A9326/G/YfW6/697+/91//7/7T+1m3r99K/O2/k/8z/+/P//5+a//+k/f/fBf+/7bZtv3Xw78feDDy988O8Pf8//rL8w//v1X5+Mv/j/H//y/+v+h+sL/t//X/5j+d/+/P/95uJ/9H/5P//3+/v+t////P5+5D/8P/4B/e/77Xv9V/+r/1f/mfz/v/jP8z/5P/+t/eX//s/1n/7/7L/N//33/5fzf///P/M/zP/j//P8/+R/8//13/7n////P5l/9/81//j/Hv8u/8G/91wy88z485///z/6v/3f/bfmf/6X/+3Z3/7n5n/7v/3P/m//mv/kf5J/+X//X/Lf3X//r/m///X/3n+r//z/+/P/nv//v+a/6/97/tvzP//3h7/If/6L//t/zL/+e/9c/ePfd//P/j//W/+Xfv//P/+X/X/8H/LP/W//r/W/Pvfn//3//7+H/6i/b//Pve/2f/u/+2/tZt6/fSvy9k//+G//5/P/Pf//X/P//f/H//rfm3//v/y78/+cvefv+/5J/97///0n/79/3/z73/+/Z/zP/5//x/yf/vX/fbMf/+//p/+d//f/p/81/95+D/y1/+i//+/y1/97/y7/lv/vH/+h/+f77737+m/7r//3/3n9rN/X6/38//B/3D49/Hvv+//+7/l/97/4X/Mfnr/+78//z/+Y/nX/3/y399/8P/+P/+P/+P+W//9//+/zP//v//WfPv//f8j9829+//X8z//v/HvyP/9f/rvzP//P/+7/L//X/7f81/8z/+P/mv/vXvX/5n/zH/+H/5H/9V/+P/Pf/u/x///+59/9///8t//z+Y/lX/2/+7/Wf//+x/6X/uv//X/LfP//p/y7//v/3P5n/Tv//v89/n/7//H/xf9N/wN+3n878feDDzP8zM//y//q/Jv/O1/95/a/f1+v9/P/wf9w9P/x/+w/uP/wP3Pf/P//v/zv//f8i++/8/+lf//8/nP/3//7/8f/HfyX9+54P/zz//6//J//z//3f8z/+R3/9P829+87ff6X///38f8y/894L//f//k97297+/V//d/j95t/1f/Xvsv/9P3/2Lz1+fP/2479Vv3386/6f/R3/2x/lf/3//4/k//+7//7f8h/f//vf8//63P//5n77rgP91wB+4L/z+r/9V7/Vf/l//T/Lff/v/5X/+z1N/mf/6f/1V/97/63/I//7//+/5n/7v//t8z/+i/J/859+N/2v//H/WvP/tP3v/rP/9b8z/x/+q//+F/5l9e/Pv/Tf/635n/+V//1fy//v/jP8j//3/+J/yP92yobkP3r3/+7/KP/+6l/y395/+1/z//7P//t7f/bf/k/zh+8+5B//Wf+m/59//9f/WvM/9/+Wf/uWzH37f/i/p//1f5B8//09+fPz7v/+m4ff5P/9//5X92/+5X92P/278uPf/j//L8s//+4P8i++/13f8y/dM/+H9571/23zLw7XfLw7XfLwzffmP//9//x37//X/7789dfP//d/j/yT/7f/xvTv/Xz//3/+r/9V/03/+D/kv/pv/+v+b/+7/8z/L1B34f/Xuw1/04/96N//9zP//t//+//v//k/9P/5L//t//+/zF775t/xvTv/X/5l9//0/+e3/q/8V/13//ffOPvn/9Z/+5v/1f53/5n/+v+e/v//w/yv/w//5X8r9/+///Pz/6b/j/yLz79/z/576Nl2/kfPX//X/Pf/f+1f8h/8n//7/L//z//7+Wf/+f//U9723vv+e7D0/+/v+Vf/v//1/zP/v//l/yf/8/+bfmf/3f//X829//H/+/7t//4/kf3//j95t+dfPv3+Xfn5828Pf8//rL+H7z//7P959++P/5X9f/f/+PfOvP//+//3//X/L//H/8Z8y8M1L//f/7f8z/O/9f/lvzv//X/PfP//t/y7//v//sP7j3g//I/P//jP819+/9//8//HvyP+1f/6y9O/9fP//v/W//tfyP/199yNfPff9f8m//f//v8s///y/+b37//9/mv/vf//X86/95V+Ufvu3/+P+W//7T/7v87//9//+/5l/+7//7/Lvf//e/5Jff/+/+Z/+/x/lv/j/H8p/+b+X/+v9Gy7blP/7//2/k/3z7P/m3n/x//vXmf/7f/+353/6Xf57/8J//9x/kH7/7sP3z/+0/mP//3x/y/z798N/5P83fvz/WvP/P/7X/Pf3H3Xf/Nvf/uH/+vH/7f/8H+Pf3//f7z7//7/X/PfP//v/y7//v//s/+Wfve/f/m3zLz3XffLP3j3XdfPf/v/f/Lf8//+3/Nv/+3/H8p/+b/FfzP//t//L/OP/vvf8r/e//P/+P+nff8D//H/v/m3zL33+7/+/7t/1f/XvOPvvb/yf/u//8X8f//H//rfmf/tv//fy3//7/1/+2+n/mv/Tf/tf86/+e/9f+/v/t/8//+5//+/5v/zX//X/Pvvf8P/+l/6r/9//z/+bfrnv//P/+R/v/0bK9uU//v//7/LfP/+x/+afO/+//+/59//7f80/e/+P/+3zL33P/uf+nff/7f/9P829//H//l/zP/+3//U+X/7tv/lvz//yL/5f+Bfnr/9u/73vf/vf3H3X/7b//3/J/n//y//PfyP+1//7f//V/kP33vfvPvfPufw//6/X/xf5V+/+//XfPuY37L8D6/5eGz3/3//z/6v/1X/5fy/v/tP/tf8lff//v/lv/jf/5f52f/bf//P53//7/9//yT+7/+P/5P/9f/+X8u//7//7fy3/+f//f59/7/x/+z/L//p/+V/mf33r4//5H/+/4H/y5dO/z/8551fMvDM+/PfP/+v/5e//b/kX3//H//t+/N//W/5n/3v//t+ZffP//t+Rd//+/+b/mv/3v//t+f/9f/tvTv/Xf/vfmfv3/xl+R/P/9R/6p//3//3/Lf/Tv/+v87/+1/95/rf/7v/+35P/mv/+v8X/mf/7f8/+Wfvv//W/I/fefg/8j//3/+r/W/fvfv/zP/j/H/+iZdv07//H/3/y/x+/5V//X/6P/nv/fv/fP/H/+NfNvx/+w/uv+333/3+Tf+e/f/6//t/zP/9v/+vz//9f/tvTv/Xf/vfmf/3f//V8b//v//t+d//+/+b8/8++8/+r/VfP/fv/mv5H/+/4H/y5dO/z/8551fMvDM+9/+Pf//ffOvf//f8z/474//5f+B//v//v/8/zXf+b/mf/V/+7/Lf/y//9f8z/+3//V/mf/tv//v87/+T//f/Pfnf/+/+e/Pf//f89/e/+P/+T/5//v//+/P/pv+v/1//p/+Z/8//x/+W/un//b/mf/3v//s/PfP//v/zP//3h7/If/fv//f8//9//p/+Z/+/+H/+B/9+7D//A9326/G/YfW6/697+/91//7/7T+1m3r99K/O2/k/8z/+/P//5+a//+k/f/fBf+/7bZtv3Xw78feDDy988O8Pf8//rL8w//v1X5+Mv/j/H//y/+v+h+sL/t//X/5j+d/+/P/95uJ/9H/5P//3+/v+t////P5+5D/8P/4B/e/77Xv9V/+r/1f/mfz/v/jP8z/5P/+t/eX//s/1n/7/7L/N//33/5fzf///P/M/zP/j//P8/+R/8//13/7n////P5l/9/81//j/Hv8u/8G/91wy88z485///z/6v/3f/bfmf/6X/+3Z3/7n5n/7v/3P/m//mv/kf5J/+X//X/Lf3X//r/m///X/3n+r//z/+/P/nv//v+a/6/97/tvzP//3h7/If/6L//t/zL/+e/9c/ePfd//P/j//W/+Xfv//P/+X/X/8H/LP/W//r/W/Pvfn//3//7+H/6i/b//Pve/2f/u/+2/tZt6/fSvy9k//+G//5/P/Pf//X/P//f/H//rfm3//v/y78/+cvefv+/5J/97///0n/79/3/z73/+/Z/zP/5//x/yf/vX/fbMf/+//p/+d//f/p/81/95+D/y1/+i//+/y1/97/y7/lv/vH/+h/+f77737+m/7r//3/3n9rN/X6/38//B/3D49/Hvv+//+7/l/97/4X/Mfnr/+78//z/+Y/nX/3/y399/8P/+P/+P/+P+W//9//+/zP//v//WfPv//f8j9829+//X8z//v/HvyP/9f/rvzP//P/+7/L//X/7f81/8z/+P/mv/vXvX/5n/zH/+H/5H/9V/+P/Pf/u/x///+59/9///8t//z+Y/lX/2/+7/Wf//+x/6X/uv//X/LfP//p/y7//v/3P5n/Tv//v89/n/7//H/xf9N/wN+3n878feDDzP8zM//y//q/Jv/O1/95/a/f1+v9/P/wf9w9P/x/+w/uP/wP3Pf/P//v/zv//f8i++/8/+lf//8/nP/3//7/8f/HfyX9+54P/zz//6//J//z//3f8z/+R3/9P829+87ff6X///38f8y/894L//f//k97297+/V//d/j95t/1f/Xvsv/9P3/2Lz1+fP/2479Vv3386/6f/R3/2x/lf/3//4/k//+7//7f8h/f//vf8//63P//5n77rgP91wB+4L/z+r/9V7/Vf/l//T/Lff/v/5X/+z1N/mf/6f/1V/97/63/I//7//+/5n/7v//t8z/+i/J/859+N/2v//H/WvP/tP3v/rP/9b8z/x/+q//+F/5l9e/Pv/Tf/635n/+V//1fy//v/jP8j//3/+J/yP92yobkP3r3/+7/KP/+6l/y395/+1/z//7P//t7f/bf/k/zh+8+5B//Wf+m/59//9f/WvM/9/+Wf/uWzH37f/i/p//1f5B8//09+fPz7v/+m4ff5P/9//5X92/+5X92P/278uPf/j//L8s//+4P8i++/13f8y/dM/+H9571/23zLw7XfLw7XfLwzffmP//9//x37//X/7789dfP//d/j/yT/7f/xvTv/Xz//3/+r/9V/03/+D/kv/pv/+v+b/+7/8z/L1B34f/Xuw1/04/96N//9zP//t//+//v//k/9P/5L//t//+/zF775t/xvTv/X/5l9//0/+e3/q/8V/13//ffOPvn/9Z/+5v/1f53/5n/+v+e/v//w/yv/w//5X8r9/+///Pz/6b/j/yLz79/z/576Nl2/kfPX//X/Pf/f+1f8h/8n//7/L//z//7+Wf/+f//U9723vv+e7D0/+/v+Vf/v//1/zP/v//l/yf/8/+bfmf/3f//X829//H/+/7t//4/kf3//j95t+dfPv3+Xfn5828Pf8//rL+H7z//7P959++P/5X9f/f/+PfOvP//+//3//X/L//H/8Z8y8M1L//f/7f8z/O/9f/lvzv//X/PfP//t/y7//v//sP7j3g//I/P//jP819+/9//8//HvyP+1f/6y9O/9fP//v/W//tfyP/199yNfPff9f8m//f//v8s///y/+b37//9/mv/vf//X86/95V+Ufvu3/+P+W//7T/7v87//9//+/5l/+7//7/Lvf//e/5Jff/+/+Z/+/x/lv/j/H8p/+b+X/+v9Gy7blP/7//2/k/3z7P/m3n/x//vXmf/7f/+353/6Xf57/8J//9x/kH7/7sP3z/+0/mP//3x/y/z798N/5P83fvz/WvP/P/7X/Pf3H3Xf/Nvf/uH/+vH/7f/8H+Pf3//f7z7//7/X/PfP//v/y7//v//s/+Wfve/f/m3zLz3XffLP3j3XdfPf/v/f/Lf8//+3/Nv/+3/H8p/+b/FfzP//t//L/OP/vvf8r/e//P/+P+nff8D//H/v/m3zL33+7/+/7t/1f/XvOPvvb/yf/u//8X8f//H//rfmf/tv//fy3//7/1/+2+n/mv/Tf/tf86/+e/9f+/v/t/8//+5//+/5v/zX//X/Pvvf8P/+l/6r/9//z/+bfrnv//P/+R/v/0bK9uU//v//7/LfP/+x/+afO/+//+/59//7f80/e/+P/+3zL33P/uf+nff/7f/9P829//H//l/zP/+3//U+X/7tv/lvz//yL/5f+Bfnr/9u/73vf/vf3H3X/7b//3/J/n//y//PfyP+1//7f//V/kP33vfvPvfPufw//6/X/xf5V+/+//XfPuY37L8D6/5eGz3/3//z/6v/1X/5fy/v/tP/tf8lff//v/lv/jf/5f52f/bf//P53//7/9//yT+7/+P/5P/9f/+X8u//7//7fy3/+f//f59/7/x/+z/L//p/+V/mf33r4//5H/+/4H/y5dO/z/8551fMvDM+/PfP/+v/5e//b/kX3//H//t+/N//W/5n/3v//t+ZffP//t+Rd//+/+b/mv/3v//t+f/9f/tvTv/Xf/vfmfv3/xl+R/P/9R/6p//3//3/Lf/Tv/+v87/+1/95/rf/7v/+35P/mv/+v8X/mf/7f8/+Wfvv//W/I/fefg/8j//3/+r/W/fvfv/zP/j/H/+iZdv07//H/3/y/x+/5V//X/6P/nv/fv/fP/H/+NfNvx/+w/uv+333/3+Tf+e/f/6//t/zP/9v/+vz//9f/tvTv/Xf/vfmf/3f//V8b//v//t+d//+/+b8/8++8/+r/VfP/fv/mv5H/+/4H/y5dO/z/8551fMvDM+9/+Pf//ffOvf//f8z/474//5f+B//v//v/8/zXf+b/mf/V/+7/Lf/y//9f8z/+3//V/mf/tv//v87/+T//f/Pfnf/+/+e/Pf//f89/e/+P/+T/5//v//+/P/pv+v/1//p/+Z/8//x/+W/un//b/mf/3v//s/PfP//v/zP//3h7/If/fv//f8//9//p/+Z/+/+H/+B/9+7D//A9326/G/YfW6/697+/91//7/7T+1m3r99K/O2/k/8z/+/P//5+a//+k/f/fBf+/7bZtv3Xw78feDDy988O8Pf8//rL8w//v1X5+Mv/j/H//y/+v+h+sL/t//X/5j+d/+/P/95uJ/9H/5P//3+/v+t////P5+5D/8P/4B/e/77Xv9V/+r/1f/mfz/v/jP8z/5P/+t/eX//s/1n/7/7L/N//33/5fzf///P/M/zP/j//P8/+R/8//13/7n////P5l/9/81//j/Hv8u/8G/91wy88z485///z/6v/3f/bfmf/6X/+3Z3/7n5n/7v/3P/m//mv/kf5J/+X//X/Lf3X//r/m///X/3n+r//z/+/P/nv//v+a/6/97/tvzP//3h7/If/6L//t/zL/+e/9c/ePfd//P/j//W/+Xfv//P/+X/X/8H/LP/W//r/W/Pvfn//3//7+H/6i/b//Pve/2f/u/+2/tZt6/fSvy9k//+G//5/P/Pf//X/P//f/H//rfm3//v/y78/+cvefv+/5J/97///0n/79/3/z73/+/Z/zP/5//x/yf/vX/fbMf/+//p/+d//f/p/81/95+D/y1/+i//+/y1/97/y7/lv/vH/+h/+f77737+m/7r//3/3n9rN/X6/38//B/3D49/Hvv+//+7/l/97/4X/Mfnr/+78//z/+Y/nX/3/y399/8P/+P/+P/+P+W//9//+/zP//v//WfPv//f8j9829+//X8z//v/HvyP/9f/rvzP//P/+7/L//X/7f81/8z/+P/mv/vXvX/5n/zH/+H/5H/9V/+P/Pf/u/x///+59/9///8t//z+Y/lX/2/+7/Wf//+x/6X/uv//X/LfP//p/y7//v/3P5n/Tv//v89/n/7//H/xf9N/wN+3n878feDDzP8zM//y//q/Jv/O1/95/a/f1+v9/P/wf9w9P/x/+w/uP/wP3Pf/P//v/zv//f8i++/8/+lf//8/nP/3//7/8f/HfyX9+54P/zz//6//J//z//3f8z/+R3/9P829+87ff6X///38f8y/894L//f//k97297+/V//d/j95t/1f/Xvsv/9P3/2Lz1+fP/2479Vv3386/6f/R3/2x/lf/3//4/k//+7//7f8h/f//vf8//63P//5n77rgP91wB+4L/z+r/9V7/Vf/l//T/Lff/v/5X/+z1N/mf/6f/1V/97/63/I//7//+/5n/7v//t8z/+i/J/859+N/2v//H/WvP/tP3v/rP/9b8z/x/+q//+F/5l9e/Pv/Tf/635n/+V//1fy//v/jP8j//3/+J/yP92yobkP3r3/+7/KP/+6l/y395/+1/z//7P//t7f/bf/k/zh+8+5B//Wf+m/59//9f/WvM/9/+Wf/uWzH37f/i/p//1f5B8//09+fPz7v/+m4ff5P/9//5X92/+5X92P/278uPf/j//L8s//+4P8i++/13f8y/dM/+H9571/23zLw7XfLw7XfLwzffmP//9//x37//X/7789dfP//d/j/yT/7f/xvTv/Xz//3/+r/9V/03/+D/kv/pv/+v+b/+7/8z/L1B34f/Xuw1/04/96N//9zP//t//+//v//k/9P/5L//t//+/zF775t/xv
