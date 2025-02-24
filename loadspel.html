@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements and Daily Newsletter</title>
+    <title>Processing Financial Statements & Prestige AI - Daily Newsletter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,71 +60,21 @@
             background-color: #f4f4f4;
         }
 
-        .newsletter-table {
+        .newsletter-container {
             width: 600px;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
+            margin: auto;
             background-color: #ffffff;
             margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            border-radius: 5px;
+            padding: 20px;
         }
 
         .newsletter-header {
-            padding: 20px 0;
+            text-align: center;
         }
 
         .newsletter-header img {
-            display: block;
-        }
-
-        .newsletter-header h1 {
-            color: #081a56;
-            font-size: 24px;
-            margin-top: 10px;
-        }
-
-        .newsletter-header p {
-            color: #081a56;
-            font-size: 16px;
-            margin: 5px 0 0;
-        }
-
-        .news-stories h2 {
-            color: #081a56;
-            font-size: 20px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #16d1f2;
-            padding-bottom: 5px;
-        }
-
-        .news-stories h3 {
-            color: #081a56;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .news-stories p {
-            color: #333333;
-            font-size: 14px;
-        }
-
-        .footer {
-            background-color: #081a56;
-            color: #ffffff;
-            padding: 10px 0;
-            border-radius: 0 0 8px 8px;
-        }
-
-        .footer p {
-            font-size: 14px;
-            margin: 0;
-        }
-
-        .footer p:last-child {
-            font-size: 12px;
-            margin: 5px 0 0;
+            max-width: 100%;
         }
     </style>
 </head>
@@ -169,76 +119,6 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table>
-        <tr>
-            <td align="center">
-                <table class="newsletter-table">
-                    <tr class="newsletter-header">
-                        <td align="center">
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
-                            <h1>Prestige AI - Daily Newsletter</h1>
-                            <p><span id="currentDate"></span> | Sunrise Edition</p>
-                            <script>
-                              const today = new Date();
-                              const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                              document.getElementById("currentDate").textContent = today.toLocaleDateString('en-US', options);
-                            </script>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="news-stories" style="padding: 20px;">
-                            <h2>Top News Stories</h2>
-
-                            <div style="margin-bottom: 20px;">
-                                <h3><a href="https://www.foxnews.com/video/6369113713112" style="color: #081a56; text-decoration: none;" target="_blank">Central California jail providing essential tools to inmates while saving taxpayers $1M a year</a></h3>
-                                <p>A Central California jail is implementing a program that provides inmates with essential tools and resources, resulting in significant cost savings for taxpayers, estimated at $1 million annually.</p>
-                            </div>
-
-                            <div style="margin-bottom: 20px;">
-                                <h3><a href="https://www.foxnews.com/world/pope-francis-suffering-early-stage-kidney-failure-condition-remains-control-vatican#" style="color: #081a56; text-decoration: none;"  target="_blank">Pope Francis in Critical Condition with Early-Stage Kidney Failure</a></h3>
-                                <p>Pope Francis is currently in critical condition at an Italian hospital, suffering from early-stage kidney failure in addition to bilateral pneumonia. He remains alert and is receiving treatment.</p>
-                            </div>
-
-                            <div style="margin-bottom: 20px;">
-                                <h3><a href="https://www.foxnews.com/world/netanyahu-shows-picture-bibas-family-combat-officers-graduation-remember-what-we-fighting-for#" style="color: #081a56; text-decoration: none;"  target="_blank">Netanyahu Displays Bibas Family Photo, Reminds Officers of War's Purpose</a></h3>
-                                <p>Israeli Prime Minister Benjamin Netanyahu displayed images of Shiri Bibas and her two sons, Ariel and Kfir during a combat officers’ graduation. He reminded that Israel will continue to eliminate the threat to its existence that Hamas represents.</p>
-                            </div>
-
-                            <div style="margin-bottom: 20px;">
-                                <h3><a href="https://www.foxnews.com/world/iran-tests-trump-regime-general-says-wipe-israel-off-map#" style="color: #081a56; text-decoration: none;" target="_blank">Iranian General Threatens to 'Wipe Israel Off the Map' Amid Renewed Sanctions</a></h3>
-                                <p>Following the reimposition of economic sanctions by President Trump, a high-level Iranian general declared that Iran will launch an attack to obliterate Israel.</p>
-                            </div>
-
-                            <div style="margin-bottom: 20px;">
-                                <h3><a href="https://www.firstpost.com/tech/apple-intelligence-finally-coming-to-india-in-april-thanks-to-ios-18-4-update-beta-version-released-13865871.html" style="color: #081a56; text-decoration: none;" target="_blank">Apple Intelligence Coming to India in April with iOS 18.4</a></h3>
-                                <p>Apple's AI suite, Apple Intelligence, will be available in India with the iOS 18.4 update in April. The update expands language support and introduces new AI-powered features, including Priority Notifications.</p>
-                            </div>
-
-                            <div style="margin-bottom: 20px;">
-                                <h3><a href="https://www.foxnews.com/world/uks-nigel-farage-says-political-revolution-sweep-europe-following-vances-munich-comments#" style="color: #081a56; text-decoration: none;" target="_blank">Nigel Farage Predicts 'Political Revolution' in Europe</a></h3>
-                                <p>Nigel Farage, leader of Reform UK, believes a "political revolution" similar to that in the U.S. will sweep through Europe, commenting on JD Vance's recent statements at the Munich Security Conference.</p>
-                            </div>
-
-                            <div style="margin-bottom: 20px;">
-                                <h3><a href="https://www.foxnews.com/world/houthis-target-us-fighter-jet-drone-sam-missiles-first-time#" style="color: #081a56; text-decoration: none;" target="_blank">Houthis Target US Fighter Jet with SAMs for the First Time</a></h3>
-                                <p>Houthi rebels fired surface-to-air missiles at a U.S. F-16 fighter jet, marking the first time such an attack has occurred, according to senior U.S. defense officials.</p>
-                            </div>
-
-                            <p style="color: #b0b0b0; font-size: 12px;"><i>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;" target="_blank">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;" target="_blank">BBC</a>, and  <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;" target="_blank">Firstpost</a>.</i></p>
-                        </td>
-                    </tr>
-
-                    <tr class="footer">
-                        <td align="center">
-                            <p>Joke of the Day:</p>
-                            <p>Why don't scientists trust atoms?  Because they make up everything!</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-
-</body>
-</html>
+    <div class="newsletter-container">
+        <div class="newsletter-header">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAAgAElEQVR4nOzdeXxU1f3/8dcE5qaQgARVqCCqiAIiqKB9U0VREBAUFfFHFBHF/8Au6qIID7roogsq6oI/4p8o4lHsoij4hRBXVFBBReSgCBQQsmHYP/bmzplztj3v7H1m7sx5Z+acGe/N3PM9M+8953zOZDpQFEVRUR9N/4yKImhW0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEURRFUehv0bIEUR
