@@ -54,47 +54,24 @@
 
         .newsletter {
             background-color: #f4f4f4;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
             padding: 20px;
-        }
-
-        .newsletter img {
-            display: block;
-            margin: auto;
-        }
-
-        .newsletter h2 {
-            color: #081a56;
-            font-size: 20px;
             margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .newsletter h1, .newsletter h2, .newsletter h3 {
+            color: #081a56;
         }
 
         .newsletter p {
-            color: #333;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-
-        .newsletter a {
-            color: #081a56;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .joke {
-            color: #081a56;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 5px;
+            color: #333333;
         }
 
         .footer {
-            font-size: 12px;
-            color: #777;
-            padding-top: 20px;
+            background-color: #081a56;
+            color: #ffffff;
+            padding: 10px 0;
+            border-radius: 0 0 8px 8px;
         }
     </style>
 </head>
@@ -140,157 +117,81 @@
     </script>
 
     <div class="newsletter">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f4f4f4;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f4f4">
             <tr>
                 <td align="center">
-                    <table width="600" border="0" cellspacing="0" cellpadding="20" style="background-color: #ffffff;">
+                    <table width="600" border="0" cellspacing="0" cellpadding="20" style="background-color: #ffffff; margin-top: 20px; margin-bottom: 20px; border-radius: 8px;">
+                        <!-- Header -->
                         <tr>
-                            <td align="center">
-                                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
+                            <td align="center" style="padding: 20px 0;">
+                                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
+                                <h1 style="color: #081a56; font-size: 24px; margin-top: 10px;">Prestige AI - Daily Newsletter</h1>
+                                <p style="color: #081a56; font-size: 16px; margin: 5px 0 0;">
+                                    <span id="currentDate"></span> | Sunrise Edition
+                                </p>
+                                <script>
+                                  const today = new Date();
+                                  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                                  document.getElementById("currentDate").textContent = today.toLocaleDateString('en-US', options);
+                                </script>
                             </td>
-                        </tr>
-                        <tr>
-                            <td align="center" style="font-size: 24px; font-weight: bold; color: #081a56; padding-top: 10px;">
-                                Prestige AI - Daily Newsletter
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center" style="font-size: 16px; color: #16d1f2;">
-                                Afternoon Edition - February 24, 2025
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="border-bottom: 2px solid #b0b0b0; padding-top: 10px;"></td>
                         </tr>
 
                         <!-- News Stories -->
                         <tr>
-                            <td>
-                                <h2 style="color: #081a56; font-size: 20px; margin-top: 20px;">Today's Top Stories</h2>
-                                <p style="color: #666;"><i>Curated from Fox News, BBC, and Firstpost.</i></p>
+                            <td style="padding: 20px;">
+                                <h2 style="color: #081a56; font-size: 20px; margin-bottom: 15px; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top News Stories</h2>
 
                                 <!-- Story 1 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0">
-                                    <tr>
-                                       <td width="120" valign="top">
-                                         <a href="https://www.foxnews.com/video/6369219420112" style="text-decoration: none;">
-                                         <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/e4326284-1572-42ad-ad7d-95104f4bd049/f3dff30c-1b98-4b5c-9990-4296ff9c4794/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Hamas' days 'are numbered'" width="110" style="border-radius: 4px;">
-                                         </a>
-                                        </td>
-                                        <td valign="top">
-                                            <a href="https://www.foxnews.com/video/6369219420112" style="color: #081a56; text-decoration: none; font-size: 16px; font-weight: bold;">Hamas' days 'are numbered', former Netanyahu chief of staff claims</a>
-                                            <p style="color: #333; font-size: 14px; margin-top: 5px;">A former chief of staff for Israeli Prime Minister Netanyahu has stated that Hamas' time is running out, suggesting an intensification of military operations in the region.</p>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <div style="margin-bottom: 20px;">
+                                    <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;"><a href="https://www.foxnews.com/video/6369113713112" style="color: #081a56; text-decoration: none;" target="_blank">Central California jail providing essential tools to inmates while saving taxpayers $1M a year</a></h3>
+                                    <p style="color: #333333; font-size: 14px;">A Central California jail is implementing a program that provides inmates with essential tools and resources, resulting in significant cost savings for taxpayers, estimated at $1 million annually.</p>
+                                </div>
 
                                 <!-- Story 2 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0">
-                                    <tr>
-                                      <td width="120" valign="top">
-                                         <a href="https://www.foxnews.com/video/6369202738112" style="text-decoration: none;">
-                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/80d7a3c9-c6a3-4ba9-8a7e-63b5c8b47714/76de694c-19cd-412e-9f40-dcdb9088c424/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump on Ukraine deal" width="110" style="border-radius: 4px;">
-                                        </a>
-                                        </td>
-                                        <td valign="top">
-                                             <a href="https://www.foxnews.com/video/6369202738112" style="color: #081a56; text-decoration: none; font-size: 16px; font-weight: bold;">Trump figures 'we're pretty close to a deal' with Ukraine over war funds</a>
-                                            <p style="color: #333; font-size: 14px; margin-top: 5px;">Former President Trump believes a deal is imminent regarding funding for Ukraine. This likely relates to discussions around financial aid and military support.</p>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <div style="margin-bottom: 20px;">
+                                    <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/pope-francis-suffering-early-stage-kidney-failure-condition-remains-control-vatican#" style="color: #081a56; text-decoration: none;"  target="_blank">Pope Francis in Critical Condition with Early-Stage Kidney Failure</a></h3>
+                                    <p style="color: #333333; font-size: 14px;">Pope Francis is currently in critical condition at an Italian hospital, suffering from early-stage kidney failure in addition to bilateral pneumonia. He remains alert and is receiving treatment.</p>
+                                </div>
 
-                                 <!-- Story 3 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0">
-                                    <tr>
-                                      <td width="120" valign="top">
-                                         <a href="https://www.foxnews.com/world/trump-envoy-visits-injured-ukrainian-soldiers-deliver-message-gets-asked-simple-question#" style="text-decoration: none;">
-                                          <img src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/6b153f22-10aa-4210-830a-6f006f6beae8/992bfa61-8c34-4641-9d64-e728dbe19b64/1280x720/match/image.jpg" alt="Ukraine-Russia War Update" width="110" style="border-radius: 4px;">
-                                      </a>
-                                        </td>
-                                        <td valign="top">
-                                            <a href="https://www.foxnews.com/world/trump-envoy-visits-injured-ukrainian-soldiers-deliver-message-gets-asked-simple-question#" style="color: #081a56; text-decoration: none; font-size: 16px; font-weight: bold;">US Envoy Nears Rare Minerals Deal with Ukraine</a>
-                                            <p style="color: #333; font-size: 14px; margin-top: 5px;">President Trump's envoy is close to securing a deal for access to Ukraine's rare minerals. The deal is framed within the context of ongoing US support against Russian aggression.</p>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <!-- Story 3 -->
+                                <div style="margin-bottom: 20px;">
+                                    <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/netanyahu-shows-picture-bibas-family-combat-officers-graduation-remember-what-we-fighting-for#" style="color: #081a56; text-decoration: none;"  target="_blank">Netanyahu Displays Bibas Family Photo, Reminds Officers of War's Purpose</a></h3>
+                                    <p style="color: #333333; font-size: 14px;">Israeli Prime Minister Benjamin Netanyahu displayed images of Shiri Bibas and her two sons, Ariel and Kfir during a combat officers’ graduation. He reminded that Israel will continue to eliminate the threat to its existence that Hamas represents.</p>
+                                </div>
 
                                 <!-- Story 4 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0">
-                                  <tr>
-                                      <td width="120" valign="top">
-                                            <a href="https://www.foxnews.com/video/6369199147112" style="text-decoration: none;">
-                                             <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/45a5a577-589f-4607-83a1-0014f604e682/ce89c5ba-669e-4129-8fcc-98e8385ed759/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="White House, Ukraine nearing deal for access to rare minerals" width="110" style="border-radius: 4px;">
-                                            </a>
-                                        </td>
-                                        <td valign="top">
-                                            <a href="https://www.foxnews.com/video/6369199147112" style="color: #081a56; text-decoration: none; font-size:16px; font-weight:bold">White House, Ukraine nearing deal for access to rare minerals</a>
-                                           <p style="color: #333; font-size: 14px; margin-top: 5px;">The White House and Ukraine are reportedly nearing a deal that would grant the US access to Ukraine's rare mineral resources. The deal has significant geopolitical and economic implications.</p>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <div style="margin-bottom: 20px;">
+                                    <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/iran-tests-trump-regime-general-says-wipe-israel-off-map#" style="color: #081a56; text-decoration: none;" target="_blank">Iranian General Threatens to 'Wipe Israel Off the Map' Amid Renewed Sanctions</a></h3>
+                                    <p style="color: #333333; font-size: 14px;">Following the reimposition of economic sanctions by President Trump, a high-level Iranian general declared that Iran will launch an attack to obliterate Israel.</p>
+                                </div>
 
                                 <!-- Story 5 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0">
-                                    <tr>
-                                        <td width="120" valign="top">
-                                            <a href="https://www.firstpost.com/vantage/israeli-pm-benjamin-netanyahu-gifts-a-golden-pager-to-donald-trump-vantage-with-palki-sharma-n18g-vd892932/" style="text-decoration: none;">
-                                               <img src="https://www.firstpost.com/world/as-germany-goes-to-vote-far-right-afd-puts-leftists-moderates-on-notice/type=normal" alt="Netanyahu gifts Trump a golden pager" width="110" height="62" style="border-radius: 4px;">
-                                             </a>
-                                             </td>
-                                          <td valign="top">
-                                            <a href="https://www.firstpost.com/vantage/israeli-pm-benjamin-netanyahu-gifts-a-golden-pager-to-donald-trump-vantage-with-palki-sharma-n18g-vd892932/" style="color: #081a56; text-decoration: none; font-size: 16px; font-weight: bold;">Netanyahu Gifts Trump a Golden Pager</a>
-                                            <p style="color: #333; font-size: 14px;  margin-top: 5px;">Israeli PM Benjamin Netanyahu presented Donald Trump with a golden pager, a symbolic gift highlighting the close relationship between the two leaders.</p>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <div style="margin-bottom: 20px;">
+                                    <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;"><a href="https://www.firstpost.com/tech/apple-intelligence-finally-coming-to-india-in-april-thanks-to-ios-18-4-update-beta-version-released-13865871.html" style="color: #081a56; text-decoration: none;" target="_blank">Apple Intelligence Coming to India in April with iOS 18.4</a></h3>
+                                    <p style="color: #333333; font-size: 14px;">Apple's AI suite, Apple Intelligence, will be available in India with the iOS 18.4 update in April. The update expands language support and introduces new AI-powered features, including Priority Notifications.</p>
+                                </div>
 
                                 <!-- Story 6 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0">
-                                    <tr>
-                                     <td width="120" valign="top">
-                                          <a href="https://www.foxnews.com/world/economy-immigration-elon-musk-center-german-election-conservative-candidate-favorite-win" style="text-decoration: none;">
-                                           <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/scholz-and-merz-germany-debate-scaled.jpg?ve=1&tl=1" alt="German Election" width="110" style="border-radius: 4px;">
-                                      </a>
-                                   </td>
-                                   <td valign="top">
-                                         <a href="https://www.foxnews.com/world/economy-immigration-elon-musk-center-german-election-conservative-candidate-favorite-win"  style="color: #081a56; text-decoration: none;font-size: 16px; font-weight: bold;">German Elections: Conservatives Poised for Victory</a>
-                                         <p style="color: #333; font-size: 14px; margin-top: 5px">Germany's conservative Christian Democrats, led by Friedrich Merz, are expected to win Sunday's elections. The election focuses on key issues like the economy, immigration, and security.</p>
-                                    </td>
-                                    </tr>
-                                </table>
+                                <div style="margin-bottom: 20px;">
+                                    <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/uks-nigel-farage-says-political-revolution-sweep-europe-following-vances-munich-comments#" style="color: #081a56; text-decoration: none;" target="_blank">Nigel Farage Predicts 'Political Revolution' in Europe</a></h3>
+                                    <p style="color: #333333; font-size: 14px;">Nigel Farage, leader of Reform UK, believes a "political revolution" similar to that in the U.S. will sweep through Europe, commenting on JD Vance's recent statements at the Munich Security Conference.</p>
+                                </div>
 
-                               <!-- Story 7-->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                                     <tr>
-                                       <td width="120" valign="top">
-                                        <a href="https://www.foxnews.com/video/6369156603112" style="text-decoration: none;">
-                                          <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/ccea822d-a4f6-446b-9f65-1618ccf3e944/eaae3dfd-03b7-4455-8d39-0734411da563/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Kentucky DMV Shooting" width="110" style="border-radius:4px">
-                                       </a>
-                                   </td>
-                                  <td valign="top">
-                                            <a href="https://www.foxnews.com/video/6369156603112" style="color: #081a56; text-decoration: none; font-size: 16px; font-weight:bold">Three Killed at a Kentucky DMV Shooting</a>
-                                           <p style="color: #333; font-size: 14px; margin-top: 5px;">A shooting at a Kentucky DMV resulted in three fatalities. Local authorities are investigating the incident.</p>
-                                        </td>
-                                     </tr>
-                                </table>
-
+                                <!-- Story 7 -->
+                                <div style="margin-bottom: 20px;">
+                                    <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/houthis-target-us-fighter-jet-drone-sam-missiles-first-time#" style="color: #081a56; text-decoration: none;" target="_blank">Houthis Target US Fighter Jet with SAMs for the First Time</a></h3>
+                                    <p style="color: #333333; font-size: 14px;">Houthi rebels fired surface-to-air missiles at a U.S. F-16 fighter jet, marking the first time such an attack has occurred, according to senior U.S. defense officials.</p>
+                                </div>
+                                <p style="color: #b0b0b0; font-size: 12px;"><i>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;" target="_blank">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;" target="_blank">BBC</a>, and  <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;" target="_blank">Firstpost</a>.</i></p>
                             </td>
                         </tr>
 
-                        <tr>
-                             <td style="border-bottom: 2px solid #b0b0b0; padding-top: 10px;"></td>
-                        </tr>
-
-                       <tr>
-                            <td align="center" style="padding-top: 20px;">
-                              <p class="joke">Joke of the Day</p>
-                                <p style="color: #333; font-size: 14px;">Why don't scientists trust atoms? Because they make up everything!</p>
-                            </td>
-                        </tr>
-
+                        <!-- Footer -->
                         <tr>
                             <td align="center" class="footer">
-                                &copy; 2025 Prestige AI. All rights reserved.
+                                <p style="font-size: 14px; margin: 0;">Joke of the Day:</p>
+                                <p style="font-size: 12px; margin: 5px 0 0;">Why don't scientists trust atoms?  Because they make up everything!</p>
                             </td>
                         </tr>
                     </table>
