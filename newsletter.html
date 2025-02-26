@@ -6,158 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prestige AI - Daily Newsletter</title>
 </head>
-<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333;">
 
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
-    <tr>
-        <td align="center" style="padding: 20px;">
-            <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="border-collapse: collapse; background-color: #ffffff;">
-                <!-- Header -->
-                <tr>
-                    <td align="center" bgcolor="#081a56" style="padding: 20px;">
-                        <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                        <h1 style="color: #ffffff; margin: 10px 0 5px 0; font-size: 24px;">Prestige AI - Daily Newsletter</h1>
-                        <p style="color: #16d1f2; margin: 0;">
-                            <script>
-                                const today = new Date();
-                                document.write(today.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
-                            </script> - Sunrise Edition
-                        </p>
-                    </td>
-                </tr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #081a56; color: #fff; padding: 20px;">
+        <tr>
+            <td align="center">
+                <!-- Base64 Encoded Logo -->
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/h2JAAAAMFBMVEX///8AAAD8/Pz5+fnMzMzx8fH39/fW1tbr6+vj4+P19fXo6Oje3t7i4uLq6urPz88yT2WPAAAGbklEQVR4nO2d25qrIAyGq6Dg///S0zJ2C5J2+3Jc/X6l1qR0AicREBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgF2GoyfR6d/L9fHy4+V0OsrGxsr19fXx+evrOx8H2RjBwcH/4eHh/0dHRx8ZGRl+g4OD/9fNlyQyMjL69dXV1zM2NlZJp9Pfh4eHR+/evdvpdDqbZDL1ej0ej8dbdXV1x8jIyL6dnp7m5+fn5yckJMjPz+fBwcFv4vF4/f7+/r77+/v7AwIC1nNzc/vW1tb6g4ODL05OTk5PT/Nz8/Pz34ODg79jY2N7e3v7i4uL34eHh19JSUmNjY3tLS0tnZ2dvbm5+RsQEDAxMSF9fX19fX39i4uLX1xcfFvHxcW9tbW1iIiI9vb29vT0dG9vb9/e3n47OzvHy8vLjYyMfFNTU39/f//x8fG/m5qafD09/fDw8N27d+8KDAx8+PDh3rVr1woLC7sGBwe/iYmJd/fu3QUFBeW1a9d2jx8//k1NTT4bGxsjIyPfAENDQ/Pnzh0jIyN7R48e7cnJyff27ds5OjrK9fb2fvny5R0/P7+fn59fvZ6fFxcX/9DQ0IuKikp/f3//8PCw4eHh38nJyf8/Pz/+9ddfnx8/fvybm5t/4+Pjf+fn5//19fXb2tr6f//79+//jw4NfnZ29sLCwv97e3uvt7f306dP/9/c3P+Hh4c/Njb2r6ys/E9PT58+ffr0f9ra2u+Pj4+/Pj4+fL8vPz+/QkND/xsbG4+Pj/9HR0efmJj4v2fPnv2zs7O/FhYWPjIyfKdr58vLy/8+Pj4eHBw8ffr0jxw58k9MTLxbW1s/Pz8/cujhYxNPT09/Pz8//uPHj//r6+v/7dq1q1+/fv36+Pj483Nzc/Nvb2//DAwM/Ldv3743NDT+t7S0/PLy8q/Ozo7G/3nL9+/fv7e2tv709PT/pqamL/X19f8fHx8/PT39Xlxc+Pj4+NfW1j41NfVPTk7+BwYGPjk5+VVXV/8BAPv4+PjNzMz8q6qq/gEAGD99+vSrq6t/zZo164cPHzo/P//Pzs7+/v7+xsbG169ff+fn5//MzMzz8/P/lZSU/AMDwxdHR0c/JyfnPzMz8w4ODP0BAPjAw8JcvX/7nzp37W1pa/mZmZv4DAPAXLlz45cuX/9HR0f9fXl7+BQAYH3r+/PnV1dX/6urq/wEA8E8PDz87O/s/Nzf3Dw8Pf9euXfvAwMDHAQD4zMnJ+dmzZ/83Nzd/AwAw/uDBg0dJScn8Q4ODP0BAPjs6Ov4JCQn/ycnJ/wEAsP79+/c3Ozv7z8zM/A8NDf0DAIi/ffv2q6ur/6Oiov8DAMQfP3787NmzfycnJ/8DAMTfvn371dXV/1lZWf8DAMTDw8NPTEz8HxwcfAEA8AwJCfnw4cPHx8f/AQAQE5KSPjAw8A8ODv4DAPAZPz+/yY+P/wIA8Bk6OrrLSkr+HRsb+wMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwN80g7kU7j+/97e3v+nu7v54enr6JRAQ/9FoNOe+vn719fX1X1xc/BITEyMTE5N2dnaWiYmJ3rx587/+/v4BCQkJTp8+/e7cuXPevHnz7t69e/fu3bt37969e/fu3bv+z26zJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg3+UfpJm6n43fAAAAAElFTkSuQmCC" alt="Prestige AI Logo" style="width: 150px; height: auto;">
+                <h1 style="margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
+                <p style="margin: 0;">
+                    <?php echo date("F j, Y"); ?> | Sunrise Edition
+                </p>
+            </td>
+        </tr>
+    </table>
 
-                <!-- News Stories -->
-                <tr>
-                    <td style="padding: 20px;">
-                        <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top Stories</h2>
+    <table width="80%" border="0" cellspacing="0" cellpadding="20" align="center" style="background-color: #fff;">
+        <tr>
+            <td>
+                <h2 style="color: #081a56;">Top Stories</h2>
+                <p>Compiled from published news stories from Firstpost.</p>
 
-                        <!-- Story 1 -->
-                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-bottom: 20px;">
-                            <tr>
-                                <td width="120" valign="top" style="padding-right: 15px;">
-                                    <a href="https://www.foxnews.com/video/6369278205112" style="text-decoration: none;">
-                                        <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/e8c0f615-1752-4d43-b505-c5a54b499537/eb12d65b-a364-4662-bf13-beadc2e804f9/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump expresses hope for an end to the Russia-Ukraine war" width="110" height="62" style="display: block; border: 1px solid #b0b0b0;">
-                                    </a>
-                                </td>
-                                <td>
-                                    <h3 style="color: #081a56; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/video/6369278205112" style="color: #081a56; text-decoration: none;">Trump expresses hope for an end to the Russia-Ukraine war</a></h3>
-                                    <p style="color: #333333; margin: 0;">Former President Trump discusses his desire for a peaceful resolution to the ongoing conflict between Russia and Ukraine.</p>
-                                </td>
-                            </tr>
-                        </table>
+                <!-- News Story 1 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.firstpost.com/world/g20-finance-ministers-and-central-bankers-meet-amid-rising-tensions-13866701.html" style="color: #081a56; text-decoration: none;">G20 Finance Ministers Meet Amid Rising Tensions</a></h3>
+                    <p>Finance ministers and central bankers from the G20 nations are convening in South Africa, with disagreements over climate finance, debt, and inequalities.  Key members are absent or have reduced presence, and there's little hope for consensus on core issues advocated by President Cyril Ramaphosa.</p>
+                </div>
 
-                        <!-- Story 2 -->
-                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-bottom: 20px;">
-                            <tr>
-                                <td width="120" valign="top" style="padding-right: 15px;">
-                                  <a href="https://www.firstpost.com/world/ukraine-russia-war-3-years-live-updates-zelenskyy-three-years-of-resistance-on-anniversary-of-russian-invasion-13866235.html" style="text-decoration: none;">
-                                    <img src="https://images.firstpost.com/uploads/2025/02/firstpost-news-latest-28-2025-02-3a6e21ca262576adbe28407410977d2c-1200x675.jpg?im=FitAndFill=(284,159)" alt="Ukraine Russia War" width="110" height="62" style="display: block; border: 1px solid #b0b0b0;">
-                                  </a>
-                                </td>
-                                <td>
-                                    <h3 style="color: #081a56; margin: 0 0 5px 0;"><a href="https://www.firstpost.com/world/ukraine-russia-war-3-years-live-updates-zelenskyy-three-years-of-resistance-on-anniversary-of-russian-invasion-13866235.html"  style="color: #081a56; text-decoration: none;">Ukraine-Russia 3 years war Live Updates: European leaders huddle in Kyiv, Macron arrives at White House</a></h3>
-                                    <p style="color: #333333; margin: 0;">European leaders convene in Kyiv to mark the third anniversary of the Russia-Ukraine war, while discussions continue at the White House with President Macron's arrival.</p>
-                                </td>
-                            </tr>
-                        </table>
+                <!-- News Story 2 -->
+                 <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.firstpost.com/world/trump-says-zelenskyy-will-visit-us-to-sign-rare-earth-deal-for-continued-military-aid-13866694.html" style="color: #081a56; text-decoration: none;">Trump Announces Zelenskyy Visit for Rare Earth Deal</a></h3>
+                     <p>US President Donald Trump announced that Ukrainian President Volodymyr Zelenskyy will visit the White House to sign a rare earth minerals deal, essential for continued US military aid to Ukraine. This follows tense negotiations and a war of words between the two leaders.</p>
+                </div>
 
-                        <!-- Story 3 -->
-                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-bottom: 20px;">
-                           <tr>
-                                <td width="120" valign="top" style="padding-right: 15px;">
-                                  <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="text-decoration: none;">
-                                    <img src="https://images.firstpost.com/uploads/2025/02/Apple-to-launch-new-MacBook-Air-with-M4-chip-next-month-2025-02-01d295cffa3adfc6ed844b10bc762bd0-1200x675.jpg?im=FitAndFill=(596,336)" alt="Apple Macbook Air" width="110" height="62" style="display: block; border: 1px solid #b0b0b0;">
-                                   </a>
-                                </td>
-                                <td>
-                                     <h3 style="color: #081a56; margin: 0 0 5px 0;"><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color: #081a56; text-decoration: none;">Apple to launch new MacBook Air with M4 chip next month</a></h3>
-                                    <p style="color: #333333; margin: 0;">Apple is set to release its next-generation MacBook Air models in March, featuring the new M4 chip for enhanced performance and efficiency.</p>
-                                </td>
-                            </tr>
-                        </table>
+                <!-- News Story 3 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.firstpost.com/world/to-seek-trumps-support-ukraine-agrees-on-terms-of-us-critical-mineral-deal-13866690.html" style="color: #081a56; text-decoration: none;">Ukraine Agrees to US Critical Mineral Deal</a></h3>
+                    <p>Ukraine and the US have agreed on a draft mineral deal, granting the US access to Ukraine's rare earth minerals.  This agreement is central to President Trump's condition for continuing support to Kyiv and is hoped to secure ongoing military aid.</p>
+                </div>
 
-                         <!-- Story 4 -->
-                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-bottom: 20px;">
-                            <tr>
-                                <td width="120" valign="top" style="padding-right: 15px;">
-                                  <a href="https://www.foxnews.com/world/state-treasury-departments-reimposes-maximum-pressure-sanctions-irans-oil-trade#" style="text-decoration: none;">
-                                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/iran-oil.jpg?ve=1&tl=1" alt="Iran Oil Sanctions" width="110" height="62" style="display: block; border: 1px solid #b0b0b0;">
-                                   </a>
-                                </td>
-                                <td>
-                                    <h3 style="color: #081a56; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/world/state-treasury-departments-reimposes-maximum-pressure-sanctions-irans-oil-trade#" style="color: #081a56; text-decoration: none;">U.S. Reimposes Sanctions on Iran's Oil Trade</a></h3>
-                                    <p style="color: #333333; margin: 0;">The U.S. State and Treasury Departments have reimposed maximum pressure sanctions on Iran's oil trade, targeting a network of illicit shipping facilitators.</p>
-                                </td>
-                            </tr>
-                        </table>
+                <!-- News Story 4 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                   <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.firstpost.com/world/starmer-commits-to-boost-defence-spending-to-2-5-of-gdp-by-2027-on-eve-of-us-trip-13866682.html" style="color: #081a56; text-decoration: none;">UK's Starmer Boosts Defence Spending Ahead of US Trip</a></h3>
+                    <p>UK Prime Minister Keir Starmer announced an increase in defense spending to 2.5% of GDP by 2027, with a target of 3%, signaling support for European security to US President Trump. The increase will be funded by cuts to international aid.</p>
+                </div>
 
+                <!-- News Story 5 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.firstpost.com/world/eu-chief-to-seek-indias-help-in-enforcing-russia-sanctions-during-meeting-with-pm-modi-13866661.html" style="color: #081a56; text-decoration: none;">EU Chief to Seek India's Help in Enforcing Russia Sanctions</a></h3>
+                    <p>European Commission President Ursula von der Leyen will discuss enforcing sanctions on Russia with Indian Prime Minister Narendra Modi.  The visit also aims to advance negotiations on a free trade agreement.</p>
+                </div>
 
-                        <!-- Story 5 -->
-                         <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-bottom: 20px;">
-                           <tr>
-                                <td width="120" valign="top" style="padding-right: 15px;">
-                                 <a href="https://www.firstpost.com/tech/nvidia-launches-new-free-ai-tool-that-can-teach-american-sign-language-13865297.html" style="text-decoration: none;">
-                                    <img src="https://images.firstpost.com/uploads/2025/02/NVIDIA-launches-new-free-AI-tool-that-can-teach-American-Sign-Language-2025-02-98f4394aeb187f3a45f46243c6ccd343-1200x675.jpg?im=FitAndFill=(596,336)" alt="Nvidia AI" width="110" height="62" style="display: block; border: 1px solid #b0b0b0;">
-                                   </a>
-                                </td>
-                                <td>
-                                    <h3 style="color: #081a56; margin: 0 0 5px 0;"><a href="https://www.firstpost.com/tech/nvidia-launches-new-free-ai-tool-that-can-teach-american-sign-language-13865297.html" style="color: #081a56; text-decoration: none;">NVIDIA launches new free AI tool that can teach American Sign Language</a></h3>
-                                    <p style="color: #333333; margin: 0;">NVIDIA has released 'Signs,' a free AI-powered tool to make learning American Sign Language (ASL) more accessible and interactive.</p>
-                                </td>
-                            </tr>
-                        </table>
+                <!-- News Story 6 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.firstpost.com/tech/how-deepseeks-ai-models-gave-nvidias-h20-chips-a-major-boost-in-china-sent-demand-rocketing-13866458.html" style="color: #081a56; text-decoration: none;">DeepSeek's AI Models Boost Demand for NVIDIA's H20 Chips in China</a></h3>
+                   <p>DeepSeek's cost-efficient AI models have significantly increased demand for NVIDIA's H20 chips in China. Major tech firms are increasing orders, highlighting NVIDIA's continued dominance in the AI hardware market, despite US export restrictions.</p>
+                </div>
 
-                        <!-- Story 6 -->
-                         <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-bottom: 20px;">
-                          <tr>
-                                <td width="120" valign="top" style="padding-right: 15px;">
-                                 <a href="https://www.foxnews.com/video/6369251157112" style="text-decoration: none;">
-                                   <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/0f3a6622-2f66-49a7-a5b4-8b44c490d3e0/fdaffeab-de27-4500-acbf-8b3ce8a21549/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="Trump to meet with France's Macron" width="110" height="62" style="display: block; border: 1px solid #b0b0b0;">
-                                   </a>
-                                </td>
-                                <td>
-                                    <h3 style="color: #081a56; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/video/6369251157112" style="color: #081a56; text-decoration: none;">Trump to meet with France's Macron to discuss Europe's role in Ukraine peace talks</a></h3>
-                                    <p style="color: #333333; margin: 0;">President Trump is scheduled to meet with French President Macron to discuss the ongoing peace talks and Europe's involvement in resolving the Ukraine conflict.</p>
-                                </td>
-                            </tr>
-                        </table>
-                         <!-- Story 7 -->
-                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-bottom: 20px;">
-                          <tr>
-                                <td width="120" valign="top" style="padding-right: 15px;">
-                                 <a href="https://www.firstpost.com/world/eu-adopts-16th-russia-sanctions-package-targets-crypto-exchange-13866305.html" style="text-decoration: none;">
-                                   <img src="https://images.firstpost.com/uploads/2025/02/Representational-Image-2025-02-24T211130.106-2025-02-bacdef4ea4bdafd0ddc695188161ad08.jpg?im=FitAndFill=(596,336)" alt="EU Sanctions" width="110" height="62" style="display: block; border: 1px solid #b0b0b0;">
-                                </a>
-                                </td>
-                                <td>
-                                      <h3 style="color: #081a56; margin: 0 0 5px 0;"><a href="https://www.firstpost.com/world/eu-adopts-16th-russia-sanctions-package-targets-crypto-exchange-13866305.html" style="color: #081a56; text-decoration: none;">EU adopts 16th Russia sanctions package, targets crypto exchange</a></h3>
-                                    <p style="color: #333333; margin: 0;">The EU has approved a 16th round of sanctions against Russia, including targeting a cryptocurrency exchange for the first time.</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
+                 <!-- News Story 7 -->
+                <div style="margin-bottom: 20px; padding-bottom: 15px;">
+                    <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.firstpost.com/world/six-years-of-balakot-airstrike-heres-how-indias-bold-military-operation-hit-pakistan-out-of-the-blue-13866697.html" style="color:#081a56; text-decoration: none">Six Years of Balakot Airstrike</a></h3>
+                    <p>This article revisits India's Balakot airstrike, a significant military operation against Pakistan. It highlights the boldness and strategic importance of the operation, which occurred six years ago.</p>
+                </div>
 
-                 <!-- Sources -->
-                <tr>
-                    <td style="padding: 20px; text-align: center; color: #b0b0b0; font-size: 12px;">
-                        This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #081a56;">Fox News</a>,  <a href="https://www.firstpost.com" style="color: #081a56;">Firstpost</a>.  Click the links to view their full content.
-                    </td>
-                </tr>
+                <p>
+                    For more details, visit <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
+                </p>
 
+                 <!-- Joke of the Day -->
+                <div style="margin-top: 30px; padding-top: 15px; border-top: 2px solid #16d1f2;">
+                    <h3 style="color: #081a56;">Joke of the Day</h3>
+                    <p>Why don't scientists trust atoms?</p>
+                    <p>Because they make up everything!</p>
+                </div>
 
-                <!-- Footer -->
-                <tr>
-                    <td align="center" bgcolor="#081a56" style="padding: 20px;">
-                        <p style="color: #ffffff; margin: 0;">&copy; 2025 Prestige AI. All rights reserved.</p>
-                        <p style="color:#16d1f2; margin-top:1em;">Joke of the Day: Why don't scientists trust atoms?  Because they make up everything!</p>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
+            </td>
+        </tr>
+    </table>
 
 </body>
 </html>
+
 ```
