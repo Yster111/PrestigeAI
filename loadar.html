@@ -52,33 +52,40 @@
             margin: 10px auto;
         }
 
-        .newsletter {
-            background-color: #f4f4f4;
-            color: #333;
+        table {
+            width: 100%;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 0;
+        }
+
+        .newsletter-header {
+            background-color: #081a56;
+            color: #ffffff;
+            text-align: center;
             padding: 20px;
         }
 
-        .newsletter table {
-            max-width: 800px;
-            margin: auto;
-            background-color: #fff;
+        .newsletter-header img {
+            width: 150px;
+            height: auto;
         }
 
-        .newsletter h1, .newsletter h2, .newsletter h3 {
-            color: #081a56;
-        }
-
-        .newsletter a {
-            color: #16d1f2;
-            text-decoration: none;
-        }
-
-        .joke {
-            background-color: #081a56;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
+        .newsletter-content {
+            width: 80%;
+            background-color: #ffffff;
+            margin: 20px auto;
             border-radius: 5px;
+            padding: 20px;
+        }
+
+        .newsletter-footer {
+            background-color: #081a56;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 5px;
+            padding: 20px;
         }
     </style>
 </head>
@@ -123,154 +130,70 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #081a56; color: #fff;">
-            <tr>
-                <td align="center" style="padding: 20px;">
-                    <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                    <h1 style="font-size: 24px; margin-top: 10px;">Prestige AI - Daily Newsletter</h1>
-                    <p style="margin: 5px 0 0;">
-                        <span style="color: #16d1f2;">
-                            <?php echo date("F j, Y"); ?>
-                        </span> - Afternoon Edition
-                    </p>
-                </td>
-            </tr>
-        </table>
+    <div class="newsletter-header">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/PPLAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAMAUExURUxpcSM2hSNBhk94nDFQjjZGlUZvgV19oEV9n0NyiU16nzlMkD5FlUFtnUV7oEF5oE6CgVt/pE+CgUJ3oT5FlUF4oU6FhFt/pU6Dg0F4oUB3ok9/pEp/mzxElEJ5oU+DgVB7nkV6oEh/m////1aBf1mAf1+Agl+CgVyBf2CCgVyBf2CCf16BgV2Bf2CBf16BgV6CgV6CgV2BgV6CgF+BgF6CgV6BgF+BgF6BgF2BgV6BgF6BgV2BgV6BgGCBgF+BgF6BgF2BgV2BgV6DgV+Bf1+BgF6BgV6BgV2BgV6BgV2BgWAAV4AAFoACGEACmYAC2kBDW4BDXAAD3EBEHEBE3IBFHQBF3cCGHkBG3sCG34DHn8EIn8EIYAEI4IEJIQEJ4cGJ4kHKIsHKY0ILJAHK5AIK5EILpEIL5EIL5EIL5IIJJQIJ5QIJJUIJ5QIJJYIJ5cIJ5gIKJkIKZ4KLJkKLJ4KLqAKL6IKMqAMLsAM74ANL8AN8EAPMEAPcIBPcMBPsMBPsQBP8UBPscCP8cCP8gDQckDQcoEQMsEQMwEQMsEQcsEQcsEQcsEQssERMsERMsERMsERcwERcwERcwERcwERcwERcsEREwEBEwEBExEBExEBExERExEVExEVExERExEVExERExEVEwEBMwEBEyERExEVEyEVExEVExEVEyEVExEVEyERExEVEyEVExEVExEVExERExEVExEVExEVExEUExEVExEVExEVExEVExEVExEVExEUExEVExEVExEVExEVExEVExERExEVExEUExEVExEVExEVExEUExEUExEVExEVExEUExEVExEVExEVExEVExEUExEUExEVExEUExEVExEUExEURFRYSEhYaGxweISIjIyQlJScnKSsrLCQ4ME1PT1JRUVJTVVRWV1hZXVpbXF9gYWJjYWRlZ2dpb28ATY4AS5UATZcATZgBT6gBEakBE6oBFawBFewBVe0Blq8CEbICE7QCFLoDF8MEHc4EI8UFIckGJswGJ88IKdMKL9gKL9oMMd4MM+EONuIPM+wQPO8SO/JTO/JXPe9ZO/RaPfFcQPtdQfxoRfx5Svz1Uf35Vf7pV////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgAAACwAAAAAASwAKAAAI/wADCBxIsKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzIseNHSAAAOw==" alt="Prestige AI Logo">
+        <h1 style="font-size: 24px; margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
+        <p style="font-size: 16px; margin: 5px 0;">
+            <script>
+                document.write(new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+            </script>
+        </p>
+        <p style="font-size: 14px;">Sunrise Edition</p>
+    </div>
 
-        <table width="100%" border="0" cellspacing="20" cellpadding="20">
-            <tr>
-                <td>
-                    <h2 style="border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top Stories</h2>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <!-- Story 1 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td width="120" style="padding-right: 15px; vertical-align: top;">
-                                <a href="https://www.foxnews.com/video/6369317652112" style="text-decoration: none;">
-                                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/a4a2e830-69d6-4fdf-9665-337d0ecf99e6/606131b5-94cc-4af4-8ede-29d2cd4766e6/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Opportunities are greater than risks of AI, White House 'AI and crypto czar' says" width="120" style="border-radius: 4px;">
-                                </a>
-                            </td>
-                            <td style="vertical-align: top;">
-                                <h3 style="font-size: 16px; margin: 0 0 5px;"><a href="https://www.foxnews.com/video/6369317652112" style="color: #081a56; text-decoration: none;">Opportunities are greater than risks of AI, White House 'AI and crypto czar' says</a></h3>
-                                <p style="font-size: 14px; margin: 0; color: #555;">The White House 'AI and crypto czar' emphasizes the potential benefits of AI outweighing the risks, highlighting advancements and opportunities in various sectors.</p>
-                            </td>
-                        </tr>
-                    </table>
+    <div class="newsletter-content">
+        <h2 style="color: #081a56;">Top News Stories</h2>
+        <p><em>Compiled from published news stories from Fox News, BBC, and Firstpost.</em></p>
 
-                    <!-- Story 2 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td width="120" style="padding-right: 15px; vertical-align: top;">
-                                <a href="https://www.foxnews.com/world/taiwan-dispatches-navy-air-force-after-china-launches-live-fire-drills-no-warning" style="text-decoration: none;">
-                                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/gettyimages-2169757502.jpg?ve=1&tl=1" alt="Taiwan dispatches naval and air forces image" width="120" style="border-radius: 4px;">
-                                </a>
-                            </td>
-                            <td style="vertical-align: top;">
-                                <h3 style="font-size: 16px; margin: 0 0 5px;"><a href="https://www.foxnews.com/world/taiwan-dispatches-navy-air-force-after-china-launches-live-fire-drills-no-warning" style="text-decoration: none;">Taiwan Dispatches Forces After China Launches Live-Fire Drills</a></h3>
-                                <p style="font-size: 14px; margin: 0; color:#555">Taiwan mobilized its naval, land, and air forces after China initiated live-fire exercises near Taiwan's coast without prior warning. Taiwanese officials condemned the move as a violation of international norms.</p>
-                            </td>
-                        </tr>
-                    </table>
+        <!-- News Story 1 -->
+        <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+            <h3 style="color: #081a56; margin-bottom:5px"><a href="https://www.foxnews.com/video/6369317652112" style="color: #16d1f2; text-decoration: none;">Opportunities are greater than risks of AI, White House 'AI and crypto czar' says</a></h3>
+            <p style="line-height:150%">The White House 'AI and crypto czar' highlights the opportunities presented by AI outweighing its risks. This article also notes the many other things going around the world at this critical time.</p>
+        </div>
 
-                    <!-- Story 3 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td width="120" style="padding-right: 15px; vertical-align: top;">
-                                <a href="https://www.foxnews.com/world/analysts-back-trumps-usaid-cuts-africa-say-increased-trade-better-benefit-continents-poor" style="text-decoration: none;">
-                                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/gettyimages-1359725650-scaled.jpg?ve=1&tl=1" alt="USAID project in Africa" width="120" style="border-radius:4px">
-                                </a>
-                            </td>
-                            <td style="vertical-align:top">
-                                <h3 style="font-size:16px; margin:0 0 5px;"><a href="https://www.foxnews.com/world/analysts-back-trumps-usaid-cuts-africa-say-increased-trade-better-benefit-continents-poor" style="color: #081a56; text-decoration: none;">Analysts Back Trump's USAID Cuts in Africa, Favor Increased Trade</a></h3>
-                                <p style="font-size:14px; margin:0;color:#555">Analysts support President Trump's decision to freeze foreign aid to Africa, suggesting that increased trade with the U.S. would be more beneficial for the continent's long-term economic development.</p>
-                            </td>
-                        </tr>
-                    </table>
+        <!-- News Story 2 -->
+        <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+            <h3 style="color: #081a56; margin-bottom:5px"><a href="https://www.foxnews.com/video/6369369765112" style="color: #16d1f2; text-decoration: none;">Musk attends first Cabinet meeting as Trump's latest executive order targets federal spending</a></h3>
+            <p style="line-height:150%">Elon Musk participates in his first Cabinet meeting following Trump's executive order on federal spending. Details of the meeting and its implications are discussed.</p>
+        </div>
 
-                    <!-- Story 4 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td width="120" style="padding-right: 15px; vertical-align: top;">
-                                <a href="https://www.foxnews.com/video/6369338556112" style="text-decoration: none;">
-                                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/74a8730a-7b0c-42e3-9deb-eb0cb8d7b328/7dbaaa18-a123-4396-87fd-afeac397fd2a/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Secretary Rubio Ukraine engagement" width="120" style="border-radius: 4px;">
-                                </a>
-                            </td>
-                            <td style="vertical-align:top;">
-                                <h3 style="font-size:16px; margin:0 0 5px;"><a href="https://www.foxnews.com/video/6369338556112" style="color: #081a56; text-decoration: none">Secretary Rubio:  'constant' engagement with Ukraine</a></h3>
-                                <p style="font-size: 14px; margin: 0; color: #555;">Secretary Rubio discusses President Trump's continuous engagement with Ukraine and efforts towards ending the ongoing war.</p>
-                            </td>
-                        </tr>
-                    </table>
+        <!-- News Story 3 -->
+        <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+            <h3 style="color: #081a56; margin-bottom:5px"><a href="https://www.foxnews.com/video/6369366850112" style="color: #16d1f2; text-decoration: none;">New Iranian development is a 'strategic nightmare,' Heritage Foundation senior fellow says</a></h3>
+            <p style="line-height:150%">A senior fellow at the Heritage Foundation describes a new development in Iran as a 'strategic nightmare'. The article provides context and potential consequences.</p>
+        </div>
 
-                    <!-- Story 5 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td width="120" style="padding-right: 15px; vertical-align: top;">
-                                <a href="https://www.foxnews.com/world/trump-says-minerals-deal-has-been-pretty-much-negotiated-zelenskyy-meeting-slated-friday" style="text-decoration: none;">
-                                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/zelensky_trump.jpg?ve=1&tl=1" alt="Trump and Zelenskyy split image" width="120" style="border-radius: 4px;">
-                                </a>
-                            </td>
-                            <td style="vertical-align:top;">
-                                <h3 style="font-size:16px; margin:0 0 5px;"><a href="https://www.foxnews.com/world/trump-says-minerals-deal-has-been-pretty-much-negotiated-zelenskyy-meeting-slated-friday" style="color:#081a56; text-decoration: none;">Trump Says Minerals Deal with Ukraine 'Pretty Much Negotiated'</a></h3>
-                                <p style="font-size:14px;margin:0; color:#555;">President Trump announced that a minerals deal with Ukraine, giving the U.S. access to resources in exchange for support, is nearing completion, with a meeting scheduled with President Zelenskyy.</p>
-                            </td>
-                        </tr>
-                    </table>
+        <!-- News Story 4 -->
+        <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+            <h3 style="color: #081a56; margin-bottom:5px"><a href="https://www.foxnews.com/video/6369338556112" style="color: #16d1f2;text-decoration:none">Secretary Rubio: Trump has had 'constant' engagement with Ukraine amid push to end war</a></h3>
+            <p style="line-height:150%">Secretary of State Marco Rubio discusses President Trump's ongoing engagement with Ukraine and the efforts to end the war. The article highlights top priorities under Rubio's leadership at the State Department.</p>
+        </div>
 
-                    <!-- Story 6 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td width="120" style="padding-right: 15px; vertical-align: top;">
-                                <a href="https://www.foxnews.com/world/least-four-dead-south-korea-highway-construction-project-collapse" style="text-decoration: none;">
-                                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/collapsed-highway-construction-site-in-cheonan-south-korea.jpg?ve=1&tl=1" alt="South Korea highway collapse" width="120" style="border-radius: 4px;">
-                                </a>
-                            </td>
-                            <td style="vertical-align:top;">
-                                <h3 style="font-size:16px; margin:0 0 5px;"><a href="https://www.foxnews.com/world/least-four-dead-south-korea-highway-construction-project-collapse" style="color: #081a56; text-decoration: none">At Least Four Dead in South Korea Highway Construction Collapse</a></h3>
-                                <p style="font-size: 14px; margin: 0; color: #555;">A highway construction project collapsed in South Korea, resulting in at least four deaths and six injuries. Rescue operations were conducted to search for any missing individuals.</p>
-                            </td>
-                        </tr>
-                    </table>
+        <!-- News Story 5 -->
+        <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+            <h3 style="color: #081a56; margin-bottom:5px"><a href="https://www.firstpost.com/world/china-rejects-trumps-50-per-cent-defence-cut-proposal-says-military-spending-ensures-sovereignty-13866637.html" style="color: #16d1f2; text-decoration: none;">China rejects Trump’s 50 per cent defence cut proposal, says military spending ensures sovereignty</a></h3>
+            <p style="line-height:150%">China declines a proposal to reduce defense budgets, asserting that its spending is necessary for national sovereignty and security.</p>
+        </div>
 
-                    <!-- Story 7 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td width="120" style="padding-right: 15px; vertical-align: top;">
-                                <a href="https://www.foxnews.com/video/6369311833112" style="text-decoration: none;">
-                                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/6bdc635f-510e-4711-b9c9-c6ccb187aa73/b81dcdf5-a57d-4c06-98bd-910ffcb3860b/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Former DEA agent warns about Mexico danger" width="120" style="border-radius: 4px;">
-                                </a>
-                            </td>
-                            <td style="vertical-align:top">
-                                <h3 style="font-size:16px;margin:0 0 5px;"><a href="https://www.foxnews.com/video/6369311833112" style="color:#081a56; text-decoration: none;">Former DEA Agent Warns Americans that Mexico is 'Highly Dangerous'</a></h3>
-                                <p style="font-size: 14px; margin: 0; color: #555;">A former DEA agent issues a stark warning to Americans about the dangers of traveling to Mexico, citing high levels of violence and criminal activity.</p>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
+        <!-- News Story 6 -->
+        <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+            <h3 style="color: #081a56; margin-bottom:5px"><a href="https://www.foxnews.com/world/taiwan-dispatches-navy-air-force-after-china-launches-live-fire-drills-no-warning" style="color:#16d1f2; text-decoration:none;">Taiwan dispatches navy, air force after China launches live-fire drills with no warning</a></h3>
+            <p style="line-height:150%">Taiwan responds to unannounced Chinese live-fire drills by deploying its naval, land, and air forces. The drills are considered a violation of international norms.</p>
+        </div>
 
-            <tr>
-                <td>
-                    <p style="font-size: 14px; color: #555;">
-                        This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2;">Fox News</a>, <a href="https://www.bbc.com" style="color: #16d1f2;">BBC</a>, and <a href="https://www.firstpost.com" style="color:#16d1f2">Firstpost</a>.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="joke">
-                        <h3 style="font-size: 18px; margin: 0 0 10px">Joke of the Day</h3>
-                        <p style="font-size:14px; margin:0">
-                            Why don't scientists trust atoms?  Because they make up everything!
-                        </p>
-                    </div>
-                </td>
-            </tr>
-        </table>
+        <!-- News Story 7-->
+        <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+            <h3 style="color: #081a56; margin-bottom:5px"><a href="https://www.foxnews.com/world/analysts-back-trumps-usaid-cuts-africa-say-increased-trade-better-benefit-continents-poor" style="color:#16d1f2; text-decoration:none;">Analysts back Trump’s USAID cuts to Africa, say increased trade would better benefit continent’s poor</a></h3>
+            <p style="line-height:150%">Analysts suggest that increased trade with the U.S., rather than aid, is key to Africa's future, supporting Trump's foreign aid freeze.</p>
+        </div>
+
+        <p>For more information, please visit <a href="https://www.foxnews.com" style="color: #16d1f2;">Fox News</a>,
+        <a href="https://www.bbc.com" style="color: #16d1f2;">BBC</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2;">Firstpost</a>.</p>
+    </div>
+
+    <div class="newsletter-footer">
+        <h2 style="font-size: 20px;margin-bottom:5px">Joke of the Day</h2>
+        <p style="font-style: italic; font-size:14px">Why don't scientists trust atoms? Because they make up everything!</p>
     </div>
 
 </body>
