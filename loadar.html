@@ -52,67 +52,48 @@
             margin: 10px auto;
         }
 
-        table {
-            width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .newsletter-table {
-            width: 600px;
+        .newsletter {
             margin: 20px auto;
-            background-color: #ffffff;
-        }
-
-        .newsletter-header {
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .newsletter-header img {
-            display: block;
-            margin: 0 auto;
-        }
-
-        .newsletter-header h1 {
-            color: #081a56;
-            font-size: 24px;
-            margin-top: 10px;
-        }
-
-        .newsletter-header p {
-            color: #b0b0b0;
-            font-size: 14px;
-            margin: 5px 0 0 0;
-        }
-
-        .story {
-            border-bottom: 1px solid #b0b0b0;
-            margin-bottom: 15px;
-            padding: 10px;
-        }
-
-        .story img {
-            display: block;
-        }
-
-        .story h3 {
-            color: #081a56;
-            font-size: 16px;
-            margin-top: 0;
-        }
-
-        .story p {
-            color: #555;
-        }
-
-        .footer {
+            background-color: #f4f4f4;
+            color: #333;
             padding: 20px;
+            border-radius: 8px;
+        }
+
+        .newsletter h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .newsletter h2 {
+            color: #081a56;
+            border-bottom: 2px solid #16d1f2;
+            padding-bottom: 5px;
+        }
+
+        .newsletter h3 {
+            color: #081a56;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .newsletter p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .newsletter a {
+            color: #16d1f2;
+            text-decoration: none;
+        }
+
+        .joke {
             background-color: #081a56;
-            color: #ffffff;
-            font-size: 12px;
+            color: #fff;
+            border-radius: 8px;
+            text-align: center;
+            padding: 20px;
+            margin: 20px auto;
         }
     </style>
 </head>
@@ -157,88 +138,96 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table class="newsletter-table">
-        <tr>
-            <td class="newsletter-header">
-                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
-                <h1>Prestige AI - Daily Newsletter</h1>
-                <p><?php echo date("F j, Y"); ?> - Afternoon Edition</p>
-            </td>
-        </tr>
-        <tr>
-            <td style="padding: 0 20px;">
-                <h2 style="color: #081a56; font-size: 20px; margin-bottom: 10px;">Top Stories</h2>
-                <p style="color: #555; margin-bottom: 20px;">Curated news from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none">Firstpost</a>.</p>
+    <div class="newsletter">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #081a56; color: #fff; text-align: center; padding: 20px 0;">
+            <tr>
+                <td>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/IM2AAAAZlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8BvGXuAAAACXRSTlMA/////////wD//51mHwAAAfVJREFUeNrt3e2WoyAMBuC0Gv//l/ei42gJgqQ5/P3m7iuqVftU8zBAwDAAAAAAAAAAAAAA9D29lTqN5sX5t2G89f50/79T5Lek797eG89f50/69f23/yD7d0L8279/nRvjtvn7h39/nRvjtvX7Jv6vNH27pn5y7r90L8279/nRvjtvn5y7v/d0L827z3k9P4/WbV/t4Lz1/nTvr1v6vN7/XlW085/dO+vW/q8085+n/HbR/s2Lr9z89lFfnjvb1m2n99fO9jWbaP1s2eP+9jWbffl+sO9vWbffl+sObfU3P97c22v3y5Xvf7WpZtE5w/O1vWbROcdyWtb1m0TnDsl7n2S9ztE5w/Jd5X2a5ztE5xbJX5z2a5ztE5xbJf6ey3udonc9z720/57bO528f57LO520f57He5O2/eLtf2m/m/v/5k3/5bH/5tj/82x/+ZY//Nsf/m2P/zbH/5tj/82x/+ZY//Nsf/m2P/zbH/5tj/82x/+ZY//Nsf/m2Pz/dPAAAAAAAAAAAAAAAAAAAAAADw2X8AWMQhNioN6YMAAAAASUVORK5CYII=" alt="Prestige AI Logo" style="width: 200px; height: auto;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h1>Prestige AI - Daily Newsletter</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                      <script>
+                        document.write(new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+                      </script>
+                    - Sunrise Edition</p>
+                </td>
+            </tr>
+        </table>
 
-                <div class="story">
-                    <a href="https://www.foxnews.com/video/6369387963112" style="color: #16d1f2; text-decoration: none;">
-                        <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/61a39c43-fb95-4f65-8c8f-4bf323c193a0/78518e07-45aa-4d01-95b5-32d27333107c/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump touted for 'clever' minerals deal with Ukraine amid push for peace" width="120">
-                    </a>
-                    <h3><a href="https://www.foxnews.com/video/6369387963112" style="color: #081a56; text-decoration: none;">Trump touted for 'clever' minerals deal with Ukraine amid push for peace</a></h3>
-                    <p>Analysts discuss a potential deal giving the US access to Ukrainian minerals as a strategic move to deter Russian aggression and support peace efforts.</p>
-                </div>
+        <table width="80%" border="0" cellspacing="0" cellpadding="20" style="margin: 20px auto; background-color: #fff; border-radius: 8px;">
+            <tr>
+                <td>
+                    <h2>Top Stories</h2>
 
-                <div class="story">
-                    <a href="https://www.foxnews.com/video/6369369765112" style="color: #16d1f2; text-decoration: none;">
-                        <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/e548bc40-1f47-4049-a6e4-eadc970a71cc/f98e0fa9-5e54-4dcd-9e67-b5c88d3e5c47/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Musk attends first Cabinet meeting as Trump's latest executive order targets federal spending" width="120">
-                    </a>
-                    <h3><a href="https://www.foxnews.com/video/6369369765112" style="color: #081a56; text-decoration: none;">Musk attends first Cabinet meeting as Trump's latest executive order targets federal spending</a></h3>
-                    <p>Elon Musk's participation in a cabinet meeting highlights a focus on fiscal responsibility, following an executive order targeting reductions in federal spending.</p>
-                </div>
+                    <div style="margin-bottom: 20px;">
+                        <h3>Mexico Extradites Dozens of Cartel Leaders and Members to U.S.</h3>
+                        <p>Mexico has begun extraditing high-level cartel figures, including Rafael Caro Quintero, to the U.S., fulfilling one of President Trump's demands as a tariff deadline loomed. This action is part of ongoing negotiations on trade and security.</p>
+                        <a href="https://www.foxnews.com/world/mexico-extradites-dozens-cartel-leaders-members-us-drug-lord-rafael-caro-quintero">Read More on Fox News</a>
+                    </div>
 
-                <div class="story">
-                    <a href="https://www.firstpost.com/world/trump-says-american-firms-can-hire-productive-indians-under-gold-card-citizenship-plan-13867135.html" style="color: #16d1f2; text-decoration: none;">
-                        <img src="https://images.firstpost.com/uploads/2025/02/Untitled-design-71-2025-02-55e03bc0bd6c512ec354f37c97555eb0.jpg?im=FitAndFill=(596,336)" alt="Trump says American firms can hire 'productive' Indians under 'gold card' citizenship plan" width="120">
-                    </a>
-                    <h3><a href="https://www.firstpost.com/world/trump-says-american-firms-can-hire-productive-indians-under-gold-card-citizenship-plan-13867135.html" style="color: #081a56; text-decoration: none;">Trump says American firms can hire 'productive' Indians under 'gold card' citizenship plan</a></h3>
-                    <p>A new "gold card" initiative allows US firms to hire Indian graduates, boosting investment and addressing the national debt.</p>
-                </div>
+                    <div style="margin-bottom: 20px;">
+                        <h3>Trump Vows March 4 Tariffs for Mexico, Canada; China Faces Additional 10%</h3>
+                        <p>President Trump announced that 25% tariffs on Mexican and Canadian goods will take effect on March 4 due to ongoing drug trafficking. Additionally, an extra 10% tariff will be imposed on Chinese goods, on top of an existing 10%.</p>
+                        <a href="https://www.firstpost.com/world/trump-vows-march-4-tariffs-for-mexico-and-canada-china-faces-additional-10-13867276.html">Read More on Firstpost</a>
+                    </div>
 
-                <div class="story">
-                    <a href="https://www.bbc.com/news/articles/cewkkkvkzn9o" style="color: #16d1f2; text-decoration: none;">
-                        <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/b254/live/46cfaba0-f4f3-11ef-8c03-7dfdbeeb2526.jpg.webp" alt="Hollywood legend Gene Hackman and wife found dead at their home" width="120">
-                    </a>
-                    <h3><a href="https://www.bbc.com/news/articles/cewkkkvkzn9o" style="color: #081a56; text-decoration: none;">Hollywood legend Gene Hackman and wife found dead at their home</a></h3>
-                    <p>Local police have stated no foul play is suspected in the deaths of Gene Hackman and his wife, found at their home.</p>
-                </div>
+                    <div style="margin-bottom: 20px;">
+                        <h3>New MacBook Air with M4 Chip to Launch Next Month</h3>
+                        <p>Apple is set to release new MacBook Air models in March, featuring the upgraded M4 chip. This upgrade is expected to improve speed, power efficiency, and AI-driven features, making it a significant step forward for the popular laptop.</p>
+                        <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html">Read More on Firstpost</a>
+                    </div>
 
-                <div class="story">
-                    <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color: #16d1f2; text-decoration: none;">
-                        <img src="https://images.firstpost.com/uploads/2025/02/Apple-to-launch-new-MacBook-Air-with-M4-chip-next-month-2025-02-01d295cffa3adfc6ed844b10bc762bd0-1200x675.jpg?im=FitAndFill=(596,336)" alt="Apple to launch new MacBook Air with M4 chip next month" width="120">
-                    </a>
-                    <h3><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color:#081a56; text-decoration: none;">Apple to launch new MacBook Air with M4 chip next month</a></h3>
-                    <p>Apple is set to release new MacBook Air models with the M4 chip, expected to deliver significant upgrades in speed, power efficiency, and AI capabilities.</p>
-                </div>
+                    <div style="margin-bottom: 20px;">
+                      <h3>DeepSeek AI Powers Connected Car and Self-Driving Tech in Chinese EVs</h3>
+                      <p>Chinese AI startup DeepSeek's technology is being integrated into electric vehicles by Geely and BYD, enhancing connected car features and self-driving capabilities. This collaboration aims to strengthen their competitiveness in the EV market.</p>
+                      <a href="https://www.firstpost.com/tech/deepseek-is-now-in-chinese-evs-to-power-geely-byds-connected-car-and-self-driving-tech-13862061.html">Read More on Firstpost</a>
+                    </div>
 
-                <div class="story">
-                    <a href="https://www.foxnews.com/video/6369317652112" style="color: #16d1f2;text-decoration: none;">
-                        <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/a4a2e830-69d6-4fdf-9665-337d0ecf99e6/606131b5-94cc-4af4-8ede-29d2cd4766e6/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Opportunities are greater than risks of AI, White House 'AI and crypto czar' says" width="120">
-                    </a>
-                    <h3><a href="https://www.foxnews.com/video/6369317652112" style="color: #081a56; text-decoration: none;">Opportunities are greater than risks of AI, White House 'AI and crypto czar' says</a></h3>
-                    <p>The White House 'AI and crypto czar' discusses the balance between AI's benefits and potential risks, pushing for responsible development.</p>
-                </div>
+                    <div style="margin-bottom: 20px;">
+                        <h3>UN Human Rights Council Censors Statement on Bibas Family Murders</h3>
+                        <p>A video statement mentioning the murder of Ariel and Kfir Bibas was abruptly cut off during a UN Human Rights Council session. The incident occurred during a discussion on the human rights situation in the Occupied Palestinian Territory.</p>
+                        <a href="https://www.foxnews.com/world/american-censored-un-human-rights-council-accused-using-disrespectful-language">Read More on Fox News</a>
+                    </div>
 
-                <div class="story">
-                    <a href="https://www.bbc.com/news/live/c625ex282zzt" style="color: #16d1f2; text-decoration:none;">
-                        <img src="https://ichef.bbci.co.uk/ace/standard/1536/cpsprodpb/c7b1/live/36a08680-f4e6-11ef-896e-d7e7fb1719a4.jpg.webp" alt="Europe should provide security guarantees for Ukraine, Trump says ahead of Starmer talks" width="120">
-                    </a>
-                    <h3><a href="https://www.bbc.com/news/live/c625ex282zzt" style="color: #081a56; text-decoration: none;">Europe should provide security guarantees for Ukraine, Trump says ahead of Starmer talks</a></h3>
-                    <p>The upcoming meeting between the US president and UK prime minister will extensively cover strategies for support and security in Ukraine.</p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td align="center" style="padding: 20px;">
-                <h2 style="color: #081a56; font-size: 18px;">Joke of the Day</h2>
-                <p style="color: #555; font-style: italic;">Why don't scientists trust atoms? <br> Because they make up everything!</p>
-            </td>
-        </tr>
-        <tr>
-            <td class="footer">
-                &copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.
-            </td>
-        </tr>
-    </table>
+                    <div style="margin-bottom: 20px;">
+                        <h3>Iran Can Manufacture 6 Nuclear Weapons with Newly Enriched Uranium, UN Report Says</h3>
+                        <p>The International Atomic Energy Agency (IAEA) reported that Iran has significantly increased its production of highly enriched uranium. Former Arkansas Governor, Mike Huckabee, mentioned Iran's constant threats of wiping out both Israel and the U.S.</p>
+                        <a href="https://www.foxnews.com/world/iran-can-manufacture-6-nuclear-weapons-newly-enriched-uranium-un-atomic-agency-report-says">Read More on Fox News</a>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                      <h3>As Trump Courts Russia & Cuts US aids, China Emerges as Real Winner</h3>
+                        <p>With the U.S. cutting foreign aids and shifting its alliances towards Russia, China appears to be filling the power vacuum left by the US.</p>
+                        <a href="https://www.firstpost.com/world/as-trump-courts-russia-cuts-us-aids-china-emerges-as-real-winner-13867087.html">Read More on Firstpost</a>
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+
+        <table width="80%" border="0" cellspacing="0" cellpadding="20" style="margin: 20px auto; background-color: #fff; border-radius: 8px;">
+            <tr>
+                <td>
+                    <p style="font-size: 14px; line-height: 1.6; color: #b0b0b0;">
+                      This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/">Fox News</a>,
+                      and <a href="https://www.firstpost.com/">Firstpost</a>.
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <div class="joke">
+            <h2>Joke of the Day</h2>
+            <p>Why don't scientists trust atoms? Because they make up everything!</p>
+        </div>
+    </div>
 
 </body>
 </html>
