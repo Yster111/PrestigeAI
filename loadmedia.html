@@ -52,45 +52,81 @@
             margin: 10px auto;
         }
 
-        .newsletter {
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background-color: #f4f4f4; 
-            color: #333;
+        table {
+            width: 100%;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 0;
         }
 
         .newsletter-table {
-            width: 100%; 
-            border: 0; 
-            cellspacing: 0; 
-            cellpadding: 0; 
-            background-color: #081a56; 
-            color: #fff; 
-            text-align: center; 
-            padding: 20px 0;
-        }
-
-        .newsletter-content {
-            width: 80%; 
-            border: 0; 
-            cellspacing: 0; 
-            cellpadding: 20; 
-            margin: 20px auto; 
-            background-color: #fff; 
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
             border-radius: 8px;
         }
 
-        .footer-table {
-            width: 80%; 
-            border: 0; 
-            cellspacing: 0; 
-            cellpadding: 20; 
-            margin: 20px auto; 
-            background-color: #081a56; 
-            color: #fff; 
-            border-radius: 8px; 
+        .newsletter-header {
+            background-color: #081a56;
+            color: #fff;
             text-align: center;
+            padding: 20px 0;
+        }
+
+        .newsletter-header img {
+            width: 200px;
+            height: auto;
+        }
+
+        .newsletter-header h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .newsletter-header p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .story-title {
+            color: #081a56;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .story-content {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .story-link {
+            color: #16d1f2;
+            text-decoration: none;
+        }
+
+        .footer {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #b0b0b0;
+        }
+
+        .joke-table {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #081a56;
+            color: #fff;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .joke-table h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .joke-table p {
+            font-size: 14px;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -135,20 +171,20 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table class="newsletter-table">
+    <table class="newsletter-header">
         <tr>
             <td>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/IM2AAAAZlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8BvGXuAAAACXRSTlMA/////////wD//51mHwAAAfVJREFUeNrt3e2WoyAMBuC0Gv//l/ei42gJgqQ5/P3m7iuqVftU8zBAwDAAAAAAAAAAAAAA9D29lTqN5sX5t2G89f50/79T5Lek797eG89f50/69f23/yD7d0L8279/nRvjtvn7h39/nRvjtvX7Jv6vNH27pn5y7r90L8279/nRvjtvn5y7v/d0L827z3k9P4/WbV/t4Lz1/nTvr1v6vN7/XlW085/dO+vW/q8085+n/HbR/s2Lr9z89lFfnjvb1m2n99fO9jWbaP1s2eP+9jWbffl+sO9vWbffl+sObfU3P97c22v3y5Xvf7WpZtE5w/O1vWbROcdyWtb1m0TnDsl7n2S9ztE5w/Jd5X2a5ztE5xbJX5z2a5ztE5xbJf6ey3udonc9z720/57bO528f57LO520f57He5O2/eLtf2m/m/v/5k3/5bH/5tj/82x/+ZY//Nsf/m2P/zbH/5tj/82x/+ZY//Nsf/m2P/zbH/5tj/82x/+ZY//Nsf/m2Pz/dPAAAAAAAAAAAAAAAAAAAAAADw2X8AWMQhNioN6YMAAAAASUVORK5CYII=" alt="Prestige AI Logo" style="width: 200px; height: auto;">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/IM2AAAAZlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8BvGXuAAAACXRSTlMA/////////wD//51mHwAAAfVJREFUeNrt3e2WoyAMBuC0Gv//l/ei42gJgqQ5/P3m7iuqVftU8zBAwDAAAAAAAAAAAAAA9D29lTqN5sX5t2G89f50/79T5Lek797eG89f50/69f23/yD7d0L8279/nRvjtvn7h39/nRvjtvX7Jv6vNH27pn5y7r90L8279/nRvjtvn5y7v/d0L827z3k9P4/WbV/t4Lz1/nTvr1v6vN7/XlW085/dO+vW/q8085+n/HbR/s2Lr9z89lFfnjvb1m2n99fO9jWbaP1s2eP+9jWbffl+sO9vWbffl+sObfU3P97c22v3y5Xvf7WpZtE5w/O1vWbROcdyWtb1m0TnDsl7n2S9ztE5w/Jd5X2a5ztE5xbJX5z2a5ztE5xbJf6ey3udonc9z720/57bO528f57LO520f57He5O2/eLtf2m/m/v/5k3/5bH/5tj/82x/+ZY//Nsf/m2P/zbH/5tj/82x/+ZY//Nsf/m2P/zbH/5tj/82x/+ZY//Nsf/m2Pz/dPAAAAAAAAAAAAAAAAAAAAAADw2X8AWMQhNioN6YMAAAAASUVORK5CYII=" alt="Prestige AI Logo">
             </td>
         </tr>
         <tr>
             <td>
-                <h1 style="font-size: 24px; margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
+                <h1>Prestige AI - Daily Newsletter</h1>
             </td>
         </tr>
         <tr>
             <td>
-                <p style="font-size: 16px; margin: 5px 0;">
+                <p>
                   <script>
                     document.write(new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
                   </script>
@@ -157,77 +193,70 @@
         </tr>
     </table>
 
-    <table class="newsletter-content">
+    <table class="newsletter-table">
         <tr>
             <td>
                 <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top Stories</h2>
 
                 <div style="margin-bottom: 20px;">
-                    <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;">Mexico Extradites Dozens of Cartel Leaders and Members to U.S.</h3>
-                    <p style="font-size: 14px; line-height: 1.6;">Mexico has begun extraditing high-level cartel figures, including Rafael Caro Quintero, to the U.S., fulfilling one of President Trump's demands as a tariff deadline loomed. This action is part of ongoing negotiations on trade and security.</p>
-                    <a href="https://www.foxnews.com/world/mexico-extradites-dozens-cartel-leaders-members-us-drug-lord-rafael-caro-quintero" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
+                    <h3 class="story-title">Mexico Extradites Dozens of Cartel Leaders and Members to U.S.</h3>
+                    <p class="story-content">Mexico has begun extraditing high-level cartel figures, including Rafael Caro Quintero, to the U.S., fulfilling one of President Trump's demands as a tariff deadline loomed. This action is part of ongoing negotiations on trade and security.</p>
+                    <a class="story-link" href="https://www.foxnews.com/world/mexico-extradites-dozens-cartel-leaders-members-us-drug-lord-rafael-caro-quintero">Read More on Fox News</a>
                 </div>
 
                 <div style="margin-bottom: 20px;">
-                    <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;">Trump Vows March 4 Tariffs for Mexico, Canada; China Faces Additional 10%</h3>
-                    <p style="font-size: 14px; line-height: 1.6;">President Trump announced that 25% tariffs on Mexican and Canadian goods will take effect on March 4 due to ongoing drug trafficking.  Additionally, an extra 10% tariff will be imposed on Chinese goods, on top of an existing 10%.</p>
-                    <a href="https://www.firstpost.com/world/trump-vows-march-4-tariffs-for-mexico-and-canada-china-faces-additional-10-13867276.html" style="color: #16d1f2; text-decoration: none;">Read More on Firstpost</a>
+                    <h3 class="story-title">Trump Vows March 4 Tariffs for Mexico, Canada; China Faces Additional 10%</h3>
+                    <p class="story-content">President Trump announced that 25% tariffs on Mexican and Canadian goods will take effect on March 4 due to ongoing drug trafficking. Additionally, an extra 10% tariff will be imposed on Chinese goods, on top of an existing 10%.</p>
+                    <a class="story-link" href="https://www.firstpost.com/world/trump-vows-march-4-tariffs-for-mexico-and-canada-china-faces-additional-10-13867276.html">Read More on Firstpost</a>
                 </div>
 
                 <div style="margin-bottom: 20px;">
-                    <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;">New MacBook Air with M4 Chip to Launch Next Month</h3>
-                    <p style="font-size: 14px; line-height: 1.6;">Apple is set to release new MacBook Air models in March, featuring the upgraded M4 chip. This upgrade is expected to improve speed, power efficiency, and AI-driven features, making it a significant step forward for the popular laptop.</p>
-                    <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color: #16d1f2; text-decoration: none;">Read More on Firstpost</a>
+                    <h3 class="story-title">New MacBook Air with M4 Chip to Launch Next Month</h3>
+                    <p class="story-content">Apple is set to release new MacBook Air models in March, featuring the upgraded M4 chip. This upgrade is expected to improve speed, power efficiency, and AI-driven features, making it a significant step forward for the popular laptop.</p>
+                    <a class="story-link" href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html">Read More on Firstpost</a>
                 </div>
 
                 <div style="margin-bottom: 20px;">
-                  <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;">DeepSeek AI Powers Connected Car and Self-Driving Tech in Chinese EVs</h3>
-                  <p style="font-size: 14px; line-height: 1.6;">Chinese AI startup DeepSeek's technology is being integrated into electric vehicles by Geely and BYD, enhancing connected car features and self-driving capabilities. This collaboration aims to strengthen their competitiveness in the EV market.</p>
-                  <a href="https://www.firstpost.com/tech/deepseek-is-now-in-chinese-evs-to-power-geely-byds-connected-car-and-self-driving-tech-13862061.html" style="color: #16d1f2; text-decoration: none;">Read More on Firstpost</a>
+                  <h3 class="story-title">DeepSeek AI Powers Connected Car and Self-Driving Tech in Chinese EVs</h3>
+                  <p class="story-content">Chinese AI startup DeepSeek's technology is being integrated into electric vehicles by Geely and BYD, enhancing connected car features and self-driving capabilities. This collaboration aims to strengthen their competitiveness in the EV market.</p>
+                  <a class="story-link" href="https://www.firstpost.com/tech/deepseek-is-now-in-chinese-evs-to-power-geely-byds-connected-car-and-self-driving-tech-13862061.html">Read More on Firstpost</a>
                 </div>
 
                 <div style="margin-bottom: 20px;">
-                    <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;">UN Human Rights Council Censors Statement on Bibas Family Murders</h3>
-                    <p style="font-size: 14px; line-height: 1.6;">A video statement mentioning the murder of Ariel and Kfir Bibas was abruptly cut off during a UN Human Rights Council session.  The incident occurred during a discussion on the human rights situation in the Occupied Palestinian Territory.</p>
-                    <a href="https://www.foxnews.com/world/american-censored-un-human-rights-council-accused-using-disrespectful-language" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
+                    <h3 class="story-title">UN Human Rights Council Censors Statement on Bibas Family Murders</h3>
+                    <p class="story-content">A video statement mentioning the murder of Ariel and Kfir Bibas was abruptly cut off during a UN Human Rights Council session. The incident occurred during a discussion on the human rights situation in the Occupied Palestinian Territory.</p>
+                    <a class="story-link" href="https://www.foxnews.com/world/american-censored-un-human-rights-council-accused-using-disrespectful-language">Read More on Fox News</a>
                 </div>
 
                 <div style="margin-bottom: 20px;">
-                    <h3 style="color: #081a56; font-size: 18px; margin-bottom: 5px;">Iran Can Manufacture 6 Nuclear Weapons with Newly Enriched Uranium, UN Report Says</h3>
-                    <p style="font-size: 14px; line-height: 1.6;">
-                        The International Atomic Energy Agency (IAEA) reported that Iran has significantly increased its production of highly enriched uranium. Former Arkansas Governor, Mike Huckabee, mentioned Iran's constant threats of wiping out both Israel and the U.S.
-                    </p>
-                    <a href="https://www.foxnews.com/world/iran-can-manufacture-6-nuclear-weapons-newly-enriched-uranium-un-atomic-agency-report-says" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
+                    <h3 class="story-title">Iran Can Manufacture 6 Nuclear Weapons with Newly Enriched Uranium, UN Report Says</h3>
+                    <p class="story-content">The International Atomic Energy Agency (IAEA) reported that Iran has significantly increased its production of highly enriched uranium. Former Arkansas Governor, Mike Huckabee, mentioned Iran's constant threats of wiping out both Israel and the U.S.</p>
+                    <a class="story-link" href="https://www.foxnews.com/world/iran-can-manufacture-6-nuclear-weapons-newly-enriched-uranium-un-atomic-agency-report-says">Read More on Fox News</a>
                 </div>
 
                 <div style="margin-bottom: 20px;">
-                  <h3 style="color: #081a56; font-size: 18px;margin-bottom:5px;">As Trump Courts Russia & Cuts US aids, China Emerges as Real Winner</h3>
-                    <p style="font-size:14px;line-height:1.6;">
-                        With the U.S. cutting foreign aids and shifting its alliances towards Russia, China appears to be filling the power vacuum left by the US.
-                    </p>
-                    <a href="https://www.firstpost.com/world/as-trump-courts-russia-cuts-us-aids-china-emerges-as-real-winner-13867087.html" style="color:#16d1f2;text-decoration:none">Read More on Firstpost</a>
+                  <h3 class="story-title">As Trump Courts Russia & Cuts US aids, China Emerges as Real Winner</h3>
+                    <p class="story-content">With the U.S. cutting foreign aids and shifting its alliances towards Russia, China appears to be filling the power vacuum left by the US.</p>
+                    <a class="story-link" href="https://www.firstpost.com/world/as-trump-courts-russia-cuts-us-aids-china-emerges-as-real-winner-13867087.html">Read More on Firstpost</a>
                 </div>
 
             </td>
         </tr>
     </table>
 
-    <table class="newsletter-content">
+    <table class="newsletter-table">
         <tr>
             <td>
-                <p style="font-size: 14px; line-height: 1.6; color: #b0b0b0;">
-                  This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
-                  and <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
-                </p>
+                <p class="footer">This newsletter is compiled from published news stories from <a class="story-link" href="https://www.foxnews.com/">Fox News</a>, and <a class="story-link" href="https://www.firstpost.com/">Firstpost</a>.</p>
             </td>
         </tr>
     </table>
 
-    <table class="footer-table">
+    <table class="joke-table">
         <tr>
             <td>
-                <h2 style="font-size: 20px; margin-bottom: 10px;">Joke of the Day</h2>
-                <p style="font-size: 14px; line-height: 1.6;">Why don't scientists trust atoms?  Because they make up everything!</p>
+                <h2>Joke of the Day</h2>
+                <p>Why don't scientists trust atoms? Because they make up everything!</p>
             </td>
         </tr>
     </table>
