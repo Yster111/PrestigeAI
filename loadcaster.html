@@ -7,18 +7,20 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
             text-align: center;
-            margin: 50px;
-            background-color: #f8f9fa; /* Light background for contrast */
         }
 
         .message-box {
             max-width: 700px;
-            margin: auto;
+            margin: 50px auto;
             padding: 15px;
             background-color: #f8f9fa;
-            border: 2px solid #081a56; /* Dark blue border all around */
-            border-radius: 8px; /* Slightly rounded corners for a modern look */
+            border: 2px solid #081a56;
+            border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
@@ -27,7 +29,7 @@
             width: 100%;
             max-width: 600px;
             height: 30px;
-            background-color: #b0b0b0; /* Gray background */
+            background-color: #b0b0b0;
             border-radius: 10px;
             overflow: hidden;
             margin: 20px auto;
@@ -37,10 +39,10 @@
         .progress-bar {
             height: 100%;
             width: 0%;
-            background-color: #16d1f2; /* Light blue progress bar */
+            background-color: #16d1f2;
             text-align: center;
             line-height: 30px;
-            color: #081a56; /* Dark blue text */
+            color: #081a56;
             font-weight: bold;
             transition: width linear;
         }
@@ -48,56 +50,106 @@
         #progress-text, h2 {
             text-align: center;
             font-size: 16px;
-            color: #081a56; /* Dark blue text */
+            color: #081a56;
             margin: 10px auto;
         }
 
-        .newsletter {
-            background-color: #f4f4f4;
-            margin-top: 50px;
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #081a56;
+            color: #fff;
             padding: 20px;
-        }
-
-        .newsletter h1 {
-            font-size: 24px;
-            margin-top: 10px;
-        }
-
-        .newsletter p {
-            font-size: 16px;
-            margin-top: 5px;
-        }
-
-        .news-story {
-            padding: 10px;
-            border-bottom: 1px solid #b0b0b0;
-        }
-
-        .news-story h2 {
-            font-size: 18px;
-            color: #081a56;
-            margin-bottom: 5px;
-        }
-
-        .news-story p {
-            font-size: 14px;
-            color: #333;
-        }
-
-        .joke {
-            padding: 10px;
             text-align: center;
         }
 
-        .joke h3 {
-            font-size: 16px;
-            color: #081a56;
-            margin-bottom: 5px;
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            line-height: 1.2;
         }
 
-        .joke p {
+        .header p {
+            margin: 5px 0 0;
             font-size: 14px;
-            color: #333;
+            color: #b0b0b0;
+        }
+
+        .logo {
+            max-height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .news-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .news-item h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+            color: #081a56;
+            line-height: 1.3;
+        }
+
+        .news-item p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .news-item a {
+            color: #16d1f2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #081a56;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #16d1f2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .joke {
+            font-style: italic;
+            color: #b0b0b0;
+            padding-top: 15px;
         }
     </style>
 </head>
@@ -142,76 +194,61 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #081a56; color: #ffffff; text-align: center;">
-            <tr>
-                <td style="padding: 20px;">
-                    <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block; margin: 0 auto;">
-                    <h1>Prestige AI - Daily Newsletter</h1>
-                    <p>Sunrise Edition - <span id="currentDate"></span></p>
-                </td>
-            </tr>
-        </table>
+    <div class="container">
+        <div class="header">
+            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" class="logo">
+            <h1>Prestige AI - Daily Newsletter</h1>
+            <p><?php echo date("F j, Y"); ?> - Afternoon Edition</p>
+        </div>
+        <div class="content">
 
-        <script>
-            const today = new Date();
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            document.getElementById("currentDate").textContent = today.toLocaleDateString("en-US", options);
-        </script>
+            <div class="news-item">
+                <h2>Zelenskyy Meets with British PM After Tense Trump Exchange</h2>
+                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/76a958c3-142a-46ff-b8d8-8c24972d387e/77220db0-5249-49b0-b850-dcb1e8b0a88e/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Zelenskyy and Starmer">
+                <p>Ukrainian President Volodymyr Zelenskyy met with British Prime Minister Keir Starmer in London, shortly after a highly publicized and tense meeting with President Trump and Vice President Vance in Washington D.C. The meeting in London focused on continued UK support for Ukraine. The UK pledged a significant loan for military assets. The meeting came after a contentious exchange in the Oval Office about a proposed peace deal and U.S. support.</p>
+                <a href="https://www.foxnews.com/video/6369500101112" target="_blank">Read More on Fox News</a>
+            </div>
 
-        <table width="80%" align="center" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff; margin-top: 20px;">
-            <tr>
-                <td style="padding: 20px;">
-                    <p style="font-size: 14px; color: #b0b0b0; margin-bottom: 20px;">
-                        Today's news, curated from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
-                        <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and
-                        <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
-                    </p>
+            <div class="news-item">
+                <h2>Pope Francis Stable, Continues Recovery in Hospital</h2>
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/pope-francis-health-update_007-.jpg?ve=1&tl=1" alt="Pope Francis">
+                <p>Pope Francis is in stable condition as he continues to recover from double pneumonia at Gemelli Hospital. He delivered his Sunday blessing in written form, thanking the faithful for their prayers and emphasizing the absurdity of war. The Vatican reported he's responding well to respiratory therapy and his overall condition is improving.</p>
+                <a href="https://www.foxnews.com/world/pope-francis-had-peaceful-night-hospital-skip-sunday-noon-blessing-while-continuing-recovery" target="_blank">Read More on Fox News</a>
+            </div>
 
-                    <!-- News Stories -->
-                    <div class="news-story">
-                        <h2><a href="https://www.foxnews.com/world/russia-revels-oval-office-spectacle-after-zelenskyy-spars-trump-vance" style="color: #081a56; text-decoration: none;">Russia Revels in Oval Office Spectacle After Zelenskyy Spars with Trump, Vance</a></h2>
-                        <p>Russian officials and state media celebrated the heated exchange between Ukrainian President Zelenskyy, President Trump, and VP Vance, viewing it as a diplomatic victory. Former Russian President Medvedev called it a "proper slap down," while Russian media outlets highlighted Zelenskyy's early departure from the White House. The incident has further strained US-Ukraine relations.</p>
-                    </div>
+            <div class="news-item">
+                <h2>Israeli Ambassador Warns of Iran's Nuclear Progress</h2>
+                <p>Israeli Ambassador to the U.S., Yechiel Leiter, expressed serious concerns about Iran's nuclear program, stating that Iran is "racing forward." This statement follows Israel's decision to block humanitarian aid into Gaza after Hamas rejected a ceasefire extension proposal.</p>
+                <a href="https://www.foxnews.com/video/6369510211112" target="_blank">Read More on Fox News</a>
+            </div>
 
-                    <div class="news-story">
-                        <h2><a href="https://www.foxnews.com/world/taiwans-volunteer-military-shrinks-amid-growing-chinese-aggression" style="color: #081a56; text-decoration: none;">Taiwan's Volunteer Military Shrinks Amid Growing Chinese Aggression</a></h2>
-                        <p>Taiwan's military is facing recruitment challenges due to a low birthrate and competition from the private sector, losing 12,000 service members between 2022 and 2024. The idea of enlisting foreign migrants is being revisited, though it faces significant social and political hurdles. The shrinking force comes as China intensifies its threats and military activity near the island.</p>
-                    </div>
+            <div class="news-item">
+                <h2>Taiwan's Military Faces Recruiting Challenges</h2>
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2023/07/1200/675/taiwanmilitary.jpg?ve=1&tl=1" alt="Taiwanese Soldiers">
+                <p>Amid escalating tensions with China, Taiwan's military is struggling to meet recruitment goals. A declining birthrate, competition from the private sector, and past pension cuts are contributing factors. The possibility of enlisting foreign migrants is being considered, a concept that has been discussed for decades.</p>
+                <a href="https://www.foxnews.com/world/taiwans-volunteer-military-shrinks-amid-growing-chinese-aggression" target="_blank">Read More on Fox News</a>
+            </div>
 
-                    <div class="news-story">
-                        <h2><a href="https://www.foxnews.com/world/who-could-lead-zelenskyy-resigned" style="color: #081a56; text-decoration: none;">Potential Successors to Zelenskyy Emerge Amid Calls for Resignation</a></h2>
-                        <p>Following a public dispute with President Trump and VP Vance and calls for his resignation from Senator Lindsey Graham, speculation has arisen about potential successors to Ukrainian President Volodymyr Zelenskyy. Figures like Kyiv Mayor Vitali Klitschko, Parliament Chairman Ruslan Stefanchuk, Military Intelligence Chief Kyrylo Budanov, and former Commander-in-Chief Valery Zaluzhny are being discussed as possible replacements.</p>
-                    </div>
+            <div class="news-item">
+                <h2>Gene Hackman and Wife Found Dead, Believed Deceased for Over a Week</h2>
+                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/a58fa182-a06d-48f3-a359-e2b2f388936b/39cf2c45-16b3-492d-b8ea-c0dde016a30b/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Depiction of Gene Hackman">
+                <p>Authorities state that Gene Hackman and his wife were probably dead for over a week before they were discovered.</p>
+                <a href="https://www.foxnews.com/video/6369504399112" target="_blank">Read more on Fox News</a>
+            </div>
 
-                    <div class="news-story">
-                        <h2><a href="https://www.firstpost.com/world/silicon-shield-at-risk-taiwan-to-raise-defence-spending-to-3-of-gdp-will-it-appease-trump-and-deter-china-13867875.html" style="color: #081a56; text-decoration: none;">Taiwan to Raise Defence Spending to 3% of GDP</a></h2>
-                        <p>Taiwan plans to increase its defense spending to 3% of its GDP, responding to pressure from the US and growing threats from China. This move aims to strengthen Taiwan's military, but it's uncertain if it will satisfy US demands or deter Chinese aggression. President Trump has pushed for even higher spending, up to 10% of GDP, creating tension in the US-Taiwan relationship.</p>
-                    </div>
+            <div class="news-item">
+                <h2>Russian Media Reacts to Trump-Zelenskyy Clash</h2>
+                <p>Russian state media widely covered the tense exchange between President Trump, Vice President Vance, and Ukrainian President Zelenskyy. Outlets highlighted the disagreement and portrayed it as a rebuke of Zelenskyy. This comes amid ongoing tensions between Russia and Ukraine, with international leaders expressing support for Ukraine.</p>
+                <a href="https://www.foxnews.com/world/russia-revels-oval-office-spectacle-after-zelenskyy-spars-trump-vance" target="_blank">Read more on Fox News</a>
+            </div>
 
-                    <div class="news-story">
-                        <h2><a href="https://www.foxnews.com/world/heres-real-reason-trump-zelenskyys-deal-blew-up-oval-office" style="color: #081a56; text-decoration: none;">Real Reason Behind Trump-Zelenskyy Oval Office Fallout</a></h2>
-                        <p>According to sources close to Zelenskyy, the heated exchange was fueled by Zelenskyy's rejection of a proposed minerals-for-security agreement that lacked substantial security guarantees for Ukraine from another potential Russian invasion, a key requirement for Kyiv.</p>
-                    </div>
+        </div>
 
-                    <div class="news-story">
-                        <h2><a href="https://www.foxnews.com/world/lebanon-seizes-2-5m-destined-hezbollah-after-stopping-man-airport-unprecedented-bust" style="color:#081a56; text-decoration:none">Lebanon Seizes $2.5M Destined for Hezbollah in 'Unprecedented' Airport Bust</a></h2>
-                        <p>Lebanese authorities detained a man at Beirut's airport reportedly carrying $2.5 million in cash intended for Hezbollah. The money was allegedly coming from Turkey. Experts call the seizure "unprecedented" and it highlights ongoing efforts by Iran to fund the terrorist group, which has experienced significant weakening from Israel's military actions.</p>
-                    </div>
+        <div class="footer">
+            <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com">Fox News</a>, <a href="https://www.bbc.com">BBC</a>, and <a href="https://www.firstpost.com">Firstpost</a>.</p>
+            <p class ="joke">Joke of the Day: Why don't scientists trust atoms? Because they make up everything!</p>
+        </div>
 
-                    <div class="news-story">
-                        <h2><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color:#081a56; text-decoration:none">Apple to launch new MacBook Air with M4 chip next month</a></h2>
-                        <p>Apple is reportedly launching new MacBook Air models in March, featuring the new M4 chip. This upgrade promises improved performance, efficiency, and potential AI-driven features. The move follows the unveiling of the iPhone 16e, showing Apple's focus on in-house chip technology.</p>
-                    </div>
-
-                    <div class="joke">
-                        <h3>Joke of the Day</h3>
-                        <p>Why don't scientists trust atoms? Because they make up everything!</p>
-                    </div>
-                </td>
-            </tr>
-        </table>
     </div>
-
 </body>
 </html>
