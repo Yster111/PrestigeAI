@@ -1,166 +1,150 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prestige AI - Daily Newsletter</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            background-color: #081a56;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-            line-height: 1.2;
-        }
-        .header p {
-            margin: 5px 0 0;
-            font-size: 14px;
-            color: #b0b0b0;
-        }
-        .logo {
-           max-height: 60px;
-            margin-bottom: 10px;
-        }
-        .content {
-            padding: 20px;
-        }
-        .news-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-        }
-        .news-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        .news-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-        .news-item h2 {
-            font-size: 18px;
-            margin: 0 0 10px;
-            color: #081a56;
-            line-height: 1.3;
-        }
-        .news-item p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #555;
-        }
-        .news-item a {
-            color: #16d1f2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .news-item a:hover {
-           text-decoration:underline;
-        }
-
-
-        .footer {
-            background-color: #081a56;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-size: 12px;
-        }
-        .footer a {
-            color: #16d1f2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-         .joke {
-            font-style: italic;
-            color: #b0b0b0;
-            padding-top: 15px;
-        }
-
-    </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" class="logo">
-            <h1>Prestige AI - Daily Newsletter</h1>
-            <p><?php echo date("F j, Y"); ?> - Afternoon Edition</p>
-        </div>
-        <div class="content">
 
-             <div class="news-item">
-                <h2>Zelenskyy Meets with British PM After Tense Trump Exchange</h2>
-                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/76a958c3-142a-46ff-b8d8-8c24972d387e/77220db0-5249-49b0-b850-dcb1e8b0a88e/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Zelenskyy and Starmer">
-                <p>Ukrainian President Volodymyr Zelenskyy met with British Prime Minister Keir Starmer in London, shortly after a highly publicized and tense meeting with President Trump and Vice President Vance in Washington D.C.  The meeting in London focused on continued UK support for Ukraine.  The UK pledged a significant loan for military assets. The meeting came after a contentious exchange in the Oval Office about a proposed peace deal and U.S. support.</p>
-                <a href="https://www.foxnews.com/video/6369500101112" target="_blank">Read More on Fox News</a>
-            </div>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
 
-            <div class="news-item">
-                <h2>Pope Francis Stable, Continues Recovery in Hospital</h2>
-                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/pope-francis-health-update_007-.jpg?ve=1&tl=1" alt="Pope Francis">
-                <p>Pope Francis is in stable condition as he continues to recover from double pneumonia at Gemelli Hospital. He delivered his Sunday blessing in written form, thanking the faithful for their prayers and emphasizing the absurdity of war. The Vatican reported he's responding well to respiratory therapy and his overall condition is improving.</p>
-                <a href="https://www.foxnews.com/world/pope-francis-had-peaceful-night-hospital-skip-sunday-noon-blessing-while-continuing-recovery" target="_blank">Read More on Fox News</a>
-            </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f4f4f4;">
+        <tr>
+            <td align="center">
+                <table width="600" border="0" cellspacing="0" cellpadding="20" style="background-color: #ffffff; margin-top: 20px; margin-bottom: 20px;">
+                    <!-- Header -->
+                    <tr>
+                        <td align="center" style="padding: 20px 0; background-color: #081a56;">
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
+                            <h1 style="color: #ffffff; font-size: 24px; margin: 10px 0 5px 0;">Prestige AI - Daily Newsletter</h1>
+                            <p style="color: #16d1f2; font-size: 14px; margin: 0;">
+                                <script>
+                                    document.write(new Date().toLocaleDateString());
+                                </script> - Sunrise Edition
+                            </p>
+                        </td>
+                    </tr>
 
-            <div class="news-item">
-                <h2>Israeli Ambassador Warns of Iran's Nuclear Progress</h2>
-                <p>
-                  Israeli Ambassador to the U.S., Yechiel Leiter, expressed serious concerns about Iran's nuclear program, stating that Iran is "racing forward."  This statement follows Israel's decision to block humanitarian aid into Gaza after Hamas rejected a ceasefire extension proposal.
-                </p>
-                <a href="https://www.foxnews.com/video/6369510211112" target="_blank">Read More on Fox News</a>
-            </div>
+                    <!-- News Stories -->
+                    <tr>
+                        <td style="padding: 20px;">
+                            <h2 style="color: #081a56; font-size: 20px; margin-bottom: 15px;">Top News Stories</h2>
 
-            <div class="news-item">
-               <h2>Taiwan's Military Faces Recruiting Challenges</h2>
-               <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2023/07/1200/675/taiwanmilitary.jpg?ve=1&tl=1" alt="Taiwanese Soldiers">
-                <p>Amid escalating tensions with China, Taiwan's military is struggling to meet recruitment goals.  A declining birthrate, competition from the private sector, and past pension cuts are contributing factors. The possibility of enlisting foreign migrants is being considered, a concept that has been discussed for decades.</p>
-                 <a href="https://www.foxnews.com/world/taiwans-volunteer-military-shrinks-amid-growing-chinese-aggression" target="_blank">Read More on Fox News</a>
-            </div>
+                            <!-- Story 1 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                                <tr>
+                                    <td width="120" valign="top">
+                                        <a href="https://www.foxnews.com/world/zelenskyy-meets-british-prime-minister-keir-starmer-london-following-trump-oval-office-clash" style="text-decoration: none;">
+                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/76a958c3-142a-46ff-b8d8-8c24972d387e/77220db0-5249-49b0-b850-dcb1e8b0a88e/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Zelenskyy and Starmer" width="110" style="display: block;">
+                                        </a>
+                                    </td>
+                                     <td valign="top">
+                                  <h3 style="color: #081a56; font-size: 16px; margin-top: 0;"><a href="https://www.foxnews.com/world/zelenskyy-meets-british-prime-minister-keir-starmer-london-following-trump-oval-office-clash" style="color:#081a56; text-decoration:none">Zelenskyy Meets with British PM After Trump Clash</a></h3>
+                                        <p style="color: #333333; font-size: 14px;">Ukrainian President Volodymyr Zelenskyy met with British Prime Minister Keir Starmer in London, following a tense exchange with President Donald Trump in Washington D.C.  The UK provided a substantial loan to Ukraine for military assets. This meeting highlights continued international support for Ukraine amidst ongoing tensions.</p>
+                                    </td>
+                                </tr>
+                            </table>
 
-            <div class="news-item">
-              <h2>Gene Hackman and Wife Found Dead, Believed Deceased for Over a Week</h2>
-               <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/a58fa182-a06d-48f3-a359-e2b2f388936b/39cf2c45-16b3-492d-b8ea-c0dde016a30b/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Depiction of Gene Hackman">
-              <p>Authorities state that Gene Hackman and his wife were probably dead for over a week before they were discovered.</p>
-              <a href="https://www.foxnews.com/video/6369504399112" target="_blank">Read more on Fox News</a>
-            </div>
+                            <!-- Story 2 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                                <tr>
+                                    <td width="120" valign="top">
+                                        <a href="https://www.foxnews.com/world/russia-revels-oval-office-spectacle-after-zelenskyy-spars-trump-vance" style="text-decoration: none;">
+                                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/zelenskyy-trump-vance-oval-office.jpg?ve=1&tl=1" alt="Zelenskyy, Trump and Vance" width="110" style="display: block;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <h3 style="color: #081a56; font-size: 16px; margin-top: 0;"><a href="https://www.foxnews.com/world/russia-revels-oval-office-spectacle-after-zelenskyy-spars-trump-vance" style="color:#081a56;text-decoration:none;">Russia Reacts to Trump-Zelenskyy Clash</a></h3>
+                                        <p style="color: #333333; font-size: 14px;">Russian officials and media celebrated the tense exchange between President Trump, Vice President Vance, and Ukrainian President Zelenskyy.  Former Russian President Dmitry Medvedev called it a "proper slap down." The event has been widely publicized in Russian state media.</p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Story 3 -->
+                           <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                                <tr>
+                                    <td width="120" valign="top">
+                                        <a href="https://www.firstpost.com/world/china-signals-shift-towards-tech-sector-but-experts-warn-of-caution-13867950.html" style="text-decoration: none;">
+                                            <img src="https://images.firstpost.com/uploads/2025/02/Xi-2025-02-dff28d1f1974effe31d0a820b44d203f-1200x675.jpg?im=FitAndFill=(596,336)" alt="Chinese President Xi Jinping" width="110" style="display: block;">
+                                         </a>
+                                     </td>
+                                     <td valign="top">
+                                  <h3 style="color: #081a56; font-size: 16px; margin-top: 0;"><a href="https://www.firstpost.com/world/china-signals-shift-towards-tech-sector-but-experts-warn-of-caution-13867950.html" style="color:#081a56;text-decoration:none">China's Tech Sector: A Cautious Thaw</a></h3>
+                                        <p style="color: #333333; font-size: 14px;">A recent handshake between President Xi Jinping and Jack Ma has fueled speculation of a friendlier stance towards China's tech sector.  However, experts warn that this shift is likely driven by strategic national interests, particularly technological independence from the US, rather than a full embrace of private enterprise.</p>
+                                     </td>
+                                </tr>
+                            </table>
+
+                            <!-- Story 4 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                                <tr>
+                                    <td width="120" valign="top">
+                                 <a href="https://www.firstpost.com/tech/microsoft-shuts-down-skype-to-prioritise-teams-13867649.html" style="text-decoration: none;">
+                                            <img src="https://images.firstpost.com/uploads/2025/02/Untitled-design-2025-02-28T203633.817-2025-02-55c53243eca042b58053eaa0d3f206a8.jpg?im=FitAndFill=(596,336)" alt="Skype Logo" width="110" style="display: block;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                     <h3 style="color: #081a56; font-size: 16px; margin-top: 0;"><a href="https://www.firstpost.com/tech/microsoft-shuts-down-skype-to-prioritise-teams-13867649.html" style="color:#081a56;text-decoration:none">Microsoft Shuts Down Skype</a></h3>
+                                        <p style="color: #333333; font-size: 14px;">Microsoft announced the shutdown of Skype, effective May 2025, to prioritize its Microsoft Teams platform. Existing Skype users can migrate their accounts to Teams for free.  This marks the end of an era for the pioneering internet calling service.</p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                             <!-- Story 5 -->
+                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                                <tr>
+                                    <td width="120" valign="top">
+                                       <a href="https://www.foxnews.com/world/us-embassy-thailand-warns-americans-violent-retaliatory-attacks-risk-after-uyghurs-deported-china" style="text-decoration: none;">
+                                         <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/thailand-deportations.jpg?ve=1&tl=1" alt="Trucks in Thailand" width="110" style="display: block;">
+                                       </a>
+                                  </td>
+                                  <td valign="top">
+                                   <h3 style="color: #081a56; font-size: 16px; margin-top: 0;"><a href="https://www.foxnews.com/world/us-embassy-thailand-warns-americans-violent-retaliatory-attacks-risk-after-uyghurs-deported-china" style="color:#081a56;text-decoration:none">US Embassy in Thailand Warns of Potential Attacks</a></h3>
+                                        <p style="color: #333333; font-size: 14px;">The US Embassy in Bangkok issued a warning to Americans about potential violent retaliatory attacks following Thailand's deportation of 45 Uyghurs to China. The embassy cited a precedent from 2015, highlighting increased risk in crowded tourist locations.</p>
+                                        </td>
+                                </tr>
+                            </table>
+                          <!-- Story 6 -->
+                           <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                                <tr>
+                                  <td width="120" valign="top">
+                                  <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="text-decoration: none;">
+                                            <img src="https://images.firstpost.com/uploads/2025/02/Apple-to-launch-new-MacBook-Air-with-M4-chip-next-month-2025-02-01d295cffa3adfc6ed844b10bc762bd0-1200x675.jpg?im=FitAndFill=(596,336)" alt="MacBook Air" width="110" style="display: block;">
+                                        </a>
+                                  </td>
+                                  <td valign="top">
+                                        <h3 style="color: #081a56; font-size: 16px; margin-top: 0;"><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color:#081a56; text-decoration:none">Apple to Launch New MacBook Air with M4 Chip</a></h3>
+                                        <p style="color: #333333; font-size: 14px;">Apple is expected to launch new MacBook Air models in March, featuring the upgraded M4 chip.  This follows the release of the iPhone 16e with Apple's first in-house modem, the C1 chip, demonstrating Apple's continued push for greater control over its hardware components.</p>
+                                     </td>
+                                </tr>
+                            </table>
 
 
-            <div class="news-item">
-              <h2>Russian Media Reacts to Trump-Zelenskyy Clash</h2>
-              <p>Russian state media widely covered the tense exchange between President Trump, Vice President Vance, and Ukrainian President Zelenskyy.  Outlets highlighted the disagreement and portrayed it as a rebuke of Zelenskyy.  This comes amid ongoing tensions between Russia and Ukraine, with international leaders expressing support for Ukraine.</p>
-              <a href="https://www.foxnews.com/world/russia-revels-oval-office-spectacle-after-zelenskyy-spars-trump-vance" target="_blank">Read more on Fox News</a>
-            </div>
+                        </td>
+                    </tr>
 
-        </div>
+                    <!-- Sources -->
+                    <tr>
+                         <td style="padding: 20px; font-size: 12px; color: #b0b0b0; text-align: center;">
+                This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
+            </td>
+                    </tr>
 
-        <div class="footer">
-            <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com">Fox News</a>, <a href="https://www.bbc.com">BBC</a>, and <a href="https://www.firstpost.com">Firstpost</a>.</p>
-            <p class ="joke">Joke of the Day: Why don't scientists trust atoms?  Because they make up everything!</p>
-        </div>
+                    <!-- Conclusion -->
+                    <tr>
+                        <td style="padding: 20px; background-color: #081a56; color: #ffffff; text-align: center;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px;">Joke of the Day</h3>
+                            <p style="font-size: 14px;">Why don't scientists trust atoms? <br> Because they make up everything!</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
-    </div>
 </body>
+
 </html>
 ```
