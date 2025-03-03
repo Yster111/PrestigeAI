@@ -52,78 +52,64 @@
             margin: 10px auto;
         }
 
-        .newsletter {
-            background-color: #f4f4f4;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            padding: 20px;
-        }
-
-        .newsletter h1 {
-            color: #ffffff;
-            font-size: 24px;
-            margin: 10px 0 5px 0;
-        }
-
-        .newsletter p {
-            color: #16d1f2;
-            font-size: 14px;
-            margin: 0;
-        }
-
-        .newsletter-table {
+        table {
             width: 100%;
             border: 0;
             cellspacing: 0;
             cellpadding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .newsletter-table {
+            width: 600px;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 20;
             background-color: #ffffff;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .newsletter-table td {
-            padding: 20px;
-        }
-
-        .story {
-            border-bottom: 1px solid #b0b0b0;
-            margin-bottom: 15px;
-        }
-
-        .story img {
-            display: block;
-        }
-
-        .story h3 {
+        .newsletter-title {
             color: #081a56;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .newsletter-date {
+            color: #b0b0b0;
             font-size: 16px;
             margin-top: 0;
         }
 
-        .story p {
-            color: #333333;
+        .news-story-title {
+            color: #081a56;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .news-story-content {
+            color: #333;
             font-size: 14px;
+            line-height: 1.6;
         }
 
-        .footer {
-            padding: 20px;
-            font-size: 12px;
+        .footer-text {
             color: #b0b0b0;
-            text-align: center;
+            font-size: 12px;
         }
 
-        .conclusion {
+        .joke-section {
             padding: 20px;
             background-color: #081a56;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .joke-text {
             color: #ffffff;
-            text-align: center;
-        }
-
-        .conclusion h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .conclusion p {
             font-size: 14px;
+            font-style: italic;
         }
     </style>
 </head>
@@ -168,134 +154,93 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <table class="newsletter-table">
-            <tr>
-                <td align="center" style="padding: 20px 0; background-color: #081a56;">
-                    <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                    <h1>Prestige AI - Daily Newsletter</h1>
-                    <p>
-                        <script>
-                            document.write(new Date().toLocaleDateString());
-                        </script> - Sunrise Edition
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding: 20px;">
-                    <h2 style="color: #081a56; font-size: 20px; margin-bottom: 15px;">Top News Stories</h2>
+    <table>
+        <tr>
+            <td align="center">
+                <table class="newsletter-table">
+                    <tr>
+                        <td align="center">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACnCAMAAAAh5h5zAAABY1BMVEUAAAAAAAD/ZgD/////YQD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/XAD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgAAAFb/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD7bQD/ZgD/pAD2swA5PkD5cgD/ZgD/ZgD1bwD/ZgD/ZgD/ZgD/lgD/ZgD/ZgD/ZgD1fQDqjAD/ZgD/ZgD/ZgDymwD/ZgD6eAD/ZgD5fAD/ZgD1ggDojAD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgL1Zc/EAAAAmXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC55vLq3Mv9+1J772S2zX3+1+S8+2z2f6R92/f39P7X73X7X6t3E89126v0+9r+s3T+1pS7e7a/D6t3E8fX5qGk8t5g8tX44tE8+2k2f6r5sEw8lqj91+9f+r0s64r+mR0lK9w+1H5Kz8v3x/9eL/z0z2AAAAAWJLR0QB/wIt3gAAAAd0SU1FB+cMEg4EAK5iQ1cAAAYYSURBVHja7d3pXXxZEMBhpUTARFwCQlqgEAIJQUoQSCd4sAMsEIiUEAIF6h0HB/Jyd9J+9B9d/r7N8G+/C/fJ/98975wVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgLeBO9q9Wv0N/C9770QfS/9L/0u/i97n9fNq+f2v9L/0P+F/3x6q3wTfSzuA73hXz/1sYl/d+B/6XPR3j/5c8fX9b3w2g/f/hL99W+Ff4/h+576Xfpf+G70r2B/7Xv6/F76P9/z79/yJ9O/9c+C/2z4X/d/5r/3z43/xO+l36f/hvYrvO/R/758L/4n/z/r3/3vwv/jf/d+j+3/W///yY/y/4n/zfr+/F/6P/ffhf/M////////////9//T9z7fLrrn539P+/b7X7+v15eXv/3hP7h+bHn9P+/b7X7+v5Ym7c37772z+t7+/Xf/nrfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfQv/D1/y9T6Fz4e/4er9S/+PDj/1qu1P9//V+r9P+P9Wq/t3+976V//9u/r/W/v0/w88G79UuH2fT4v1ar9T/Dz/1+3/66/V/v/hV/4f/vW7+v/hV34/AAAAAElFTkSuQmCC" alt="Prestige AI Logo" style="max-width: 200px; margin-bottom: 10px;">
+                            <h1 class="newsletter-title">Prestige AI - Daily Newsletter</h1>
+                            <p class="newsletter-date">March 4, 2025 - Afternoon Edition</p>
+                        </td>
+                    </tr>
 
-                    <div class="story">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                            <tr>
-                                <td width="120" valign="top">
-                                    <a href="https://www.foxnews.com/world/zelenskyy-meets-british-prime-minister-keir-starmer-london-following-trump-oval-office-clash" style="text-decoration: none;">
-                                        <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/76a958c3-142a-46ff-b8d8-8c24972d387e/77220db0-5249-49b0-b850-dcb1e8b0a88e/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Zelenskyy and Starmer" width="110">
-                                    </a>
-                                </td>
-                                <td valign="top">
-                                    <h3><a href="https://www.foxnews.com/world/zelenskyy-meets-british-prime-minister-keir-starmer-london-following-trump-oval-office-clash" style="color:#081a56; text-decoration:none">Zelenskyy Meets with British PM After Trump Clash</a></h3>
-                                    <p>Ukrainian President Volodymyr Zelenskyy met with British Prime Minister Keir Starmer in London, following a tense exchange with President Donald Trump in Washington D.C. The UK provided a substantial loan to Ukraine for military assets. This meeting highlights continued international support for Ukraine amidst ongoing tensions.</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <!-- News Story 1 -->
+                    <tr>
+                        <td style="padding: 10px 0;">
+                            <h2 class="news-story-title">Evangelicals Push for Trump to Recognize Israeli Sovereignty over Biblical Heartland</h2>
+                            <p class="news-story-content">A group of American Christian leaders is urging President Trump to recognize Israeli sovereignty over Judea and Samaria (West Bank). They cite biblical connections and were slated to deliver a declaration signed by 3,000 religious leaders. This follows Trump's statement about a potential announcement on the matter. The 2020 "Peace to Prosperity" plan, which envisioned Israeli annexation, was shelved for the Abraham Accords. Israeli lawmakers and organizations are also pushing for sovereignty, citing security concerns and historical ties. Others warn against it, highlighting the possibility of a non-democratic outcome.</p>
+                            <a href="https://www.foxnews.com/world/leading-evangelicals-push-have-president-trump-recognize-israeli-sovereignty-over-biblical-heartland" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
+                        </td>
+                    </tr>
+                    <tr><td style="border-bottom: 1px solid #b0b0b0;"></td></tr>
 
-                    <div class="story">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                            <tr>
-                                <td width="120" valign="top">
-                                    <a href="https://www.foxnews.com/world/russia-revels-oval-office-spectacle-after-zelenskyy-spars-trump-vance" style="text-decoration: none;">
-                                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/zelenskyy-trump-vance-oval-office.jpg?ve=1&tl=1" alt="Zelenskyy, Trump and Vance" width="110">
-                                    </a>
-                                </td>
-                                <td valign="top">
-                                    <h3><a href="https://www.foxnews.com/world/russia-revels-oval-office-spectacle-after-zelenskyy-spars-trump-vance" style="color:#081a56;text-decoration:none;">Russia Reacts to Trump-Zelenskyy Clash</a></h3>
-                                    <p>Russian officials and media celebrated the tense exchange between President Trump, Vice President Vance, and Ukrainian President Zelenskyy. Former Russian President Dmitry Medvedev called it a "proper slap down." The event has been widely publicized in Russian state media.</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <!-- News Story 2 -->
+                    <tr>
+                        <td style="padding: 10px 0;">
+                            <h2 class="news-story-title">Terror Attack in Haifa, Israel Leaves 1 Dead, 4 Wounded</h2>
+                            <p class="news-story-content">A stabbing attack at a transit hub in Haifa, Israel, resulted in one death and four injuries. Israeli authorities are treating the incident as a militant attack. The attacker, an Arab citizen of Israel, was killed by security forces. Israeli Prime Minister Benjamin Netanyahu condemned the attack and vowed to continue fighting those who seek to harm Israelis.</p>
+                            <a href="https://www.foxnews.com/video/6369551466112" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
+                        </td>
+                    </tr>
+                    <tr><td style="border-bottom: 1px solid #b0b0b0;"></td></tr>
 
-                    <div class="story">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                            <tr>
-                                <td width="120" valign="top">
-                                    <a href="https://www.firstpost.com/world/china-signals-shift-towards-tech-sector-but-experts-warn-of-caution-13867950.html" style="text-decoration: none;">
-                                        <img src="https://images.firstpost.com/uploads/2025/02/Xi-2025-02-dff28d1f1974effe31d0a820b44d203f-1200x675.jpg?im=FitAndFill=(596,336)" alt="Chinese President Xi Jinping" width="110">
-                                    </a>
-                                </td>
-                                <td valign="top">
-                                    <h3><a href="https://www.firstpost.com/world/china-signals-shift-towards-tech-sector-but-experts-warn-of-caution-13867950.html" style="color:#081a56;text-decoration:none">China's Tech Sector: A Cautious Thaw</a></h3>
-                                    <p>A recent handshake between President Xi Jinping and Jack Ma has fueled speculation of a friendlier stance towards China's tech sector. However, experts warn that this shift is likely driven by strategic national interests, particularly technological independence from the US, rather than a full embrace of private enterprise.</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <!-- News Story 3 -->
+                    <tr>
+                        <td style="padding: 10px 0;">
+                            <h2 class="news-story-title">Delegation of Released Hamas Hostages Traveling to DC to Meet with Trump Admin Officials</h2>
+                            <p class="news-story-content">Seven individuals released from Hamas captivity are heading to Washington, D.C., to express gratitude and provide firsthand accounts of their experiences. They will meet with Trump administration officials and emphasize the need for the remaining hostages to be returned. Israeli officials have halted aid to Gaza, demanding Hamas accept a ceasefire extension.</p>
+                            <a href="https://www.foxnews.com/world/delegation-hostages-released-hamas-traveling-dc-meet-trump-admin-officials" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
+                        </td>
+                    </tr>
+                    <tr><td style="border-bottom: 1px solid #b0b0b0;"></td></tr>
 
-                    <div class="story">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                            <tr>
-                                <td width="120" valign="top">
-                                    <a href="https://www.firstpost.com/tech/microsoft-shuts-down-skype-to-prioritise-teams-13867649.html" style="text-decoration: none;">
-                                        <img src="https://images.firstpost.com/uploads/2025/02/Untitled-design-2025-02-28T203633.817-2025-02-55c53243eca042b58053eaa0d3f206a8.jpg?im=FitAndFill=(596,336)" alt="Skype Logo" width="110">
-                                    </a>
-                                </td>
-                                <td valign="top">
-                                    <h3><a href="https://www.firstpost.com/tech/microsoft-shuts-down-skype-to-prioritise-teams-13867649.html" style="color:#081a56;text-decoration:none">Microsoft Shuts Down Skype</a></h3>
-                                    <p>Microsoft announced the shutdown of Skype, effective May 2025, to prioritize its Microsoft Teams platform. Existing Skype users can migrate their accounts to Teams for free. This marks the end of an era for the pioneering internet calling service.</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <!-- News Story 4 -->
+                    <tr>
+                        <td style="padding: 10px 0;">
+                            <h2 class="news-story-title">UK Factories Cut Jobs at Fastest Pace Since 2020 Covid Crisis</h2>
+                            <p class="news-story-content">British factories reduced their workforce at the fastest rate in nearly five years. The S&P Global Purchasing Managers’ Index (PMI) fell to a 14-month low. Rising costs and decreased demand contributed to job cuts. However, manufacturers expressed optimism about economic conditions and future business plans. The Bank of England is monitoring the jobs market for inflation pressures.</p>
+                            <a href="https://www.firstpost.com/world/uk-factories-cut-jobs-at-fastest-pace-since-2020-covid-crisis-but-raise-hopes-rises-for-pick-up-in-economy-13868330.html" style="color: #16d1f2; text-decoration: none;">Read More on Firstpost</a>
+                        </td>
+                    </tr>
+                    <tr><td style="border-bottom: 1px solid #b0b0b0;"></td></tr>
 
-                    <div class="story">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                            <tr>
-                                <td width="120" valign="top">
-                                    <a href="https://www.foxnews.com/world/us-embassy-thailand-warns-americans-violent-retaliatory-attacks-risk-after-uyghurs-deported-china" style="text-decoration: none;">
-                                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/thailand-deportations.jpg?ve=1&tl=1" alt="Trucks in Thailand" width="110">
-                                    </a>
-                                </td>
-                                <td valign="top">
-                                    <h3><a href="https://www.foxnews.com/world/us-embassy-thailand-warns-americans-violent-retaliatory-attacks-risk-after-uyghurs-deported-china" style="color:#081a56;text-decoration:none">US Embassy in Thailand Warns of Potential Attacks</a></h3>
-                                    <p>The US Embassy in Bangkok issued a warning to Americans about potential violent retaliatory attacks following Thailand's deportation of 45 Uyghurs to China. The embassy cited a precedent from 2015, highlighting increased risk in crowded tourist locations.</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <!-- News Story 5 -->
+                    <tr>
+                        <td style="padding: 10px 0;">
+                            <h2 class="news-story-title">Did Assads Drain Syria of Its Gold?</h2>
+                            <p class="news-story-content">Documents reveal a vast economic empire built by Maher al-Assad and his network, pillaging Syria during the civil war. The Fourth Division, led by Maher, engaged in various illicit activities, including expropriation, looting, and controlling key industries. The documents found detail their immense wealth and shady dealings, highlighting their exploitation of an impoverished nation.</p>
+                            <a href="https://www.firstpost.com/world/did-assads-drain-syria-of-its-gold-report-says-family-pillaged-civil-war-torn-country-for-years-13868329.html" style="color: #16d1f2; text-decoration: none;">Read More on Firstpost</a>
+                        </td>
+                    </tr>
+                    <tr><td style="border-bottom: 1px solid #b0b0b0;"></td></tr>
 
-                    <div class="story">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                            <tr>
-                                <td width="120" valign="top">
-                                    <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="text-decoration: none;">
-                                        <img src="https://images.firstpost.com/uploads/2025/02/Apple-to-launch-new-MacBook-Air-with-M4-chip-next-month-2025-02-01d295cffa3adfc6ed844b10bc762bd0-1200x675.jpg?im=FitAndFill=(596,336)" alt="MacBook Air" width="110">
-                                    </a>
-                                </td>
-                                <td valign="top">
-                                    <h3><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color:#081a56; text-decoration:none">Apple to Launch New MacBook Air with M4 Chip</a></h3>
-                                    <p>Apple is expected to launch new MacBook Air models in March, featuring the upgraded M4 chip. This follows the release of the iPhone 16e with Apple's first in-house modem, the C1 chip, demonstrating Apple's continued push for greater control over its hardware components.</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <!-- News Story 6-->
+                    <tr>
+                        <td style="padding: 10px 0;">
+                            <h2 class="news-story-title">Mike Pompeo: US needs to focus on imposing costs on Putin</h2>
+                            <p class="news-story-content">Mike Pompeo argues that the US needs to impose greater costs on Putin.</p>
+                            <a href="https://www.foxnews.com/video/6369550596112" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
+                        </td>
+                    </tr>
 
-                </td>
-            </tr>
-            <tr>
-                <td class="footer">
-                    This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
-                </td>
-            </tr>
-            <tr>
-                <td class="conclusion">
-                    <h3>Joke of the Day</h3>
-                    <p>Why don't scientists trust atoms? <br> Because they make up everything!</p>
-                </td>
-            </tr>
-        </table>
-    </div>
+                    <tr>
+                        <td align="center" style="padding-top: 20px;">
+                            <p class="footer-text">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com" style="color:#16d1f2; text-decoration: none;">Firstpost</a>.</p>
+                        </td>
+                    </tr>
+
+                    <!-- Joke of the Day -->
+                    <tr>
+                        <td align="center" class="joke-section">
+                            <p class="joke-text"><strong>Joke of the Day:</strong> Why don't scientists trust atoms? Because they make up everything!</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
 </body>
 </html>
