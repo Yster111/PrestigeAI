@@ -67,51 +67,66 @@
             cellpadding: 20;
             background-color: #ffffff;
             margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
 
-        .newsletter-title {
-            color: #081a56;
+        .newsletter-header {
+            padding: 20px 0;
+            background-color: #081a56;
+            color: #ffffff;
+        }
+
+        .newsletter-header img {
+            display: block;
+        }
+
+        .newsletter-header h1 {
             font-size: 24px;
-            margin-bottom: 5px;
+            margin: 10px 0;
         }
 
-        .newsletter-date {
-            color: #b0b0b0;
+        .newsletter-header p {
             font-size: 16px;
-            margin-top: 0;
+            margin: 5px 0;
         }
 
-        .news-story-title {
-            color: #081a56;
+        .news-item {
+            border-bottom: 1px solid #b0b0b0;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        .news-item h3 {
             font-size: 18px;
+            color: #081a56;
             margin-bottom: 5px;
         }
 
-        .news-story-content {
-            color: #333;
+        .news-item p {
             font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .read-more {
-            color: #16d1f2;
-            text-decoration: none;
+            color: #333333;
         }
 
         .footer {
-            color: #b0b0b0;
             font-size: 12px;
+            color: #b0b0b0;
+            padding: 40px;
         }
 
         .joke {
-            padding: 20px;
-            background-color: #081a56;
-            border-radius: 0 0 8px 8px;
-            color: #ffffff;
+            border-top: 2px solid #16d1f2;
+            padding: 20px 0;
+        }
+
+        .joke h3 {
+            font-size: 16px;
+            color: #081a56;
+            margin-bottom: 5px;
+        }
+
+        .joke p {
             font-size: 14px;
-            font-style: italic;
+            color: #333333;
         }
     </style>
 </head>
@@ -161,82 +176,66 @@
             <td align="center">
                 <table class="newsletter-table">
                     <tr>
-                        <td align="center">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACnCAMAAAAh5h5zAAABY1BMVEUAAAAAAAD/ZgD/////YQD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/XAD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgAAAFb/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD7bQD/ZgD/pAD2swA5PkD5cgD/ZgD/ZgD1bwD/ZgD/ZgD/ZgD/lgD/ZgD/ZgD/ZgD1fQDqjAD/ZgD/ZgD/ZgDymwD/ZgD6eAD/ZgD5fAD/ZgD1ggDojAD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgD/ZgL1Zc/EAAAAmXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC55vLq3Mv9+1J772S2zX3+1+S8+2z2f6R92/f39P7X73X7X6t3E89126v0+9r+s3T+1pS7e7a/D6t3E8fX5qGk8t5g8tX44tE8+2k2f6r5sEw8lqj91+9f+r0s64r+mR0lK9w+1H5Kz8v3x/9eL/z0z2AAAAAWJLR0QB/wIt3gAAAAd0SU1FB+cMEg4EAK5iQ1cAAAYYSURBVHja7d3pXXxZEMBhpUTARFwCQlqgEAIJQUoQSCd4sAMsEIiUEAIF6h0HB/Jyd9J+9B9d/r7N8G+/C/fJ/98975wVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgLeBO9q9Wv0N/C9770QfS/9L/0u/i97n9fNq+f2v9L/0P+F/3x6q3wTfSzuA73hXz/1sYl/d+B/6XPR3j/5c8fX9b3w2g/f/hL99W+Ff4/h+576Xfpf+G70r2B/7Xv6/F76P9/z79/yJ9O/9c+C/2z4X/d/5r/3z43/xO+l36f/hvYrvO/R/758L/4n/z/r3/3vwv/jf/d+j+3/W///yY/y/4n/zfr+/F/6P/ffhf/M////////////9//T9z7fLrrn539P+/b7X7+v15eXv/3hP7h+bHn9P+/b7X7+v5Ym7c37772z+t7+/Xf/nrfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfWuvH+HqfQv/D1/y9T6Fz4e/4er9S/+PDj/1qu1P9//V+r9P+P9Wq/t3+976V//9u/r/W/v0/w88G79UuH2fT4v1ar9T/Dz/1+3/66/V/v/hV/4f/vW7+v/hV34/AAAAAElFTkSuQmCC" alt="Prestige AI Logo" style="max-width: 200px; margin-bottom: 10px;">
-                            <h1 class="newsletter-title">Prestige AI - Daily Newsletter</h1>
-                            <p class="newsletter-date">March 4, 2025 - Afternoon Edition</p>
+                        <td class="newsletter-header">
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
+                            <h1>Prestige AI - Daily Newsletter</h1>
+                            <p><span style="color: #16d1f2;">Sunrise Edition</span> | <span style="color: #b0b0b0;">
+                                <script>
+                                    document.write(new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+                                </script>
+                            </span></p>
                         </td>
                     </tr>
-
-                    <!-- News Story 1 -->
                     <tr>
-                        <td style="padding: 10px 0;">
-                            <h2 class="news-story-title">Evangelicals Push for Trump to Recognize Israeli Sovereignty over Biblical Heartland</h2>
-                            <p class="news-story-content">A group of American Christian leaders is urging President Trump to recognize Israeli sovereignty over Judea and Samaria (West Bank). They cite biblical connections and were slated to deliver a declaration signed by 3,000 religious leaders. This follows Trump's statement about a potential announcement on the matter. The 2020 "Peace to Prosperity" plan, which envisioned Israeli annexation, was shelved for the Abraham Accords. Israeli lawmakers and organizations are also pushing for sovereignty, citing security concerns and historical ties. Others warn against it, highlighting the possibility of a non-democratic outcome.</p>
-                            <a href="https://www.foxnews.com/world/leading-evangelicals-push-have-president-trump-recognize-israeli-sovereignty-over-biblical-heartland" class="read-more">Read More on Fox News</a>
+                        <td style="padding: 20px 0;">
+                            <h2 style="font-size:20px; color:#081a56; margin-bottom: 1em; text-align: center;">Today's Top Stories</h2>
+
+                            <div class="news-item">
+                                <h3>India's Anthem Played In Pakistan, Another Mishap For Hosts</h3>
+                                <p>During a recent sports event in Pakistan, India's national anthem was mistakenly played, causing a stir. This incident adds to a series of organizational mishaps by the hosts.</p>
+                            </div>
+
+                            <div class="news-item">
+                                <h3>Vasundhara Oswal: Indian-origin Billionaire Details Ugandan Jail Ordeal</h3>
+                                <p>Indian-origin billionaire Vasundhara Oswal shares her harrowing experience in a Ugandan jail, shedding light on the conditions and challenges faced.</p>
+                            </div>
+
+                            <div class="news-item">
+                                <h3>Trump's Aide Proposes Canada's Expulsion from Five Eyes Alliance</h3>
+                                <p>A close aide to former President Trump has suggested expelling Canada from the Five Eyes intelligence alliance, raising concerns about the future of the longstanding partnership.</p>
+                            </div>
+
+                            <div class="news-item">
+                                <h3>DR Congo: Police Switches Allegiance to M23, Tshisekedi Calls for Unity Govt</h3>
+                                <p>In DR Congo, police forces have reportedly switched allegiance to the M23 rebel group, prompting President Tshisekedi to call for a unity government to address the escalating crisis.</p>
+                            </div>
+
+                            <div class="news-item">
+                                <h3>Tennis World Fumes, Sinner’s Doping Ban A Biased Decision?</h3>
+                                <p>The tennis community is in uproar over Jannik Sinner's doping ban, with many questioning the fairness and impartiality of the decision.</p>
+                            </div>
+
+                            <div class="news-item">
+                                <h3>Pope Francis Suffers Two Respiratory 'Insufficiencies', Back on Ventilation</h3>
+                                <p>The Vatican announced that Pope Francis experienced two episodes of respiratory distress and has been placed back on ventilation.</p>
+                            </div>
+
                         </td>
                     </tr>
-                    <tr><td style="border-bottom: 1px solid #b0b0b0;"></td></tr>
-
-                    <!-- News Story 2 -->
                     <tr>
-                        <td style="padding: 10px 0;">
-                            <h2 class="news-story-title">Terror Attack in Haifa, Israel Leaves 1 Dead, 4 Wounded</h2>
-                            <p class="news-story-content">A stabbing attack at a transit hub in Haifa, Israel, resulted in one death and four injuries. Israeli authorities are treating the incident as a militant attack. The attacker, an Arab citizen of Israel, was killed by security forces. Israeli Prime Minister Benjamin Netanyahu condemned the attack and vowed to continue fighting those who seek to harm Israelis.</p>
-                            <a href="https://www.foxnews.com/video/6369551466112" class="read-more">Read More on Fox News</a>
+                        <td align="center" style="padding: 20px 0; background-color: #081a56; color:#b0b0b0; font-size:12px;">
+                            <p>This newsletter is compiled from published news stories from: <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.</p>
                         </td>
                     </tr>
-                    <tr><td style="border-bottom: 1px solid #b0b0b0;"></td></tr>
-
-                    <!-- News Story 3 -->
                     <tr>
-                        <td style="padding: 10px 0;">
-                            <h2 class="news-story-title">Delegation of Released Hamas Hostages Traveling to DC to Meet with Trump Admin Officials</h2>
-                            <p class="news-story-content">Seven individuals released from Hamas captivity are heading to Washington, D.C., to express gratitude and provide firsthand accounts of their experiences. They will meet with Trump administration officials and emphasize the need for the remaining hostages to be returned. Israeli officials have halted aid to Gaza, demanding Hamas accept a ceasefire extension.</p>
-                            <a href="https://www.foxnews.com/world/delegation-hostages-released-hamas-traveling-dc-meet-trump-admin-officials" class="read-more">Read More on Fox News</a>
+                        <td class="joke">
+                            <h3>Joke of the Day</h3>
+                            <p>Why don't scientists trust atoms? Because they make up everything!</p>
                         </td>
                     </tr>
-                    <tr><td style="border-bottom: 1px solid #b0b0b0;"></td></tr>
-
-                    <!-- News Story 4 -->
                     <tr>
-                        <td style="padding: 10px 0;">
-                            <h2 class="news-story-title">UK Factories Cut Jobs at Fastest Pace Since 2020 Covid Crisis</h2>
-                            <p class="news-story-content">British factories reduced their workforce at the fastest rate in nearly five years. The S&P Global Purchasing Managers’ Index (PMI) fell to a 14-month low. Rising costs and decreased demand contributed to job cuts. However, manufacturers expressed optimism about economic conditions and future business plans. The Bank of England is monitoring the jobs market for inflation pressures.</p>
-                            <a href="https://www.firstpost.com/world/uk-factories-cut-jobs-at-fastest-pace-since-2020-covid-crisis-but-raise-hopes-rises-for-pick-up-in-economy-13868330.html" class="read-more">Read More on Firstpost</a>
-                        </td>
-                    </tr>
-                    <tr><td style="border-bottom: 1px solid #b0b0b0;"></td></tr>
-
-                    <!-- News Story 5 -->
-                    <tr>
-                        <td style="padding: 10px 0;">
-                            <h2 class="news-story-title">Did Assads Drain Syria of Its Gold?</h2>
-                            <p class="news-story-content">Documents reveal a vast economic empire built by Maher al-Assad and his network, pillaging Syria during the civil war. The Fourth Division, led by Maher, engaged in various illicit activities, including expropriation, looting, and controlling key industries. The documents found detail their immense wealth and shady dealings, highlighting their exploitation of an impoverished nation.</p>
-                            <a href="https://www.firstpost.com/world/did-assads-drain-syria-of-its-gold-report-says-family-pillaged-civil-war-torn-country-for-years-13868329.html" class="read-more">Read More on Firstpost</a>
-                        </td>
-                    </tr>
-                    <tr><td style="border-bottom: 1px solid #b0b0b0;"></td></tr>
-
-                    <!-- News Story 6-->
-                    <tr>
-                        <td style="padding: 10px 0;">
-                            <h2 class="news-story-title">Mike Pompeo: US needs to focus on imposing costs on Putin</h2>
-                            <p class="news-story-content">Mike Pompeo argues that the US needs to impose greater costs on Putin.</p>
-                            <a href="https://www.foxnews.com/video/6369550596112" class="read-more">Read More on Fox News</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td align="center" style="padding-top: 20px;">
-                            <p class="footer">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" class="read-more">Fox News</a>, <a href="https://www.bbc.com" class="read-more">BBC</a>, and <a href="https://www.firstpost.com" class="read-more">Firstpost</a>.</p>
-                        </td>
-                    </tr>
-
-                    <!-- Joke of the Day -->
-                    <tr>
-                        <td align="center" class="joke">
-                            <strong>Joke of the Day:</strong> Why don't scientists trust atoms? Because they make up everything!
+                        <td class="footer">
+                            &copy; <script>document.write(new Date().getFullYear())</script> Prestige AI. All rights reserved.
                         </td>
                     </tr>
                 </table>
