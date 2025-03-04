@@ -52,40 +52,56 @@
             margin: 10px auto;
         }
 
-        .newsletter {
-            background-color: #f4f4f4;
-            margin-top: 20px;
-            margin-bottom: 20px;
+        .newsletter-body {
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f4f4; 
+            color: #333;
+        }
+
+        .newsletter-header {
+            background-color: #081a56; 
+            color: #fff; 
             padding: 20px;
         }
 
-        .newsletter h1 {
-            font-size: 24px;
-            margin: 10px 0;
+        .newsletter-header img {
+            width: 150px; 
+            height: auto;
         }
 
-        .newsletter h2 {
-            font-size: 20px;
-            color: #081a56;
-            margin-bottom: 1em;
-            text-align: center;
+        .newsletter-content {
+            max-width: 800px; 
+            margin: 20px auto; 
+            background-color: #fff; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
         }
 
-        .newsletter h3 {
-            font-size: 18px;
-            color: #081a56;
+        .newsletter-content h2 {
+            color: #081a56; 
+            margin-bottom: 20px;
+        }
+
+        .newsletter-content h3 {
+            color: #081a56; 
             margin-bottom: 5px;
         }
 
-        .newsletter p {
-            font-size: 14px;
-            color: #333333;
+        .newsletter-content p {
+            color: #333;
         }
 
-        .footer {
-            font-size: 12px;
-            color: #b0b0b0;
-            padding: 40px;
+        .newsletter-footer {
+            background-color: #081a56; 
+            color: #fff; 
+            text-align: center; 
+            padding: 20px;
+        }
+
+        .joke {
+            margin-bottom:10px;
         }
     </style>
 </head>
@@ -130,120 +146,82 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f4f4f4;">
+    <div class="newsletter-body">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="newsletter-header">
             <tr>
                 <td align="center">
-                    <table width="600" border="0" cellspacing="0" cellpadding="20" style="background-color: #ffffff;">
-                        <!-- Header -->
-                        <tr>
-                            <td align="center" style="padding: 20px 0; background-color: #081a56; color: #ffffff;">
-                                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                                <h1>Prestige AI - Daily Newsletter</h1>
-                                <p>
-                                    <span style="color: #16d1f2;">Sunrise Edition</span> |
-                                    <span style="color: #b0b0b0;">
-                                        <script>
-                                            document.write(new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
-                                        </script>
-                                    </span>
-                                </p>
-                            </td>
-                        </tr>
-
-                        <!-- News Stories -->
-                        <tr>
-                            <td style="padding: 20px 0;">
-                                <h2>Today's Top Stories</h2>
-
-                                <!-- News Item 1 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                    <tr>
-                                        <td>
-                                            <h3>India's Anthem Played In Pakistan, Another Mishap For Hosts</h3>
-                                            <p>During a recent sports event in Pakistan, India's national anthem was mistakenly played, causing a stir. This incident adds to a series of organizational mishaps by the hosts.</p>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <!-- News Item 2 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                    <tr>
-                                        <td>
-                                            <h3>Vasundhara Oswal: Indian-origin Billionaire Details Ugandan Jail Ordeal</h3>
-                                            <p>Indian-origin billionaire Vasundhara Oswal shares her harrowing experience in a Ugandan jail, shedding light on the conditions and challenges faced.</p>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <!-- News Item 3 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                    <tr>
-                                        <td>
-                                            <h3>Trump's Aide Proposes Canada's Expulsion from Five Eyes Alliance</h3>
-                                            <p>A close aide to former President Trump has suggested expelling Canada from the Five Eyes intelligence alliance, raising concerns about the future of the longstanding partnership.</p>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <!-- News Item 4 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                    <tr>
-                                        <td>
-                                            <h3>DR Congo: Police Switches Allegiance to M23, Tshisekedi Calls for Unity Govt</h3>
-                                            <p>In DR Congo, police forces have reportedly switched allegiance to the M23 rebel group, prompting President Tshisekedi to call for a unity government to address the escalating crisis.</p>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <!-- News Item 5 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                    <tr>
-                                        <td>
-                                            <h3>Tennis World Fumes, Sinner’s Doping Ban A Biased Decision?</h3>
-                                            <p>The tennis community is in uproar over Jannik Sinner's doping ban, with many questioning the fairness and impartiality of the decision.</p>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <!-- News Item 6 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                    <tr>
-                                        <td>
-                                            <h3>Pope Francis Suffers Two Respiratory 'Insufficiencies', Back on Ventilation</h3>
-                                            <p>The Vatican announced that Pope Francis experienced two episodes of respiratory distress and has been placed back on ventilation.</p>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                            </td>
-                        </tr>
-
-                        <!-- Sources -->
-                        <tr>
-                            <td align="center" style="padding: 20px 0; background-color: #081a56; color:#b0b0b0; font-size:12px;">
-                                <p>This newsletter is compiled from published news stories from: <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.</p>
-                            </td>
-                        </tr>
-                        <!-- Joke of the Day -->
-                        <tr>
-                            <td align="center" style="border-top: 2px solid #16d1f2; padding: 20px 0;">
-                                <h3>Joke of the Day</h3>
-                                <p>Why don't scientists trust atoms? Because they make up everything!</p>
-                            </td>
-                        </tr>
-
-                        <!-- Footer-->
-                        <tr>
-                            <td align="center" class="footer">
-                                &copy; <script>document.write(new Date().getFullYear())</script> Prestige AI. All rights reserved.
-                            </td>
-                        </tr>
-
-                    </table>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/PPLAAAAMFBMVEUAAAD///////////////////////////////////////////////////////////////84Es5CAAAAEHRSTlMAAgMEhZaXn6Wot7m/wM/7Gcn74AAAAAFiS0dEAf8CLdAAAA80SURBVHja7d3bVtswEAVQW5R7v/L/X6yN4EBA4WCx9z6nZqKkScs5X5JAAAAAAAAAAAAALz/G6aNA8/p91Xn5h7e47rT75rT6yRdr9fS19d2qFz32vJaz91hJv/T2W1kR2u17K1Z72F7W1a7R77YS72W3m1Xf5jV2Krf3lK3qO3vXJ3r9f/V2n51h72F32zLvbLvfLnv07k+/uUvfa/fbjfe/4i7v1f+8S59f1/727n2/59f36v8+8S59f1/76rv0rk+/vM/ftfb9L5378j5/197Vrv3vH/vJ+/5wAAAAAAAAAA4Pj/QJrtfU+7vtcL3a/3+v0ba7fvtdrv+bX96hmd3nJme0vdWq3na73sLZ7W1kR2v59gWte7LXt9fR77J/29mte279s3+O+/wJtfsPrvP3p+06ut/voe3p+06uL/16n+8S793/5W/7hLv3X/l7d32v18F3613f6/W+T2/d1rX/uSvfS+f6z1773z722z+L7z5/z/4+v08AAAAAAAAAADBixP8BvF2s437uBAAAAABJRU5ErkJggg==" alt="Prestige AI Logo">
+                    <h1 style="font-size: 24px; margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
+                    <p style="margin: 5px 0;">
+                        <script>
+                            document.write(new Date().toLocaleDateString());
+                        </script> - Afternoon Edition
+                    </p>
                 </td>
             </tr>
         </table>
+
+        <table width="100%" border="0" cellspacing="0" cellpadding="20" class="newsletter-content">
+            <tr>
+                <td>
+                    <h2>Top Stories</h2>
+
+                    <!-- News Item 1 -->
+                    <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                        <h3><a href="https://www.foxnews.com/video/6369584577112" style="color: #081a56; text-decoration: none;">Dan Hoffman: Trump's decision to halt US aid to Ukraine could 'embolden' Putin</a></h3>
+                        <p>Dan Hoffman discusses the potential consequences of President Trump's decision to halt US aid to Ukraine, suggesting it could embolden Russian President Vladimir Putin. The discussion covers the geopolitical implications and strategic considerations of the decision.</p>
+                    </div>
+
+                    <!-- News Item 2 -->
+                    <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                        <h3><a href="https://www.foxnews.com/world/trumps-threats-against-canada-boost-trudeaus-liberal-party-polls-new-tariffs-set-begin#" style="color: #081a56; text-decoration: none;">Trump tariffs on Canada, Mexico, China to go into effect at midnight</a></h3>
+                        <p>Analysts predict that if Canada's Liberal Party retains power, it will be partly due to President Trump's policies. Trump's tariff threats and annexation references have boosted the Liberal party's popularity, shifting the political focus from domestic issues to dealing with a perceived threat from the US.</p>
+                    </div>
+
+                    <!-- News Item 3 -->
+                    <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                        <h3><a href="https://www.foxnews.com/world/leading-evangelicals-push-have-president-trump-recognize-israeli-sovereignty-over-biblical-heartland#" style="color: #081a56; text-decoration: none;">Leading Evangelicals Push to Have President Trump Recognize Israeli Sovereignty Over 'Biblical Heartland'</a></h3>
+                        <p>Influential American Christian leaders are reaffirming the Jewish people's right to Judea and Samaria (West Bank) as the biblical heartland of Israel, urging President Trump to recognize Israeli sovereignty over the area. This push comes amidst ongoing debates about the region's status and future peace negotiations.</p>
+                    </div>
+
+                    <!-- News Item 4 -->
+                    <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                        <h3><a href="https://www.foxnews.com/world/double-standards-trumps-row-zelenskyy-recalls-obama-biden-humiliation-netanyahu#" style="color:#081a56; text-decoration: none">Trump’s row with Zelenskyy recalls Obama, Biden humiliations of Netanyahu</a></h3>
+                        <p>The recent public disagreement between President Trump and Ukrainian President Zelenskyy has drawn comparisons to past US administrations' treatment of Israeli Prime Minister Netanyahu. Critics argue that there is a double standard in the international response to such conflicts.</p>
+                    </div>
+
+                    <!-- News Item 5 -->
+                    <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                        <h3><a href="https://www.firstpost.com/world/china-has-its-own-headache-while-the-world-worries-about-inflation-beijing-battles-deflation-13868673.html" style="color: #081a56; text-decoration: none;">China has its own headache: While the world worries about inflation, Beijing battles deflation</a></h3>
+                        <p>China is facing a period of deflation, marked by falling prices and sluggish economic growth. This contrasts sharply with inflationary pressures in other parts of the world. The upcoming annual session of China's parliament will likely address this challenge, with possible measures including increased government spending.</p>
+                    </div>
+
+                    <!-- News Item 6 -->
+                    <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                        <h3><a href="https://www.firstpost.com/tech/apple-to-invest-500bn-to-build-servers-and-hire-20000-people-to-boost-us-ai-capabilities-13866371.html" style="color:#081a56; text-decoration: none;">Apple to invest $500Bn to build servers and hire 20,000 people to boost US AI capabilities</a></h3>
+                        <p>Apple is aligning with President Trump's AI vision with a massive $500 billion investment. The plan includes hiring 20,000 US workers, constructing a manufacturing facility in Texas for Apple Intelligence servers, and boosting domestic manufacturing and R&D.</p>
+                    </div>
+
+                    <!-- News Item 7 -->
+                    <div style="margin-bottom: 20px; padding-bottom: 15px;">
+                        <h3 style="font-size:1.2em;"><a href="https://www.foxnews.com/world/delegation-hostages-released-hamas-traveling-dc-meet-trump-admin-officials" style="color:#081a56; text-decoration: none;">Delegation of hostages released from Hamas traveling to DC to meet Trump admin officials</a></h3>
+                        <p>Seven individuals freed from Hamas captivity are set to meet with US officials, including those from the Trump administration. They will express gratitude for the president's efforts in securing hostage releases and share firsthand experiences to advocate for the return of the remaining captives.</p>
+                    </div>
+
+                    <p style="font-size: 14px; color: #b0b0b0; margin-top: 30px;">
+                        This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
+                        <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
+                    </p>
+
+                </td>
+            </tr>
+        </table>
+
+        <div class="newsletter-footer">
+            <h3 class="joke">Joke of the Day</h3>
+            <p>Why don't scientists trust atoms?</p>
+            <p>Because they make up everything!</p>
+        </div>
     </div>
 
 </body>
