@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements & Prestige AI - Daily Newsletter</title>
+    <title>Processing Financial Statements and Daily Newsletter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,60 +52,61 @@
             margin: 10px auto;
         }
 
-        table {
-            width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
-        }
-
-        .newsletter-table {
-            width: 800px;
-            margin: 20px auto;
+        .newsletter-body {
+            margin: 0;
+            padding: 0;
             background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #081a56;
         }
 
         .newsletter-header {
-            background-color: #081a56;
-            color: #ffffff;
-            padding: 20px 0;
-        }
-
-        .newsletter-header img {
-            max-width: 200px;
-            height: auto;
+            padding: 20px;
+            background-color: #16d1f2;
+            color: #081a56;
         }
 
         .newsletter-header h1 {
-            margin: 10px 0;
+            margin: 0;
+            font-size: 24px;
         }
 
         .newsletter-header p {
-            margin: 5px 0;
+            margin: 5px 0 0 0;
+            font-size: 16px;
         }
 
-        .news-story h2 {
-            color: #081a56;
-            border-bottom: 2px solid #16d1f2;
-            padding-bottom: 5px;
+        .newsletter-content {
+            width: 85%;
+            margin: auto;
         }
 
-        .footer {
-            background-color: #081a56;
-            color: #ffffff;
-            text-align: center;
-            margin-top: 20px;
-            padding: 20px 0;
-        }
-
-        .footer p {
+        .newsletter-content p {
+            font-size: 14px;
+            color: #b0b0b0;
             margin: 0;
         }
 
-        .joke {
+        .newsletter-content a {
             color: #081a56;
+            text-decoration: underline;
+        }
+
+        .newsletter-content h2 {
+            font-size: 18px;
+            margin: 0;
+            color: #081a56;
+        }
+
+        .newsletter-content img {
+            display: block;
+            border-radius: 5px;
+        }
+
+        .newsletter-footer {
+            background-color: #b0b0b0;
+            padding: 20px;
+            color: #081a56;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -150,86 +151,119 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table class="newsletter-header">
-        <tr>
-            <td align="center">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/jVIAAAAflBMVEUAAAD////7+/vT09Pz8/Pn5+f29vbi4uL8/PzLy8vV1dXj4+P09PTp6enX19fs7Oz4+PjPz887OzsQEBB6enrFxcWJiYnAwMB+fn4oKChGRkZOTk7n5+cbGxs1NTW8vLw1NTVNTU1HR0d/f38NDQ3Dw8MnJychISEGBgbNnIqLAAAKJElEQVR4nO2dC3eiOhSAQy2yZINQkWC1rcb7v9VEqhLCEhK2EksK2f+/Rk/p4v540lF27uM5EJJmskQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgT+j5/8cHPv93d8+J/fVq+5O/uFbrb63V7XU+P+7b7Zqvl9Wl93V+Wn3pW6y9r77v+2m11+N22P3znt8fL/sW5J3N09eE5JvL97E887O+sXzE965W705fT0+12O+z9xP04/y6523+3L3g2v6uJ3N49zG/x0/8q6zU5N087D7+oN9dvuJ7d+E9eXF8z/8xX7l3R3V3/+v3H6z7599//Dfnvx7u739f/n+V3/1B3L43p183xT/7eFv7v9/vN7evP17X3w9JvJ9k+eX3C//8t3vV/90H1z8959x21/89z83k9d/vfvj4/3V7x/3n/f7n9fU35/V+f49/8P59x8983O8L35/1u70+f9W5P/zLzS09+9/O8xH23z88P+rP2+0G6Kz/3Xz23066zP1+y31/9xO55t2jF/644e44d7w/51j/3d//Xk51/6zX99jvfP75T2v/+T/173i7z+3I/3v3t3n3v04eT8384v2XJ5/m/+D5f03v6Ff52/+4D5/y+z/9zX/w/n3J728/3v3l78Pef31w3y3T/7jfy5d+X979+/f7y/yB926cff+1//h/x/u3T76f+3/X3H3B/v7X/+bfv8f99/tJ728j+d+e/+f2v//L43/8d//9z3z88vvH5d/d/3P992/8//6/8/3v/n/3Y9f7X//92/9//w+fv/+h7z8+vJ+f/ef7+f/+f/f/u/7L/73/+3f3vT/73X0//7/+7f/H+33/8t9df//3H1/P/+9+9/33//j/2T/9//z9+P//77/8/T//v/n//n//59/f//v/+z/8P//9+f79/8/v//j//X/8//9//5//5//5//5//5//5//5//5//5//5//5//5//5//5/8j6W888Z9Kek/vO8/jH9/l5/P8/v/y+Z//5fJ//5vJ9/388fn/T/3zT+zzPz+7/P5n//l8n//m8n3/fzxeTzP//PeTx8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAArI6M18t8b7u/3D9fV396L43r9Y3d96O43r9/fF9/bF7v77e33k7jvv19dPb7e33k7jeP5/e0346jeP1/esXneP6/f30dvt7XeSuN8/n94TfjpF//148/34b8+7I43M+nPyw312+4/7W6/53bveN9tY92T54d8vj3v6G/P5X3x8fJ+T3vff7y9+f339+R1z+/Xp/f38nv99n9/fj6z8993t6d/MvNbfX5/P3p5f+3p7ff7y99vT2+n1/Xf3vzy+4f99d/f7zfv3k79/n9W5/V++vvv7355fcP+/uTh9//n19/fPz+f39v/736395f/7345/c/3dSn53/3789fuH/fv/P/3t6/81T2X/9vV+p7e/fpj/8x1wF/3n73/97en/NP17/+/vv7n+8/3d2X/v/Xp7e/fpj/8x1wF/3n73/97evP14fl/fX346/cP+/ve/+J2X/v/Xp/f38n/7/1v/+fnlzzd3Zf+/9envz/+9Pfnlzzd3Zf+/9e7qP7749fuvv/+7f/V3df+/L43/uT7e76/+/nvn/9/n579T2+f79//1r95/l/f/98/fj399/fP399/fH5//w//9+/+bvPz39//9n/+/v//9vf/3/9ff3Pz/f/v/3P///+f/zfn//D///n///f/zfn/9/v/n///f/zfn//D///n///f/zfn//D///n///f/zfn//D///n///f/zfn//D///n///f/zfn//D///n///f/zfn//D///n///f/zfn6QAAwMD52+Kx9P54vvf55X/+/v//7/X7M07M0i/c+3+zNO3k/eH9+Nl7z9178+3oW9/83i/eex93y/eeyf/c//l/Zf34WbvP/Xvz7dhb3/z+Ltv/O98y+794/3n/w93/3/6H/4D/9d/+vPz/6h7cAP/7//8/V/9d/+vPz/6h7cAP/7X1/X/3X/4z89/PYHNoB/8tcn9//989//r5P7/T1wAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyL8Dwq1GzTjIEBUAAAAASUVORK5CYII=" alt="Prestige AI Logo">
-                <h1>Prestige AI - Daily Newsletter</h1>
-                <p><?php echo date("F j, Y"); ?> - Sunrise Edition</p>
-            </td>
-        </tr>
-    </table>
+    <div class="newsletter-body">
+        <table width="100%" bgcolor="#081a56" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center" style="padding: 20px;">
+                    <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
+                </td>
+            </tr>
+        </table>
 
-    <table class="newsletter-table">
-        <tr>
-            <td>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="newsletter-header">
+                    <h1>Prestige AI - Daily Newsletter</h1>
+                    <p>March 6, 2025 - Afternoon Edition</p>
+                </td>
+            </tr>
+        </table>
 
-                <!-- News Story 1 -->
-                <h2>US-Canada Trade Tensions</h2>
-                <p>
-                    Ontario Premier Doug Ford has threatened to cut off energy exports to the United States in response to President Trump's tariffs. The US is a major customer of Canadian electricity, with New York, Michigan and Minnesota being Ontario's biggest customers. Canada's electricity exports to the US reached a record high in 2022. Canada announced retaliatory tariffs, and further measures are threatened.
-                    <a href="https://www.foxnews.com/world/canadian-premier-threatens-cut-off-energy-us-response-trump-tariffs-they-need-to-feel-the-pain#" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
-                </p>
+        <div class="newsletter-content">
+            <p>This newsletter is compiled from published news stories from
+                <a href="https://www.foxnews.com/">Fox News</a>,
+                <a href="https://www.bbc.com">BBC</a>, and
+                <a href="https://www.firstpost.com">Firstpost</a>.
+            </p>
 
-                <!-- News Story 2 -->
-                <h2>Gaza Reconstruction Debate</h2>
-                <p>
-                    Arab leaders convened in Cairo for an emergency summit to discuss a counterproposal to President Trump's Gaza plan. Egypt proposes a $53 billion reconstruction plan, but the proposal faces challenges, including Hamas' rejection, the Palestinian Authority's reluctance to participate, and concerns about financial oversight and corruption. The plan, importantly, doesn't call for the displacement of Gaza's residents. Arab leaders are primarily concerned with navigating Trump's unpredictable stance on Gaza.
-                    <a href="https://www.foxnews.com/world/pressured-trumps-gaza-plan-arab-countries-meet-egypt-discuss-alternative-proposal#" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
-                </p>
+            <table width="100%" border="0" cellpadding="0" cellspacing="10">
+                <tr>
+                    <td valign="top" width="150">
+                        <a href="https://www.foxnews.com/politics/trumps-gold-card-visa-could-invite-fraud-national-security-risks-expert" style="text-decoration:none">
+                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/2025-03-05t024041z_1281810131_rc2q6dagpknu_rtrmadp_3_usa-trump-congress.jpg?ve=1&tl=1" alt="Donald Trump" width="150">
+                        </a>
+                    </td>
+                    <td valign="top">
+                        <h2><a href="https://www.foxnews.com/politics/trumps-gold-card-visa-could-invite-fraud-national-security-risks-expert" style="color: #081a56; text-decoration:none">Trump's 'Gold Card' Visa Could Invite Fraud, National Security Risks: Expert</a></h2>
+                        <p>President Trump's proposed "$5 million gold card" visa, offering a path to US citizenship, faces criticism for potentially inviting fraud and national security risks. Experts warn of parallels to the EB-5 program's issues, questioning the vetting process's effectiveness.</p>
+                    </td>
+                </tr>
+            </table>
 
-                <!-- News Story 3 -->
-                <h2>Houthis Designated Terrorist Organization</h2>
-                <p>
-                    Secretary of State Marco Rubio announced the designation of the Iran-backed Houthis in Yemen as a foreign terrorist organization. This action fulfills one of President Trump's initial promises. The Houthis have launched numerous attacks on Red Sea vessels. Trump had previously designated the group, but President Biden reversed the decision.
-                    <a href="https://www.foxnews.com/world/houthis-designated-foreign-terrorist-organization-rubio-says#" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
-                </p>
+            <table width="100%" border="0" cellpadding="0" cellspacing="10">
+                <tr>
+                    <td valign="top" width="150">
+                        <a href="https://www.foxnews.com/world/canadian-premier-threatens-cut-off-energy-us-response-trump-tariffs-they-need-to-feel-the-pain#" style="text-decoration:none">
+                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/01/1200/675/gettyimages-1246869518-scaled.jpg?ve=1&tl=1" alt="Ontario Premier Doug Ford" width="150">
+                        </a>
+                    </td>
+                    <td valign="top">
+                        <h2><a href="https://www.foxnews.com/world/canadian-premier-threatens-cut-off-energy-us-response-trump-tariffs-they-need-to-feel-the-pain#" style="color: #081a56; text-decoration:none">Canadian Premier Threatens to Cut Off Energy to US in Response to Trump Tariffs</a></h2>
+                        <p>Ontario Premier Doug Ford threatens to cut off energy exports to the US in response to President Trump's tariffs, stating "they need to feel the pain." Canada, a major electricity exporter to the US, particularly to New York, Michigan, and Minnesota, is considering matching US tariffs.</p>
+                    </td>
+                </tr>
+            </table>
 
-                <!-- News Story 4 -->
-                <h2>Department of Education Clarifies DEI Guidance</h2>
-                <p>
-                    The Department of Education clarified that observances like Black History Month do not violate an order requiring the removal of DEI policies. Schools cannot operate programs that treat students differently based on race. President Trump signed executive orders directing agencies to eliminate funding for discriminatory treatment and indoctrination.
-                    <a href="https://www.foxnews.com/world/department-education-clarifies-school-dei-guidelines-saying-black-history-month-doesnt-violate-order#" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
-                </p>
+            <table width="100%" border="0" cellpadding="0" cellspacing="10">
+                <tr>
+                    <td valign="top" width="150">
+                        <a href="https://www.foxnews.com/world/pressured-trumps-gaza-plan-arab-countries-meet-egypt-discuss-alternative-proposal#" style="text-decoration:none">
+                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/gaza-arab-league-summit-scaled.jpg?ve=1&tl=1" alt="Arab League Summit" width="150">
+                        </a>
+                    </td>
+                    <td valign="top">
+                        <h2><a href="https://www.foxnews.com/world/pressured-trumps-gaza-plan-arab-countries-meet-egypt-discuss-alternative-proposal#" style="color: #081a56; text-decoration:none">Arab Countries Meet in Egypt to Discuss Alternative Proposal to Trump's Gaza Plan</a></h2>
+                        <p>Arab leaders held an emergency summit in Cairo to present a counterproposal to President Trump's Gaza plan, focusing on Egypt's $53 billion reconstruction blueprint. The plan emphasizes Palestinian-led reconstruction and avoids displacement, unlike Trump's proposal, but faces challenges due to Hamas' control and funding concerns.</p>
+                    </td>
+                </tr>
+            </table>
 
-                <!-- News Story 5 -->
-                <h2>Pope Francis' Health Update</h2>
-                <p>
-                    Pope Francis's condition remains stable, but he will resume "non-invasive mechanical ventilation." He has been diagnosed with a complex respiratory infection. Vatican sources indicate his outlook is complex.
-                    <a href="https://www.foxnews.com/world/pope-francis-off-mechanical-ventilation-stabilizing-after-breathing-crises-vatican-sources#" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
-                </p>
+            <table width="100%" border="0" cellpadding="0" cellspacing="10">
+                <tr>
+                    <td valign="top" width="150">
+                        <a href="https://www.foxnews.com/world/houthis-designated-foreign-terrorist-organization-rubio-says#" style="text-decoration: none;">
+                            <img src="https://static.foxnews.com/foxnews.com/content/uploads/2025/02/marco-rubio.gif" alt="Marco Rubio" width="150">
+                        </a>
+                    </td>
+                    <td valign="top">
+                        <h2><a href="https://www.foxnews.com/world/houthis-designated-foreign-terrorist-organization-rubio-says#" style="color:#081a56; text-decoration:none">Houthis Designated as a Foreign Terrorist Organization, Rubio Announces</a></h2>
+                        <p>Secretary of State Marco Rubio announced the designation of the Iran-backed Houthis in Yemen as a foreign terrorist organization, fulfilling one of President Trump's promises. The move aims to protect US national security interests and curtail support for terrorist activities. The Houthis have carried out numerous attacks in the Red Sea.</p>
+                    </td>
+                </tr>
+            </table>
 
-                <!-- News Story 6 -->
-                <h2>Chaos in Serbian Parliament</h2>
-                <p>
-                    Opposition lawmakers in Serbia set off smoke grenades and tear gas in parliament to protest the government. The protests stem from a fatal canopy collapse at a railway station, blamed on government corruption. The ruling coalition accused the opposition of being a "terrorist gang."
-                    <a href="https://www.foxnews.com/world/serbian-lawmakers-throw-smoke-grenades-tear-gas-parliament#" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
-                </p>
+            <table width="100%" border="0" cellpadding="0" cellspacing="10">
+                <tr>
+                    <td valign="top" width="150">
+                        <a href="https://www.firstpost.com/world/china-digs-deeper-in-west-asia-firm-signs-557-mn-contract-in-kuwait-15000-workers-already-in-uae-13868978.html" style="text-decoration:none">
+                            <img src="https://images.firstpost.com/uploads/2025/03/Untitled-design-2025-03-05T164616.252-2025-03-db2f8493b5276a667c9a6fba0f4d9199.jpg?im=FitAndFill=(596,336)" alt="China Kuwait" width="150">
+                        </a>
+                    </td>
+                    <td valign="top">
+                        <h2><a href="https://www.firstpost.com/world/china-digs-deeper-in-west-asia-firm-signs-557-mn-contract-in-kuwait-15000-workers-already-in-uae-13868978.html" style="color:#081a56; text-decoration:none">China Digs Deeper in West Asia, Firm Signs $557 Mn Contract in Kuwait; 15,000 Workers Already in UAE</a></h2>
+                        <p>A Wuhan-based firm, China Gezhouba Group Company Limited (CGGC), signed a $557 million deal with Kuwait's Public Authority for Housing Welfare (PAHW) for infrastructure projects in South Saad Al-Abdullah New City. This marks a significant step in China's expanding presence in West Asia. Additionally, nearly 15,500 Chinese companies are already operating in the UAE.</p>
+                    </td>
+                </tr>
+            </table>
 
-                <!-- News Story 7 -->
-                <h2>Trump's Threats Boost Trudeau's Liberal Party</h2>
-                <p>
-                    President Trump's threats against Canada, including tariffs and annexation references, have boosted the popularity of Canada's Liberal Party. Polls show the Liberals now leading the Conservatives, reversing a significant previous deficit. The change in public opinion is attributed to Trudeau stepping down and Trump's rhetoric.
-                    <a href="https://www.foxnews.com/world/trumps-threats-against-canada-boost-trudeaus-liberal-party-polls-new-tariffs-set-begin#" style="color: #16d1f2; text-decoration: none;">Read More on Fox News</a>
-                </p>
+            <table width="100%" border="0" cellpadding="0" cellspacing="10">
+                <tr>
+                    <td valign="top" width="150">
+                        <a href="https://www.firstpost.com/tech/china-to-promote-open-source-risc-v-chips-boosting-domestic-chip-industry-13868493.html" style="text-decoration:none">
+                            <img src="https://images.firstpost.com/uploads/2025/03/chips-2025-03-b9aac10d3063bc69c409944b7401ebfd-1200x675.jpg?im=FitAndFill=(596,336)" alt="China Chips" width="150">
+                        </a>
+                    </td>
+                    <td valign="top">
+                        <h2><a href="https://www.firstpost.com/tech/china-to-promote-open-source-risc-v-chips-boosting-domestic-chip-industry-13868493.html" style="color:#081a56; text-decoration:none">China to Promote Open-source RISC-V Chips, Boosting Domestic Chip Industry</a></h2>
+                        <p>China plans to release instructions encouraging the nationwide use of open-source RISC-V processors to reduce reliance on Western technology. This move, a collaboration between eight government departments, aims to bolster China's domestic chip industry amidst growing US-China tech tensions.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
-                <p style="font-size: 14px; color: #b0b0b0;">
-                    This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
-                    <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and
-                    <a href="https://www.firstpost.com/" style="color:#16d1f2; text-decoration:none">Firstpost</a>.
-                </p>
-
-                <hr style="border: none; border-top: 1px solid #b0b0b0; margin: 20px 0;">
-
-                <h3 class="joke">Joke of the Day</h3>
-                <p>Why don't scientists trust atoms? Because they make up everything!</p>
-
-            </td>
-        </tr>
-    </table>
-
-    <div class="footer">
-        <p>&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
+        <div class="newsletter-footer">
+            <p><b>Joke of the Day:</b> Why don't scientists trust atoms? Because they make up everything!</p>
+        </div>
     </div>
 
 </body>
