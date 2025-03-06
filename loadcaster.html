@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements and Daily Newsletter</title>
+    <title>Processing Financial Statements & Prestige AI - Daily Newsletter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,86 +52,47 @@
             margin: 10px auto;
         }
 
-        table {
+        .newsletter {
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .newsletter table {
             width: 100%;
             border: 0;
             cellspacing: 0;
             cellpadding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .newsletter-table {
-            width: 600px;
-            margin-top: 20px;
             background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .newsletter-header {
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .newsletter-header img {
-            display: block;
-        }
-
-        .newsletter-header h1 {
-            color: #081a56;
+        .newsletter h1 {
             font-size: 24px;
-            margin-top: 10px;
-        }
-
-        .newsletter-header p {
+            margin: 0;
             color: #16d1f2;
+        }
+
+        .newsletter h2 {
+            color: #081a56;
+            border-bottom: 2px solid #16d1f2;
+            padding-bottom: 5px;
+        }
+
+        .newsletter h3 {
             font-size: 16px;
-            margin: 5px 0;
-        }
-
-        .news-item {
-            margin-bottom: 20px;
-        }
-
-        .news-item img {
-            border-radius: 4px;
-        }
-
-        .news-item h3 {
-            font-size: 16px;
-            margin-top: 0;
+            margin: 0;
             margin-bottom: 5px;
-            color: #081a56;
         }
 
-        .news-item p {
+        .newsletter p {
             font-size: 14px;
-            line-height: 1.5;
-            color: #555;
+            margin: 0;
         }
 
-        .source-links {
-            font-size: 12px;
-            color: #777;
-            margin-top: 20px;
-        }
-
-        .joke-section {
-            padding: 20px;
-            border-top: 1px solid #b0b0b0;
-            text-align: center;
-        }
-
-        .joke-section h2 {
-            color: #081a56;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .joke-section p {
-            font-size: 14px;
-            color: #555;
-            font-style: italic;
+        .newsletter img {
+            display: block;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -176,130 +137,106 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table>
-        <tr>
-            <td align="center">
-                <table class="newsletter-table">
-                    <tr>
-                        <td class="newsletter-header">
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
-                            <h1>Prestige AI - Daily Newsletter</h1>
-                            <p><?php echo date("F j, Y"); ?> - Sunrise Edition</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 20px; border-top: 1px solid #b0b0b0;">
-                            <h2 style="color: #081a56; font-size: 20px; margin-bottom: 15px;">Top Stories</h2>
+    <div class="newsletter">
+        <table>
+            <tr>
+                <td align="center">
+                    <table width="600" border="0" cellspacing="0" cellpadding="20" style="background-color: #ffffff;">
+                        <!-- Header -->
+                        <tr>
+                            <td align="center" style="padding: 20px 0;">
+                                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige&#x20;AI&#x20;Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
+                            </td>
+                        </tr>
+                        <tr>
+                           <td align="center" style="padding: 20px 0; background-color: #081a56; color: #ffffff; border-radius: 10px 10px 0 0">
+                                <h1>Prestige AI - Daily Newsletter</h1>
+                                <p>
+                                  <script>
+                                    const today = new Date();
+                                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                                    document.write(today.toLocaleDateString('en-US', options));
+                                  </script>
+                                </p>
+                                <p>Afternoon Edition</p>
+                            </td>
+                        </tr>
 
-                            <!-- News Item 1 -->
-                            <div class="news-item">
-                                <table width="100%">
+                        <!-- News Stories -->
+                        <tr>
+                            <td style="padding-top: 20px;">
+                                <h2>Top Stories</h2>
+
+                                <!-- Story 1 -->
+                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
                                     <tr>
-                                        <td width="120" valign="top" style="padding-right: 15px;">
-                                             <a href="https://www.foxnews.com/video/6369657247112" style="text-decoration: none;"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/a1bbadb7-df7c-4923-9c39-5f1500acfd74/ef8e57dc-d324-4950-9ba8-87d602aa0915/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="How will Trump's tariffs affect the country?" width="110"></a>
+                                        <td width="120" valign="top">
+                                            <a href="https://www.foxnews.com/world/pause-us-foreign-aid-has-un-panic-over-funding-cuts-trump-says-world-body-not-being-well-run"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/09/1200/675/GettyImages-1170721494.jpg?ve=1&tl=1" alt="UN General Assembly" width="110"></a>
                                         </td>
                                         <td valign="top">
-                                            <h3><a href="https://www.foxnews.com/video/6369657247112" style="color: #081a56; text-decoration: none;">How will Trump's tariffs affect the country?</a></h3>
-                                            <p>Experts discuss the potential impacts of Trump's proposed tariffs on the US economy, including effects on trade relations, consumer prices, and domestic industries.</p>
+                                          <h3><a href="https://www.foxnews.com/world/pause-us-foreign-aid-has-un-panic-over-funding-cuts-trump-says-world-body-not-being-well-run" style="color: #081a56; text-decoration: none;">Pause in US foreign aid has UN in panic over future funding cuts</a></h3>
+                                            <p>The UN is facing potential funding cuts and reforms, particularly targeting its Department of Global Communications, which some critics accuse of promoting anti-American and antisemitic messages.  The U.S., a major contributor to the UN, has already halted funding to certain UN agencies.</p>
                                         </td>
                                     </tr>
                                 </table>
-                            </div>
 
-                             <!-- News Item 2 -->
-                            <div class="news-item">
-                                <table width="100%">
+                                <!-- Story 2 -->
+                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
                                     <tr>
-                                        <td width="120" valign="top" style="padding-right: 15px;">
-                                           <a href="https://www.foxnews.com/video/6369654570112" style="text-decoration: none;"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/3151ec1c-f81e-41e9-abc2-85b17b15054e/d4c03309-15d7-4bbe-bdb9-c13d7b813aef/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump meets with freed Gaza hostages" width="110"></a>
-                                        </td>
-                                        <td valign="top">
-                                            <h3><a href="https://www.foxnews.com/video/6369654570112" style=" color: #081a56; text-decoration: none;">Trump meets with freed Gaza hostages</a></h3>
-                                            <p>Former President Trump met with individuals recently released from captivity in Gaza, discussing their experiences and ongoing efforts for hostage release.</p>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-
-                            <!-- News Item 3 -->
-                            <div class="news-item">
-                                <table width="100%">
-                                    <tr>
-                                        <td width="120" valign="top" style="padding-right: 15px;">
-                                            <a href="https://www.foxnews.com/video/6369628835112" style="text-decoration: none;"><img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/da24ad6a-b26d-4561-bde4-0fb6311e55d0/a02f3060-2b7e-4bd0-b4e3-550223a195bf/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump reveals letter from Zelenskyy" width="110"></a>
-                                        </td>
-                                        <td valign="top">
-                                           <h3><a href="https://www.foxnews.com/video/6369628835112" style=" color: #081a56; text-decoration: none;">Trump reveals he received letter from Zelenskyy to restart negotiations</a></h3>
-                                            <p>Donald Trump announced he received a letter from Ukrainian President Zelenskyy, expressing interest in restarting peace negotiations with Russia.</p>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-
-                            <!-- News Item 4 -->
-                           <div class="news-item">
-                                <table width="100%">
-                                    <tr>
-                                        <td width="120" valign="top" style="padding-right: 15px;">
-                                           <a href="https://www.foxnews.com/world/trump-touts-5-million-gold-card-new-path-citizenship" style="text-decoration: none;"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/2025-03-05t024041z_1281810131_rc2q6dagpknu_rtrmadp_3_usa-trump-congress.jpg?ve=1&tl=1" alt="Trump champions $5 million ‘gold card’" width="110"></a>
+                                        <td width="120" valign="top">
+                                            <a href="https://www.foxnews.com/world/trump-touts-5-million-gold-card-new-path-citizenship"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/trump-address-1.jpg?ve=1&tl=1" alt="Trump address" width="110"></a>
                                         </td>
                                         <td valign="top">
                                             <h3><a href="https://www.foxnews.com/world/trump-touts-5-million-gold-card-new-path-citizenship" style="color: #081a56; text-decoration: none;">Trump champions $5 million ‘gold card’ as the new path to citizenship</a></h3>
-                                            <p>President Trump announced a new "$5 million gold card" visa program, offering a path to U.S. citizenship for wealthy, job-creating individuals, sparking debate about its potential for fraud.</p>
+                                            <p>President Trump announced a new "$5 million gold card" visa program as a path to U.S. citizenship for wealthy individuals.  This initiative aims to attract successful job creators but has raised concerns about potential fraud and national security risks.</p>
                                         </td>
-                                    </tr>
+                                  </tr>
                                 </table>
-                            </div>
 
-                            <!-- News Item 5 -->
-                            <div class="news-item">
-                                <table width="100%">
+                                <!-- Story 3 -->
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
                                     <tr>
-                                        <td width="120" valign="top" style="padding-right: 15px;">
-                                            <a href="https://www.foxnews.com/world/canadian-premier-threatens-cut-off-energy-us-response-trump-tariffs-they-need-to-feel-the-pain" style="text-decoration: none;"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/01/1200/675/gettyimages-1246869518-scaled.jpg?ve=1&tl=1" alt="Canadian leader threatens to halt energy exports to US" width="110"></a>
+                                        <td width="120" valign="top">
+                                            <a href="https://www.foxnews.com/world/canadian-premier-threatens-cut-off-energy-us-response-trump-tariffs-they-need-to-feel-the-pain"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/01/1200/675/gettyimages-1246869518-scaled.jpg?ve=1&tl=1" alt="Ontario Premier Doug Ford" width="110"></a>
                                         </td>
-                                         <td valign="top">
+                                        <td valign="top">
                                             <h3><a href="https://www.foxnews.com/world/canadian-premier-threatens-cut-off-energy-us-response-trump-tariffs-they-need-to-feel-the-pain" style="color: #081a56; text-decoration: none;">Canadian leader threatens to halt energy exports to US</a></h3>
-                                            <p>Ontario Premier Doug Ford threatened to cut off energy exports to the U.S. in response to President Trump's tariffs, escalating trade tensions between the two countries.</p>
+                                            <p>Ontario Premier Doug Ford threatened to cut off energy exports to the United States in response to President Trump's tariffs, saying "they need to feel the pain."  Canada is a major electricity supplier to the U.S., particularly New York, Michigan, and Minnesota.</p>
                                         </td>
                                     </tr>
-                                </table>
-                            </div>
+                                 </table>
 
-                            <!-- News Item 6 -->
-                             <div class="news-item">
-                                <table width="100%">
+                                <!-- Story 4 -->
+                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
                                     <tr>
-                                        <td width="120" valign="top" style="padding-right: 15px;">
-                                            <a href="https://www.foxnews.com/world/russian-missile-experts-visited-iran-amid-growing-military-ties" style="text-decoration: none;"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/01/1200/675/russia-iran-2.jpg?ve=1&tl=1" alt="Russian President Masoud Pezeshkian" width="110"></a>
+                                        <td width="120" valign="top">
+                                             <a href="https://www.foxnews.com/world/russian-missile-experts-visited-iran-amid-growing-military-ties"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2023/06/1200/675/Iran-ayatollah.png?ve=1&tl=1" alt="Iran's Supreme Leader Ayatollah Ali Khamenei speaks in Tehran" width="110"></a>
                                         </td>
                                          <td valign="top">
-                                            <h3><a href="https://www.foxnews.com/world/russian-missile-experts-visited-iran-amid-growing-military-ties" style="color: #081a56; text-decoration: none;">Russian military experts visit Iran as both nations deepen ties</a></h3>
-                                            <p>Russian military experts visited Iran twice in 2024, highlighting increased cooperation between the two countries amid regional tensions and the ongoing conflict in Ukraine.</p>
-                                        </td>
+                                             <h3><a href="https://www.foxnews.com/world/russian-missile-experts-visited-iran-amid-growing-military-ties" style="color: #081a56; text-decoration: none;">Russian military experts visit Iran as both nations deepen ties</a></h3>
+                                             <p>Russian military experts visited Iran in 2024, indicating growing cooperation between the two countries. Discussions may have revolved around expanding their military ties, particularly in air defense and missile technology. The Kremlin may be broached about assisting the United States in talks regarding to Iran's nuclear program.</p>
+                                          </td>
                                     </tr>
-                                </table>
-                            </div>
+                                 </table>
 
-                             <!-- News Source Links -->
-                            <p class="source-links">
-                                Compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
-                                <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and
-                                <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
-                            </p>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="joke-section">
-                            <h2>Joke of the Day</h2>
-                            <p>Why don't scientists trust atoms?  Because they make up everything!</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                                <!-- Story 5 -->
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                                   <tr>
+                                    <td width="120" valign="top">
+                                        <a href="https://www.firstpost.com/world/trump-wants-us-to-make-more-xi-wants-china-to-spend-more-both-aim-to-tame-headwinds-13869309.html"><img src="https://images.firstpost.com/uploads/2024/11/Representational-Image-2024-11-15T232503.526-2024-11-f485ded2a4b3b12f611541a644ebe997.jpg?im=FitAndFill=(596,336)" alt="Trump wants US to make more, Xi wants China to spend more: Both aim to tame headwinds" width="110"></a>
+                                    </td>
+                                    <td valign="top">
+                                        <h3><a href="https://www.firstpost.com/world/trump-wants-us-to-make-more-xi-wants-china-to-spend-more-both-aim-to-tame-headwinds-13869309.html" style="color:#081a56; text-decoration: none;">Trump wants US to make more, Xi wants China to spend more: Both aim to tame headwinds</a></h3>
+                                    </td>
+                                   </tr>
+                                 </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 </body>
 </html>
