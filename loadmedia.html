@@ -52,43 +52,95 @@
             margin: 10px auto;
         }
 
-        .newsletter-body {
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background-color: #ffffff; 
-            color: #081a56;
+        .newsletter {
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
 
-        .newsletter-header {
-            width: 100%; 
-            background-color: #081a56; 
-            border: 0; 
-            cellpadding: 0; 
+        .newsletter-table {
+            width: 100%;
+            border: 0;
             cellspacing: 0;
-        }
-
-        .newsletter-title {
-            width: 100%; 
-            background-color: #16d1f2; 
-            color: #081a56;
+            cellpadding: 0;
+            background-color: #f4f4f4;
         }
 
         .newsletter-content {
-            width: 85%; 
-            align: center; 
-            border: 0; 
-            cellpadding: 0; 
-            cellspacing: 20; 
-            style="margin: auto;"
+            width: 600px;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 20;
+            background-color: #ffffff;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .newsletter-header {
+            padding: 20px 0;
+        }
+
+        .newsletter-header img {
+            display: block;
+        }
+
+        .newsletter-header h1 {
+            color: #081a56;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .newsletter-header p {
+            color: #16d1f2;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+        }
+
+        .news-item img {
+            border-radius: 4px;
+        }
+
+        .news-item h3 {
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #081a56;
+        }
+
+        .news-item p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .source-links {
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
         }
 
         .joke-section {
-            width: 100%; 
-            background-color: #b0b0b0; 
-            border: 0; 
-            cellpadding: 0; 
-            cellspacing: 0;
+            padding: 20px;
+            border-top: 1px solid #b0b0b0;
+            text-align: center;
+        }
+
+        .joke-section h2 {
+            color: #081a56;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .joke-section p {
+            font-size: 14px;
+            color: #555;
+            font-style: italic;
         }
     </style>
 </head>
@@ -133,155 +185,96 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table class="newsletter-header">
-        <tr>
-            <td align="center" style="padding: 20px;">
-                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-            </td>
-        </tr>
-    </table>
+    <div class="newsletter">
+        <table class="newsletter-table">
+            <tr>
+                <td align="center">
+                    <table class="newsletter-content">
+                        <tr>
+                            <td class="newsletter-header">
+                                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
+                                <h1>Prestige AI - Daily Newsletter</h1>
+                                <p><?php echo date("F j, Y"); ?> - Sunrise Edition</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 20px; border-top: 1px solid #b0b0b0;">
+                                <h2 style="color: #081a56; font-size: 20px; margin-bottom: 15px;">Top Stories</h2>
 
-    <table class="newsletter-title">
-        <tr>
-            <td align="center" style="padding: 20px; background-color: #16d1f2; color: #081a56;">
-                <h1 style="margin: 0; font-size: 24px;">Prestige AI - Daily Newsletter</h1>
-                <p style="margin: 5px 0 0 0; font-size: 16px;">
-                    March 6, 2025 - Afternoon Edition
-                </p>
-            </td>
-        </tr>
-    </table>
+                                <!-- News Item 1 -->
+                                <div class="news-item">
+                                    <a href="https://www.foxnews.com/video/6369657247112" style="text-decoration: none;">
+                                        <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/a1bbadb7-df7c-4923-9c39-5f1500acfd74/ef8e57dc-d324-4950-9ba8-87d602aa0915/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="How will Trump's tariffs affect the country?" width="110">
+                                    </a>
+                                    <h3><a href="https://www.foxnews.com/video/6369657247112" style="color: #081a56; text-decoration: none;">How will Trump's tariffs affect the country?</a></h3>
+                                    <p>Experts discuss the potential impacts of Trump's proposed tariffs on the US economy, including effects on trade relations, consumer prices, and domestic industries.</p>
+                                </div>
 
-    <table class="newsletter-content">
-       <tr>
-            <td style="padding: 10px 0;">
-                <p style="font-size: 14px; color: #b0b0b0; margin: 0;">
-                    This newsletter is compiled from published news stories from
-                    <a href="https://www.foxnews.com/" style="color: #081a56; text-decoration: underline;">Fox News</a>,
-                    <a href="https://www.bbc.com" style="color: #081a56; text-decoration: underline;">BBC</a>, and
-                    <a href="https://www.firstpost.com" style="color: #081a56; text-decoration: underline;">Firstpost</a>.
-                </p>
-            </td>
-        </tr>
+                                <!-- News Item 2 -->
+                                <div class="news-item">
+                                    <a href="https://www.foxnews.com/video/6369654570112" style="text-decoration: none;">
+                                        <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/3151ec1c-f81e-41e9-abc2-85b17b15054e/d4c03309-15d7-4bbe-bdb9-c13d7b813aef/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump meets with freed Gaza hostages" width="110">
+                                    </a>
+                                    <h3><a href="https://www.foxnews.com/video/6369654570112" style="color: #081a56; text-decoration: none;">Trump meets with freed Gaza hostages</a></h3>
+                                    <p>Former President Trump met with individuals recently released from captivity in Gaza, discussing their experiences and ongoing efforts for hostage release.</p>
+                                </div>
 
-        <tr>
-            <td>
-                <table width="100%" border="0" cellpadding="0" cellspacing="10">
-                    <tr>
-                        <td valign="top" width="150">
-                            <a href="https://www.foxnews.com/politics/trumps-gold-card-visa-could-invite-fraud-national-security-risks-expert" style="text-decoration:none">
-                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/2025-03-05t024041z_1281810131_rc2q6dagpknu_rtrmadp_3_usa-trump-congress.jpg?ve=1&tl=1" alt="Donald Trump" width="150" style="display: block; border-radius: 5px;">
-                            </a>
-                        </td>
-                        <td valign="top">
-                            <h2 style="font-size: 18px; margin: 0; color: #081a56;"><a href="https://www.foxnews.com/politics/trumps-gold-card-visa-could-invite-fraud-national-security-risks-expert" style="color: #081a56; text-decoration:none">Trump's 'Gold Card' Visa Could Invite Fraud, National Security Risks: Expert</a></h2>
-                            <p style="font-size: 14px; color: #333; line-height: 1.5;">President Trump's proposed "$5 million gold card" visa, offering a path to US citizenship, faces criticism for potentially inviting fraud and national security risks. Experts warn of parallels to the EB-5 program's issues, questioning the vetting process's effectiveness.</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+                                <!-- News Item 3 -->
+                                <div class="news-item">
+                                    <a href="https://www.foxnews.com/video/6369628835112" style="text-decoration: none;">
+                                        <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/da24ad6a-b26d-4561-bde4-0fb6311e55d0/a02f3060-2b7e-4bd0-b4e3-550223a195bf/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump reveals letter from Zelenskyy" width="110">
+                                    </a>
+                                    <h3><a href="https://www.foxnews.com/video/6369628835112" style="color: #081a56; text-decoration: none;">Trump reveals he received letter from Zelenskyy to restart negotiations</a></h3>
+                                    <p>Donald Trump announced he received a letter from Ukrainian President Zelenskyy, expressing interest in restarting peace negotiations with Russia.</p>
+                                </div>
 
-        <tr>
-            <td>
-              <table width="100%" border="0" cellpadding="0" cellspacing="10">
-                    <tr>
-                         <td valign="top" width="150">
-                            <a href="https://www.foxnews.com/world/canadian-premier-threatens-cut-off-energy-us-response-trump-tariffs-they-need-to-feel-the-pain#" style="text-decoration:none">
-                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/01/1200/675/gettyimages-1246869518-scaled.jpg?ve=1&tl=1" alt="Ontario Premier Doug Ford" width="150" style="display:block; border-radius:5px">
-                            </a>
-                       </td>
-                        <td valign="top">
-                            <h2 style="font-size: 18px; margin: 0; color: #081a56;"><a href = "https://www.foxnews.com/world/canadian-premier-threatens-cut-off-energy-us-response-trump-tariffs-they-need-to-feel-the-pain#" style="color: #081a56; text-decoration:none">Canadian Premier Threatens to Cut Off Energy to US in Response to Trump Tariffs</a></h2>
-                            <p style="font-size: 14px; color: #333; line-height: 1.5;">Ontario Premier Doug Ford threatens to cut off energy exports to the US in response to President Trump's tariffs, stating "they need to feel the pain."  Canada, a major electricity exporter to the US, particularly to New York, Michigan, and Minnesota, is considering matching US tariffs.</p>
-                      </td>
-                   </tr>
-              </table>
-          </td>
-        </tr>
+                                <!-- News Item 4 -->
+                                <div class="news-item">
+                                    <a href="https://www.foxnews.com/world/trump-touts-5-million-gold-card-new-path-citizenship" style="text-decoration: none;">
+                                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/2025-03-05t024041z_1281810131_rc2q6dagpknu_rtrmadp_3_usa-trump-congress.jpg?ve=1&tl=1" alt="Trump champions $5 million ‘gold card’" width="110">
+                                    </a>
+                                    <h3><a href="https://www.foxnews.com/world/trump-touts-5-million-gold-card-new-path-citizenship" style="color: #081a56; text-decoration: none;">Trump champions $5 million ‘gold card’ as the new path to citizenship</a></h3>
+                                    <p>President Trump announced a new "$5 million gold card" visa program, offering a path to U.S. citizenship for wealthy, job-creating individuals, sparking debate about its potential for fraud.</p>
+                                </div>
 
-        <tr>
-          <td>
-            <table width = "100%" border="0" cellpadding="0" cellspacing="10">
-              <tr>
-                   <td valign="top" width="150">
-                       <a href="https://www.foxnews.com/world/pressured-trumps-gaza-plan-arab-countries-meet-egypt-discuss-alternative-proposal#" style="text-decoration:none">
-                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/gaza-arab-league-summit-scaled.jpg?ve=1&tl=1" alt="Arab League Summit" width ="150" style="display:block; border-radius:5px">
-                        </a>
-                    </td>
-                     <td valign="top">
-                        <h2 style="font-size: 18px; margin:0; color: #081a56"><a href ="https://www.foxnews.com/world/pressured-trumps-gaza-plan-arab-countries-meet-egypt-discuss-alternative-proposal#" style="color: #081a56; text-decoration:none">Arab Countries Meet in Egypt to Discuss Alternative Proposal to Trump's Gaza Plan</a></h2>
-                        <p style="font-size:14px; color:#333; line-height:1.5">Arab leaders held an emergency summit in Cairo to present a counterproposal to President Trump's Gaza plan, focusing on Egypt's $53 billion reconstruction blueprint. The plan emphasizes Palestinian-led reconstruction and avoids displacement, unlike Trump's proposal, but faces challenges due to Hamas' control and funding concerns.</p>
-                    </td>
-                </tr>
-              </table>
-            </td>
-        </tr>
+                                <!-- News Item 5 -->
+                                <div class="news-item">
+                                    <a href="https://www.foxnews.com/world/canadian-premier-threatens-cut-off-energy-us-response-trump-tariffs-they-need-to-feel-the-pain" style="text-decoration: none;">
+                                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/01/1200/675/gettyimages-1246869518-scaled.jpg?ve=1&tl=1" alt="Canadian leader threatens to halt energy exports to US" width="110">
+                                    </a>
+                                    <h3><a href="https://www.foxnews.com/world/canadian-premier-threatens-cut-off-energy-us-response-trump-tariffs-they-need-to-feel-the-pain" style="color: #081a56; text-decoration: none;">Canadian leader threatens to halt energy exports to US</a></h3>
+                                    <p>Ontario Premier Doug Ford threatened to cut off energy exports to the U.S. in response to President Trump's tariffs, escalating trade tensions between the two countries.</p>
+                                </div>
 
-        <tr>
-           <td>
-              <table width="100%" border="0" cellpadding="0" cellspacing="10">
-                <tr>
-                    <td valign="top" width = "150">
-                        <a href="https://www.foxnews.com/world/houthis-designated-foreign-terrorist-organization-rubio-says#" style="text-decoration: none;">
-                           <img src="https://static.foxnews.com/foxnews.com/content/uploads/2025/02/marco-rubio.gif" alt="Marco Rubio" width="150" style="display: block; border-radius: 5px">
-                         </a>
-                    </td>
-                    <td valign="top">
-                        <h2 style="font-size: 18px; margin: 0; color: #081a56;"><a href = "https://www.foxnews.com/world/houthis-designated-foreign-terrorist-organization-rubio-says#" style="color:#081a56; text-decoration:none">Houthis Designated as a Foreign Terrorist Organization, Rubio Announces</a></h2>
-                      <p style="font-size: 14px; color: #333; line-height: 1.5;">Secretary of State Marco Rubio announced the designation of the Iran-backed Houthis in Yemen as a foreign terrorist organization, fulfilling one of President Trump's promises. The move aims to protect US national security interests and curtail support for terrorist activities. The Houthis have carried out numerous attacks in the Red Sea.</p>
-                    </td>
-                </tr>
-               </table>
-            </td>
-        </tr>
+                                <!-- News Item 6 -->
+                                <div class="news-item">
+                                    <a href="https://www.foxnews.com/world/russian-missile-experts-visited-iran-amid-growing-military-ties" style="text-decoration: none;">
+                                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/01/1200/675/russia-iran-2.jpg?ve=1&tl=1" alt="Russian President Masoud Pezeshkian" width="110">
+                                    </a>
+                                    <h3><a href="https://www.foxnews.com/world/russian-missile-experts-visited-iran-amid-growing-military-ties" style="color: #081a56; text-decoration: none;">Russian military experts visit Iran as both nations deepen ties</a></h3>
+                                    <p>Russian military experts visited Iran twice in 2024, highlighting increased cooperation between the two countries amid regional tensions and the ongoing conflict in Ukraine.</p>
+                                </div>
 
-         <tr>
-           <td>
-              <table width="100%" border="0" cellpadding="0" cellspacing="10">
-                <tr>
-                    <td valign="top" width = "150">
-                        <a href = "https://www.firstpost.com/world/china-digs-deeper-in-west-asia-firm-signs-557-mn-contract-in-kuwait-15000-workers-already-in-uae-13868978.html" style="text-decoration:none">
-                         <img src="https://images.firstpost.com/uploads/2025/03/Untitled-design-2025-03-05T164616.252-2025-03-db2f8493b5276a667c9a6fba0f4d9199.jpg?im=FitAndFill=(596,336)" alt = "China Kuwait" width="150" style="display:block; border-radius:5px">
-                         </a>
-                    </td>
+                                <!-- News Source Links -->
+                                <p class="source-links">
+                                    Compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
+                                    <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and
+                                    <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
+                                </p>
 
-                    <td valign="top">
-                         <h2 style="font-size:18px; margin:0; color:#081a56"><a href="https://www.firstpost.com/world/china-digs-deeper-in-west-asia-firm-signs-557-mn-contract-in-kuwait-15000-workers-already-in-uae-13868978.html" style="color:#081a56; text-decoration:none">China Digs Deeper in West Asia, Firm Signs $557 Mn Contract in Kuwait; 15,000 Workers Already in UAE</a></h2>
-                        <p style="font-size:14px; color:#333; line-height:1.5"> A Wuhan-based firm, China Gezhouba Group Company Limited (CGGC), signed a $557 million deal with Kuwait's Public Authority for Housing Welfare (PAHW) for infrastructure projects in South Saad Al-Abdullah New City. This marks a significant step in China's expanding presence in West Asia. Additionally, nearly 15,500 Chinese companies are already operating in the UAE.</p>
-                    </td>
-                </tr>
-               </table>
-             </td>
-         </tr>
-                <tr>
-           <td>
-              <table width="100%" border="0" cellpadding="0" cellspacing="10">
-                <tr>
-                    <td valign="top" width = "150">
-                        <a href = "https://www.firstpost.com/tech/china-to-promote-open-source-risc-v-chips-boosting-domestic-chip-industry-13868493.html" style="text-decoration:none">
-                         <img src="https://images.firstpost.com/uploads/2025/03/chips-2025-03-b9aac10d3063bc69c409944b7401ebfd-1200x675.jpg?im=FitAndFill=(596,336)" alt = "China Chips" width="150" style="display:block; border-radius:5px">
-                         </a>
-                    </td>
-
-                    <td valign="top">
-                         <h2 style="font-size:18px; margin:0; color:#081a56"><a href="https://www.firstpost.com/tech/china-to-promote-open-source-risc-v-chips-boosting-domestic-chip-industry-13868493.html" style="color:#081a56; text-decoration:none">China to Promote Open-source RISC-V Chips, Boosting Domestic Chip Industry</a></h2>
-                        <p style="font-size:14px; color:#333; line-height:1.5"> China plans to release instructions encouraging the nationwide use of open-source RISC-V processors to reduce reliance on Western technology. This move, a collaboration between eight government departments, aims to bolster China's domestic chip industry amidst growing US-China tech tensions.</p>
-                    </td>
-                </tr>
-               </table>
-             </td>
-         </tr>
-
-    </table>
-
-    <table class="joke-section">
-        <tr>
-            <td align="center" style="padding: 20px; color: #081a56; font-size:14px">
-                <p><b>Joke of the Day:</b> Why don't scientists trust atoms? Because they make up everything!</p>
-            </td>
-        </tr>
-    </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="joke-section">
+                                <h2>Joke of the Day</h2>
+                                <p>Why don't scientists trust atoms?  Because they make up everything!</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 </body>
 </html>
