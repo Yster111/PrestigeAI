@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements & Prestige AI - Daily Newsletter</title>
+    <title>Processing Financial Statements</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,49 +51,6 @@
             color: #081a56; /* Dark blue text */
             margin: 10px auto;
         }
-
-        .newsletter {
-            background-color: #ffffff;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        .newsletter table {
-            width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
-            background-color: #ffffff;
-        }
-
-        .newsletter h1 {
-            font-size: 24px;
-            margin: 0;
-            color: #16d1f2;
-        }
-
-        .newsletter h2 {
-            color: #081a56;
-            border-bottom: 2px solid #16d1f2;
-            padding-bottom: 5px;
-        }
-
-        .newsletter h3 {
-            font-size: 16px;
-            margin: 0;
-            margin-bottom: 5px;
-        }
-
-        .newsletter p {
-            font-size: 14px;
-            margin: 0;
-        }
-
-        .newsletter img {
-            display: block;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
@@ -137,106 +94,110 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <table>
-            <tr>
-                <td align="center">
-                    <table width="600" border="0" cellspacing="0" cellpadding="20" style="background-color: #ffffff;">
-                        <!-- Header -->
-                        <tr>
-                            <td align="center" style="padding: 20px 0;">
-                                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige&#x20;AI&#x20;Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                            </td>
-                        </tr>
-                        <tr>
-                           <td align="center" style="padding: 20px 0; background-color: #081a56; color: #ffffff; border-radius: 10px 10px 0 0">
-                                <h1>Prestige AI - Daily Newsletter</h1>
-                                <p>
-                                  <script>
-                                    const today = new Date();
-                                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                                    document.write(today.toLocaleDateString('en-US', options));
-                                  </script>
-                                </p>
-                                <p>Afternoon Edition</p>
-                            </td>
-                        </tr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f4f4f4; padding: 20px; max-width:600px; margin:auto;">
+        <tr>
+            <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #081a56; color: #ffffff; padding: 20px; text-align: center; border-radius: 8px 8px 0 0;">
+                    <tr>
+                        <td>
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" style="max-width: 200px; height: auto;">
+                            <h1 style="font-size: 24px; margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
+                            <p style="margin: 5px 0;">
+                                <script>
+                                    document.write(new Date().toLocaleDateString('en-US', {
+                                        weekday: 'long',
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric'
+                                    }));
+                                </script> - Sunrise Edition
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff; padding: 20px; border-radius: 0 0 8px 8px;">
+                    <tr>
+                        <td>
+                            <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top Stories</h2>
+                        </td>
+                    </tr>
+                    <!-- Story 1 -->
+                    <tr>
+                        <td style="padding-bottom: 15px; margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
+                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/video/6369705216112" style="color: #081a56; text-decoration: none;">Boy missing for 7 years found safe</a></h3>
+                            <p style="color: #333333;">A boy who had been missing for seven years has been found safe. Further details about the circumstances of his disappearance and recovery are available in the full report.</p>
+                        </td>
+                    </tr>
 
-                        <!-- News Stories -->
-                        <tr>
-                            <td style="padding-top: 20px;">
-                                <h2>Top Stories</h2>
+                    <!-- Story 2 -->
+                    <tr>
+                        <td style="padding-bottom: 15px; margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
+                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/albania-issues-yearlong-tiktok-ban-youth-violence-concerns" style="color: #081a56; text-decoration: none;">Albania Issues Yearlong TikTok Ban Over Youth Violence Concerns</a></h3>
+                            <p style="color: #333333;">The Albanian Cabinet has decided to shut down TikTok for 12 months, blaming the platform for inciting violence and bullying, especially among children. The government is working with TikTok on implementing parental controls and age verification.</p>
+                        </td>
+                    </tr>
 
-                                <!-- Story 1 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                    <tr>
-                                        <td width="120" valign="top">
-                                            <a href="https://www.foxnews.com/world/pause-us-foreign-aid-has-un-panic-over-funding-cuts-trump-says-world-body-not-being-well-run"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/09/1200/675/GettyImages-1170721494.jpg?ve=1&tl=1" alt="UN General Assembly" width="110"></a>
-                                        </td>
-                                        <td valign="top">
-                                          <h3><a href="https://www.foxnews.com/world/pause-us-foreign-aid-has-un-panic-over-funding-cuts-trump-says-world-body-not-being-well-run" style="color: #081a56; text-decoration: none;">Pause in US foreign aid has UN in panic over future funding cuts</a></h3>
-                                            <p>The UN is facing potential funding cuts and reforms, particularly targeting its Department of Global Communications, which some critics accuse of promoting anti-American and antisemitic messages.  The U.S., a major contributor to the UN, has already halted funding to certain UN agencies.</p>
-                                        </td>
-                                    </tr>
-                                </table>
+                    <!-- Story 3 -->
+                    <tr>
+                        <td style="padding-bottom: 15px; margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
+                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/video/6369692848112" style="color: #081a56; text-decoration: none;">Trump says Russia and Ukraine ‘have no choice’ but to make a peace deal</a></h3>
+                            <p style="color: #333333;">Former President Trump has stated his belief that Russia and Ukraine will have to negotiate a peace agreement, emphasizing the necessity of a resolution.</p>
+                        </td>
+                    </tr>
+                    <!-- Story 4 -->
+                    <tr>
+                        <td style="padding-bottom: 15px;margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
+                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/after-trump-threat-hamas-refuses-release-more-hostages-without-phase-2-ceasefire-deal" style="color:#081a56; text-decoration:none;">Hamas ignores Trump threat, refuses to release more hostages without ceasefire</a></h3>
+                            <p style="color: #333333">Hamas has rejected President Trump's demand for the release of Israeli hostages, insisting on a permanent ceasefire deal as a precondition. This follows Trump's meeting with former hostages and a warning to Hamas.</p>
+                        </td>
+                    </tr>
 
-                                <!-- Story 2 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                    <tr>
-                                        <td width="120" valign="top">
-                                            <a href="https://www.foxnews.com/world/trump-touts-5-million-gold-card-new-path-citizenship"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/trump-address-1.jpg?ve=1&tl=1" alt="Trump address" width="110"></a>
-                                        </td>
-                                        <td valign="top">
-                                            <h3><a href="https://www.foxnews.com/world/trump-touts-5-million-gold-card-new-path-citizenship" style="color: #081a56; text-decoration: none;">Trump champions $5 million ‘gold card’ as the new path to citizenship</a></h3>
-                                            <p>President Trump announced a new "$5 million gold card" visa program as a path to U.S. citizenship for wealthy individuals.  This initiative aims to attract successful job creators but has raised concerns about potential fraud and national security risks.</p>
-                                        </td>
-                                  </tr>
-                                </table>
+                    <!-- Story 5 -->
+                    <tr>
+                        <td style="padding-bottom: 15px; margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
+                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.firstpost.com/world/eu-leaders-back-new-plan-to-increase-defence-expenditure-amid-change-in-us-foreign-policy-13869385.html" style="color: #081a56; text-decoration: none;">EU leaders back new plan to increase defence expenditure amid change in US foreign policy</a></h3>
+                            <p style="color: #333333;">European Union leaders have agreed on a new defense plan, allocating billions of euros to boost the continent's security. This comes in response to indications from US President Donald Trump that Europe will need to take greater responsibility for its own defense.</p>
+                        </td>
+                    </tr>
+                    <!-- Story 6 -->
+                    <tr>
+                        <td style="padding-bottom: 15px; margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
+                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/pause-us-foreign-aid-has-un-panic-over-funding-cuts-trump-says-world-body-not-being-well-run" style="color: #081a56; text-decoration: none;">Pause in US foreign aid has UN in panic over future funding cuts</a></h3>
+                            <p style="color: #333333;">The United Nations is expressing concern over potential cuts in U.S. funding following a review ordered by President Trump. The U.S. has already halted funding to UNRWA and withdrawn from the U.N. Human Rights Council.</p>
+                        </td>
+                    </tr>
+                    <!-- Story 7 -->
+                    <tr>
+                        <td style="padding-bottom: 15px; margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
+                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/video/6369648902112" style="color: #081a56; text-decoration: none;">There is ‘no doubt’ that the US-Ukraine minerals deal will be signed, Gen. Jack Keane argues</a></h3>
+                            <p>Gen. Jack Keane expresses his confidence in the upcoming signing of a US-Ukraine minerals deal, suggesting a deepening of ties between the two nations in resource management and trade.</p>
+                        </td>
+                    </tr>
 
-                                <!-- Story 3 -->
-                                 <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                    <tr>
-                                        <td width="120" valign="top">
-                                            <a href="https://www.foxnews.com/world/canadian-premier-threatens-cut-off-energy-us-response-trump-tariffs-they-need-to-feel-the-pain"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/01/1200/675/gettyimages-1246869518-scaled.jpg?ve=1&tl=1" alt="Ontario Premier Doug Ford" width="110"></a>
-                                        </td>
-                                        <td valign="top">
-                                            <h3><a href="https://www.foxnews.com/world/canadian-premier-threatens-cut-off-energy-us-response-trump-tariffs-they-need-to-feel-the-pain" style="color: #081a56; text-decoration: none;">Canadian leader threatens to halt energy exports to US</a></h3>
-                                            <p>Ontario Premier Doug Ford threatened to cut off energy exports to the United States in response to President Trump's tariffs, saying "they need to feel the pain."  Canada is a major electricity supplier to the U.S., particularly New York, Michigan, and Minnesota.</p>
-                                        </td>
-                                    </tr>
-                                 </table>
+                    <tr>
+                        <td style="padding-top: 15px;">
+                            <p style="color:#b0b0b0; font-size:12px;">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color:#16d1f2; text-decoration:none;">Fox News</a>, <a href="https://www.bbc.com" style="color:#16d1f2; text-decoration:none">BBC</a>, and <a href="https://www.firstpost.com" style="color:#16d1f2; text-decoration:none">Firstpost</a>.</p>
+                        </td>
+                    </tr>
 
-                                <!-- Story 4 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                    <tr>
-                                        <td width="120" valign="top">
-                                             <a href="https://www.foxnews.com/world/russian-missile-experts-visited-iran-amid-growing-military-ties"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2023/06/1200/675/Iran-ayatollah.png?ve=1&tl=1" alt="Iran's Supreme Leader Ayatollah Ali Khamenei speaks in Tehran" width="110"></a>
-                                        </td>
-                                         <td valign="top">
-                                             <h3><a href="https://www.foxnews.com/world/russian-missile-experts-visited-iran-amid-growing-military-ties" style="color: #081a56; text-decoration: none;">Russian military experts visit Iran as both nations deepen ties</a></h3>
-                                             <p>Russian military experts visited Iran in 2024, indicating growing cooperation between the two countries. Discussions may have revolved around expanding their military ties, particularly in air defense and missile technology. The Kremlin may be broached about assisting the United States in talks regarding to Iran's nuclear program.</p>
-                                          </td>
-                                    </tr>
-                                 </table>
-
-                                <!-- Story 5 -->
-                                 <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                   <tr>
-                                    <td width="120" valign="top">
-                                        <a href="https://www.firstpost.com/world/trump-wants-us-to-make-more-xi-wants-china-to-spend-more-both-aim-to-tame-headwinds-13869309.html"><img src="https://images.firstpost.com/uploads/2024/11/Representational-Image-2024-11-15T232503.526-2024-11-f485ded2a4b3b12f611541a644ebe997.jpg?im=FitAndFill=(596,336)" alt="Trump wants US to make more, Xi wants China to spend more: Both aim to tame headwinds" width="110"></a>
-                                    </td>
-                                    <td valign="top">
-                                        <h3><a href="https://www.firstpost.com/world/trump-wants-us-to-make-more-xi-wants-china-to-spend-more-both-aim-to-tame-headwinds-13869309.html" style="color:#081a56; text-decoration: none;">Trump wants US to make more, Xi wants China to spend more: Both aim to tame headwinds</a></h3>
-                                    </td>
-                                   </tr>
-                                 </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </div>
-
+                    <tr>
+                        <td>
+                            <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Joke of the Day</h2>
+                            <p style="color: #333333; font-style: italic;">Why don't scientists trust atoms? <br> Because they make up everything!</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center; padding:10px; background-color:#081a56; color:#fff; font-size: 12px;">
+                &copy; 2025 Prestige AI. All rights reserved.
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
