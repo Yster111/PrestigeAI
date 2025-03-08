@@ -57,55 +57,31 @@
             border: 0;
             cellspacing: 0;
             cellpadding: 0;
+            background-color: #f4f4f4;
         }
 
-        .newsletter-header {
-            background-color: #081a56;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        .newsletter-header img {
-            max-width: 150px;
-        }
-
-        .newsletter-content {
-            width: 80%;
+        .newsletter-table {
+            width: 600px;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 20;
             background-color: #ffffff;
-            margin: 20px auto;
-            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
         }
 
-        .newsletter-footer {
-            background-color: #081a56;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h2 {
+        h1, h2, h3 {
             color: #081a56;
-            border-bottom: 2px solid #16d1f2;
-            padding-bottom: 5px;
-        }
-
-        h3 {
-            color: #081a56;
-            margin-bottom: 5px;
         }
 
         p {
-            color: #333333;
+            color: #555555;
         }
 
-        a {
-            color: #16d1f2;
-            text-decoration: none;
-        }
-
-        .joke {
-            font-style: italic;
+        .source {
+            margin-top: 5px;
+            color: #b0b0b0;
         }
     </style>
 </head>
@@ -150,55 +126,125 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter-header">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/ip3AAABgFBMVEUAAAD/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+M1JjXAAAAd3RSTlMAAQIDBAUGBwgJCg0ODxAREhMUFxgZGhscHR4fICEiIyQlJicoKSorLC0uLzAxMjM0NTY3ODk6Ozw9Pj9AQUJDREVGR0hJSktMTU5PUFFTVldYWVxdXmJjZWdqa2xub3Bxc3R1dnd4eXp7fH6AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+SOXp7QAAAt9JREFUeNrt3dl64jAQBVCx/P//V29BQk8LURTZe5J0/F5aW3RtsYJ7OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP4x+W8z/Xv7K7rXef37n9d7y2X12u//r/5H+b68+/b19/79++K9h9W+68t3jM5Zlf95xV6iE2V9s+IbpV594yMtv5W+s+W3D9B6x86xV6f12vYfh3Vl157z7/5d7+xM1S+T6k3f1983d99sP1V594yNt/1J6i+l9W/WfUvpPqX1r7d8y8u+jI7r9H6X1r5v3z6D1b1n5/mI4d1ed++fQeuv1fqT9h+X8d/D8zYfW/L756y27YfoPUfsepfW/55cI1SufGpvv5+H9e19cf68i8P45nL+3z337F594y8u+jL/t9x9u9n7/0jqr1j5/p9m8p85+N/x7I61/W+b+2/l+bY+9K6v94i/O/I6v9r6T1X5ry8+vD337F594y899z95YjVP468u+jI7r9H6d9v+4+Z/W/55cI1T+y60/U+b+G/B6i9V+a8vXrz7/W+ufN+2H5fyL7/6y8t/b8D67835t/f9t33333vj1/L79u1u+jYjVP44/rv1+y8zYfW/L79b0XqHyP77r9H5py/f4bZ+Wve+5d933v6XVPk3+367k9V+a8tP2H5ft59H9l1p/1z+P2/rXv3zIzVP7LrT9T5v7X1J+w/L9vPo/svJ+/Y+pfk/ZdaP2D7W+ufN+2H5ft59H9l1p+vJ+/Y+pfk/ZdaP2D5G+uvx86xV6f12vo/pPWvm/fPzzD9u/r9vPf/sXn3jLyf5/P/j9+/vB/T8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/EwHhTqVq4Qk4tEAAAAASUVORK5CYII=" alt="Prestige AI Logo">
-        <h1>Prestige AI - Daily Newsletter</h1>
-        <p>Sunrise Edition - <span id="currentDate"></span></p>
-    </div>
+    <table>
+        <tr>
+            <td align="center">
+                <table class="newsletter-table">
+                    <tr>
+                        <td align="center">
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
+                            <h1 style="font-size: 24px; margin-top: 10px;">Prestige AI - Daily Newsletter</h1>
+                            <p style="color: #16d1f2; font-size: 16px; margin: 5px 0;">
+                                <script>
+                                    document.write(new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+                                </script>
+                                 - Afternoon Edition
+                            </p>
+                        </td>
+                    </tr>
 
-    <script>
-        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-    </script>
+                    <tr>
+                        <td>
+                            <h2 style="font-size: 20px; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top News Stories</h2>
+                             <p style="color: #b0b0b0; font-size: 12px;">Curated from Fox News, BBC, and Firstpost.</p>
 
-    <div class="newsletter-content">
-        <h2>Top News Stories</h2>
-        <p>Compiled from published news stories from Fox News, BBC, and Firstpost.</p>
+                            <table>
+                                <tr>
+                                     <td width="120" valign="top">
+                                        <a href="https://www.foxnews.com/world/un-draft-report-children-conflict-zones-raises-eyebrows-framing-israelis" style="text-decoration: none;">
+                                          <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2023/11/1200/675/GettyImages-1757744116.jpg?ve=1&tl=1" alt="Photos of the deceased or missing Israelis" width="110" style="border-radius: 4px;">
+                                        </a>
+                                      </td>
+                                    <td>
+                                        <h3 style="font-size: 16px; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/world/un-draft-report-children-conflict-zones-raises-eyebrows-framing-israelis" style="color: #081a56; text-decoration: none;">UN Draft Report on Israeli Child Victims Raises Concerns</a></h3>
+                                        <p>An upcoming UN report on children in conflict zones is drawing criticism for its portrayal of Israeli victims and alleged lack of transparency regarding data verification. It focuses on the IDF while downplaying Hamas' actions.</p>
+                                        <p class="source"><small>Source: Fox News</small></p>
+                                    </td>
+                                </tr>
+                            </table>
 
-        <div>
-            <h3>Poland Announces Military Training Plan for All Men</h3>
-            <p>Polish Prime Minister Donald Tusk announced plans to make all men in Poland undergo military training. The government aims to have a model ready by the end of the year, ensuring every adult male is trained in case of war. The goal is to increase the size of the Polish army, including reservists to 500.000. Tusk stated if things are organized wisely there would be several courses of action such as reservists and intensive training. <a href="https://www.bbc.com/news/articles/cy83r93l208o">Read more on BBC</a>.</p>
-        </div>
+                            <table>
+                                <tr>
+                                  <td width="120" valign="top">
+                                      <a href="https://www.foxnews.com/world/polish-government-plans-mandatory-military-training-adult-men" style="text-decoration: none;">
+                                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/donald-tusk.jpg?ve=1&tl=1" alt="Donald Tusk" width="110" style="border-radius: 4px;">
+                                        </a>
+                                  </td>
+                                    <td>
+                                        <h3 style="font-size: 16px; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/world/polish-government-plans-mandatory-military-training-adult-men" style="color: #081a56; text-decoration: none;">Poland Plans Military Training for All Adult Men</a></h3>
+                                        <p>Amid growing security concerns due to the war in Ukraine, Poland is developing a plan for large-scale military training for adult males, aiming to create a reserve force. This is not a return to universal military service, but a reserve similar to Switzerland.</p>
+                                        <p class="source"><small>Source: Fox News</small></p>
+                                    </td>
+                                </tr>
+                            </table>
 
-        <div>
-            <h3>Huawei's Revenue Jumps 22% YoY in 2024</h3>
-            <p>Huawei Technologies reported an impressive revenue of over 860 billion yuan (US$118.3 billion) for 2024, a 22% increase from 2023. This achievement highlights Huawei's resilience and strategic focus on innovation despite ongoing trade restrictions from Washington. <a href="https://www.firstpost.com/tech/huaweis-revenue-jumps-22-yoy-in-2024-set-new-record-despite-us-sanctions-13860243.html">Read more on Firstpost</a>.</p>
-        </div>
+                            <table>
+                                <tr>
+                                    <td width="120" valign="top">
+                                      <a href="https://www.foxnews.com/video/6369755350112" style="text-decoration: none">
+                                          <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/71deb790-de30-4eaf-b7bc-da317f37f6da/22f554fb-ef1d-476c-a1c5-a03f47c3b76c/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="'Decoding Broken Hearts': Artificial intelligence used to advance heart health research" width="110" style="border-radius: 4px;">
+                                        </a>
+                                     </td>
+                                    <td>
+                                        <h3 style="font-size: 16px; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/video/6369755350112" style="color: #081a56; text-decoration: none;">AI Advances Heart Health Research</a></h3>
+                                        <p>Artificial intelligence is playing a significant role in advancing heart health research. The "Decoding Broken Hearts" initiative utilizes AI to analyze vast datasets and improve diagnostic and treatment strategies for heart conditions.</p>
+                                        <p class="source"><small>Source: Fox News</small></p>
+                                    </td>
+                                </tr>
+                            </table>
 
-        <div>
-            <h3>As Trump Talks to Hamas, 3 Plans Toggle to Decide Post-War Fate of Gaza</h3>
-            <p>Three competing plans have emerged to determine Gaza’s post-war governance. These include a controversial takeover plan by President Trump, a proposal for Egyptian peacekeepers by Israeli opposition leader Yair Lapid, and a governance committee plan introduced by Egypt. <a href="https://www.firstpost.com/world/as-trump-talks-to-hamas-3-plans-toggle-to-decide-post-war-fate-of-gaza-13869494.html">Read more on Firstpost</a></p>
-        </div>
+                            <table>
+                                <tr>
+                                 <td width="120" valign="top">
+                                        <a href="https://www.foxnews.com/world/22-dead-gang-clashes-ecuadors-largest-city" style="text-decoration: none;">
+                                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/ecuador-detainees.jpg?ve=1&tl=1" alt="Ecuador gang clash detainees" width="110" style="border-radius: 4px;">
+                                        </a>
+                                   </td>
+                                    <td>
+                                       <h3 style="font-size: 16px; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/world/22-dead-gang-clashes-ecuadors-largest-city" style="color: #081a56; text-decoration: none;">22 Dead in Ecuador Gang Clashes</a></h3>
+                                           <p>Deadly clashes between gang factions in Guayaquil, Ecuador, have left nearly two dozen people dead. Authorities have launched an offensive, arresting 14 individuals and seizing weapons.</p>
+                                           <p class="source"><small>Source: Fox News</small></p>
+                                     </td>
+                                </tr>
+                            </table>
 
-        <div>
-            <h3>'Decoding Broken Hearts': Artificial intelligence used to advance heart health research</h3>
-            <p>'Decoding broken hearts' uses Artificial Intelligence to advance heart health research. <a href="https://www.foxnews.com/video/6369755350112">Read more on Fox News</a>.</p>
-        </div>
+                            <table>
+                                <tr>
+                                  <td width="120" valign="top">
+                                        <a href="https://www.foxnews.com/video/6369734393112" style="text-decoration: none;">
+                                              <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/4c640948-12db-4be9-b71c-400bd58abb77/4ea96b3f-3883-477e-9d50-6281478ee14c/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump urges negotiations with Iran on nuclear weapons" width="110" style="border-radius: 4px;">
+                                          </a>
+                                       </td>
+                                    <td>
+                                         <h3 style="font-size: 16px; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/video/6369734393112" style="color: #081a56; text-decoration: none;">Trump Urges Negotiations with Iran</a></h3>
+                                           <p>Former President Trump has called for negotiations with Iran regarding its nuclear weapons program, emphasizing the need for diplomatic solutions. (Video summary - adjust to reflect full article if more detailed)</p>
+                                           <p class="source"><small>Source: Fox News</small></p>
+                                  </td>
+                                </tr>
+                            </table>
 
-        <div>
-            <h3>Apple to launch new MacBook Air with M4 chip next month</h3>
-            <p>Apple is going to launch its next generation Macbook Air models in March, bringing upgrades by introducing the M4 Chip. Reports suggest that Apple has started to clean out existing inventory of the Macbook Air stock, a strong suggestion that the models are just around the corner. The 13-inch and 15-inch Macbook Airs, running with the M2 chip, are set to receive a big boost with the M4 chip as well. <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html">Read more on FirstPost</a>.</p>
-        </div>
+                          <!-- Story 6 -->
+                           <table>
+                                <tr>
+                                  <td width="120" valign="top">
+                                          <a href="https://www.foxnews.com/world/cyclone-alfred-weakens-closes-australias-east-coast" style="text-decoration: none;">
+                                             <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/cyclone-alfred-australia.jpg" alt="Cyclone Alfred" width="110" style="border-radius: 4px;">
+                                          </a>
+                                       </td>
+                                    <td>
+                                         <h3 style="font-size: 16px; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/world/cyclone-alfred-weakens-closes-australias-east-coast" style="color: #081a56; text-decoration: none;">Cyclone Alfred Weakens Off Australia's East Coast</a></h3>
+                                           <p>Cyclone Alfred has weakened as it moves away from Australia's east coast, but authorities are still on alert for potential flooding and strong winds in affected areas.</p>
+                                           <p class="source"><small>Source: Fox News</small></p>
+                                  </td>
+                                </tr>
+                            </table>
 
-        <div>
-            <h3>UN says 186 missing and at least 2 dead after migrant boats capsize off Yemen and Djibouti</h3>
-            <p>At least two people have died and 186 others are missing after four boats with migrants from Africa capsized off Yemen and Djibouti. <a href="https://www.foxnews.com/world/un-says-186-missing-least-2-dead-after-migrant-boats-capsize-off-yemen-djibouti">Read more on Fox News</a>.</p>
-        </div>
-    </div>
-
-    <div class="newsletter-footer">
-        <h3>Joke of the Day</h3>
-        <p class="joke">Why don't scientists trust atoms? Because they make up everything!</p>
-    </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
 </body>
 </html>
