@@ -1,125 +1,107 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prestige AI - Daily Newsletter</title>
 </head>
-
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0"
-        style="background-color: #f4f4f4; padding: 20px; max-width:600px; margin:auto;">
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #081a56; color: #ffffff; text-align: center; padding: 20px 0;">
         <tr>
             <td>
-                <table width="100%" border="0" cellspacing="0" cellpadding="0"
-                    style="background-color: #081a56; color: #ffffff; padding: 20px; text-align: center; border-radius: 8px 8px 0 0;">
-                    <tr>
-                        <td>
-
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" style="max-width: 200px; height: auto;">
-
-                            <h1 style="font-size: 24px; margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
-                            <p style="margin: 5px 0;">
-                                <script>
-                                    document.write(new Date().toLocaleDateString('en-US', {
-                                        weekday: 'long',
-                                        year: 'numeric',
-                                        month: 'long',
-                                        day: 'numeric'
-                                    }));
-                                </script> - Sunrise Edition
-                            </p>
-                        </td>
-                    </tr>
-                </table>
+                <!-- Base64 Encoded Logo -->
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/ip3AAABgFBMVEUAAAD/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+M1JjXAAAAd3RSTlMAAQIDBAUGBwgJCg0ODxAREhMUFxgZGhscHR4fICEiIyQlJicoKSorLC0uLzAxMjM0NTY3ODk6Ozw9Pj9AQUJDREVGR0hJSktMTU5PUFFTVldYWVxdXmJjZWdqa2xub3Bxc3R1dnd4eXp7fH6AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+SOXp7QAAAt9JREFUeNrt3dl64jAQBVCx/P//V29BQk8LURTZe5J0/F5aW3RtsYJ7OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP4x+W8z/Xv7K7rXef37n9d7y2X12u//r/5H+b68+/b19/79++K9h9W+68t3jM5Zlf95xV6iE2V9s+IbpV594yMtv5W+s+W3D9B6x86xV6f12vYfh3Vl157z7/5d7+xM1S+T6k3f1983d99sP1V594yNt/1J6i+l9W/WfUvpPqX1r7d8y8u+jI7r9H6X1r5v3z6D1b1n5/mI4d1ed++fQeuv1fqT9h+X8d/D8zYfW/L756y27YfoPUfsepfW/55cI1SufGpvv5+H9e19cf68i8P45nL+3z337F594y8u+jL/t9x9u9n7/0jqr1j5/p9m8p85+N/x7I61/W+b+2/l+bY+9K6v94i/O/I6v9r6T1X5ry8+vD337F594y899z95YjVP468u+jI7r9H6d9v+4+Z/W/55cI1T+y60/U+b+G/B6i9V+a8vXrz7/W+ufN+2H5fyL7/6y8t/b8D67835t/f9t33333vj1/L79u1u+jYjVP44/rv1+y8zYfW/L79b0XqHyP77r9H5py/f4bZ+Wve+5d933v6XVPk3+367k9V+a8tP2H5ft59H9l1p/1z+P2/rXv3zIzVP7LrT9T5v7X1J+w/L9vPo/svJ+/Y+pfk/ZdaP2D7W+ufN+2H5ft59H9l1p+vJ+/Y+pfk/ZdaP2D5G+uvx86xV6f12vo/pPWvm/fPzzD9u/r9vPf/sXn3jLyf5/P/j9+/vB/T8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/EwHhTqVq4Qk4tEAAAAASUVORK5CYII=" alt="Prestige AI Logo" style="max-width: 150px;">
+                <h1 style="font-size: 24px; margin-bottom: 5px;">Prestige AI - Daily Newsletter</h1>
+                <p style="font-size: 16px; margin-top: 0;">
+                    Sunrise Edition - 
+                    <span id="currentDate">
+                        <script>
+                            document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                        </script>
+                    </span>
+                </p>
             </td>
-        </tr>
-        <tr>
-                <td>
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff; padding: 20px; border-radius: 0 0 8px 8px; ">
-                        <tr>
-                            <td>
-                                <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top Stories</h2>
-                            </td>
-                        </tr>
-                    <!-- Story 1 -->
-                    <tr>
-                        <td style="padding-bottom: 15px; margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
-                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/video/6369705216112" style="color: #081a56; text-decoration: none;">Boy missing for 7 years found safe</a></h3>
-                            <p style="color: #333333;">A boy who had been missing for seven years has been found safe. Further details about the circumstances of his disappearance and recovery are available in the full report.</p>
-                        </td>
-                    </tr>
-
-                    <!-- Story 2 -->
-                    <tr>
-                        <td style="padding-bottom: 15px; margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
-                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/albania-issues-yearlong-tiktok-ban-youth-violence-concerns" style="color: #081a56; text-decoration: none;">Albania Issues Yearlong TikTok Ban Over Youth Violence Concerns</a></h3>
-                            <p style="color: #333333;">The Albanian Cabinet has decided to shut down TikTok for 12 months, blaming the platform for inciting violence and bullying, especially among children.  The government is working with TikTok on implementing parental controls and age verification.</p>
-                        </td>
-                    </tr>
-
-                    <!-- Story 3 -->
-                    <tr>
-                        <td style="padding-bottom: 15px; margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
-                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/video/6369692848112" style="color: #081a56; text-decoration: none;">Trump says Russia and Ukraine ‘have no choice’ but to make a peace deal</a></h3>
-                            <p style="color: #333333;">Former President Trump has stated his belief that Russia and Ukraine will have to negotiate a peace agreement, emphasizing the necessity of a resolution.</p>
-                        </td>
-                    </tr>
-                    <!-- Story 4 -->
-                        <tr>
-                            <td style="padding-bottom: 15px;margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
-                                <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/after-trump-threat-hamas-refuses-release-more-hostages-without-phase-2-ceasefire-deal" style="color:#081a56; text-decoration:none;">Hamas ignores Trump threat, refuses to release more hostages without ceasefire</a></h3>
-                                <p style="color: #333333">Hamas has rejected President Trump's demand for the release of Israeli hostages, insisting on a permanent ceasefire deal as a precondition.  This follows Trump's meeting with former hostages and a warning to Hamas.</p>
-                            </td>
-                        </tr>
-
-                    <!-- Story 5 -->
-                     <tr>
-                        <td style="padding-bottom: 15px; margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
-                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.firstpost.com/world/eu-leaders-back-new-plan-to-increase-defence-expenditure-amid-change-in-us-foreign-policy-13869385.html" style="color: #081a56; text-decoration: none;">EU leaders back new plan to increase defence expenditure amid change in US foreign policy</a></h3>
-                            <p style="color: #333333;">European Union leaders have agreed on a new defense plan, allocating billions of euros to boost the continent's security.  This comes in response to indications from US President Donald Trump that Europe will need to take greater responsibility for its own defense.</p>
-                        </td>
-                    </tr>
-                     <!-- Story 6 -->
-                     <tr>
-                        <td style="padding-bottom: 15px; margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
-                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/pause-us-foreign-aid-has-un-panic-over-funding-cuts-trump-says-world-body-not-being-well-run" style="color: #081a56; text-decoration: none;">Pause in US foreign aid has UN in panic over future funding cuts</a></h3>
-                            <p style="color: #333333;">The United Nations is expressing concern over potential cuts in U.S. funding following a review ordered by President Trump.  The U.S. has already halted funding to UNRWA and withdrawn from the U.N. Human Rights Council.</p>
-                        </td>
-                    </tr>
-                     <!-- Story 7 -->
-                                       <tr>
-                        <td style="padding-bottom: 15px; margin-bottom:15px; border-bottom: 1px solid #b0b0b0">
-                            <h3 style="color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/video/6369648902112" style="color: #081a56; text-decoration: none;">There is ‘no doubt’ that the US-Ukraine minerals deal will be signed, Gen. Jack Keane argues</a></h3>
-                            <p>Gen. Jack Keane expresses his confidence in the upcoming signing of a US-Ukraine minerals deal, suggesting a deepening of ties between the two nations in resource management and trade.</p>
-                        </td>
-                    </tr>
-
-
-                    <tr>
-                      <td style= "padding-top: 15px;">
-                        <p style="color:#b0b0b0; font-size:12px;">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color:#16d1f2; text-decoration:none;">Fox News</a>, <a href="https://www.bbc.com" style="color:#16d1f2; text-decoration:none">BBC</a>, and <a href="https://www.firstpost.com" style="color:#16d1f2; text-decoration:none">Firstpost</a>.</p>
-                      </td>
-                   </tr>
-
-                    <tr>
-                      <td>
-                         <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Joke of the Day</h2>
-                        <p style="color: #333333; font-style: italic;">Why don't scientists trust atoms? <br> Because they make up everything!</p>
-                      </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-           <tr>
-            <td style="text-align: center; padding:10px; background-color:#081a56; color:#fff; font-size: 12px;">
-            &copy; 2025 Prestige AI. All rights reserved.
-           </td>
         </tr>
     </table>
-</body>
 
+
+    <table width="80%" border="0" cellspacing="0" cellpadding="20" align="center" style="background-color: #ffffff; margin-top: 20px;">
+        <tr>
+            <td style="padding: 20px;">
+                <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top News Stories</h2>
+                <p style="color: #555555">Compiled from published news stories from Fox News, BBC, and Firstpost.</p>
+
+                <!-- Story 1 -->
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #081a56; margin-bottom: 5px;">Poland Announces Military Training Plan for All Men</h3>
+                    <p style="color: #333333;">
+                        Polish Prime Minister Donald Tusk announced plans to make all men in Poland undergo military training. The government aims to have a model ready by the end of the year, ensuring every adult male is trained in case of war. The goal is to increase the size of the Polish army, including reservists to 500.000. Tusk stated if things are organized wisely there would be several couses of action such as reservists and intensive training.
+                        <a href="https://www.bbc.com/news/articles/cy83r93l208o" style="color: #16d1f2; text-decoration: none;">Read more on BBC</a>.
+                      </p>
+                </div>
+
+                <!-- Story 2 -->
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #081a56; margin-bottom: 5px;">Huawei's Revenue Jumps 22% YoY in 2024</h3>
+                    <p style="color: #333333;">
+                        Huawei Technologies reported an impressive revenue of over 860 billion yuan (US$118.3 billion) for 2024, a 22% increase from 2023. This achievement highlights Huawei's resilience and strategic focus on innovation despite ongoing trade restrictions from Washington.
+                        <a href="https://www.firstpost.com/tech/huaweis-revenue-jumps-22-yoy-in-2024-set-new-record-despite-us-sanctions-13860243.html" style="color: #16d1f2; text-decoration: none;">Read more on Firstpost</a>.
+                    </p>
+                </div>
+
+                <!-- Story 3 -->
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #081a56; margin-bottom: 5px;">As Trump Talks to Hamas, 3 Plans Toggle to Decide Post-War Fate of Gaza</h3>
+                    <p style="color: #333333;">
+                        Three competing plans have emerged to determine Gaza’s post-war governance. These include a controversial takeover plan by President Trump, a proposal for Egyptian peacekeepers by Israeli opposition leader Yair Lapid, and a governance committee plan introduced by Egypt.
+                        <a href="https://www.firstpost.com/world/as-trump-talks-to-hamas-3-plans-toggle-to-decide-post-war-fate-of-gaza-13869494.html" style="color: #16d1f2; text-decoration: none;">Read more on Firstpost</a>
+                    </p>
+                </div>
+
+
+
+                <!-- Story 4 -->
+                 <div style="margin-bottom: 20px;">
+                    <h3 style="color: #081a56; margin-bottom: 5px;">'Decoding Broken Hearts': Artificial intelligence used to advance heart health research</h3>
+                    <p style="color: #333333;">
+                       'Decoding broken hearts' uses Artificial Intelligence to advance heart health research.
+                        <a href="https://www.foxnews.com/video/6369755350112" style="color: #16d1f2; text-decoration: none;">Read more on Fox News</a>.
+                    </p>
+                </div>
+
+                 <!-- Story 5 -->
+                 <div style="margin-bottom: 20px;">
+                    <h3 style="color: #081a56; margin-bottom: 5px;">Apple to launch new MacBook Air with M4 chip next month</h3>
+                    <p style="color: #333333;">
+                        Apple is going to launch it's next generation Macbook Air models in March, bringing upgrades by introducing the M4 Chip. Reports suggest that Apple has started to clean out existing inventory of the Macbook Air stock, a strong suggestion that the models are just around the corner. The 13-inch and 15-inch Macbook aAirs, running with the M2 chip. Are set to receiven a big boost with the M4 chip as well.
+                        <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color: #16d1f2; text-decoration: none;">Read more on FirstPost</a>.
+                    </p>
+                </div>
+              <!-- Story 6 -->
+               <div style="margin-bottom: 20px;">
+                    <h3 style="color: #081a56; margin-bottom: 5px;">UN says 186 missing and at least 2 dead after migrant boats capsize off Yemen and Djibouti</h3>
+                    <p style="color: #333333;">
+                      At least two people have dies and 186 other are missing after four boats with migrants from Africa capsized off Yemen and Djibouti.
+                        <a href="https://www.foxnews.com/world/un-says-186-missing-least-2-dead-after-migrant-boats-capsize-off-yemen-djibouti" style="color: #16d1f2; text-decoration: none;">Read more on Fox News</a>.
+                    </p>
+                </div>
+
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="20" style="background-color: #081a56; color: #ffffff; text-align: center;">
+        <tr>
+            <td>
+                <h3 style="margin-bottom: 10px;">Joke of the Day</h3>
+                <p style="font-style: italic;">Why don't scientists trust atoms?  Because they make up everything!</p>
+            </td>
+        </tr>
+    </table>
+
+</body>
 </html>
+
 ```
