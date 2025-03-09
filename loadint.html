@@ -52,33 +52,84 @@
             margin: 10px auto;
         }
 
-        .newsletter {
-            background-color: #f4f4f4;
-            color: #333;
-            padding: 20px;
-        }
-
-        .newsletter table {
+        table {
             width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-        }
-
-        .newsletter h1, .newsletter h2, .newsletter h3 {
-            color: #081a56;
-        }
-
-        .newsletter a {
-            color: #16d1f2;
-            text-decoration: none;
-        }
-
-        .joke {
             background-color: #f4f4f4;
-            color: #555;
+            border-collapse: collapse;
+        }
+
+        .newsletter-table {
+            width: 600px;
+            background-color: #ffffff;
+            margin: 0 auto;
+        }
+
+        .newsletter-header {
+            background-color: #081a56;
             padding: 20px;
             text-align: center;
+            color: #ffffff;
+        }
+
+        .newsletter-header img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .newsletter-header h1 {
+            font-size: 24px;
+            margin: 10px 0 0 0;
+        }
+
+        .newsletter-header p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .story-title {
+            color: #081a56;
+            font-size: 18px;
+            margin: 0 0 5px 0;
+        }
+
+        .story-content {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .story-source {
+            font-size: 12px;
+            color: #b0b0b0;
+        }
+
+        .footer {
+            padding: 10px 20px;
+            text-align: center;
+            border-top: 1px solid #b0b0b0;
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: #b0b0b0;
+            margin: 0;
+        }
+
+        .joke-section {
+            background-color: #081a56;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .joke-section h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .joke-section p {
+            font-size: 14px;
+            font-style: italic;
         }
     </style>
 </head>
@@ -123,125 +174,119 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <table cellpadding="0" cellspacing="0" border="0" style="background-color: #081a56; color: #fff;">
-            <tr>
-                <td align="center" style="padding: 20px;">
-                    <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" style="max-width: 200px; height: auto;">
-                </td>
-            </tr>
-            <tr>
-                <td align="center" style="padding-bottom: 20px;">
-                    <h1 style="margin: 0; font-size: 24px; color: #fff;">Prestige AI - Daily Newsletter</h1>
-                    <p style="margin: 5px 0 0; color: #16d1f2;"><?php echo date("F j, Y"); ?> - Sunrise Edition</p>
-                </td>
-            </tr>
-        </table>
+    <table class="newsletter-table">
+        <tr>
+            <td class="newsletter-header">
+                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
+                <h1>Prestige AI - Daily Newsletter</h1>
+                <p>
+                    <script>
+                        const today = new Date();
+                        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                        document.write(today.toLocaleDateString('en-US', options));
+                    </script>
+                     - Afternoon Edition
+                </p>
+            </td>
+        </tr>
 
-        <table cellpadding="20" cellspacing="0" border="0">
-            <tr>
-                <td>
-                    <h2 style="margin-bottom: 10px;">Top Stories</h2>
-                    <p style="color: #555; font-size:14px; line-height:1.4">This newsletter curates news from leading sources such as <a href="https://www.foxnews.com">Fox News</a>, <a href="https://www.bbc.com">BBC</a>, and <a href="https://www.firstpost.com">Firstpost</a>.</p>
+        <tr>
+            <td style="padding: 20px;">
+                <h2 style="color: #081a56; font-size: 20px; margin-bottom: 15px; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top Stories</h2>
 
-                    <!-- News Story 1 -->
-                    <table cellpadding="10" cellspacing="0" border="0" style="border-bottom: 1px solid #b0b0b0;">
-                      <tr>
-                        <td valign="top">
-                            <a href="https://www.foxnews.com/world/north-korea-unveils-its-first-nuclear-powered-submarine" style="text-decoration: none;">
-                              <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/north-korea-1.jpg?ve=1&tl=1" alt="North Korean leader Kim Jong Un visits a shipyard" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
-                            </a>
-                          </td>
-                          <td valign="top">
-                              <h3 style="margin-top: 0;"><a href="https://www.foxnews.com/world/north-korea-unveils-its-first-nuclear-powered-submarine" style="color: #081a56; text-decoration:none;">North Korea Unveils Nuclear-Powered Submarine</a></h3>
-                              <p style="color: #555;font-size:14px; line-height:1.4">North Korea has revealed its first nuclear-powered submarine, a significant development that could pose a major security threat to South Korea and the U.S.  The submarine is believed to be capable of carrying around 10 nuclear-capable missiles.  Experts suggest North Korea may have received Russian technological assistance for the submarine's nuclear reactor.</p>
-                          </td>
-                       </tr>
-                    </table>
+                <!-- Story 1 -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin-bottom: 20px;">
+                    <tr>
+                        <td style="padding-bottom: 10px;">
+                            <h3 class="story-title"><a href="https://www.foxnews.com/world/north-korea-unveils-its-first-nuclear-powered-submarine" style="color: #081a56; text-decoration: none;">North Korea Unveils Nuclear-Powered Submarine</a></h3>
+                            <p class="story-content">North Korea has unveiled its first nuclear-powered submarine, a significant development that poses a major security threat to South Korea and the U.S. The submarine is believed to be capable of carrying about 10 nuclear-capable missiles. Experts speculate that North Korea may have received Russian technological assistance in exchange for supporting Russia's war efforts in Ukraine.</p>
+                            <span class="story-source">Source: <a href="https://www.foxnews.com/world/north-korea-unveils-its-first-nuclear-powered-submarine" style="color: #16d1f2; text-decoration: none;">Fox News</a></span>
+                        </td>
+                    </tr>
+                </table>
 
-                     <!-- News Story 2 -->
-                    <table cellpadding="10" cellspacing="0" border="0" style="border-bottom: 1px solid #b0b0b0;">
-                        <tr>
-                            <td valign="top">
-                                <a href="https://www.foxnews.com/world/tulsi-gabbards-warning-senate-syria-proves-prophetic-al-qaeda-linked-regime-slaughters-minorities" style="text-decoration:none">
-                                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/01/1200/675/tulsi-gabbard-3.png?ve=1&tl=1" alt="Tulsi Gabbard" style="width: 150px; height: auto; margin-right:15px; border-radius:5px;">
-                                </a>
-                            </td>
-                            <td valign="top">
-                                <h3 style="margin-top: 0;"><a href="https://www.foxnews.com/world/tulsi-gabbards-warning-senate-syria-proves-prophetic-al-qaeda-linked-regime-slaughters-minorities" style="text-decoration:none; color:#081a56;">Syrian Jihadists Accused of Killing Alawite and Christians</a></h3>
-                                <p style="color: #555;font-size:14px; line-height:1.4">Reports from Syria indicate that al-Qaeda-linked forces are accused of massacring Alawites and Christians.  This comes after Tulsi Gabbard's warning about Islamist extremists controlling Syria. Witnesses report brutal killings and looting by militias, raising serious concerns about the safety of religious minorities.</p>
-                            </td>
-                        </tr>
-                    </table>
+                <!-- Story 2 -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin-bottom: 20px;">
+                    <tr>
+                        <td style="padding-bottom: 10px;">
+                            <h3 class="story-title"><a href="https://www.bbc.com/news/articles/crknjgrd3geo" style="color: #081a56; text-decoration: none;">Syria Leader Calls for Peace After Hundreds of Civilians Killed</a></h3>
+                            <p class="story-content">Syria's leader Ahmed Sharaa has called for peace following clashes where Syrian security forces reportedly killed hundreds of civilians from the Alawite religious minority. The UK-based SOHR reports around 745 civilians were killed in 30 "massacres." The total death toll, including fighters, exceeds 1,000 in the last four days.</p>
+                            <span class="story-source">Source: <a href="https://www.bbc.com/news/articles/crknjgrd3geo" style="color: #16d1f2; text-decoration: none;">BBC</a></span>
+                        </td>
+                    </tr>
+                </table>
 
-                    <!-- News Story 3 -->
-                    <table cellpadding="10" cellspacing="0" border="0" style="border-bottom: 1px solid #b0b0b0;">
-                      <tr>
-                            <td valign="top">
-                            <a href="https://www.foxnews.com/world/gaza-plan-criticized-us-israel-gets-european-support" style="text-decoration:none">
-                                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/gaza-jabaliya.png?ve=1&tl=1" alt="Destroyed buildings in Gaza" style="width: 150px; height: auto; margin-right: 15px;border-radius:5px">
-                             </a>
-                            </td>
-                            <td valign="top">
-                                <h3 style="margin-top: 0;"><a href="https://www.foxnews.com/world/gaza-plan-criticized-us-israel-gets-european-support" style="color:#081a56; text-decoration:none">European Leaders Support Egypt's Gaza Plan, Defying US and Israel</a></h3>
-                                <p style="color: #555;font-size:14px; line-height:1.4">European leaders have voiced support for an Arab-backed plan for Gaza reconstruction, contrasting with U.S. and Israeli objections.  The plan focuses on Palestinian-led efforts, while the U.S. favors President Trump's proposal for relocation. Concerns remain about the role of the Palestinian Authority and UNRWA.</p>
-                            </td>
-                        </tr>
-                    </table>
+                <!-- Story 3 -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin-bottom: 20px;">
+                    <tr>
+                        <td style="padding-bottom: 10px;">
+                            <h3 class="story-title"><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color:#081a56; text-decoration:none">Apple to Launch New MacBook Air with M4 Chip Next Month</a></h3>
+                            <p class="story-content">Apple plans to launch its next-generation MacBook Air models with the new M4 chip in March. The upgraded chip is expected to enhance speed, power efficiency, and AI-driven capabilities. Apple has reportedly started clearing existing MacBook Air stock.</p>
+                            <span class="story-source">Source: <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color: #16d1f2; text-decoration: none;">Firstpost</a></span>
+                        </td>
+                    </tr>
+                </table>
 
-                    <!-- News Story 4 -->
-                     <table cellpadding="10" cellspacing="0" border="0" style="border-bottom: 1px solid #b0b0b0;">
-                      <tr>
-                           <td valign="top">
-                            <a href="https://www.foxnews.com/world/bipartisan-legislation-seeks-reign-in-erdogans-turkey-over-ties-to-us-foes" style="text-decoration:none">
-                                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/erdogan-and-putin-scaled.jpg?ve=1&tl=1" alt="Erdogan and Putin" style="width: 150px; height: auto; margin-right: 15px;border-radius:5px">
-                            </a>
-                            </td>
-                            <td valign="top">
-                                <h3 style="margin-top: 0;"><a href="https://www.foxnews.com/world/bipartisan-legislation-seeks-reign-in-erdogans-turkey-over-ties-to-us-foes" style="color:#081a56; text-decoration:none">Bipartisan Legislation Seeks to Reign in Erdogan's Turkey</a></h3>
-                                <p style="color: #555;font-size:14px; line-height:1.4">A bipartisan group of U.S. lawmakers is introducing legislation to redesignate Turkey as a Near Eastern country, reflecting its growing ties with Russia, China, Iran, and Hamas.  Concerns are raised about Turkey's actions contradicting American interests and its obstruction of NATO unity.</p>
-                            </td>
-                       </tr>
-                      </table>
+                <!-- Story 4 -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin-bottom: 20px;">
+                    <tr>
+                        <td style="padding-bottom: 10px;">
+                            <h3 class="story-title"><a href="https://www.foxnews.com/world/trumps-scottish-golf-resort-vandalized-pro-palestine-group-over-gaza-stance" style="color:#081a56; text-decoration: none">Trump's Scottish Golf Resort Vandalized</a></h3>
+                            <p class="story-content">President Donald Trump's Turnberry golf resort in Scotland was vandalized by pro-Palestine activists. The group "Palestine Action" claimed responsibility, citing Trump's plans for Gaza. Drone footage showed the clubhouse splattered with red paint and the message "Gaza Is Not For Sale" painted near a green. Scottish police are investigating.</p>
+                            <span class="story-source">Source: <a href="https://www.foxnews.com/world/trumps-scottish-golf-resort-vandalized-pro-palestine-group-over-gaza-stance" style="color: #16d1f2; text-decoration: none;">Fox News</a></span>
+                        </td>
+                    </tr>
+                </table>
 
-                    <!-- News Story 5 -->
-                    <table cellpadding="10" cellspacing="0" border="0" style="border-bottom: 1px solid #b0b0b0;">
-                       <tr>
-                            <td valign="top">
-                                <a href="https://www.firstpost.com/world/us-vetoes-canadas-g7-proposal-to-form-a-task-force-to-counter-russias-shadow-fleet-heres-why-13869963.html" style="text-decoration:none">
-                                    <img src="https://images.firstpost.com/uploads/2025/01/Firstpost-94-2025-01-1360b46dd4da0ae890e83e30403fdb9d.jpg?im=FitAndFill=(596,336)" alt="Oil tanker" style="width: 150px; height: auto; margin-right:15px; border-radius:5px">
-                                  </a>
-                            </td>
-                            <td valign="top">
-                                <h3 style="margin-top: 0;"><a href="https://www.firstpost.com/world/us-vetoes-canadas-g7-proposal-to-form-a-task-force-to-counter-russias-shadow-fleet-heres-why-13869963.html" style="text-decoration:none; color:#081a56">US Vetoes Canada's G7 Proposal on Russia's Shadow Fleet</a></h3>
-                                <p style="color: #555;font-size:14px; line-height:1.4">The US vetoed a Canadian proposal to create a G7 task force to combat Russia's "shadow fleet" of oil tankers.  The US reportedly weakened language against Russia while strengthening it against China during negotiations. The reason cited is a re-evaluation of the US position in multilateral organizations.</p>
-                            </td>
-                        </tr>
-                    </table>
+                <!-- Story 5 -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin-bottom: 20px;">
+                    <tr>
+                        <td style="padding-bottom:10px;">
+                            <h3 class="story-title"><a href="https://www.bbc.com/news/articles/cd7eyz3yn5do" style="color:#081a56; text-decoration:none;">How Trump's Threats Have Changed Everything About Canada's Politics</a></h3>
+                            <p class="story-content">US President Donald Trump's statement about wanting to make Canada the 51st state has significantly impacted Canadian politics. Justin Trudeau's party, initially facing potential defeat, has seen a shift following Trump's remarks.</p>
+                            <span class="story-source">Source: <a href="https://www.bbc.com/news/articles/cd7eyz3yn5do" style="color: #16d1f2; text-decoration: none;">BBC</a></span>
+                        </td>
+                    </tr>
+                </table>
 
-                  <!-- News Story 6 -->
-                  <table cellpadding="10" cellspacing="0" border="0">
-                      <tr>
-                            <td valign="top">
-                            <a href="https://www.firstpost.com/tech/indonesia-approves-a-dozen-apple-products-raising-hope-for-lifting-ban-on-iphone-sales-13869495.html" style="text-decoration:none;">
-                              <img src="https://images.firstpost.com/uploads/2025/02/Apple-removes-its-Advanced-Data-Protection-services-from-the-UK-2025-02-eebe6b9dbced90ed605560f478c9c4ed-1200x675.jpg?im=FitAndFill=(596,336)" alt="Apple Products" style="width: 150px; height: auto; margin-right: 15px;border-radius:5px">
-                            </a>
-                            </td>
-                            <td valign="top">
-                                <h3 style="margin-top: 0;"><a href="https://www.firstpost.com/tech/indonesia-approves-a-dozen-apple-products-raising-hope-for-lifting-ban-on-iphone-sales-13869495.html" style="text-decoration:none; color:#081a56">Indonesia Approves Apple Products, Raising Hopes for Lifting iPhone Ban</a></h3>
-                                <p style="color: #555;font-size:14px; line-height:1.4">Indonesia has approved local certificates for several Apple products, paving the way for a potential lifting of the ban on iPhone sales. This follows Apple's investment deal to meet local content requirements. Further approvals are still needed before sales can resume.</p>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+                <!-- Story 6 -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin-bottom: 20px;">
+                    <tr>
+                        <td style="padding-bottom: 10px;">
+                            <h3 class="story-title"><a href="https://www.firstpost.com/tech/microsoft-to-discontinue-skype-teams-takes-over-as-primary-videoconferencing-platform-13867946.html" style="color:#081a56; text-decoration:none">Microsoft to Discontinue Skype</a></h3>
+                            <p class="story-content">Microsoft has announced it will discontinue Skype, the video-calling service it acquired in 2011. Services will be migrated to Microsoft Teams, its flagship videoconferencing platform. Skype users will be able to log into Teams with their existing accounts. The move reflects Microsoft's prioritization of Teams and simplification of its communication software offerings.</p>
+                            <span class="story-source">Source: <a href="https://www.firstpost.com/tech/microsoft-to-discontinue-skype-teams-takes-over-as-primary-videoconferencing-platform-13867946.html" style="color: #16d1f2; text-decoration: none;">Firstpost</a></span>
+                        </td>
+                    </tr>
+                </table>
 
-        <div class="joke">
-            <h3>Joke of the Day</h3>
-            <p>Why don't scientists trust atoms?  Because they make up everything!</p>
-        </div>
-    </div>
+                <!-- Story 7 -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin-bottom: 20px;">
+                    <tr>
+                        <td style="padding-bottom: 10px;">
+                            <h3 class="story-title"><a href="https://www.foxnews.com/world/bipartisan-legislation-seeks-reign-in-erdogans-turkey-over-ties-to-us-foes" style="color:#081a56; text-decoration: none">Bipartisan Legislation Seeks to Reign in Erdogan's Turkey</a></h3>
+                            <p class="story-content">A bipartisan group of US House lawmakers is introducing legislation to redesignate Turkey as a Near Eastern country at the State Department, rather than a European country. This reflects concerns about Turkey's deepening ties with Russia, China, Iran, and Hamas, which are seen as conflicting with Western security interests. The bill aims to reflect Turkey's "hostile regime's conduct."</p>
+                            <span class="story-source">Source: <a href="https://www.foxnews.com/world/bipartisan-legislation-seeks-reign-in-erdogans-turkey-over-ties-to-us-foes" style="color: #16d1f2; text-decoration: none;">Fox News</a></span>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Sources -->
+        <tr>
+            <td class="footer">
+                <p>This newsletter is compiled from published news stories from <a style="color:#16d1f2;" href="https://www.foxnews.com">Fox News</a>, <a style="color:#16d1f2;" href="https://www.bbc.com">BBC</a>, and <a style="color: #16d1f2" href="https://www.firstpost.com/">Firstpost</a>.</p>
+            </td>
+        </tr>
+
+        <!-- Conclusion (Joke of the Day) -->
+        <tr>
+            <td class="joke-section">
+                <h3>Joke of the Day</h3>
+                <p>Why don't scientists trust atoms? <br> Because they make up everything!</p>
+            </td>
+        </tr>
+    </table>
 
 </body>
 </html>
