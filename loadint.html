@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements and Daily Newsletter</title>
+    <title>Processing Financial Statements & Prestige AI - Daily Newsletter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,87 +54,31 @@
 
         .newsletter {
             background-color: #f4f4f4;
-            color: #081a56;
-            margin: 0;
-            padding: 0;
+            color: #333;
+            padding: 20px;
         }
 
-        .newsletter-table {
+        .newsletter table {
             width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
-            background-color: #f4f4f4;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
         }
 
-        .newsletter-content {
-            width: 600px;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
-            background-color: #ffffff;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-        .newsletter-header {
-            text-align: center;
-        }
-
-        .newsletter-header img {
-            display: block;
-        }
-
-        .newsletter-header h1 {
+        .newsletter h1, .newsletter h2, .newsletter h3 {
             color: #081a56;
-            font-size: 24px;
-            margin-top: 10px;
         }
 
-        .newsletter-header p {
+        .newsletter a {
             color: #16d1f2;
-            font-size: 16px;
-            margin: 5px 0;
+            text-decoration: none;
         }
 
-        .news-stories h2 {
-            color: #081a56;
-            font-size: 20px;
-            border-bottom: 2px solid #16d1f2;
-            padding-bottom: 5px;
-        }
-
-        .news-stories p {
-            color: #b0b0b0;
-            font-size: 12px;
-        }
-
-        .news-story {
-            width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 10;
-        }
-
-        .news-story img {
-            border-radius: 4px;
-        }
-
-        .news-story h3 {
-            color: #081a56;
-            font-size: 16px;
-            margin: 0 0 5px 0;
-        }
-
-        .news-story p {
-            color: #555555;
-            font-size: 14px;
-        }
-
-        .news-story small {
-            margin-top: 5px;
-            color: #b0b0b0;
+        .joke {
+            background-color: #f4f4f4;
+            color: #555;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -180,129 +124,123 @@
     </script>
 
     <div class="newsletter">
-        <table class="newsletter-table">
+        <table cellpadding="0" cellspacing="0" border="0" style="background-color: #081a56; color: #fff;">
             <tr>
-                <td align="center">
-                    <table class="newsletter-content">
+                <td align="center" style="padding: 20px;">
+                    <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" style="max-width: 200px; height: auto;">
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="padding-bottom: 20px;">
+                    <h1 style="margin: 0; font-size: 24px; color: #fff;">Prestige AI - Daily Newsletter</h1>
+                    <p style="margin: 5px 0 0; color: #16d1f2;"><?php echo date("F j, Y"); ?> - Sunrise Edition</p>
+                </td>
+            </tr>
+        </table>
+
+        <table cellpadding="20" cellspacing="0" border="0">
+            <tr>
+                <td>
+                    <h2 style="margin-bottom: 10px;">Top Stories</h2>
+                    <p style="color: #555; font-size:14px; line-height:1.4">This newsletter curates news from leading sources such as <a href="https://www.foxnews.com">Fox News</a>, <a href="https://www.bbc.com">BBC</a>, and <a href="https://www.firstpost.com">Firstpost</a>.</p>
+
+                    <!-- News Story 1 -->
+                    <table cellpadding="10" cellspacing="0" border="0" style="border-bottom: 1px solid #b0b0b0;">
+                      <tr>
+                        <td valign="top">
+                            <a href="https://www.foxnews.com/world/north-korea-unveils-its-first-nuclear-powered-submarine" style="text-decoration: none;">
+                              <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/north-korea-1.jpg?ve=1&tl=1" alt="North Korean leader Kim Jong Un visits a shipyard" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+                            </a>
+                          </td>
+                          <td valign="top">
+                              <h3 style="margin-top: 0;"><a href="https://www.foxnews.com/world/north-korea-unveils-its-first-nuclear-powered-submarine" style="color: #081a56; text-decoration:none;">North Korea Unveils Nuclear-Powered Submarine</a></h3>
+                              <p style="color: #555;font-size:14px; line-height:1.4">North Korea has revealed its first nuclear-powered submarine, a significant development that could pose a major security threat to South Korea and the U.S.  The submarine is believed to be capable of carrying around 10 nuclear-capable missiles.  Experts suggest North Korea may have received Russian technological assistance for the submarine's nuclear reactor.</p>
+                          </td>
+                       </tr>
+                    </table>
+
+                     <!-- News Story 2 -->
+                    <table cellpadding="10" cellspacing="0" border="0" style="border-bottom: 1px solid #b0b0b0;">
                         <tr>
-                            <td class="newsletter-header">
-                                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
-                                <h1>Prestige AI - Daily Newsletter</h1>
-                                <p>
-                                    <script>
-                                        document.write(new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
-                                    </script>
-                                     - Afternoon Edition
-                                </p>
+                            <td valign="top">
+                                <a href="https://www.foxnews.com/world/tulsi-gabbards-warning-senate-syria-proves-prophetic-al-qaeda-linked-regime-slaughters-minorities" style="text-decoration:none">
+                                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/01/1200/675/tulsi-gabbard-3.png?ve=1&tl=1" alt="Tulsi Gabbard" style="width: 150px; height: auto; margin-right:15px; border-radius:5px;">
+                                </a>
+                            </td>
+                            <td valign="top">
+                                <h3 style="margin-top: 0;"><a href="https://www.foxnews.com/world/tulsi-gabbards-warning-senate-syria-proves-prophetic-al-qaeda-linked-regime-slaughters-minorities" style="text-decoration:none; color:#081a56;">Syrian Jihadists Accused of Killing Alawite and Christians</a></h3>
+                                <p style="color: #555;font-size:14px; line-height:1.4">Reports from Syria indicate that al-Qaeda-linked forces are accused of massacring Alawites and Christians.  This comes after Tulsi Gabbard's warning about Islamist extremists controlling Syria. Witnesses report brutal killings and looting by militias, raising serious concerns about the safety of religious minorities.</p>
                             </td>
                         </tr>
+                    </table>
 
-                        <tr>
-                            <td class="news-stories">
-                                <h2>Top News Stories</h2>
-                                <p>Curated from Fox News, BBC, and Firstpost.</p>
+                    <!-- News Story 3 -->
+                    <table cellpadding="10" cellspacing="0" border="0" style="border-bottom: 1px solid #b0b0b0;">
+                      <tr>
+                            <td valign="top">
+                            <a href="https://www.foxnews.com/world/gaza-plan-criticized-us-israel-gets-european-support" style="text-decoration:none">
+                                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/gaza-jabaliya.png?ve=1&tl=1" alt="Destroyed buildings in Gaza" style="width: 150px; height: auto; margin-right: 15px;border-radius:5px">
+                             </a>
+                            </td>
+                            <td valign="top">
+                                <h3 style="margin-top: 0;"><a href="https://www.foxnews.com/world/gaza-plan-criticized-us-israel-gets-european-support" style="color:#081a56; text-decoration:none">European Leaders Support Egypt's Gaza Plan, Defying US and Israel</a></h3>
+                                <p style="color: #555;font-size:14px; line-height:1.4">European leaders have voiced support for an Arab-backed plan for Gaza reconstruction, contrasting with U.S. and Israeli objections.  The plan focuses on Palestinian-led efforts, while the U.S. favors President Trump's proposal for relocation. Concerns remain about the role of the Palestinian Authority and UNRWA.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-                                <!-- Story 1 -->
-                                <table class="news-story">
-                                    <tr>
-                                        <td width="120" valign="top">
-                                            <a href="https://www.foxnews.com/world/un-draft-report-children-conflict-zones-raises-eyebrows-framing-israelis" style="text-decoration: none;">
-                                                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2023/11/1200/675/GettyImages-1757744116.jpg?ve=1&tl=1" alt="Photos of the deceased or missing Israelis" width="110">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <h3><a href="https://www.foxnews.com/world/un-draft-report-children-conflict-zones-raises-eyebrows-framing-israelis" style="color: #081a56; text-decoration: none;">UN Draft Report on Israeli Child Victims Raises Concerns</a></h3>
-                                            <p>An upcoming UN report on children in conflict zones is drawing criticism for its portrayal of Israeli victims and alleged lack of transparency regarding data verification. It focuses on the IDF while downplaying Hamas' actions.</p>
-                                            <p><small>Source: Fox News</small></p>
-                                        </td>
-                                    </tr>
-                                </table>
+                    <!-- News Story 4 -->
+                     <table cellpadding="10" cellspacing="0" border="0" style="border-bottom: 1px solid #b0b0b0;">
+                      <tr>
+                           <td valign="top">
+                            <a href="https://www.foxnews.com/world/bipartisan-legislation-seeks-reign-in-erdogans-turkey-over-ties-to-us-foes" style="text-decoration:none">
+                                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/erdogan-and-putin-scaled.jpg?ve=1&tl=1" alt="Erdogan and Putin" style="width: 150px; height: auto; margin-right: 15px;border-radius:5px">
+                            </a>
+                            </td>
+                            <td valign="top">
+                                <h3 style="margin-top: 0;"><a href="https://www.foxnews.com/world/bipartisan-legislation-seeks-reign-in-erdogans-turkey-over-ties-to-us-foes" style="color:#081a56; text-decoration:none">Bipartisan Legislation Seeks to Reign in Erdogan's Turkey</a></h3>
+                                <p style="color: #555;font-size:14px; line-height:1.4">A bipartisan group of U.S. lawmakers is introducing legislation to redesignate Turkey as a Near Eastern country, reflecting its growing ties with Russia, China, Iran, and Hamas.  Concerns are raised about Turkey's actions contradicting American interests and its obstruction of NATO unity.</p>
+                            </td>
+                       </tr>
+                      </table>
 
-                                <!-- Story 2 -->
-                                <table class="news-story">
-                                    <tr>
-                                        <td width="120" valign="top">
-                                            <a href="https://www.foxnews.com/world/polish-government-plans-mandatory-military-training-adult-men" style="text-decoration: none;">
-                                                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/donald-tusk.jpg?ve=1&tl=1" alt="Donald Tusk" width="110">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <h3><a href="https://www.foxnews.com/world/polish-government-plans-mandatory-military-training-adult-men" style="color: #081a56; text-decoration: none;">Poland Plans Military Training for All Adult Men</a></h3>
-                                            <p>Amid growing security concerns due to the war in Ukraine, Poland is developing a plan for large-scale military training for adult males, aiming to create a reserve force. This is not a return to universal military service, but a reserve similar to Switzerland.</p>
-                                            <p><small>Source: Fox News</small></p>
-                                        </td>
-                                    </tr>
-                                </table>
+                    <!-- News Story 5 -->
+                    <table cellpadding="10" cellspacing="0" border="0" style="border-bottom: 1px solid #b0b0b0;">
+                       <tr>
+                            <td valign="top">
+                                <a href="https://www.firstpost.com/world/us-vetoes-canadas-g7-proposal-to-form-a-task-force-to-counter-russias-shadow-fleet-heres-why-13869963.html" style="text-decoration:none">
+                                    <img src="https://images.firstpost.com/uploads/2025/01/Firstpost-94-2025-01-1360b46dd4da0ae890e83e30403fdb9d.jpg?im=FitAndFill=(596,336)" alt="Oil tanker" style="width: 150px; height: auto; margin-right:15px; border-radius:5px">
+                                  </a>
+                            </td>
+                            <td valign="top">
+                                <h3 style="margin-top: 0;"><a href="https://www.firstpost.com/world/us-vetoes-canadas-g7-proposal-to-form-a-task-force-to-counter-russias-shadow-fleet-heres-why-13869963.html" style="text-decoration:none; color:#081a56">US Vetoes Canada's G7 Proposal on Russia's Shadow Fleet</a></h3>
+                                <p style="color: #555;font-size:14px; line-height:1.4">The US vetoed a Canadian proposal to create a G7 task force to combat Russia's "shadow fleet" of oil tankers.  The US reportedly weakened language against Russia while strengthening it against China during negotiations. The reason cited is a re-evaluation of the US position in multilateral organizations.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-                                <!-- Story 3 -->
-                                <table class="news-story">
-                                    <tr>
-                                        <td width="120" valign="top">
-                                            <a href="https://www.foxnews.com/video/6369755350112" style="text-decoration: none">
-                                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/71deb790-de30-4eaf-b7bc-da317f37f6da/22f554fb-ef1d-476c-a1c5-a03f47c3b76c/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="'Decoding Broken Hearts': Artificial intelligence used to advance heart health research" width="110">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <h3><a href="https://www.foxnews.com/video/6369755350112" style="color: #081a56; text-decoration: none;">AI Advances Heart Health Research</a></h3>
-                                            <p>Artificial intelligence is playing a significant role in advancing heart health research. The "Decoding Broken Hearts" initiative utilizes AI to analyze vast datasets and improve diagnostic and treatment strategies for heart conditions.</p>
-                                            <p><small>Source: Fox News</small></p>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <!-- Story 4 -->
-                                <table class="news-story">
-                                    <tr>
-                                        <td width="120" valign="top">
-                                            <a href="https://www.foxnews.com/world/22-dead-gang-clashes-ecuadors-largest-city" style="text-decoration: none;">
-                                                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/ecuador-detainees.jpg?ve=1&tl=1" alt="Ecuador gang clash detainees" width="110">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <h3><a href="https://www.foxnews.com/world/22-dead-gang-clashes-ecuadors-largest-city" style="color: #081a56; text-decoration: none;">22 Dead in Ecuador Gang Clashes</a></h3>
-                                            <p>Deadly clashes between gang factions in Guayaquil, Ecuador, have left nearly two dozen people dead. Authorities have launched an offensive, arresting 14 individuals and seizing weapons.</p>
-                                            <p><small>Source: Fox News</small></p>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <!-- Story 5 -->
-                                <table class="news-story">
-                                    <tr>
-                                        <td width="120" valign="top">
-                                            <a href="https://www.foxnews.com/video/6369734393112" style="text-decoration: none;">
-                                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/4c640948-12db-4be9-b71c-400bd58abb77/4ea96b3f-3883-477e-9d50-6281478ee14c/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump urges negotiations with Iran on nuclear weapons" width="110">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <h3><a href="https://www.foxnews.com/video/6369734393112" style="color: #081a56; text-decoration: none;">Trump Urges Negotiations with Iran</a></h3>
-                                            <p>Former President Trump has called for negotiations with Iran regarding its nuclear weapons program, emphasizing the need for diplomatic solutions. (Video summary - adjust to reflect full article if more detailed)</p>
-                                            <p><small>Source: Fox News</small></p>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <!-- Story 6 -->
-                                <table class="news-story">
-                                    <tr>
-                                        <td width="120" valign="top">
-                                            <a href="https://www.foxnews.com/world/cyclone-alfred-weakens-closes-australias-east-coast" style="text-decoration: none;">
-                                                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/cyclone-alfred-australia.jpg" alt="Cyclone Alfred" width="110">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <h3><a href="https://www.foxnews.com/world/cyclone-alfred-weakens-closes-australias-east-coast" style="color: #081a56; text-decoration: none;">Cyclone Alfred Weakens Off Australia's East Coast</a></h3>
-                                            <p>Cyclone Alfred has weakened as it approaches Australia's east coast, prompting warnings for coastal residents. Authorities are monitoring the situation closely.</p>
-                                            <p><small>Source: Fox News</small></p>
-                                        </td>
-                                    </tr>
-                                </table>
+                  <!-- News Story 6 -->
+                  <table cellpadding="10" cellspacing="0" border="0">
+                      <tr>
+                            <td valign="top">
+                            <a href="https://www.firstpost.com/tech/indonesia-approves-a-dozen-apple-products-raising-hope-for-lifting-ban-on-iphone-sales-13869495.html" style="text-decoration:none;">
+                              <img src="https://images.firstpost.com/uploads/2025/02/Apple-removes-its-Advanced-Data-Protection-services-from-the-UK-2025-02-eebe6b9dbced90ed605560f478c9c4ed-1200x675.jpg?im=FitAndFill=(596,336)" alt="Apple Products" style="width: 150px; height: auto; margin-right: 15px;border-radius:5px">
+                            </a>
+                            </td>
+                            <td valign="top">
+                                <h3 style="margin-top: 0;"><a href="https://www.firstpost.com/tech/indonesia-approves-a-dozen-apple-products-raising-hope-for-lifting-ban-on-iphone-sales-13869495.html" style="text-decoration:none; color:#081a56">Indonesia Approves Apple Products, Raising Hopes for Lifting iPhone Ban</a></h3>
+                                <p style="color: #555;font-size:14px; line-height:1.4">Indonesia has approved local certificates for several Apple products, paving the way for a potential lifting of the ban on iPhone sales. This follows Apple's investment deal to meet local content requirements. Further approvals are still needed before sales can resume.</p>
                             </td>
                         </tr>
                     </table>
                 </td>
             </tr>
         </table>
+
+        <div class="joke">
+            <h3>Joke of the Day</h3>
+            <p>Why don't scientists trust atoms?  Because they make up everything!</p>
+        </div>
     </div>
 
 </body>
