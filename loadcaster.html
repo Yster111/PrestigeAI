@@ -52,26 +52,31 @@
             margin: 10px auto;
         }
 
-        .newsletter {
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 20px auto;
+        table {
+            width: 100%;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 0;
+        }
+
+        .newsletter-header {
+            background-color: #081a56;
+            color: #ffffff;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .newsletter h1, .newsletter h2 {
-            color: #081a56;
+        .newsletter-content {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
         }
 
-        .newsletter a {
-            color: #16d1f2;
-            text-decoration: none;
-        }
-
-        .newsletter img {
-            border-radius: 5px;
+        .newsletter-footer {
+            background-color: #081a56;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
@@ -116,121 +121,77 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f4f4">
-            <tr>
-                <td align="center">
-                    <table width="600" border="0" cellspacing="0" cellpadding="20" style="margin: 20px auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <tr>
-                            <td align="center">
-                                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block; margin-bottom: 20px;">
-                                <h1 style="color: #081a56; font-size: 24px; margin: 0;">Prestige AI - Daily Newsletter</h1>
-                                <p style="color: #b0b0b0; font-size: 14px; margin: 5px 0;">
-                                    <script>
-                                        const today = new Date();
-                                        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                                        document.write(today.toLocaleDateString('en-US', options));
-                                    </script>
-                                     - Sunrise Edition
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="padding-top: 20px; border-top: 1px solid #b0b0b0;">
-                                <h2 style="color: #081a56; font-size: 20px; margin-bottom: 15px;">Top Stories</h2>
-                                <!-- News Story 1 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                                    <tr>
-                                       <td valign="top" width="30%" style="padding-right:15px;">
-                                          <a href="https://www.foxnews.com/world/romanian-far-right-presidential-frontrunner-taken-custody-after-jd-vances-rebuke-european-elections" target="_blank" style="text-decoration: none;">
-                                          <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/ap25057420145758.jpg?ve=1&tl=1" alt="Calin Georgescu gathering of supporters" width="180" height="120" style="display: block;">
-                                          </a>
-                                        </td>
+    <table class="newsletter-header">
+        <tr>
+            <td align="center" style="padding: 20px;">
+                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
+                <h1 style="font-size: 24px; margin-top: 10px;">Prestige AI - Daily Newsletter</h1>
+                <p style="font-size: 14px; margin: 5px 0 0;">
+                    <span id="currentDate"></span> | Afternoon Edition
+                </p>
+                <script>
+                    const date = new Date();
+                    document.getElementById("currentDate").textContent = date.toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                </script>
+            </td>
+        </tr>
+    </table>
 
-                                        <td valign="top">
-                                            <h3 style="color: #16d1f2; font-size: 16px; margin-top: 0;"><a href="https://www.foxnews.com/world/romanian-far-right-presidential-frontrunner-taken-custody-after-jd-vances-rebuke-european-elections" target="_blank" style="text-decoration: none; color: #16d1f2;">Romanian Presidential Frontrunner Barred from Election</a></h3>
-                                            <p style="font-size: 14px; line-height: 1.5;">Calin Georgescu, a populist candidate and frontrunner in Romania's presidential election, has been banned from running in the re-run.  This follows allegations of Russian collusion and has drawn criticism from figures like JD Vance and Elon Musk, who see it as a suppression of democratic processes.</p>
-                                        </td>
-                                    </tr>
-                                </table>
+    <table class="newsletter-content">
+        <tr>
+            <td style="padding: 20px;">
+                <h2 style="color: #081a56; font-size: 20px; margin-bottom: 20px;">Today's Top Stories</h2>
 
-                                <!-- News Story 2 -->
-                                 <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                                    <tr>
-                                       <td valign="top" width="30%" style="padding-right:15px;">
-                                          <a href="https://www.foxnews.com/world/mark-carney-wins-liberal-party-nomination-replace-trudeau-canadas-next-pm" target="_blank" style="text-decoration: none;">
-                                          <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/mark-carney-wins-party-primary-scaled.jpg?ve=1&tl=1" alt="Mark Carney speaks to supporters" width="180" height="120" style="display: block;">
-                                         </a>
-                                        </td>
-                                        <td valign="top">
-                                            <h3 style="color: #16d1f2; font-size: 16px; margin-top: 0;"><a href="https://www.foxnews.com/world/mark-carney-wins-liberal-party-nomination-replace-trudeau-canadas-next-pm" target="_blank" style="text-decoration: none; color: #16d1f2;">Mark Carney to Replace Trudeau as Canada's PM</a></h3>
-                                            <p style="font-size: 14px; line-height: 1.5;">Former Bank of Canada governor Mark Carney won the Liberal leadership race and is set to become Canada's next prime minister. He has vowed to maintain tariffs against the US and has positioned himself as a strong opponent of President Trump's policies.</p>
-                                        </td>
-                                    </tr>
-                                </table>
+                <!-- News Story 1 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3 style="color: #16d1f2; font-size: 18px; margin-bottom: 5px;"><a href="https://www.foxnews.com/video/6369839836112" style="color: #16d1f2; text-decoration: none;">Negotiate with Russia with 'gun on the table,' Lithuanian defense minister says</a></h3>
+                    <p style="font-size: 14px; line-height: 1.6;">Lithuanian Defense Minister Dovilė Šakalienė, drawing on her family's experience under Soviet rule, emphasizes the need for a strong stance in negotiations with Russia, likening effective diplomacy to having a "gun on the table." She expresses deep distrust of Putin and highlights President Trump's tough approach as a potential safeguard. Lithuania is significantly increasing defense spending, exceeding NATO targets, and withdrawing from international treaties on cluster munitions and landmines to send a strong message to Russia.</p>
+                </div>
 
-                                <!-- News Story 3 -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                                  <tr>
-                                    <td valign="top" width="30%" style="padding-right:15px;">
-                                      <a href="https://www.foxnews.com/world/british-pm-criticized-blocking-bill-banning-first-cousin-marriage-amid-mounting-health-concerns" target="_blank" style="text-decoration: none;">
-                                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/zelenskyy5.png?ve=1&tl=1" alt="UK Prime Minister Keir Starmer" width="180" height="120" style="display:block;">
-                                      </a>
-                                     </td>
-                                    <td valign="top">
+                <!-- News Story 2 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3 style="color: #16d1f2; font-size: 18px; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/new-study-shuts-down-icc-charges-against-israel-over-gaza-starvation-claims" style="color: #16d1f2; text-decoration: none;">New study challenges narrative that Israel deliberately caused starvation in Gaza</a></h3>
+                    <p style="font-size: 14px; line-height: 1.6;">A new study by Israeli public health experts challenges claims of Israeli-caused famine in Gaza, showing that food supplies entering Gaza have met or exceeded humanitarian standards. The study emphasizes that any hunger issues are due to Hamas's control and weaponization of food distribution, not a lack of aid entering the region. The study faced rigorous review due to anti-Israel bias within the scientific community.</p>
+                </div>
 
-                                            <h3 style="color: #16d1f2; font-size: 16px; margin-top: 0;"><a href="https://www.foxnews.com/world/british-pm-criticized-blocking-bill-banning-first-cousin-marriage-amid-mounting-health-concerns" target="_blank" style="text-decoration: none; color: #16d1f2;">UK PM Faces Criticism for Blocking Bill Banning First-Cousin Marriage</a></h3>
-                                            <p style="font-size: 14px; line-height: 1.5;">UK Prime Minister Keir Starmer is facing criticism for blocking legislation that would ban first-cousin marriage.  The bill was proposed due to concerns about health risks associated with such marriages, particularly within certain communities.</p>
-                                      </td>
-                                  </tr>
-                                </table>
-                                <!-- News Story 4 -->
-                                  <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                                  <tr>
-                                     <td valign="top" width="30%"style="padding-right:15px;">
-                                      <a href="https://www.foxnews.com/world/widespread-killing-rape-disease-war-make-democratic-republic-congo-hell-earth" target="_blank"  style="text-decoration:none;">
-                                      <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/church-attacked-in-dr-congo-scaled.jpg?ve=1&tl=1" alt="Church attacked in DR Congo"width="180" height="120" style="display:block;">
-                                      </a>
-                                     </td>
-                                     <td valign="top">
-                                            <h3 style="color: #16d1f2; font-size: 16px; margin-top: 0;"><a href="https://www.foxnews.com/world/widespread-killing-rape-disease-war-make-democratic-republic-congo-hell-earth" target="_blank" style="text-decoration: none; color: #16d1f2;">DR Congo: A Crisis of Violence and Disease</a></h3>
-                                            <p style="font-size: 14px; line-height: 1.5;">The Democratic Republic of Congo is facing a severe humanitarian crisis, with widespread killings, rape, and disease.  Recent reports highlight attacks on Christians, rampant sexual violence, and outbreaks of unidentified illnesses.</p>
-                                      </td>
-                                  </tr>
-                                </table>
+                <!-- News Story 3 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3 style="color: #16d1f2; font-size: 18px; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/ex-philippine-president-duterte-shrugs-off-possible-arrest-icc-drug-war-during-trip-hong-kong" style="color: #16d1f2; text-decoration: none;">Ex-Philippine President Duterte shrugs off possible arrest by ICC for drug war during trip to Hong Kong</a></h3>
+                    <p style="font-size: 14px; line-height: 1.6;">Former Philippine President Rodrigo Duterte, during an unannounced visit to Hong Kong, addressed the possibility of an International Criminal Court (ICC) arrest warrant for alleged crimes against humanity during his war on drugs. He stated he would accept his fate if arrested. The Philippine government is prepared for any eventuality, and law enforcement is cooperating with the ICC.</p>
+                </div>
 
-                                <!-- News Story 5-->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                                <tr>
-                                    <td valign="top" width="30%" style="padding-right:15px;">
-                                      <a href="https://www.firstpost.com/tech/4-groups-in-talks-to-buy-tiktok-says-trump-13870176.html" target="_blank" style="text-decoration: none;">
-                                      <img src="https://images.firstpost.com/uploads/2025/01/Trump-to-decide-TikToks-future-in-30-days-discussing-platforms-sale-with-several-parties-2025-01-964c93457bc48fd59607177c4614d4c0-1200x675.jpg?im=FitAndFill=(596,336)" alt="Trump discussing TikTok's future" width="180" height="120" style="display:block;">
-                                      </a>
-                                    </td>
-                                    <td valign="top">
-                                           <h3 style="color: #16d1f2; font-size: 16px; margin-top: 0;"><a href="https://www.firstpost.com/tech/4-groups-in-talks-to-buy-tiktok-says-trump-13870176.html" target="_blank" style="text-decoration: none; color: #16d1f2;">Trump Says 4 Groups in Talks to Buy TikTok</a></h3>
-                                           <p style="font-size: 14px; line-height: 1.5;">President Trump confirmed that four groups are currently negotiating to purchase TikTok's US operations. This follows a pause on the ban of the app, giving the parent company, ByteDance, time to divest.</p>
-                                       </td>
-                                </tr>
-                                </table>
+                <!-- News Story 4 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3 style="color: #16d1f2; font-size: 18px; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/romania-blocks-frontrunner-from-postponed-presidential-race" style="color: #16d1f2; text-decoration: none;">Frontrunner in Romania’s annulled presidential election barred from race</a></h3>
+                    <p style="font-size: 14px; line-height: 1.6;">Calin Georgescu, a populist candidate and frontrunner in Romania's previously annulled presidential election, has been banned from running in the re-run. Georgescu decried the decision as a sign of tyranny, while figures like Elon Musk and Kari Lake criticized the move, comparing it to actions against other nationalist leaders. The Trump administration has expressed concern over Romania's election handling.</p>
+                </div>
 
-                                <!--Spacing-->
-                               <tr height="20px"></tr>
+                <!-- News Story 5 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3 style="color: #16d1f2; font-size: 18px; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/mark-carney-wins-liberal-party-nomination-replace-trudeau-canadas-next-pm" style="color: #16d1f2; text-decoration: none;">Trump critic Mark Carney wins Liberal Party nomination, will become Canada's next PM</a></h3>
+                    <p style="font-size: 14px; line-height: 1.6;">Former Bank of Canada governor Mark Carney has won the Liberal leadership race and will become Canada's next prime minister. He vowed to maintain tariffs against the United States and asserted Canada's independence from America. Carney's victory sets the stage for a likely snap election against Conservative leader Pierre Poilievre, who has been critical of Trudeau's government.</p>
+                </div>
 
-                                <p style="font-size: 14px; color: #b0b0b0;">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" target="_blank" style="color: #16d1f2;">Fox News</a>, <a href="https://www.bbc.com/" target="_blank" style="color: #16d1f2;">BBC</a>, and  <a href="https://www.firstpost.com/" target="blank" style="color:#16d1f2">Firstpost</a>.</p>
-                             </td>
-                        </tr>
-                        <tr>
-                           <td style="padding-top: 20px; border-top: 1px solid #b0b0b0;">
-                            <h2 style="color:#081a56; font-size:18px; margin-bottom:10px;"> Joke of the Day</h2>
-                            <p style=font-size:14px; line-height:1.5;>Why don't scientists trust atoms?  Because they make up everything!</p>
-                           </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </div>
+                <!-- News Story 6 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3 style="color: #16d1f2; font-size: 18px; margin-bottom: 5px;"><a href="https://www.firstpost.com/tech/chinese-espionage-group-silk-typhoon-has-new-tactics-to-target-us-networks-13870414.html" style="color: #16d1f2; text-decoration: none;">Chinese espionage group Silk Typhoon has new tactics to target US networks</a></h3>
+                    <p style="font-size: 14px; line-height: 1.6;">The Chinese state-sponsored cyber espionage group, Silk Typhoon, has adopted new tactics, including leveraging stolen API keys and exploiting zero-day vulnerabilities, to target US government agencies, businesses, and critical infrastructure. They have been observed infiltrating IT providers, MSPs, and cloud data management firms to gain access to sensitive data and maintain long term access.</p>
+                </div>
+
+                <p style="font-size: 12px; color: #b0b0b0;">This newsletter compiles published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://firstpost.com" style="color:#16d1f2; text-decoration:none;">Firstpost</a>.</p>
+                <h2 style="color: #081a56; font-size: 20px; margin-top: 30px; margin-bottom: 10px;">Joke of the Day</h2>
+                <p style="font-size: 14px; font-style: italic;">Why don't scientists trust atoms? Because they make up everything!</p>
+            </td>
+        </tr>
+    </table>
+
+    <table class="newsletter-footer">
+        <tr>
+            <td>
+                <p style="font-size: 12px;">&copy; 2025 Prestige AI. All rights reserved.</p>
+            </td>
+        </tr>
+    </table>
 
 </body>
 </html>
