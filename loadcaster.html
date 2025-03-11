@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements & Prestige AI - Daily Newsletter</title>
+    <title>Processing Financial Statements and Daily Newsletter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
             text-align: center;
-            margin: 50px;
-            background-color: #f8f9fa; /* Light background for contrast */
         }
 
         .message-box {
             max-width: 700px;
-            margin: auto;
+            margin: 50px auto;
             padding: 15px;
             background-color: #f8f9fa;
-            border: 2px solid #081a56; /* Dark blue border all around */
-            border-radius: 8px; /* Slightly rounded corners for a modern look */
+            border: 2px solid #081a56;
+            border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
@@ -27,7 +30,7 @@
             width: 100%;
             max-width: 600px;
             height: 30px;
-            background-color: #b0b0b0; /* Gray background */
+            background-color: #b0b0b0;
             border-radius: 10px;
             overflow: hidden;
             margin: 20px auto;
@@ -37,10 +40,10 @@
         .progress-bar {
             height: 100%;
             width: 0%;
-            background-color: #16d1f2; /* Light blue progress bar */
+            background-color: #16d1f2;
             text-align: center;
             line-height: 30px;
-            color: #081a56; /* Dark blue text */
+            color: #081a56;
             font-weight: bold;
             transition: width linear;
         }
@@ -48,86 +51,117 @@
         #progress-text, h2 {
             text-align: center;
             font-size: 16px;
-            color: #081a56; /* Dark blue text */
+            color: #081a56;
             margin: 10px auto;
         }
 
-        table {
-            width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .newsletter-table {
-            width: 600px;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
-            background-color: #ffffff;
-            margin-top: 20px;
-            margin-bottom: 20px;
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            background-color: #fff;
             border-radius: 8px;
+            overflow: hidden;
         }
 
-        .newsletter-header {
+        .header {
+            background-color: #081a56;
+            color: #fff;
+            padding: 20px;
             text-align: center;
         }
 
-        .newsletter-header img {
-            width: 250px;
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
         }
 
-        .newsletter-header h1 {
-            font-size: 24px;
-            color: #081a56;
+        .header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #16d1f2;
+        }
+
+        .logo {
             margin-top: 10px;
         }
 
-        .newsletter-header p {
-            color: #b0b0b0;
-            margin: 5px 0;
+        .logo img {
+            max-width: 150px;
+            height: auto;
         }
 
-        .story-title {
-            margin: 0;
+        .content {
+            padding: 20px;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #b0b0b0;
+            padding-bottom: 20px;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item h2 {
             color: #081a56;
+            font-size: 18px;
+            margin-bottom: 5px;
         }
 
-        .story-title a {
+        .news-item h2 a {
             color: #081a56;
             text-decoration: none;
         }
 
-        .story-description {
-            margin: 5px 0;
-            color: #555;
-            line-height: 1.4;
+        .news-item h2 a:hover {
+            text-decoration: underline;
         }
 
-        .read-more {
-            color: #16d1f2;
-            line-height: 2;
+        .news-item p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .news-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .sources {
+            margin-bottom: 25px;
+        }
+
+        .sources, .sources a {
+            color: #b0b0b0;
+            font-size: 13px;
         }
 
         .footer {
-            background-color: #f4f4f4;
-            padding: 20px;
+            background-color: #081a56;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 12px;
         }
 
         .footer p {
-            color: #000;
+            margin: 5px;
             font-size: 14px;
         }
 
-        .joke {
-            color: #081a56;
-            font-size: 16px;
-            font-style: italic;
+        .joke-of-the-day {
+            margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
 
     <div class="message-box">
@@ -169,98 +203,69 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table>
-        <tr>
-            <td align="center">
-                <table class="newsletter-table">
-                    <tr>
-                        <td class="newsletter-header">
-                            <img src="data:image/png;base64,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" alt="Prestige AI Logo">
-                            <h1>Prestige AI - Daily Newsletter</h1>
-                            <p>Sunrise Edition - <span id="currentDate"></span></p>
-                        </td>
-                    </tr>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo">
+            </div>
+            <h1>Prestige AI - Daily Newsletter</h1>
+            <p>
+                <?php echo date("F j, Y"); ?> - Afternoon Edition
+            </p>
+        </div>
+        <div class="content">
+            <p class="sources">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/">Fox News</a>, <a href="https://www.bbc.com/">BBC</a>, and <a href="https://www.firstpost.com/">Firstpost</a>.</p>
 
-                    <!-- News Stories -->
-                    <tr>
-                        <td>
-                            <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top Stories</h2>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <!-- Story 1 -->
-                                <tr>
-                                    <td style="padding-bottom: 10px;">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/video/6369857115112" target="_blank">Trial underway for men accused of targeting American journalist in Iran-backed murder plot</a></h3>
-                                        <p class="story-description">A trial is currently underway for several men accused of being involved in an Iran-backed plot to assassinate an American journalist. Details are emerging about the alleged planning and motivations behind this conspiracy.</p>
-                                        <a class="read-more" href="https://www.foxnews.com/video/6369857115112" target="_blank"> Read More on Fox News</a>
-                                    </td>
-                                </tr>
-                                <!-- Story 2 -->
-                                <tr>
-                                    <td style="padding-bottom: 10px;">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/video/6369839836112" target="_blank">Negotiate with Russia with 'gun on the table,' Lithuanian defense minister says</a></h3>
-                                        <p class="story-description">Lithuania’s Defense Minister emphasized the need for a strong stance in any negotiations with Russia, advocating for a strategy where negotiations are backed by significant leverage.</p>
-                                        <a class="read-more" href="https://www.foxnews.com/video/6369839836112" target="_blank"> Read More on Fox News</a>
-                                    </td>
-                                </tr>
-                                <!-- Story 3 -->
-                                <tr>
-                                    <td style="padding-bottom: 10px;">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/world/rubio-says-mineral-deal-not-main-topic-agenda-ukraine-meeting" target="_blank">Rubio says mineral deal will not be the 'main topic' in meeting with Ukrainian delegation | Fox News</a></h3>
-                                        <p class="story-description">Secretary of State Marco Rubio clarified that securing a mineral deal, while important, is not the primary focus of the upcoming meeting with the Ukrainian delegation in Saudi Arabia. The main goal is to establish clear intentions for peace and determine Kyiv's readiness for difficult decisions.</p>
-                                        <a class="read-more" href="https://www.foxnews.com/world/rubio-says-mineral-deal-not-main-topic-agenda-ukraine-meeting" target="_blank"> Read More on Fox News</a>
-                                    </td>
-                                </tr>
-                                <!-- Story 4 -->
-                                <tr>
-                                    <td style="padding-bottom: 10px;">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/world/north-korea-fires-missiles-us-south-korea-begin-first-joint-military-exercise-trumps-second-term" target="_blank">North Korea fires missiles as US, South Korea begin major joint military exercise | Fox News</a></h3>
-                                        <p class="story-description">North Korea launched several ballistic missiles into the sea as South Korea and the United States began their first major joint military exercise of President Trump’s second term. The U.S. condemned the launches, and a South Korean KF-16 fighter jet accidentally dropped bombs on a civilian area during another live-fire exercise.</p>
-                                        <a class="read-more" href="https://www.foxnews.com/world/north-korea-fires-missiles-us-south-korea-begin-first-joint-military-exercise-trumps-second-term" target="_blank"> Read More on Fox News</a>
-                                    </td>
-                                </tr>
-                                <!-- Story 5 -->
-                                <tr>
-                                    <td style="padding-bottom: 10px;">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/video/6369815678112" target="_blank">Secret Service shoots man in overnight 'armed confrontation' near White House</a></h3>
-                                        <p class="story-description">The Secret Service shot a man involved in an armed confrontation close to the White House overnight. Details are still emerging about the incident and the condition of the individual involved.</p>
-                                        <a class="read-more" href="https://www.foxnews.com/video/6369815678112" target="_blank"> Read More on Fox News</a>
-                                    </td>
-                                </tr>
-                                <!-- Story 6 -->
-                                <tr>
-                                    <td style="padding-bottom: 10px;">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/video/6369806241112" target="_blank">Pope Francis' condition 'improving,' Vatican says</a></h3>
-                                        <p class="story-description">The Vatican has announced that Pope Francis' condition is improving as his hospitalization continues. Further updates are expected regarding his health and recovery.</p>
-                                        <a class="read-more" href="https://www.foxnews.com/video/6369806241112" target="_blank"> Read More on Fox News</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left">
-                            <p style="color: #555; font-size: smaller; margin-top:25px">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" target="_blank">Fox News</a>, <a href="https://www.bbc.com/" target="_blank">BBC</a>, and <a href="https://www.firstpost.com/" target="_blank">Firstpost</a>.</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <!-- Footer -->
-    <div class="footer">
-        <p>Joke of the Day:</p>
-        <p class="joke">Why don't scientists trust atoms? Because they make up everything!</p>
-        <p style="font-size: smaller; margin-top:40px">Prestige AI - All Rights Reserved</p>
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/moscow-drone-attack-1.jpg?ve=1&tl=1" alt="Damage from drone attack in Moscow">
+                <h2><a href="https://www.foxnews.com/world/ukraine-launches-biggest-drone-attack-moscow-killing-2-us-talks-begin">Ukraine Launches Largest-Ever Drone Attack on Moscow</a></h2>
+                <p>Ukraine launched a significant drone attack on Moscow, with 337 drones shot down over Russia. Two Miratorg employees were killed, and 18 others injured. The attack coincided with U.S.-Ukrainian talks in Saudi Arabia about ending the war.</p>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/greenland-voting-scaled.jpg?ve=1&tl=1" alt="Greenland election">
+                <h2><a href="https://www.foxnews.com/world/greenlands-opposition-party-pushes-closer-us-ties-independence-from-denmark-trump-plays-big-election">Greenland Election Signals Potential Shift in US Relations</a></h2>
+                <p>Greenland's parliamentary election could indicate a shift in its relationship with both Denmark and the United States. While independence is a major theme, Greenlanders oppose Trump's interest in acquiring the island. The Naleraq party proposes expanding partnerships, including potential defensive agreements with the U.S.</p>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/roduterte.png?ve=1&tl=1" alt="Former President of the Philippines Rodrigo Duterte">
+                <h2><a href="https://www.foxnews.com/world/former-philippine-president-rodrigo-duterte-arrested-airport-icc-warrant-crime-against-humanity">Former Philippine President Rodrigo Duterte Arrested on ICC Warrant</a></h2>
+                <p>Rodrigo Duterte was arrested in Manila on an International Criminal Court warrant related to his administration's deadly crackdown on illegal drugs. The ICC is investigating alleged crimes against humanity. His allies described the arrest as a "violation of his constitutional right."</p>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/44bc00e0-548f-4dd6-a8a5-c3a9df603850/05d3a0de-2ce1-4b72-a28f-08f3c7b815bc/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump floats potential new tariffs on Russia amid escalating war with Ukraine">
+                <h2><a href="https://www.foxnews.com/video/6369786478112">Trump floats potential new tariffs on Russia amid escalating war with Ukraine</a></h2>
+                <p>Former president Trump brings up the possibility of new Tariffs against Putin and his regime.</p>
+            </div>
+
+            <div class="news-item">
+                <h2><a href="https://www.firstpost.com/tech/chinese-espionage-group-silk-typhoon-has-new-tactics-to-target-us-networks-13870414.html">Chinese Espionage Group "Silk Typhoon" Uses New Tactics</a></h2>
+                <p>The Chinese state-sponsored cyber espionage group Silk Typhoon has adopted new methods, including exploiting zero-day vulnerabilities and leveraging stolen API keys, to target US government agencies, businesses, and critical infrastructure, with a focus on cloud-based attacks.</p>
+            </div>
+            <div class="news-item">
+                <h2><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html">Apple to Launch New MacBook Air with M4 Chip in March</a></h2>
+                <p>Apple is preparing to launch new MacBook Air models with the M4 chip in March, promising improved performance and efficiency. This follows the iPhone 16e's introduction of the C1 chip, signifying Apple's shift towards in-house technology.</p>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/north-korea-missile-test.jpg?ve=1&tl=1" alt="North Korea missile launch">
+                <h2><a href="https://www.foxnews.com/world/north-korea-fires-missiles-us-south-korea-begin-first-joint-military-exercise-trumps-second-term">North Korea Fires Missiles as US and South Korea Begin Joint Military Exercise</a></h2>
+                <p>North Korea fired several ballistic missiles into the sea as South Korea and the United States commenced their annual Freedom Shield military exercise. The U.S. condemned the launches but stated they did not pose an immediate threat.</p>
+            </div>
+
+            <div class="joke-of-the-day">
+                <h3>Joke of the day</h3>
+                <p>Why don't skeletons ever go trick or treating?</p>
+                <p>Because they have no body to go with!</p>
+            </div>
+
+        </div>
+        <div class="footer">
+            <p>&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
+        </div>
     </div>
-
-    <script>
-        // JavaScript to set the current date
-        document.getElementById('currentDate').textContent = new Date().toLocaleDateString();
-    </script>
-
 </body>
+
 </html>
