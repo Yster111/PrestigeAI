@@ -7,18 +7,20 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
             text-align: center;
-            margin: 50px;
-            background-color: #f8f9fa; /* Light background for contrast */
         }
 
         .message-box {
             max-width: 700px;
-            margin: auto;
+            margin: 50px auto;
             padding: 15px;
             background-color: #f8f9fa;
-            border: 2px solid #081a56; /* Dark blue border all around */
-            border-radius: 8px; /* Slightly rounded corners for a modern look */
+            border: 2px solid #081a56;
+            border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
@@ -27,7 +29,7 @@
             width: 100%;
             max-width: 600px;
             height: 30px;
-            background-color: #b0b0b0; /* Gray background */
+            background-color: #b0b0b0;
             border-radius: 10px;
             overflow: hidden;
             margin: 20px auto;
@@ -37,10 +39,10 @@
         .progress-bar {
             height: 100%;
             width: 0%;
-            background-color: #16d1f2; /* Light blue progress bar */
+            background-color: #16d1f2;
             text-align: center;
             line-height: 30px;
-            color: #081a56; /* Dark blue text */
+            color: #081a56;
             font-weight: bold;
             transition: width linear;
         }
@@ -48,43 +50,113 @@
         #progress-text, h2 {
             text-align: center;
             font-size: 16px;
-            color: #081a56; /* Dark blue text */
+            color: #081a56;
             margin: 10px auto;
         }
 
-        .newsletter {
-            background-color: #f4f4f4;
-            color: #081a56;
-            margin-top: 20px;
-            padding: 20px;
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            background-color: #fff;
             border-radius: 8px;
+            overflow: hidden;
         }
 
-        .newsletter h1 {
+        .header {
+            background-color: #081a56;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
             font-size: 24px;
-            color: #081a56;
+        }
+
+        .header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #16d1f2;
+        }
+
+        .logo {
             margin-top: 10px;
         }
 
-        .newsletter h2 {
-            color: #081a56;
-            border-bottom: 2px solid #16d1f2;
-            padding-bottom: 5px;
+        .logo img {
+            max-width: 150px;
+            height: auto;
         }
 
-        .newsletter a {
-            color: #16d1f2;
-            line-height: 2;
-        }
-
-        .footer {
-            background-color: #f4f4f4;
+        .content {
             padding: 20px;
         }
 
-        .footer p {
-            color: #000;
+        .news-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #b0b0b0;
+            padding-bottom: 20px;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item h2 {
+            color: #081a56;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .news-item h2 a {
+            color: #081a56;
+            text-decoration: none;
+        }
+
+        .news-item h2 a:hover {
+            text-decoration: underline;
+        }
+
+        .news-item p {
             font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .news-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .sources {
+            margin-bottom: 25px;
+        }
+
+        .sources, .sources a {
+            color: #b0b0b0;
+            font-size: 13px;
+        }
+
+        .footer {
+            background-color: #081a56;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 12px;
+        }
+
+        .footer p {
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        .joke-of-the-day {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -129,67 +201,68 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <h1>Prestige AI - Daily Newsletter</h1>
-        <p>Sunrise Edition - <span id="currentDate"></span></p>
-        <h2>Top Stories</h2>
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td style="padding-bottom: 10px;">
-                    <h3 style="margin: 0; color: #081a56;"><a href="https://www.foxnews.com/video/6369857115112" style="color: #081a56; text-decoration: none;" target="_blank">Trial underway for men accused of targeting American journalist in Iran-backed murder plot</a></h3>
-                    <p style="margin: 5px 0; color: #555; line-height: 1.4;">A trial is currently underway for several men accused of being involved in an Iran-backed plot to assassinate an American journalist.  Details are emerging about the alleged planning and motivations behind this conspiracy.</p>
-                    <a href="https://www.foxnews.com/video/6369857115112" style="color: #16d1f2; line-height: 2;" target="_blank"> Read More on Fox News</a>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-bottom: 10px;">
-                    <h3 style="margin: 0; color: #081a56;"><a href="https://www.foxnews.com/video/6369839836112" style="color: #081a56; text-decoration: none;" target="_blank">Negotiate with Russia with 'gun on the table,' Lithuanian defense minister says</a></h3>
-                    <p style="margin: 5px 0; color: #555; line-height: 1.4;">Lithuania’s Defense Minister emphasized the need for a strong stance in any negotiations with Russia, advocating for a strategy where negotiations are backed by significant leverage.</p>
-                    <a href="https://www.foxnews.com/video/6369839836112" style="color: #16d1f2;  line-height: 2;" target="_blank"> Read More on Fox News</a>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-bottom: 10px;">
-                    <h3 style="margin: 0; color: #081a56;"><a href="https://www.foxnews.com/world/rubio-says-mineral-deal-not-main-topic-agenda-ukraine-meeting" style="color: #081a56; text-decoration: none;" target="_blank">Rubio says mineral deal will not be the 'main topic' in meeting with Ukrainian delegation | Fox News</a></h3>
-                    <p style="margin: 5px 0; color: #555; line-height: 1.4;">Secretary of State Marco Rubio clarified that securing a mineral deal, while important, is not the primary focus of the upcoming meeting with the Ukrainian delegation in Saudi Arabia. The main goal is to establish clear intentions for peace and determine Kyiv's readiness for difficult decisions.</p>
-                    <a href="https://www.foxnews.com/world/rubio-says-mineral-deal-not-main-topic-agenda-ukraine-meeting" style="color: #16d1f2;  line-height: 2;" target="_blank"> Read More on Fox News</a>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-bottom: 10px;">
-                    <h3 style="margin: 0; color: #081a56;"><a href="https://www.foxnews.com/world/north-korea-fires-missiles-us-south-korea-begin-first-joint-military-exercise-trumps-second-term" style="color: #081a56; text-decoration: none;" target="_blank">North Korea fires missiles as US, South Korea begin major joint military exercise | Fox News</a></h3>
-                    <p style="margin: 5px 0; color: #555; line-height: 1.4;">North Korea launched several ballistic missiles into the sea as South Korea and the United States began their first major joint military exercise of President Trump’s second term. The U.S. condemned the launches, and a South Korean KF-16 fighter jet accidentally dropped bombs on a civilian area during another live-fire exercise.</p>
-                    <a href="https://www.foxnews.com/world/north-korea-fires-missiles-us-south-korea-begin-first-joint-military-exercise-trumps-second-term" style="color: #16d1f2;  line-height: 2;" target="_blank"> Read More on Fox News</a>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-bottom: 10px;">
-                    <h3 style="margin: 0; color: #081a56;"><a href="https://www.foxnews.com/video/6369815678112" style="color: #081a56; text-decoration: none;" target="_blank">Secret Service shoots man in overnight 'armed confrontation' near White House</a></h3>
-                    <p style="margin: 5px 0; color: #555; line-height: 1.4;">The Secret Service shot a man involved in an armed confrontation close to the White House overnight.  Details are still emerging about the incident and the condition of the individual involved.</p>
-                    <a href="https://www.foxnews.com/video/6369815678112" style="color: #16d1f2;  line-height: 2;" target="_blank"> Read More on Fox News</a>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-bottom: 10px;">
-                    <h3 style="margin: 0; color: #081a56;"><a href="https://www.foxnews.com/video/6369806241112" style="color: #081a56; text-decoration: none;" target="_blank">Pope Francis' condition 'improving,' Vatican says</a></h3>
-                    <p style="margin: 5px 0; color: #555; line-height: 1.4;">The Vatican has announced that Pope Francis' condition is improving as his hospitalization continues. Further updates are expected regarding his health and recovery.</p>
-                    <a href="https://www.foxnews.com/video/6369806241112" style="color: #16d1f2; line-height: 2;" target="_blank"> Read More on Fox News</a>
-                </td>
-            </tr>
-        </table>
-        <p style="color: #555; font-size: smaller; margin-top:25px">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" target="_blank">Fox News</a>,  <a href="https://www.bbc.com/" target="_blank">BBC</a>, and <a href="https://www.firstpost.com/" target="_blank">Firstpost</a>.</p>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo">
+            </div>
+            <h1>Prestige AI - Daily Newsletter</h1>
+            <p>
+                <?php echo date("F j, Y"); ?> - Afternoon Edition
+            </p>
+        </div>
+        <div class="content">
+            <p class="sources">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/">Fox News</a>, <a href="https://www.bbc.com/">BBC</a>, and <a href="https://www.firstpost.com/">Firstpost</a>.</p>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/moscow-drone-attack-1.jpg?ve=1&tl=1" alt="Damage from drone attack in Moscow">
+                <h2><a href="https://www.foxnews.com/world/ukraine-launches-biggest-drone-attack-moscow-killing-2-us-talks-begin">Ukraine Launches Largest-Ever Drone Attack on Moscow</a></h2>
+                <p>Ukraine launched a significant drone attack on Moscow, with 337 drones shot down over Russia. Two Miratorg employees were killed, and 18 others injured. The attack coincided with U.S.-Ukrainian talks in Saudi Arabia about ending the war.</p>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/greenland-voting-scaled.jpg?ve=1&tl=1" alt="Greenland election">
+                <h2><a href="https://www.foxnews.com/world/greenlands-opposition-party-pushes-closer-us-ties-independence-from-denmark-trump-plays-big-election">Greenland Election Signals Potential Shift in US Relations</a></h2>
+                <p>Greenland's parliamentary election could indicate a shift in its relationship with both Denmark and the United States. While independence is a major theme, Greenlanders oppose Trump's interest in acquiring the island. The Naleraq party proposes expanding partnerships, including potential defensive agreements with the U.S.</p>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/roduterte.png?ve=1&tl=1" alt="Former President of the Philippines Rodrigo Duterte">
+                <h2><a href="https://www.foxnews.com/world/former-philippine-president-rodrigo-duterte-arrested-airport-icc-warrant-crime-against-humanity">Former Philippine President Rodrigo Duterte Arrested on ICC Warrant</a></h2>
+                <p>Rodrigo Duterte was arrested in Manila on an International Criminal Court warrant related to his administration's deadly crackdown on illegal drugs. The ICC is investigating alleged crimes against humanity. His allies described the arrest as a "violation of his constitutional right."</p>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/44bc00e0-548f-4dd6-a8a5-c3a9df603850/05d3a0de-2ce1-4b72-a28f-08f3c7b815bc/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump floats potential new tariffs on Russia amid escalating war with Ukraine">
+                <h2><a href="https://www.foxnews.com/video/6369786478112">Trump floats potential new tariffs on Russia amid escalating war with Ukraine</a></h2>
+                <p>Former president Trump brings up the possibility of new Tariffs against Putin and his regime.</p>
+            </div>
+
+            <div class="news-item">
+                <h2><a href="https://www.firstpost.com/tech/chinese-espionage-group-silk-typhoon-has-new-tactics-to-target-us-networks-13870414.html">Chinese Espionage Group "Silk Typhoon" Uses New Tactics</a></h2>
+                <p>The Chinese state-sponsored cyber espionage group Silk Typhoon has adopted new methods, including exploiting zero-day vulnerabilities and leveraging stolen API keys, to target US government agencies, businesses, and critical infrastructure, with a focus on cloud-based attacks.</p>
+            </div>
+            <div class="news-item">
+                <h2><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html">Apple to Launch New MacBook Air with M4 Chip in March</a></h2>
+                <p>Apple is preparing to launch new MacBook Air models with the M4 chip in March, promising improved performance and efficiency. This follows the iPhone 16e's introduction of the C1 chip, signifying Apple's shift towards in-house technology.</p>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/north-korea-missile-test.jpg?ve=1&tl=1" alt="North Korea missile launch">
+                <h2><a href="https://www.foxnews.com/world/north-korea-fires-missiles-us-south-korea-begin-first-joint-military-exercise-trumps-second-term">North Korea Fires Missiles as US and South Korea Begin Joint Military Exercise</a></h2>
+                <p>North Korea fired several ballistic missiles into the sea as South Korea and the United States commenced their annual Freedom Shield military exercise. The U.S. condemned the launches but stated they did not pose an immediate threat.</p>
+            </div>
+
+            <div class="joke-of-the-day">
+                <h3>Joke of the day</h3>
+                <p>Why don't skeletons ever go trick or treating?</p>
+                <p>Because they have no body to go with!</p>
+            </div>
+
+        </div>
+        <div class="footer">
+            <p>&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
+        </div>
     </div>
-
-    <div class="footer">
-        <p>Joke of the Day:</p>
-        <p style="font-style: italic;">Why don't scientists trust atoms?  Because they make up everything!</p>
-        <p style="font-size: smaller; margin-top:40px">Prestige AI - All Rights Reserved</p>
-    </div>
-
-    <script>
-        // JavaScript to set the current date
-        document.getElementById('currentDate').textContent = new Date().toLocaleDateString();
-    </script>
-
 </body>
 </html>
