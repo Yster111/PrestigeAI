@@ -54,37 +54,37 @@
 
         .newsletter {
             background-color: #f4f4f4;
-            color: #333;
+            color: #081a56;
+            margin-top: 20px;
             padding: 20px;
+            border-radius: 8px;
         }
 
         .newsletter h1 {
             font-size: 24px;
+            color: #081a56;
             margin-top: 10px;
         }
 
         .newsletter h2 {
             color: #081a56;
-            font-size: 20px;
-            margin-bottom: 20px;
+            border-bottom: 2px solid #16d1f2;
+            padding-bottom: 5px;
         }
 
-        .newsletter h3 {
+        .newsletter a {
             color: #16d1f2;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .newsletter p {
-            font-size: 14px;
-            line-height: 1.6;
+            line-height: 2;
         }
 
         .footer {
-            background-color: #081a56;
-            color: #ffffff;
-            text-align: center;
+            background-color: #f4f4f4;
             padding: 20px;
+        }
+
+        .footer p {
+            color: #000;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -130,72 +130,66 @@
     </script>
 
     <div class="newsletter">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #081a56; color: #ffffff;">
+        <h1>Prestige AI - Daily Newsletter</h1>
+        <p>Sunrise Edition - <span id="currentDate"></span></p>
+        <h2>Top Stories</h2>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
-                <td align="center" style="padding: 20px;">
-                    <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                    <h1>Prestige AI - Daily Newsletter</h1>
-                    <p><span id="currentDate"></span> | Afternoon Edition</p>
-                    <script>
-                        const date = new Date();
-                        document.getElementById("currentDate").textContent = date.toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-                    </script>
+                <td style="padding-bottom: 10px;">
+                    <h3 style="margin: 0; color: #081a56;"><a href="https://www.foxnews.com/video/6369857115112" style="color: #081a56; text-decoration: none;" target="_blank">Trial underway for men accused of targeting American journalist in Iran-backed murder plot</a></h3>
+                    <p style="margin: 5px 0; color: #555; line-height: 1.4;">A trial is currently underway for several men accused of being involved in an Iran-backed plot to assassinate an American journalist.  Details are emerging about the alleged planning and motivations behind this conspiracy.</p>
+                    <a href="https://www.foxnews.com/video/6369857115112" style="color: #16d1f2; line-height: 2;" target="_blank"> Read More on Fox News</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 10px;">
+                    <h3 style="margin: 0; color: #081a56;"><a href="https://www.foxnews.com/video/6369839836112" style="color: #081a56; text-decoration: none;" target="_blank">Negotiate with Russia with 'gun on the table,' Lithuanian defense minister says</a></h3>
+                    <p style="margin: 5px 0; color: #555; line-height: 1.4;">Lithuania’s Defense Minister emphasized the need for a strong stance in any negotiations with Russia, advocating for a strategy where negotiations are backed by significant leverage.</p>
+                    <a href="https://www.foxnews.com/video/6369839836112" style="color: #16d1f2;  line-height: 2;" target="_blank"> Read More on Fox News</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 10px;">
+                    <h3 style="margin: 0; color: #081a56;"><a href="https://www.foxnews.com/world/rubio-says-mineral-deal-not-main-topic-agenda-ukraine-meeting" style="color: #081a56; text-decoration: none;" target="_blank">Rubio says mineral deal will not be the 'main topic' in meeting with Ukrainian delegation | Fox News</a></h3>
+                    <p style="margin: 5px 0; color: #555; line-height: 1.4;">Secretary of State Marco Rubio clarified that securing a mineral deal, while important, is not the primary focus of the upcoming meeting with the Ukrainian delegation in Saudi Arabia. The main goal is to establish clear intentions for peace and determine Kyiv's readiness for difficult decisions.</p>
+                    <a href="https://www.foxnews.com/world/rubio-says-mineral-deal-not-main-topic-agenda-ukraine-meeting" style="color: #16d1f2;  line-height: 2;" target="_blank"> Read More on Fox News</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 10px;">
+                    <h3 style="margin: 0; color: #081a56;"><a href="https://www.foxnews.com/world/north-korea-fires-missiles-us-south-korea-begin-first-joint-military-exercise-trumps-second-term" style="color: #081a56; text-decoration: none;" target="_blank">North Korea fires missiles as US, South Korea begin major joint military exercise | Fox News</a></h3>
+                    <p style="margin: 5px 0; color: #555; line-height: 1.4;">North Korea launched several ballistic missiles into the sea as South Korea and the United States began their first major joint military exercise of President Trump’s second term. The U.S. condemned the launches, and a South Korean KF-16 fighter jet accidentally dropped bombs on a civilian area during another live-fire exercise.</p>
+                    <a href="https://www.foxnews.com/world/north-korea-fires-missiles-us-south-korea-begin-first-joint-military-exercise-trumps-second-term" style="color: #16d1f2;  line-height: 2;" target="_blank"> Read More on Fox News</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 10px;">
+                    <h3 style="margin: 0; color: #081a56;"><a href="https://www.foxnews.com/video/6369815678112" style="color: #081a56; text-decoration: none;" target="_blank">Secret Service shoots man in overnight 'armed confrontation' near White House</a></h3>
+                    <p style="margin: 5px 0; color: #555; line-height: 1.4;">The Secret Service shot a man involved in an armed confrontation close to the White House overnight.  Details are still emerging about the incident and the condition of the individual involved.</p>
+                    <a href="https://www.foxnews.com/video/6369815678112" style="color: #16d1f2;  line-height: 2;" target="_blank"> Read More on Fox News</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 10px;">
+                    <h3 style="margin: 0; color: #081a56;"><a href="https://www.foxnews.com/video/6369806241112" style="color: #081a56; text-decoration: none;" target="_blank">Pope Francis' condition 'improving,' Vatican says</a></h3>
+                    <p style="margin: 5px 0; color: #555; line-height: 1.4;">The Vatican has announced that Pope Francis' condition is improving as his hospitalization continues. Further updates are expected regarding his health and recovery.</p>
+                    <a href="https://www.foxnews.com/video/6369806241112" style="color: #16d1f2; line-height: 2;" target="_blank"> Read More on Fox News</a>
                 </td>
             </tr>
         </table>
-
-        <table width="100%" border="0" cellspacing="0" cellpadding="20" style="max-width: 600px; margin: auto; background-color: #ffffff;">
-            <tr>
-                <td style="padding: 20px;">
-                    <h2>Today's Top Stories</h2>
-
-                    <!-- News Story 1 -->
-                    <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                        <h3><a href="https://www.foxnews.com/video/6369839836112" style="color: #16d1f2; text-decoration: none;">Negotiate with Russia with 'gun on the table,' Lithuanian defense minister says</a></h3>
-                        <p>Lithuanian Defense Minister Dovilė Šakalienė, drawing on her family's experience under Soviet rule, emphasizes the need for a strong stance in negotiations with Russia, likening effective diplomacy to having a "gun on the table." She expresses deep distrust of Putin and highlights President Trump's tough approach as a potential safeguard. Lithuania is significantly increasing defense spending, exceeding NATO targets, and withdrawing from international treaties on cluster munitions and landmines to send a strong message to Russia.</p>
-                    </div>
-
-                    <!-- News Story 2 -->
-                    <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                        <h3><a href="https://www.foxnews.com/world/new-study-shuts-down-icc-charges-against-israel-over-gaza-starvation-claims" style="color: #16d1f2; text-decoration: none;">New study challenges narrative that Israel deliberately caused starvation in Gaza</a></h3>
-                        <p>A new study by Israeli public health experts challenges claims of Israeli-caused famine in Gaza, showing that food supplies entering Gaza have met or exceeded humanitarian standards. The study emphasizes that any hunger issues are due to Hamas's control and weaponization of food distribution, not a lack of aid entering the region. The study faced rigorous review due to anti-Israel bias within the scientific community.</p>
-                    </div>
-
-                    <!-- News Story 3 -->
-                    <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                        <h3><a href="https://www.foxnews.com/world/ex-philippine-president-duterte-shrugs-off-possible-arrest-icc-drug-war-during-trip-hong-kong" style="color: #16d1f2; text-decoration: none;">Ex-Philippine President Duterte shrugs off possible arrest by ICC for drug war during trip to Hong Kong</a></h3>
-                        <p>Former Philippine President Rodrigo Duterte, during an unannounced visit to Hong Kong, addressed the possibility of an International Criminal Court (ICC) arrest warrant for alleged crimes against humanity during his war on drugs. He stated he would accept his fate if arrested. The Philippine government is prepared for any eventuality, and law enforcement is cooperating with the ICC.</p>
-                    </div>
-
-                    <!-- News Story 4 -->
-                    <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                        <h3><a href="https://www.foxnews.com/world/romania-blocks-frontrunner-from-postponed-presidential-race" style="color: #16d1f2; text-decoration: none;">Frontrunner in Romania’s annulled presidential election barred from race</a></h3>
-                        <p>Calin Georgescu, a populist candidate and frontrunner in Romania's previously annulled presidential election, has been banned from running in the re-run. Georgescu decried the decision as a sign of tyranny, while figures like Elon Musk and Kari Lake criticized the move, comparing it to actions against other nationalist leaders. The Trump administration has expressed concern over Romania's election handling.</p>
-                    </div>
-
-                    <!-- News Story 5 -->
-                    <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                        <h3><a href="https://www.foxnews.com/world/mark-carney-wins-liberal-party-nomination-replace-trudeau-canadas-next-pm" style="color: #16d1f2; text-decoration: none;">Trump critic Mark Carney wins Liberal Party nomination, will become Canada's next PM</a></h3>
-                        <p>Former Bank of Canada governor Mark Carney has won the Liberal leadership race and will become Canada's next prime minister. He vowed to maintain tariffs against the United States and asserted Canada's independence from America. Carney's victory sets the stage for a likely snap election against Conservative leader Pierre Poilievre, who has been critical of Trudeau's government.</p>
-                    </div>
-
-                    <!-- News Story 6 -->
-                    <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                        <h3><a href="https://www.firstpost.com/tech/chinese-espionage-group-silk-typhoon-has-new-tactics-to-target-us-networks-13870414.html" style="color: #16d1f2; text-decoration: none;">Chinese espionage group Silk Typhoon has new tactics to target US networks</a></h3>
-                        <p>The Chinese state-sponsored cyber espionage group, Silk Typhoon, has adopted new tactics, including leveraging stolen API keys and exploiting zero-day vulnerabilities, to target US government agencies, businesses, and critical infrastructure. They have been observed infiltrating IT providers, MSPs, and cloud data management firms to gain access to sensitive data and maintain long term access.</p>
-                    </div>
-
-                    <p style="font-size: 12px; color: #b0b0b0;">This newsletter compiles published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://firstpost.com" style="color:#16d1f2; text-decoration:none;">Firstpost</a>.</p>
-                    <h2>Joke of the Day</h2>
-                    <p style="font-size: 14px; font-style: italic;">Why don't scientists trust atoms? Because they make up everything!</p>
-                </td>
-            </tr>
-        </table>
+        <p style="color: #555; font-size: smaller; margin-top:25px">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" target="_blank">Fox News</a>,  <a href="https://www.bbc.com/" target="_blank">BBC</a>, and <a href="https://www.firstpost.com/" target="_blank">Firstpost</a>.</p>
     </div>
 
     <div class="footer">
-        <p>&copy; 2025 Prestige AI. All rights reserved.</p>
+        <p>Joke of the Day:</p>
+        <p style="font-style: italic;">Why don't scientists trust atoms?  Because they make up everything!</p>
+        <p style="font-size: smaller; margin-top:40px">Prestige AI - All Rights Reserved</p>
     </div>
+
+    <script>
+        // JavaScript to set the current date
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString();
+    </script>
 
 </body>
 </html>
