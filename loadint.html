@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +7,18 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
             text-align: center;
+            margin: 50px;
+            background-color: #f8f9fa; /* Light background for contrast */
         }
 
         .message-box {
             max-width: 700px;
-            margin: 50px auto;
+            margin: auto;
             padding: 15px;
             background-color: #f8f9fa;
-            border: 2px solid #081a56;
-            border-radius: 8px;
+            border: 2px solid #081a56; /* Dark blue border all around */
+            border-radius: 8px; /* Slightly rounded corners for a modern look */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
@@ -30,7 +27,7 @@
             width: 100%;
             max-width: 600px;
             height: 30px;
-            background-color: #b0b0b0;
+            background-color: #b0b0b0; /* Gray background */
             border-radius: 10px;
             overflow: hidden;
             margin: 20px auto;
@@ -40,10 +37,10 @@
         .progress-bar {
             height: 100%;
             width: 0%;
-            background-color: #16d1f2;
+            background-color: #16d1f2; /* Light blue progress bar */
             text-align: center;
             line-height: 30px;
-            color: #081a56;
+            color: #081a56; /* Dark blue text */
             font-weight: bold;
             transition: width linear;
         }
@@ -51,79 +48,56 @@
         #progress-text, h2 {
             text-align: center;
             font-size: 16px;
-            color: #081a56;
+            color: #081a56; /* Dark blue text */
             margin: 10px auto;
         }
 
         .container {
-            max-width: 700px;
+            max-width: 600px;
             margin: 20px auto;
             background-color: #fff;
+            padding: 20px;
             border-radius: 8px;
-            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .header {
-            background-color: #081a56;
-            color: #fff;
-            padding: 20px;
             text-align: center;
+            margin-bottom: 20px;
         }
 
-        .header h1 {
-            margin: 0;
+        h1 {
+            color: #081a56;
             font-size: 24px;
+            margin-bottom: 5px;
         }
 
-        .header p {
-            margin: 5px 0 0;
+        h2 {
+            font-size: 1.2em;
+            color: #081a56;
+            margin-top: 0.8em;
+            margin-bottom: 0.3em;
+        }
+
+        .date {
+            color: #b0b0b0;
             font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .edition {
             color: #16d1f2;
-        }
-
-        .logo {
-            margin-top: 10px;
-        }
-
-        .logo img {
-            max-width: 150px;
-            height: auto;
-        }
-
-        .content {
-            padding: 20px;
+            font-size: 16px;
         }
 
         .news-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #b0b0b0;
-            padding-bottom: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
         }
 
         .news-item:last-child {
             border-bottom: none;
-        }
-
-        .news-item h2 {
-            color: #081a56;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .news-item h2 a {
-            color: #081a56;
-            text-decoration: none;
-        }
-
-        .news-item h2 a:hover {
-            text-decoration: underline;
-        }
-
-        .news-item p {
-            font-size: 14px;
-            line-height: 1.5;
-            color: #555;
-            margin-bottom: 5px;
         }
 
         .news-item img {
@@ -131,37 +105,33 @@
             height: auto;
             border-radius: 4px;
             margin-bottom: 10px;
-            display: block;
         }
 
-        .sources {
-            margin-bottom: 25px;
+        .news-item p {
+            font-size: 14px;
+            line-height: 1.6;
         }
 
-        .sources, .sources a {
-            color: #b0b0b0;
-            font-size: 13px;
+        .news-item a {
+            color: #16d1f2;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         .footer {
-            background-color: #081a56;
-            color: #fff;
             text-align: center;
-            padding: 10px 20px;
+            margin-top: 20px;
+            color: #b0b0b0;
             font-size: 12px;
         }
 
-        .footer p {
-            margin: 5px;
-            font-size: 14px;
-        }
-
-        .joke-of-the-day {
-            margin-top: 20px;
+        .joke {
+            margin-top: 1.5em;
+            font-style: italic;
+            color: #555;
         }
     </style>
 </head>
-
 <body>
 
     <div class="message-box">
@@ -205,67 +175,23 @@
 
     <div class="container">
         <div class="header">
-            <div class="logo">
-                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo">
-            </div>
-            <h1>Prestige AI - Daily Newsletter</h1>
-            <p>
-                <?php echo date("F j, Y"); ?> - Afternoon Edition
-            </p>
+            <img src="data:image/png;base64,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">
         </div>
-        <div class="content">
-            <p class="sources">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/">Fox News</a>, <a href="https://www.bbc.com/">BBC</a>, and <a href="https://www.firstpost.com/">Firstpost</a>.</p>
-
-            <div class="news-item">
-                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/moscow-drone-attack-1.jpg?ve=1&tl=1" alt="Damage from drone attack in Moscow">
-                <h2><a href="https://www.foxnews.com/world/ukraine-launches-biggest-drone-attack-moscow-killing-2-us-talks-begin">Ukraine Launches Largest-Ever Drone Attack on Moscow</a></h2>
-                <p>Ukraine launched a significant drone attack on Moscow, with 337 drones shot down over Russia. Two Miratorg employees were killed, and 18 others injured. The attack coincided with U.S.-Ukrainian talks in Saudi Arabia about ending the war.</p>
-            </div>
-
-            <div class="news-item">
-                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/greenland-voting-scaled.jpg?ve=1&tl=1" alt="Greenland election">
-                <h2><a href="https://www.foxnews.com/world/greenlands-opposition-party-pushes-closer-us-ties-independence-from-denmark-trump-plays-big-election">Greenland Election Signals Potential Shift in US Relations</a></h2>
-                <p>Greenland's parliamentary election could indicate a shift in its relationship with both Denmark and the United States. While independence is a major theme, Greenlanders oppose Trump's interest in acquiring the island. The Naleraq party proposes expanding partnerships, including potential defensive agreements with the U.S.</p>
-            </div>
-
-            <div class="news-item">
-                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/roduterte.png?ve=1&tl=1" alt="Former President of the Philippines Rodrigo Duterte">
-                <h2><a href="https://www.foxnews.com/world/former-philippine-president-rodrigo-duterte-arrested-airport-icc-warrant-crime-against-humanity">Former Philippine President Rodrigo Duterte Arrested on ICC Warrant</a></h2>
-                <p>Rodrigo Duterte was arrested in Manila on an International Criminal Court warrant related to his administration's deadly crackdown on illegal drugs. The ICC is investigating alleged crimes against humanity. His allies described the arrest as a "violation of his constitutional right."</p>
-            </div>
-
-            <div class="news-item">
-                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/44bc00e0-548f-4dd6-a8a5-c3a9df603850/05d3a0de-2ce1-4b72-a28f-08f3c7b815bc/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump floats potential new tariffs on Russia amid escalating war with Ukraine">
-                <h2><a href="https://www.foxnews.com/video/6369786478112">Trump floats potential new tariffs on Russia amid escalating war with Ukraine</a></h2>
-                <p>Former president Trump brings up the possibility of new Tariffs against Putin and his regime.</p>
-            </div>
-
-            <div class="news-item">
-                <h2><a href="https://www.firstpost.com/tech/chinese-espionage-group-silk-typhoon-has-new-tactics-to-target-us-networks-13870414.html">Chinese Espionage Group "Silk Typhoon" Uses New Tactics</a></h2>
-                <p>The Chinese state-sponsored cyber espionage group Silk Typhoon has adopted new methods, including exploiting zero-day vulnerabilities and leveraging stolen API keys, to target US government agencies, businesses, and critical infrastructure, with a focus on cloud-based attacks.</p>
-            </div>
-            <div class="news-item">
-                <h2><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html">Apple to Launch New MacBook Air with M4 Chip in March</a></h2>
-                <p>Apple is preparing to launch new MacBook Air models with the M4 chip in March, promising improved performance and efficiency. This follows the iPhone 16e's introduction of the C1 chip, signifying Apple's shift towards in-house technology.</p>
-            </div>
-
-            <div class="news-item">
-                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/north-korea-missile-test.jpg?ve=1&tl=1" alt="North Korea missile launch">
-                <h2><a href="https://www.foxnews.com/world/north-korea-fires-missiles-us-south-korea-begin-first-joint-military-exercise-trumps-second-term">North Korea Fires Missiles as US and South Korea Begin Joint Military Exercise</a></h2>
-                <p>North Korea fired several ballistic missiles into the sea as South Korea and the United States commenced their annual Freedom Shield military exercise. The U.S. condemned the launches but stated they did not pose an immediate threat.</p>
-            </div>
-
-            <div class="joke-of-the-day">
-                <h3>Joke of the day</h3>
-                <p>Why don't skeletons ever go trick or treating?</p>
-                <p>Because they have no body to go with!</p>
-            </div>
-
+        <h1>Prestige AI - Daily Newsletter</h1>
+        <div class="date">Date: [Insert Date]</div>
+        <div class="edition">Edition: [Insert Edition]</div>
+        <div class="news-item">
+            <h2>News Title 1</h2>
+            <img src="news-image1.jpg" alt="News Image 1">
+            <p>News description goes here. <a href="#">Read more</a></p>
         </div>
-        <div class="footer">
-            <p>&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
+        <div class="news-item">
+            <h2>News Title 2</h2>
+            <img src="news-image2.jpg" alt="News Image 2">
+            <p>News description goes here. <a href="#">Read more</a></p>
         </div>
+        <div class="footer">© 2023 Prestige AI. All rights reserved.</div>
     </div>
-</body>
 
+</body>
 </html>
