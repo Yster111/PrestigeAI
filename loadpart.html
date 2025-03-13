@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background-color: #f8f9fa; /* Light background for contrast */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
 
         .message-box {
@@ -17,8 +19,8 @@
             margin: auto;
             padding: 15px;
             background-color: #f8f9fa;
-            border: 2px solid #081a56; /* Dark blue border all around */
-            border-radius: 8px; /* Slightly rounded corners for a modern look */
+            border: 2px solid #081a56;
+            border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
@@ -27,7 +29,7 @@
             width: 100%;
             max-width: 600px;
             height: 30px;
-            background-color: #b0b0b0; /* Gray background */
+            background-color: #b0b0b0;
             border-radius: 10px;
             overflow: hidden;
             margin: 20px auto;
@@ -37,10 +39,10 @@
         .progress-bar {
             height: 100%;
             width: 0%;
-            background-color: #16d1f2; /* Light blue progress bar */
+            background-color: #16d1f2;
             text-align: center;
             line-height: 30px;
-            color: #081a56; /* Dark blue text */
+            color: #081a56;
             font-weight: bold;
             transition: width linear;
         }
@@ -48,7 +50,7 @@
         #progress-text, h2 {
             text-align: center;
             font-size: 16px;
-            color: #081a56; /* Dark blue text */
+            color: #081a56;
             margin: 10px auto;
         }
 
@@ -56,48 +58,43 @@
             max-width: 600px;
             margin: 20px auto;
             background-color: #fff;
-            padding: 20px;
             border-radius: 8px;
+            overflow: hidden;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .header {
+            background-color: #081a56;
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            margin-bottom: 20px;
         }
 
-        h1 {
-            color: #081a56;
+        .header h1 {
+            margin: 0;
             font-size: 24px;
-            margin-bottom: 5px;
-        }
-
-        h2 {
-            font-size: 1.2em;
-            color: #081a56;
-            margin-top: 0.8em;
-            margin-bottom: 0.3em;
-        }
-
-        .date {
-            color: #b0b0b0;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        .edition {
             color: #16d1f2;
-            font-size: 16px;
+        }
+
+        .header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+
+        .content {
+            padding: 20px;
         }
 
         .news-item {
-            margin-bottom: 15px;
-            padding-bottom: 10px;
+            margin-bottom: 20px;
             border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
         }
 
         .news-item:last-child {
             border-bottom: none;
+            padding-bottom: 0;
         }
 
         .news-item img {
@@ -105,33 +102,63 @@
             height: auto;
             border-radius: 4px;
             margin-bottom: 10px;
+            display: block;
+        }
+
+        .news-item h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #081a56;
         }
 
         .news-item p {
+            margin: 0;
             font-size: 14px;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .news-item a {
             color: #16d1f2;
             text-decoration: none;
-            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .news-item a:hover {
+            text-decoration: underline;
         }
 
         .footer {
+            background-color: #081a56;
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            margin-top: 20px;
-            color: #b0b0b0;
             font-size: 12px;
         }
 
+        .footer a {
+            color: #16d1f2;
+        }
+
         .joke {
-            margin-top: 1.5em;
-            font-style: italic;
-            color: #555;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .joke-header {
+            font-size: 14px;
+            color: #081a56;
+            font-weight: bold;
+        }
+
+        .sources {
+            margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
 
     <div class="message-box">
@@ -175,23 +202,82 @@
 
     <div class="container">
         <div class="header">
-            <img src="data:image/png;base64,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">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAABkCAMAAADrTXHjAAAA81BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAACub160AAAAdXRSTlMAAQIDBAUHCB8gISIjJCUmJygpKissLS8wMjM7PEJGSk5SVFliY2ZnaWprcHR5fH6EgpOltLe5vsPIzM/T19vf4OLn6e3x8vX6/P099TdnDgAAAW1JREFUeNrt3Glz0zAUB/BThXIIgiAIggjIAR3EcRzHcf7/f7e7XgKEhBAf98P2tKzG5uSns9rRsiy7ySQpSRITT8hgxCAgBWqWKFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFWqWLHSCEBCrVYsKFixYsKBBhQoVLliwYMGChQoXLFiwYMGChYsVFixYsGDBggULFixYsGDBCxUqVKhQoUIFChUqVKhQoUIFChUqVKj+I4ULFixYsKBBhQoVLliwYMGChQoXLFgxdXW7YP9LliyYl9D9/fixYsWLFixYsKBBhQoXLFgxdXS74P9Mliw49fAP1y6JfixYsGDBggULFixYsGDBggULFixYsGDBggULFixYsKBBhQoVLliwYMGChQoXLFiwYMGChQoXLFjwCrlg/0uLFiy4YsGChQoXLFiwYMHux5KFCxcuXLiw4NULFixYsKBBhQoVLliwYMGChQoXLFiwYMGChQoXLFjwCrlg/0uLFiy4YsGChQoXLFiwYMHux6pFixYsGDBggULFixYsKBBhQoVLliwYMGChQoVLlwIqlixYMGChQoXLFiwYMGChQoXLFjwiLlgoUKFChUqVKhQoUKFChUqVKhQ/3tFixYsGDBggULFixYsKBBhQoVLliwYMGChQoXLFjw/3+39v3J284CixYsGDBggULFixYsKBBhQoVLliwYMGChQoVLlwIqlixYMGChQoXLFiwYMGChQoXLFjwCrlg/0uLFiy4YsGChQoXLFiwYMHux6pFixYsGDBggULFixYsKBBhQoVLliwYMGChQoVLlwIqlixYMGChQoXLFiwYMGChQoXLFh0h73+N2s+T9+f2iH/mJ9rtd256n1oUKFChUqVKhQoUKFChUqVKhQoUKFChUqVKhQoUKFChUqVKhQoUKFChUqVKhQoUKFChUqVKhQoUKFSpUqFChQoUKFSpUqPyPE6q3G9X17wAAAABJRU5ErkJggg=="
+                alt="Prestige AI Logo" style="width: 150px; height: auto; margin-bottom: 10px;">
+            <h1>Prestige AI - Daily Newsletter</h1>
+            <p id="currentDate"></p>
+            <p>Sunrise Edition</p>
         </div>
-        <h1>Prestige AI - Daily Newsletter</h1>
-        <div class="date">Date: [Insert Date Here]</div>
-        <div class="edition">Edition: [Insert Edition Here]</div>
-        <div class="news-item">
-            <h2>Headline 1</h2>
-            <img src="image1.jpg" alt="Image Description">
-            <p>Summary of the news article goes here. <a href="#">Read more</a></p>
+        <div class="content">
+            <p>Here's your daily briefing of top news stories, compiled from leading sources such as Fox News, BBC, and Firstpost:</p><br>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/antonio-guterres.jpg?ve=1&tl=1" alt="UN Secretary">
+                <h2>UN Announces 'UN80 Initiative' Amid Concerns of US Spending Cuts</h2>
+                <p>United Nations Secretary-General Antonio Guterres announced the "UN80 Initiative," a project for the UN's 80th anniversary, aimed at improving efficiency and restructuring. Critics claim it's a response to potential U.S. spending cuts, a claim Guterres denies. The initiative is described as "far beyond the technical," impacting life and death for millions globally.</p>
+                <a href="https://www.foxnews.com/world/un80-initiative-appears-show-world-bodys-panic-over-possible-doge-like-cuts" target="_blank">Read on Fox News</a>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/ukraine-russia-attack.jpg?ve=1&tl=1" alt="Ukraine Russia Attack">
+                <h2>Zelenskyy's Hometown Hit in Russian Attack as Ukraine Signals Peace Talks</h2>
+                <p>A Russian attack in Kryvyi Rih, President Zelenskyy's hometown, resulted in casualties and injuries. This occurs as Ukraine shows willingness to engage in peace talks with the U.S., accepting a ceasefire proposal. Russia is waiting for details on the proposal before commenting.</p>
+                <a href="https://www.foxnews.com/world/russia-hits-zelenskyys-hometown-ukraine-signals-its-ready-peace" target="_blank">Read on Fox News</a>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/greenland-election-1.jpg?ve=1&tl=1" alt="Greenland">
+                <h2>Greenland's Pro-Independence Party Wins Election Amidst Trump's Comments</h2>
+                <p>Greenland's center-right Demokraatit party achieved a surprise victory, ousting the incumbent party. The election's focus was on independence from Denmark, fueled by President Trump's statements about U.S. control of Greenland. The winning party favors eventual independence but with a "good foundation."</p>
+                <a href="https://www.foxnews.com/world/greenlands-center-right-party-pulls-off-upset-victory-trump-seeks-control" target="_blank">Read on Fox News</a>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/db318678-540c-4472-8a84-913b84023206/554e1fd4-21e2-4dec-adac-77cca06cd5f8/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Ship Collision">
+                <h2>Russian National Captains Cargo Ship that Collided with US Tanker</h2>
+                <p>The captain of the cargo ship that collided with a U.S. tanker off the coast of England, causing a fire and fuel spill, is a Russian national. The captain is detained on suspicion of manslaughter by gross negligence. The ship had previously failed safety inspections.</p>
+                <a href="https://www.foxnews.com/world/detained-captain-cargo-ship-collided-us-oil-tanker-russian-national-ship-owner-says" target="_blank">Read on Fox News</a>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/rubio-ukraine-talks-scaled.jpg?ve=1&tl=1" alt="Rubio in Saudi Arabia">
+                <h2>Russia Awaiting Details on US-Ukraine Cease-Fire Proposal</h2>
+                <p>Russia is waiting for detailed information from Washington about U.S.-Ukrainian cease-fire talks that took place in Saudi Arabia. Ukraine has indicated a willingness to accept a 30-day cease-fire, pending Russia's response. U.S. Secretary of State Marco Rubio will brief Russia directly.</p>
+                <a href="https://www.foxnews.com/world/russia-waiting-us-ukraine-ceasefire-proposal-details-kremlin-says" target="_blank">Read on Fox News</a>
+            </div>
+
+            <div class="news-item">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2023/03/1200/675/Putin-II.jpg?ve=1&tl=1" alt="Putin Image">
+                <h2>Can Putin Be Trusted, Even if Trump Brokers a Peace Deal? Experts Remain Skeptical.</h2>
+                <p>Even if a peace deal between Russia and Ukraine is brokered, security experts question whether Vladimir Putin can be trusted. Russia has a history of violating agreements. The success of any deal hinges on factors beyond trust, including how the West positions Russia through economic ties and security commitments with an emphasis on making the cost of further aggression outweigh any potential gain.</p>
+                <a href="https://www.foxnews.com/world/even-trump-secures-ukraine-russia-peace-deal-can-putin-trusted" target="_blank">Read on Fox News</a>
+            </div>
+
+            <div class="sources">
+                <p>Sources: <a href="https://www.foxnews.com/">Fox News</a>, <a href="https://www.bbc.com/">BBC</a>, <a href="https://www.firstpost.com/">Firstpost</a></p>
+            </div>
+
+            <div class="joke">
+                <p class="joke-header">Joke of the Day:</p>
+                <p>Why don't scientists trust atoms? Because they make up everything!</p>
+            </div>
         </div>
-        <div class="news-item">
-            <h2>Headline 2</h2>
-            <img src="image2.jpg" alt="Image Description">
-            <p>Summary of the news article goes here. <a href="#">Read more</a></p>
+
+        <div class="footer">
+            <p>&copy; 2025 Prestige AI. All rights reserved.</p>
         </div>
-        <div class="footer">© 2023 Prestige AI. All rights reserved.</div>
     </div>
 
+    <script>
+        // JavaScript to set the current date
+        const date = new Date();
+        const options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        document.getElementById('currentDate').textContent = date.toLocaleDateString('en-US', options);
+    </script>
 </body>
+
 </html>
