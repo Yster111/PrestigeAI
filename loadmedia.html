@@ -60,16 +60,68 @@
             background-color: #f4f4f4;
         }
 
-        .newsletter-container {
+        .newsletter-table {
             width: 600px;
-            margin-top: 20px;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 20;
             background-color: #ffffff;
-            border-radius: 8px;
+            margin-top: 20px;
+            border-radius: 5px;
         }
 
-        .newsletter-content {
+        .newsletter-header {
             padding: 20px;
-            text-align: center;
+            border-bottom: 1px solid #b0b0b0;
+        }
+
+        .newsletter-header h1 {
+            color: #081a56;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .newsletter-header p {
+            color: #16d1f2;
+            font-size: 16px;
+            margin: 5px 0 0 0;
+        }
+
+        .news-story {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #b0b0b0;
+            padding-bottom: 15px;
+        }
+
+        .news-story h3 {
+            color: #16d1f2;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .news-story p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .joke-section {
+            padding: 20px;
+            border-top: 1px solid #b0b0b0;
+        }
+
+        .joke-section h3 {
+            color: #081a56;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .joke-section p {
+            font-size: 14px;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #b0b0b0;
         }
     </style>
 </head>
@@ -117,14 +169,67 @@
     <table>
         <tr>
             <td align="center">
-                <div class="newsletter-container">
-                    <div class="newsletter-content">
-                        <!-- Base64 Encoded Logo -->
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/SbhAAAAw1BMVEX/////AAD/2wD/zQD/0gD/zwD/1AD/1QD/yAD/vwD/vwD/xQD/yQD/+AD/wgD/+QD/zAD/xwD/zgD/vAD/+wD/vwAAAAAAAAAAAAAAAAAAAAAAAAAA" alt="Newsletter Logo">
-                        <h2>Prestige AI - Daily Newsletter</h2>
-                        <p>Stay updated with the latest news and insights from Prestige AI.</p>
-                    </div>
-                </div>
+                <table class="newsletter-table">
+                    <tr>
+                        <td class="newsletter-header" align="center">
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
+                            <h1>Prestige AI - Daily Newsletter</h1>
+                            <p><span id="current-date"></span> | Afternoon Edition</p>
+                            <script>
+                              const today = new Date();
+                              const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                              document.getElementById("current-date").textContent = today.toLocaleDateString("en-US", options);
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 20px;">
+                            <h2 style="color: #081a56; font-size: 20px; margin-bottom: 15px;">Top News Stories</h2>
+
+                            <div class="news-story">
+                                <h3><a href="https://www.foxnews.com/world/zelenskyy-accuses-putin-trying-stall-ceasefire-talks-pushes-trump-tougher-sanctions" style="color: #16d1f2; text-decoration: none;">Zelenskyy Accuses Putin of Stalling Ceasefire, Pushes Trump for Tougher Sanctions</a></h3>
+                                <p>Ukrainian President Zelenskyy claims Russian President Putin is attempting to prolong the war, and is urging for tougher sanctions to encourage a ceasefire agreement. He believes Putin is avoiding direct communication with President Trump about his intentions. Trump has expressed a desire for peace but acknowledges the possibility of implementing severe financial measures against Russia.</p>
+                            </div>
+
+                            <div class="news-story">
+                                <h3><a href="https://www.foxnews.com/world/trump-hopes-putin-agrees-ceasefire-moscow-signals-no-truce-yet" style="color: #16d1f2; text-decoration: none;">Trump 'Hopes' Putin Agrees to Ceasefire as Moscow Signals No Truce Yet</a></h3>
+                                <p>President Trump is hopeful for a ceasefire agreement between Russia and Ukraine. While Putin has acknowledged Trump's efforts, he has indicated that Russia is not yet ready to commit to the proposed 30-day ceasefire in its current form. Russia is seeking "lasting peace" and the resolution of core issues before a ceasefire.</p>
+                            </div>
+
+                            <div class="news-story">
+                                 <h3><a href="https://www.foxnews.com/world/poland-calls-us-place-nukes-within-its-borders-amid-russia-threat" style="color:#16d1f2; text-decoration:none">Poland Calls on US to Place Nukes Within Its Borders Amid Russia Threat</a></h3>
+                                 <p>Poland's President has requested the US to station nuclear weapons within its borders as a deterrent to Russian aggression. This follows Russia's movement of nuclear weapons to Belarus. The request underscores growing security anxiety in the region.</p>
+                            </div>
+
+                            <div class="news-story">
+                                <h3><a href="https://www.foxnews.com/world/russia-presents-us-demands-need-met-before-ending-ukraine-war-report" style="color: #16d1f2; text-decoration: none;">Russia Presents US With Demands to End Ukraine War: Report</a></h3>
+                                <p>Russia has reportedly presented a list of demands to the U.S. that must be met for the war in Ukraine to end. The demands mirror previous requests made to Ukraine, the US and NATO. The contents aren't fully known. Discussions of the 30 day ceasefire are ongoing.</p>
+                            </div>
+
+                            <div class="news-story">
+                                <h3><a href="https://www.firstpost.com/tech/struggling-chipmaker-intel-sees-shares-jump-12-as-it-names-new-ceo-to-end-3-month-suspense-13871169.html" style="color: #16d1f2; text-decoration: none;">Struggling Chipmaker Intel Sees Shares Jump 12% as It Names New CEO</a></h3>
+                                   <p>Intel has appointed Lip-Bu Tan as its new CEO, following the sudden departure of its previous executives. The announcement led to an immediate 12% increase in Intel's shares.</p>
+                            </div>
+
+                            <div class="news-story">
+                                <h3><a href="https://www.foxnews.com/video/6369984053112" style="color: #16d1f2; text-decoration: none;">NATO Chief Praises Trump: 'You Broke the Deadlock' on Ukraine</a></h3>
+                                <p>NATO Secretary General Mark Rutte praised President Trump for his efforts to end the Russia-Ukraine war. Trump met with Rutte to discuss the current peace talks, emphasizing that "details of a final agreement have actually been discussed.".</p>
+                            </div>
+
+                            <div class="news-story">
+                                  <h3><a href="https://www.foxnews.com/world/un-official-denies-seeing-a-shred-evidence-showing-staff-gaza-held-hostages" style="color:#16d1f2; text-decoration:none;">UN Official Says He Has Not Seen Evidence Linking Workers to Hostages in Gaza</a></h3>
+                                <p>A top UN humanitarian aid official stated he has "not seen a shred of evidence" of UN staff or facilities being involved in holding hostages in Gaza. He offered to lead an investigation into such claims if any proof were found.</p>
+                             </div>
+                            <p class="footer">This newsletter compiles news stories from <a href="https://www.foxnews.com" style="color: #16d1f2;">Fox News</a>, <a href="https://www.bbc.com" style="color: #16d1f2;">BBC</a>, and <a href="https://www.firstpost.com" style="color:#16d1f2">Firstpost</a>.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                         <td class="joke-section" align="center">
+                            <h3>Joke of the Day</h3>
+                            <p>Why don't scientists trust atoms? Because they make up everything!</p>
+                        </td>
+                    </tr>
+                </table>
             </td>
         </tr>
     </table>
