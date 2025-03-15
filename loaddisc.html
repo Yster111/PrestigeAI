@@ -67,61 +67,66 @@
             cellpadding: 20;
             background-color: #ffffff;
             margin-top: 20px;
-            border-radius: 5px;
+            margin-bottom: 20px;
         }
 
         .newsletter-header {
-            padding: 20px;
-            border-bottom: 1px solid #b0b0b0;
+            padding: 20px 0;
+        }
+
+        .newsletter-header img {
+            display: block;
         }
 
         .newsletter-header h1 {
             color: #081a56;
             font-size: 24px;
-            margin: 0;
+            margin: 10px 0;
         }
 
         .newsletter-header p {
             color: #16d1f2;
             font-size: 16px;
-            margin: 5px 0 0 0;
+            margin: 5px 0;
         }
 
-        .news-story {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #b0b0b0;
-            padding-bottom: 15px;
+        .story-title {
+            font-size: 16px;
+            margin-top: 0;
+            color: #081a56;
         }
 
-        .news-story h3 {
-            color: #16d1f2;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .news-story p {
+        .story-description {
+            color: #555555;
             font-size: 14px;
-            line-height: 1.5;
         }
 
-        .joke-section {
-            padding: 20px;
+        .sources {
+            padding: 20px 0;
             border-top: 1px solid #b0b0b0;
+            border-bottom: 1px solid #b0b0b0;
         }
 
-        .joke-section h3 {
+        .sources p {
+            color: #777777;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .joke {
+            padding: 20px 0;
+        }
+
+        .joke h2 {
             color: #081a56;
             font-size: 18px;
             margin-bottom: 10px;
         }
 
-        .joke-section p {
+        .joke p {
+            color: #555555;
             font-size: 14px;
-        }
-
-        .footer {
-            font-size: 12px;
-            color: #b0b0b0;
+            font-style: italic;
         }
     </style>
 </head>
@@ -170,63 +175,129 @@
         <tr>
             <td align="center">
                 <table class="newsletter-table">
-                    <tr>
-                        <td class="newsletter-header" align="center">
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
+                    <tr class="newsletter-header">
+                        <td align="center" style="padding: 20px 0;">
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
                             <h1>Prestige AI - Daily Newsletter</h1>
-                            <p><span id="current-date"></span> | Afternoon Edition</p>
-                            <script>
-                              const today = new Date();
-                              const options = { year: 'numeric', month: 'long', day: 'numeric' };
-                              document.getElementById("current-date").textContent = today.toLocaleDateString("en-US", options);
-                            </script>
+                            <p>
+                                <script>
+                                  const today = new Date();
+                                  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                                  document.write(today.toLocaleDateString('en-US', options));
+                                </script>
+                                 - Sunrise Edition
+                            </p>
                         </td>
                     </tr>
+
                     <tr>
-                        <td style="padding: 20px;">
-                            <h2 style="color: #081a56; font-size: 20px; margin-bottom: 15px;">Top News Stories</h2>
+                        <td style="padding: 10px 0;">
+                            <h2 style="color: #081a56; font-size: 20px; margin-bottom: 10px;">Top Stories</h2>
 
-                            <div class="news-story">
-                                <h3><a href="https://www.foxnews.com/world/zelenskyy-accuses-putin-trying-stall-ceasefire-talks-pushes-trump-tougher-sanctions" style="color: #16d1f2; text-decoration: none;">Zelenskyy Accuses Putin of Stalling Ceasefire, Pushes Trump for Tougher Sanctions</a></h3>
-                                <p>Ukrainian President Zelenskyy claims Russian President Putin is attempting to prolong the war, and is urging for tougher sanctions to encourage a ceasefire agreement. He believes Putin is avoiding direct communication with President Trump about his intentions. Trump has expressed a desire for peace but acknowledges the possibility of implementing severe financial measures against Russia.</p>
-                            </div>
+                            <!-- Story 1 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                                <tr>
+                                    <td width="100" valign="top">
+                                        <a href="https://www.foxnews.com/world/israel-faces-new-syria-challenge-adjusts-new-strategy-amid-regional-power-struggle-influence" style="text-decoration: none;">
+                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/dff5e9ca-aa34-48d7-a681-c6820daf0656/72f86a79-c250-49b9-ae2c-f3e188360108/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="IDF Chief Eyal Zamir assesses situation in area of separation in Syria" width="90" style="display: block;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <a href="https://www.foxnews.com/world/israel-faces-new-syria-challenge-adjusts-new-strategy-amid-regional-power-struggle-influence" style="text-decoration: none; color: #081a56;">
+                                        <h3 class="story-title">IDF Chief Assesses Situation in Syria's Separation Area</h3>
+                                       </a>
+                                        <p class="story-description">The Israeli Air Force struck the headquarters of the Palestinian Islamic Jihad in Damascus.  Following Bashar al-Assad's overthrow, Israel deployed troops to the demilitarized zone and launched a diplomatic effort to influence the regional power balance. Concerns remain about sectarian violence and arms smuggling.</p>
+                                    </td>
+                                </tr>
+                            </table>
 
-                            <div class="news-story">
-                                <h3><a href="https://www.foxnews.com/world/trump-hopes-putin-agrees-ceasefire-moscow-signals-no-truce-yet" style="color: #16d1f2; text-decoration: none;">Trump 'Hopes' Putin Agrees to Ceasefire as Moscow Signals No Truce Yet</a></h3>
-                                <p>President Trump is hopeful for a ceasefire agreement between Russia and Ukraine. While Putin has acknowledged Trump's efforts, he has indicated that Russia is not yet ready to commit to the proposed 30-day ceasefire in its current form. Russia is seeking "lasting peace" and the resolution of core issues before a ceasefire.</p>
-                            </div>
+                            <!-- Story 2 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                               <tr>
+                                    <td width="100" valign="top">
+                                      <a href="https://www.foxnews.com/world/zelenskyy-accuses-putin-trying-stall-ceasefire-talks-pushes-trump-tougher-sanctions" style="text-decoration: none;">
+                                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/02/1200/675/putin-trump-zelenskyy.jpg?ve=1&tl=1" alt="Putin, Trump and Zelenskyy" width="90" style="display: block;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <a href="https://www.foxnews.com/world/zelenskyy-accuses-putin-trying-stall-ceasefire-talks-pushes-trump-tougher-sanctions" style="text-decoration: none; color:#081a56">
+                                        <h3 class="story-title">Zelenskyy Accuses Putin of Stalling Ceasefire Talks</h3>
+                                        </a>
+                                         <p class="story-description">Ukrainian President Volodymyr Zelenskyy accuses Russian President Vladimir Putin of trying to prolong the war, claiming Putin is afraid to admit this to President Trump.  Zelenskyy pushes for tougher sanctions to force Russia to negotiate.</p>
+                                    </td>
+                                </tr>
+                            </table>
 
-                            <div class="news-story">
-                                 <h3><a href="https://www.foxnews.com/world/poland-calls-us-place-nukes-within-its-borders-amid-russia-threat" style="color:#16d1f2; text-decoration:none">Poland Calls on US to Place Nukes Within Its Borders Amid Russia Threat</a></h3>
-                                 <p>Poland's President has requested the US to station nuclear weapons within its borders as a deterrent to Russian aggression. This follows Russia's movement of nuclear weapons to Belarus. The request underscores growing security anxiety in the region.</p>
-                            </div>
+                            <!-- Story 3 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                                 <tr>
+                                    <td width="100" valign="top">
+                                        <a href="https://www.foxnews.com/world/trump-downplays-china-russia-iran-nuclear-talks-says-may-discuss-de-escalation" style="text-decoration: none;">
+                                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/05/1200/675/World-Leaders-Way-Split-Photo-1.jpg?ve=1&tl=1" alt="Four way split photo of Xi Jinping, Vladimir Putin, Ali Khamenei and Kim Jong Un." width="90"  style="display: block;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <a href="https://www.foxnews.com/world/trump-downplays-china-russia-iran-nuclear-talks-says-may-discuss-de-escalation" style="text-decoration:none; color: #081a56">
+                                        <h3 class="story-title">Trump Downplays China-Russia-Iran Nuclear Talks</h3>
+                                        </a>
+                                        <p class="story-description">President Trump downplayed upcoming nuclear talks between Iran, Russia, and China.  He suggested the talks might focus on "de-escalation" and recalled past "strong" nuclear discussions with Putin. Experts dispute claims of China soon achieving nuclear parity with the U.S.</p>
+                                    </td>
+                                </tr>
+                            </table>
 
-                            <div class="news-story">
-                                <h3><a href="https://www.foxnews.com/world/russia-presents-us-demands-need-met-before-ending-ukraine-war-report" style="color: #16d1f2; text-decoration: none;">Russia Presents US With Demands to End Ukraine War: Report</a></h3>
-                                <p>Russia has reportedly presented a list of demands to the U.S. that must be met for the war in Ukraine to end. The demands mirror previous requests made to Ukraine, the US and NATO. The contents aren't fully known. Discussions of the 30 day ceasefire are ongoing.</p>
-                            </div>
+                             <!-- Story 4 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                                <tr>
+                                    <td width="100" valign="top">
+                                          <a href="https://www.foxnews.com/world/un-official-denies-seeing-a-shred-evidence-showing-staff-gaza-held-hostages" style="text-decoration: none;">
+                                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/tom-fletcher.jpg?ve=1&tl=1" alt="Tom Fletcher" width="90" style="display: block;">
+                                          </a>
+                                    </td>
+                                    <td valign="top">
+                                       <a href="https://www.foxnews.com/world/un-official-denies-seeing-a-shred-evidence-showing-staff-gaza-held-hostages" style="text-decoration: none; color: #081a56;">
+                                        <h3 class="story-title">UN Official Denies Seeing Evidence Linking Workers to Hostages in Gaza</h3>
+                                        </a>
+                                         <p class="story-description">A top UN humanitarian official, Tom Fletcher, denied seeing any evidence of UN staff involvement in holding hostages in Gaza.  This follows claims by former hostages.  Fletcher offered to lead an investigation if evidence is presented. Israel calls for a U.N. investigation.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Story 5 -->
+                           <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                                <tr>
+                                    <td width="100" valign="top">
+                                     <a href="https://www.foxnews.com/world/poland-calls-us-place-nukes-within-its-borders-amid-russia-threat" style="text-decoration: none;">
+                                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/duda.jpg?ve=1&tl=1" alt="Polish President Andrzej Duda" width="90" style="display: block;">
+                                         </a>
+                                    </td>
+                                    <td valign="top">
+                                        <a href="https://www.foxnews.com/world/poland-calls-us-place-nukes-within-its-borders-amid-russia-threat" style="text-decoration:none; color: #081a56">
+                                        <h3 class="story-title">Poland Pushes US to Place Nukes in Its Borders to Deter Russia</h3>
+                                        </a>
+                                        <p class="story-description">Poland's President Andrzej Duda again requested the U.S. to place nuclear weapons within its borders as a deterrent to Russian aggression, citing Russia's relocation of nuclear weapons to Belarus.  Poland is also reportedly in talks with France about extending nuclear deterrence.</p>
+                                    </td>
+                                </tr>
+                            </table>
 
-                            <div class="news-story">
-                                <h3><a href="https://www.firstpost.com/tech/struggling-chipmaker-intel-sees-shares-jump-12-as-it-names-new-ceo-to-end-3-month-suspense-13871169.html" style="color: #16d1f2; text-decoration: none;">Struggling Chipmaker Intel Sees Shares Jump 12% as It Names New CEO</a></h3>
-                                   <p>Intel has appointed Lip-Bu Tan as its new CEO, following the sudden departure of its previous executives. The announcement led to an immediate 12% increase in Intel's shares.</p>
-                            </div>
-
-                            <div class="news-story">
-                                <h3><a href="https://www.foxnews.com/video/6369984053112" style="color: #16d1f2; text-decoration: none;">NATO Chief Praises Trump: 'You Broke the Deadlock' on Ukraine</a></h3>
-                                <p>NATO Secretary General Mark Rutte praised President Trump for his efforts to end the Russia-Ukraine war. Trump met with Rutte to discuss the current peace talks, emphasizing that "details of a final agreement have actually been discussed.".</p>
-                            </div>
-
-                            <div class="news-story">
-                                  <h3><a href="https://www.foxnews.com/world/un-official-denies-seeing-a-shred-evidence-showing-staff-gaza-held-hostages" style="color:#16d1f2; text-decoration:none;">UN Official Says He Has Not Seen Evidence Linking Workers to Hostages in Gaza</a></h3>
-                                <p>A top UN humanitarian aid official stated he has "not seen a shred of evidence" of UN staff or facilities being involved in holding hostages in Gaza. He offered to lead an investigation into such claims if any proof were found.</p>
-                             </div>
-                            <p class="footer">This newsletter compiles news stories from <a href="https://www.foxnews.com" style="color: #16d1f2;">Fox News</a>, <a href="https://www.bbc.com" style="color: #16d1f2;">BBC</a>, and <a href="https://www.firstpost.com" style="color:#16d1f2">Firstpost</a>.</p>
                         </td>
                     </tr>
+
+                  <!-- Sources -->
                     <tr>
-                         <td class="joke-section" align="center">
-                            <h3>Joke of the Day</h3>
-                            <p>Why don't scientists trust atoms? Because they make up everything!</p>
+                        <td class="sources">
+                          <p>This newsletter is compiled from published news stories from:
+                          <br>
+                          <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
+                           <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and
+                            <a href="https://www.firstpost.com/" style="color: #16d1f2;text-decoration: none"> Firstpost</a>.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Joke of the Day -->
+                    <tr class="joke">
+                        <td align="center">
+                            <h2>Joke of the Day</h2>
+                            <p>Why don't scientists trust atoms? <br> Because they make up everything!</p>
                         </td>
                     </tr>
                 </table>
