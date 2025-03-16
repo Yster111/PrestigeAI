@@ -57,53 +57,24 @@
             border: 0;
             cellspacing: 0;
             cellpadding: 0;
-            background-color: #f4f4f4;
         }
 
         .newsletter-table {
-            width: 600px;
+            width: 80%;
             border: 0;
             cellspacing: 0;
             cellpadding: 20;
-            background-color: #ffffff;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            align: center;
         }
 
-        .newsletter-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #081a56;
-            padding-top: 10px;
-        }
-
-        .newsletter-date {
-            font-size: 16px;
-            color: #16d1f2;
-            padding-bottom: 10px;
-        }
-
-        .story-title {
-            color: #081a56;
-            font-size: 16px;
-            margin-top: 0;
-        }
-
-        .story-description {
-            color: #333333;
-            font-size: 14px;
-        }
-
-        .joke-title {
-            color: #081a56;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .joke-text {
-            color: #333333;
-            font-size: 14px;
-            font-style: italic;
+        .footer-table {
+            width: 100%;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 20;
+            background-color: #081a56;
+            color: #ffffff;
+            text-align: center;
         }
     </style>
 </head>
@@ -150,154 +121,86 @@
 
     <table>
         <tr>
-            <td align="center">
-                <table class="newsletter-table">
-                    <tr>
-                        <td align="center">
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" class="newsletter-title">
-                            Prestige AI - Daily Newsletter
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" class="newsletter-date">
-                            March 16, 2025 | Sunrise Edition
-                        </td>
-                    </tr>
-                    <tr><td style="border-bottom: 2px solid #081a56;"></td></tr>
+            <td>
+                <h1 style="color: #16d1f2; font-size: 2em; margin: 0.5em 0;">Prestige AI - Daily Newsletter</h1>
+                <p style="margin: 0;">
+                  <?php echo date("l, F j, Y"); ?>  - Afternoon Edition
+                </p>
+            </td>
+        </tr>
+    </table>
 
-                    <!-- News Stories -->
-                    <tr>
-                        <td style="padding-top: 20px;">
-                            <h2 style="color: #081a56; font-size: 20px; margin-bottom: 10px;">Top Stories</h2>
-                            <!-- Story 1 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                <tr>
-                                    <td valign="top" width="120">
-                                        <a href="https://www.foxnews.com/video/6370098178112" style="text-decoration: none;">
-                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/cd1ce235-07d5-4bab-bddc-3fccf1c13268/d63bde5b-3243-4d18-9eb5-5c82937cdc89/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="CENTCOM forces launch airstrikes against Houthis in Yemen" width="110" style="border: 1px solid #b0b0b0;">
-                                        </a>
-                                    </td>
-                                    <td valign="top">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/video/6370098178112" style="color: #081a56; text-decoration: none;">CENTCOM forces launch airstrikes against Houthis in Yemen</a></h3>
-                                        <p class="story-description">Following President Trump's orders, U.S. CENTCOM forces executed airstrikes targeting Houthi rebels in Yemen. The strikes were in response to ongoing threats from the Houthis to maritime traffic.</p>
-                                    </td>
-                                </tr>
-                            </table>
+    <table class="newsletter-table">
+        <tr>
+            <td>
+                <h2 style="color:#081a56; font-weight: bold; text-align: left">Top Headlines</h2>
+            </td>
+        </tr>
+        <?php
+            $newsItems = [
+                [
+                    "title" => "CENTCOM Forces Launch Airstrikes Against Houthis in Yemen",
+                    "summary" => "U.S. Central Command (CENTCOM) forces executed airstrikes targeting Houthi rebels in Yemen.  This action follows persistent Houthi attacks on shipping lanes and naval vessels in the Red Sea and Gulf of Aden, significantly disrupting international commerce. President Trump has condemned the attacks, emphasizing their impact on the global economy.",
+                    "link" => "https://www.foxnews.com/video/6370098178112"
+                ],
+                [
+                    "title" => "Former Israeli Hostage Speaks Out After 505 Days in Hamas Captivity",
+                    "summary" => "Tal Shoham, recently released after 505 days of captivity by Hamas, detailed his harrowing experience. He described being held in tunnels and various houses, facing starvation, abuse, and constant fear. Shoham's account highlights the brutal conditions endured by hostages and fuels calls for the release of remaining captives, including Evyatar David and Guy Gilboa-Dalal.",
+                    "link" => "https://www.foxnews.com/video/6370073618112"
+                ],
+                [
+                    "title" => "Trump Signals Progress in Russia, Ukraine Ceasefire Talks",
+                    "summary" => "President Trump indicated progress in ongoing ceasefire negotiations between Russia and Ukraine.  While details are scarce, the statement suggests a potential breakthrough after months of conflict. This aligns with Trump's previous pledges to facilitate a resolution to the conflict.",
+                    "link" => "https://www.foxnews.com/video/6370085725112"
+                ],
+                [
+                    "title" => "Cuba's Electrical Grid Collapses, Millions Without Power",
+                    "summary" => "Cuba experienced a nationwide power outage, leaving millions without electricity due to a failure in the aging power grid.  This incident underscores the country's ongoing energy crisis, exacerbated by fuel shortages and US sanctions.",
+                    "link" => "https://www.foxnews.com/world/cuba-still-largely-without-power-after-nationwide-grid-collapse"
+                ],
+                [
+                    "title" => "New Canadian PM Criticizes Trump, Vows to Maintain Tariffs",
+                    "summary" => "Mark Carney, Canada's new Prime Minister, directly criticized President Trump in his acceptance speech indicating Canada's tariffs against the U.S. will remain. He is expected to call an election soon.",
+                    "link" => "https://www.foxnews.com/world/canadas-new-pm-trump-critic-mark-carney-accused-being-out-touch-common-man"
+                ],
+                [
+                    "title" => "How JD Vance Became the Internet's Favourite Distorted Meme Face",
+                    "summary" => "JD Vance has become popular on the internet as users use images of him in a variety of memes of various contexts.",
+                    "link" => "https://www.firstpost.com/web-show/firstpostamerica/how-jd-vance-became-the-internets-favourite-distorted-meme-face-firstpost-america-n18g-vd955586/"
+                ]
+            ];
 
-                            <!-- Story 2 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                               <tr>
-                                    <td valign="top" width="120">
-                                        <a href="https://www.foxnews.com/video/6370085725112" style="text-decoration: none;">
-                                         <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/cfa4d2b4-4fe7-4ae6-b052-1ead81d964da/3878f072-c55d-4868-8dc7-b695b1075d84/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump signals progress in Russia, Ukraine ceasefire talks" width="110" style="border: 1px solid #b0b0b0;">
-                                        </a>
-                                    </td>
-                                    <td valign="top">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/video/6370085725112" style="text-decoration: none;">Trump signals progress in Russia, Ukraine ceasefire talks</a></h3>
-                                        <p class="story-description">President Trump has indicated potential progress in ceasefire negotiations between Russia and Ukraine. While details remain limited, there are indications that discussions are ongoing.</p>
-                                    </td>
-                                </tr>
-                            </table>
+            foreach ($newsItems as $item) {
+                echo '
+                <tr>
+                    <td>
+                        <h3 style="color: #081a56; font-weight: bold; margin-bottom: 0.5em;">' . $item["title"] . '</h3>
+                        <p style="color: #333333; line-height: 1.5;">' . $item["summary"] . '</p>
+                        <a href="' . $item["link"] . '" style="color: #16d1f2; text-decoration: none;">Read More</a>
+                    </td>
+                </tr>
+                <tr>
+                   <td style="border-bottom: 1px solid #b0b0b0;"></td>
+                </tr>';
+            }
+        ?>
+    </table>
 
-                            <!-- Story 3 -->
-                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                <tr>
-                                      <td valign="top" width="120">
-                                        <a href="https://www.foxnews.com/world/greenland-government-calls-trumps-acquisition-talks-unacceptable#" style="text-decoration: none;">
-                                           <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/greenland-election-2.jpg?ve=1&tl=1" alt="protest in greenland" width="110" style="border: 1px solid #b0b0b0;">
-                                         </a>
-                                      </td>
-                                    <td valign="top">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/world/greenland-government-calls-trumps-acquisition-talks-unacceptable#" style="text-decoration: none;">Greenland Rejects Trump's Acquisition Comments</a></h3>
-                                        <p class="story-description">The government of Greenland has firmly rejected President Trump's renewed interest in acquiring the territory, stating that such discussions are "unacceptable." All political parties in Greenland's parliament stand united in this position.</p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <!-- Story 4 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                <tr>
-                                    <td valign="top" width="120">
-                                        <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="text-decoration: none;">
-                                            <img src="https://images.firstpost.com/uploads/2025/02/Apple-to-launch-new-MacBook-Air-with-M4-chip-next-month-2025-02-01d295cffa3adfc6ed844b10bc762bd0-1200x675.jpg?im=FitAndFill=(596,336)" alt="Apple to launch new MacBook Air with M4 chip next month" width="110" style="border: 1px solid #b0b0b0;">
-                                         </a>
-                                    </td>
-                                    <td valign="top">
-                                        <h3 class="story-title"><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color: #081a56; text-decoration:none;">Apple to Launch New MacBook Air with M4 Chip</a></h3>
-                                         <p class="story-description">
-                                         Apple is expected to release new MacBook Air models with the advanced M4 chip in March. Reports are the new lineup is expected to deliver improved performance and efficiency.
-                                         </p>
-                                    </td>
-                                </tr>
-                             </table>
-
-                             <!-- Story 5 -->
-                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                <tr>
-                                    <td valign="top" width="120">
-                                         <a href="https://www.foxnews.com/world/cuba-still-largely-without-power-after-nationwide-grid-collapse#" style="text-decoration: none;">
-                                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/cuba-blackout.jpg?ve=1&tl=1" alt="Cuba's electrical grid collapses, millions without power" width="110" style="border: 1px solid #b0b0b0;">
-                                        </a>
-                                    </td>
-                                    <td valign="top">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/world/cuba-still-largely-without-power-after-nationwide-grid-collapse#" style="color: #081a56; text-decoration: none;">Cuba's Electrical Grid Collapses</a></h3>
-                                        <p class="story-description">Cuba experienced a nationwide power outage after its electrical grid collapsed. Millions are without electricity, raising concerns about the country's aging infrastructure.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                            <!-- Story 6 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                  <tr>
-                                     <td valign="top" width="120">
-
-                                     <a href="https://www.foxnews.com/world/israel-faces-new-syria-challenge-adjusts-new-strategy-amid-regional-power-struggle-influence#" style="text-decoration: none;">
-                                             <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/eyal-zamir-idf-.jpg?ve=1&tl=1" alt="Eyal Zamir speaks to troops in Syria" width="110" style="border: 1px solid #b0b0b0;">
-                                        </a>
-                                            </td>
-                                            <td valign="top">
-                                           <h3 class="story-title"><a href="https://www.foxnews.com/world/israel-faces-new-syria-challenge-adjusts-new-strategy-amid-regional-power-struggle-influence#" style="color: #081a56; text-decoration: none;">Israel Faces Instability in Syria</a></h3>
-                                        <p class="story-description">Following the overthrow of Bashar al-Assad, Israel has increased its military presence in the Syrian Golan Heights, citing concerns over jihadi groups and regional instability.</p>
-                                    </td>
-                                  </tr>
-                             </table>
-                             <!-- Story 7 -->
-                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="margin-bottom: 15px;">
-                                 <tr>
-                                    <td valign="top" width="120">
-                                           <a href="https://www.foxnews.com/world/trump-announces-decisive-powerful-airstrikes-against-houthi-terrorists-yemen#" style="text-decoration: none;">
-                                               <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/trump-houthis.jpg?ve=1&tl=1" alt="Houthi fighters are pictured next to U.S. President Donald Trump." width="110" style="border: 1px solid #b0b0b0;">
-                                           </a>
-                                       </td>
-                                     <td valign="top">
-                                         <h3 class="story-title"><a href="https://www.foxnews.com/world/trump-announces-decisive-powerful-airstrikes-against-houthi-terrorists-yemen#" style="text-decoration: none;">Trump Orders Airstrikes Against Houthis</a></h3>
-                                          <p class="story-description">President Trump announced that he ordered airstrikes against Houthi rebels in Yemen, citing their ongoing attacks on shipping and describing their actions as terrorism.</p>
-                                     </td>
-                                  </tr>
-                             </table>
-                        </td>
-                    </tr>
-
-                     <tr><td style="border-bottom: 2px solid #081a56; margin-top: 10px; margin-bottom: 10px;"></td></tr>
-                    <tr>
-                        <td style="font-size: 14px; color: #555555;">
-                            This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com/" style="color:#16d1f2; text-decoration:none;">Firstpost</a>.
-                        </td>
-                    </tr>
-                    <!-- Joke of the Day -->
-
-                    <tr>
-                         <td style="padding-top: 20px; padding-bottom: 10px;">
-                             <h2 class="joke-title">Joke of the Day</h2>
-                             <p class="joke-text">
-                                Why don't scientists trust atoms?  Because they make up everything!
-                             </p>
-                          </td>
-                    </tr>
-                </table>
+    <table class="footer-table">
+        <tr>
+            <td>
+                <p style="margin: 0.5em 0;">Compiled from published news stories from:
+                    <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none; margin: 0 0.5em;">Fox News</a>,
+                    <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none; margin: 0 0.5em;">BBC</a>,
+                    <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none; margin: 0 0.5em;">Firstpost</a>
+                </p>
+                <p style="margin: 1.0em 0; font-size: 1.2em; font-weight: bold; color: #16d1f2">Joke of the Day</p>
+                <p style="margin: 0;">What shirt should you wear to a tea party? A t-shirt.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="margin-top: 2em; font-size: 0.8em; color: #b0b0b0;">&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
             </td>
         </tr>
     </table>
