@@ -57,53 +57,71 @@
             border: 0;
             cellspacing: 0;
             cellpadding: 0;
-            background-color: #f4f4f4;
         }
 
         .newsletter-table {
-            width: 600px;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
-            background-color: #ffffff;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
         }
 
-        .newsletter-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #081a56;
-            padding-top: 10px;
+        .newsletter-header {
+            background-color: #081a56;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
         }
 
-        .newsletter-date {
-            font-size: 16px;
+        .newsletter-header img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .newsletter-header h1 {
             color: #16d1f2;
-            padding-bottom: 10px;
+            font-size: 2em;
+            margin: 0.5em 0;
         }
 
-        .story-title {
+        .newsletter-header p {
+            margin: 0;
+        }
+
+        .news-title {
             color: #081a56;
-            font-size: 16px;
-            margin-top: 0;
+            font-weight: bold;
+            margin-bottom: 0.5em;
         }
 
-        .story-description {
+        .news-summary {
             color: #333333;
-            font-size: 14px;
+            line-height: 1.5;
         }
 
-        .joke-title {
-            color: #081a56;
-            font-size: 18px;
-            margin-bottom: 10px;
+        .footer {
+            background-color: #081a56;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
         }
 
-        .joke-text {
-            color: #333333;
-            font-size: 14px;
-            font-style: italic;
+        .footer a {
+            color: #16d1f2;
+            text-decoration: none;
+            margin: 0 0.5em;
+        }
+
+        .joke {
+            margin: 1.0em 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #16d1f2;
+        }
+
+        .copyright {
+            margin-top: 2em;
+            font-size: 0.8em;
+            color: #b0b0b0;
         }
     </style>
 </head>
@@ -148,159 +166,82 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table>
-        <tr>
-            <td align="center">
-                <table class="newsletter-table">
-                    <tr>
-                        <td align="center">
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" class="newsletter-title">
-                            Prestige AI - Daily Newsletter
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" class="newsletter-date">
-                            March 16, 2025 | Sunrise Edition
-                        </td>
-                    </tr>
-                    <tr><td style="border-bottom: 2px solid #081a56;"></td></tr>
-
-                    <!-- News Stories -->
-                    <tr>
-                        <td style="padding-top: 20px;">
-                            <h2 style="color: #081a56; font-size: 20px; margin-bottom: 10px;">Top Stories</h2>
-                            <!-- Story 1 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                <tr>
-                                    <td valign="top" width="120">
-                                        <a href="https://www.foxnews.com/video/6370098178112" style="text-decoration: none;">
-                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/cd1ce235-07d5-4bab-bddc-3fccf1c13268/d63bde5b-3243-4d18-9eb5-5c82937cdc89/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="CENTCOM forces launch airstrikes against Houthis in Yemen" width="110" style="border: 1px solid #b0b0b0;">
-                                        </a>
-                                    </td>
-                                     <td valign="top">
-                                         <h3 class="story-title"><a href="https://www.foxnews.com/video/6370098178112" style="color: #081a56; text-decoration: none;">CENTCOM forces launch airstrikes against Houthis in Yemen</a></h3>
-                                        <p class="story-description">Following President Trump's orders, U.S. CENTCOM forces executed airstrikes targeting Houthi rebels in Yemen.  The strikes were in response to ongoing threats from the Houthis to maritime traffic.</p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <!-- Story 2 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                               <tr>
-                                    <td valign="top" width="120">
-                                        <a href="https://www.foxnews.com/video/6370085725112" style="text-decoration: none;">
-                                         <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/cfa4d2b4-4fe7-4ae6-b052-1ead81d964da/3878f072-c55d-4868-8dc7-b695b1075d84/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump signals progress in Russia, Ukraine ceasefire talks" width="110" style="border: 1px solid #b0b0b0;">
-                                        </a>
-                                    </td>
-                                    <td valign="top">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/video/6370085725112" style="text-decoration: none;">Trump signals progress in Russia, Ukraine ceasefire talks</a></h3>
-                                        <p class="story-description">President Trump has indicated potential progress in ceasefire negotiations between Russia and Ukraine.  While details remain limited, there are indications that discussions are ongoing.</p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <!-- Story 3 -->
-                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                <tr>
-                                      <td valign="top" width="120">
-                                        <a href="https://www.foxnews.com/world/greenland-government-calls-trumps-acquisition-talks-unacceptable#" style="text-decoration: none;">
-                                           <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/greenland-election-2.jpg?ve=1&tl=1" alt="protest in greenland" width="110" style="border: 1px solid #b0b0b0;">
-                                         </a>
-                                      </td>
-                                    <td valign="top">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/world/greenland-government-calls-trumps-acquisition-talks-unacceptable#" style="text-decoration: none;">Greenland Rejects Trump's Acquisition Comments</a></h3>
-                                        <p class="story-description">The government of Greenland has firmly rejected President Trump's renewed interest in acquiring the territory, stating that such discussions are "unacceptable." All political parties in Greenland's parliament stand united in this position.</p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <!-- Story 4 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                <tr>
-                                    <td valign="top" width="120">
-                                        <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="text-decoration: none;">
-                                            <img src="https://images.firstpost.com/uploads/2025/02/Apple-to-launch-new-MacBook-Air-with-M4-chip-next-month-2025-02-01d295cffa3adfc6ed844b10bc762bd0-1200x675.jpg?im=FitAndFill=(596,336)" alt="Apple to launch new MacBook Air with M4 chip next month" width="110" style="border: 1px solid #b0b0b0;">
-                                         </a>
-                                    </td>
-                                    <td valign="top">
-                                        <h3 class="story-title"><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color: #081a56; text-decoration:none;">Apple to Launch New MacBook Air with M4 Chip</a></h3>
-                                         <p class="story-description">
-                                         Apple is expected to release new MacBook Air models with the advanced M4 chip in March. Reports are the new lineup is expected to deliver improved performance and efficiency.
-                                         </p>
-                                    </td>
-                                </tr>
-                             </table>
-
-                             <!-- Story 5 -->
-                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                <tr>
-                                    <td valign="top" width="120">
-                                         <a href="https://www.foxnews.com/world/cuba-still-largely-without-power-after-nationwide-grid-collapse#" style="text-decoration: none;">
-                                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/cuba-blackout.jpg?ve=1&tl=1" alt="Cuba's electrical grid collapses, millions without power" width="110" style="border: 1px solid #b0b0b0;">
-                                        </a>
-                                    </td>
-                                    <td valign="top">
-                                        <h3 class="story-title"><a href="https://www.foxnews.com/world/cuba-still-largely-without-power-after-nationwide-grid-collapse#" style="color: #081a56; text-decoration: none;">Cuba's Electrical Grid Collapses</a></h3>
-                                        <p class="story-description">Cuba experienced a nationwide power outage after its electrical grid collapsed.  Millions are without electricity, raising concerns about the country's aging infrastructure.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                            <!-- Story 6 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
-                                  <tr>
-                                     <td valign="top" width="120">
-
-                                     <a href="https://www.foxnews.com/world/israel-faces-new-syria-challenge-adjusts-new-strategy-amid-regional-power-struggle-influence#" style="text-decoration: none;">
-                                             <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/eyal-zamir-idf-.jpg?ve=1&tl=1" alt="Eyal Zamir speaks to troops in Syria" width="110" style="border: 1px solid #b0b0b0;">
-                                        </a>
-                                            </td>
-                                            <td valign="top">
-                                           <h3 class="story-title"><a href="https://www.foxnews.com/world/israel-faces-new-syria-challenge-adjusts-new-strategy-amid-regional-power-struggle-influence#" style="color: #081a56; text-decoration: none;">Israel Faces Instability in Syria</a></h3>
-                                        <p class="story-description">Following the overthrow of Bashar al-Assad, Israel has increased its military presence in the Syrian Golan Heights, citing concerns over jihadi groups and regional instability.</p>
-                                    </td>
-                                  </tr>
-                             </table>
-                             <!-- Story 7 -->
-                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="margin-bottom: 15px;">
-                                 <tr>
-                                    <td valign="top" width="120">
-                                           <a href="https://www.foxnews.com/world/trump-announces-decisive-powerful-airstrikes-against-houthi-terrorists-yemen#" style="text-decoration: none;">
-                                               <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/trump-houthis.jpg?ve=1&tl=1" alt="Houthi fighters are pictured next to U.S. President Donald Trump." width="110" style="border: 1px solid #b0b0b0;">
-                                           </a>
-                                       </td>
-                                     <td valign="top">
-                                         <h3 class="story-title"><a href="https://www.foxnews.com/world/trump-announces-decisive-powerful-airstrikes-against-houthi-terrorists-yemen#" style="text-decoration: none;">Trump Orders Airstrikes Against Houthis</a></h3>
-                                          <p class="story-description">President Trump announced that he ordered airstrikes against Houthi rebels in Yemen, citing their ongoing attacks on shipping and describing their actions as terrorism.</p>
-                                     </td>
-                                  </tr>
-                             </table>
-                        </td>
-                    </tr>
-
-                     <tr><td style="border-bottom: 2px solid #081a56; margin-top: 10px; margin-bottom: 10px;"></td></tr>
-                    <tr>
-                        <td style="font-size: 14px; color: #555555;">
-                            This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com/" style="color:#16d1f2; text-decoration:none;">Firstpost</a>.
-                        </td>
-                    </tr>
-                    <!-- Joke of the Day -->
-
-                    <tr>
-                         <td style="padding-top: 20px; padding-bottom: 10px;">
-                             <h2 class="joke-title">Joke of the Day</h2>
-                             <p class="joke-text">
-                                Why don't scientists trust atoms?  Because they make up everything!
-                             </p>
-                          </td>
-                    </tr>
-                </table>
+    <table class="newsletter-table">
+        <tr class="newsletter-header">
+            <td>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/bDQAAAAw1BMVEUApf////8An/8Aov8Am/8AlP8Alf8AmP8Aj/8Ak/8Akv8Aof8AlP8Alv8Amf8Aqv8Mnv8Am/8AnP8Anf8Aqv8AnP8Amf8Am/8Ap/8Amv8Am/8AnP8Amf8Aov8AlP8AnP8Amf8Am/8Aof8Anv8AlP8Am/8AnP8Amf8Alv8AkP9M//8AnP8AlP8Amf8Al/8Amv8Aov8Amf8Alf8Aov8Alf8AnP8Amf8Am/8Alf8Alf8Alv9V//8AnP8AnP/Wd5/fAAAKGklEQVR4nO2dC3uqOhCGQwJCNg0C4ISwIWCBK3X//7uXmm520N6mmbKb281+31+nJIyJ5HhA0X7O0+K9/jYy78WyxS9N3D9/r8lP3p38z5f/mFvyx58n8H3I79wNf6417e71N+6D/r7fT3i98/MOf/J182bnn6/02B6D7z5y/zF4r3Hz6M19L97z3l7l/d/c+5v+p/88k/x/07+1k/2sRfpff70r8N3jT/7F93/T5r9u559H3/fL5r7371/qvvfH/L/63+/7x+r9v3u/+/+e/1/O+0L4g+T8Lvr3jL2f8/u5zQvyfU/5L+D7i/2nrvP5/r6+D+4m2H+x/7L6/0y+n/n9fP2r13l/+Uf7P85bf/339G977r54y9N/0/16kPq5t9W5v6+/2rV36T71x//P5/+W73//173vj/s9l//vV4z5u+z6f/e+D/j701L74//7+4++/+19/P+1vf/z/N/3+6j+iMh+q/t+Mv/Uf7+A/3851/k/46+058f+6+D/u977/+359b91rP/G/F/yfxPz+v/3z7593f7x/ffvf38/fv//319/d+/p+f///f///P3v3/n/7///3x/f/Hq/f7//fXf/8f3f7X73////T/5f/7/P7r7d///v/x6//86+m/f1/P/r7d///6f/3/314//P6v3//3/7/7/7/Pq/f77/7//1/9X9P/3++uvtfX///H6/f/779f7X74fXv8////v/////b93x9f/3/v1/f//d///v///5f7///X//P79P//++u7++///9////f5/f/7f/9////9/f//+X7//6f/3L3vv//6//v//P3//3/7//v/8/P76f///930f///+7/5/9//+//3x/f4+f/3/f//v//+fX7//6+/+/8f//f//f/5///8///6/8+v/9X7//6//9/+f/9/f////7/7/1/9X9/6+///f//3565///P6/v//vv7v/P/P//99fXf///X/7/7fX/v/+v/+//9///v//1/fv///9/f///1/f/99d//v//fHvX/Hv3P///1//7v//tf+//vf//P3r//P//+/Xf/4+p73/z77/9Xf/+f33/43h3+f/z9P/z9x//Pf6y878H6H8//P3///f/lT3H/9f//Xv7//3/9/P/8+ufX//67/P+77/P+vvv/z++X9/8+v/99//////Pz//7+P/77773z3/3/3//f/n/+V7//n///z8/P8P3/z6X//+fv8/ff/fv//Pf+fPf/3//1/z/z5/n/z4f3+/6z8j/v/38/3//n1/9/H///f8fX//H33P///4x/H/+f7//z/H8++z/9/9///vnv///////Hv//////7////1///tf/////vf//P///Hx++v//fP//f/7+7j7////P7///v////+vv/8+f/3///6/z/P/7H3/uP//57/P/4r73P/+59fj3z73/////P3z9f////f/8///5/9v///99fv///ff/v//+v/////1//////9f9f/7f//9+n/+n/////8////+f//f////9////////////+v/f/9////////////n////95/////////////+f//////+v/v///j/1/f7/////X/9/////+v//////////////+/////////8//j////////////////////////P//////////////////////////v///////+/x95/////////////////f/////////x9f//v////////////3//+f////1/////////////////+f/////9///+f////////+/5//////////////7////////////////////////////v//+/3//+/v//3/////f////////////////////////1/+//////////////////////P//////////////////////////9//////////////////////f///+f//////////////////////P///////////+/////////v///+///////////+/////+f//////3//////////////////////9////////////////////////////////////////////9////////////1//8///////////////////////v//1//P//8/+//////1/7/////Pf////////9+/7///n///9//////+/7////////////////////9////////4+//v///////////////////////3////f5/v//+/P///7//P//////9/f/P/9f///////9////////1////////+P/9///////////////////////////v/////9/9/9////9///////9////////////v////3///f//////////////////////////////8f5/////////1/////v///+/5///////////////9+/f//////////////////tf//////////f49/////////////////////////////5//////f///////////////7///////////////v//////////9/1/1////////////f////////8+///v////////v+f//v////////////9/////7/////vf/v/v/////////////////+v///+////////f///6///v/////////////3/9/////////////////3v/////////////////////////8/////////////////+f/////////f//////79/P/////////////////////////9///7///////////////5///////////f///8/7////////1/9///////////f//////f//////////////////////////1//////+/v///3//////////////////v//////f///////P//////////////////////X///////////+////////////6///////v/////////f///P//////f///7////+////////1/////////7//7+////////////////////////+/+////////1///4/////////////////1//////////////////////9///////9/////////////////9/////////////////v//3/v/v/////+//////////x//v/+///////////f///////////+/////+f/////9///////////+/////+//////v//v////f//////f//3///////+/P//+/v////f////////////v//////f/////////////1/9/////////////9///9//////8f9f//////////////u/////////////////f////////////////////f/+/+v///////////////////+///////////+f//f////////////////////////f///////X//////////////////////////////////////////////8////9//////////////////////////////////5/8//////8//8//x/////////1///////////+/////////f///j//////1/////////f///1//////////////////////9////////////////////1/////////////////////////+f/////////////////////v///////+/v//9////fv/////////////////n////////7////////////////////////7////9//////f//v//////////////////////////////8/////////////////+/////////////+////////////v//v//9/////////////7/////////P////////////////////////P///////////P///////////////3///////9///7///////////////P///////////////1////////////f//////9///////////f/////////////////1+P9fv/3///7/////////P/////////1//////////////////+f//X////////////////////////X//////////////////////////////////////////////8/////+f///////////////////////////////////9z+///////////////////////////////+f/xf/P/////////////////////////3////////////////////9f//////8f+/z//8////////1///f////////////vf//P/////////////////////////1////////1///8/////////////////////////P///44x/9/8f3/9////P////////////////////9///////////3///////////////4//////1////////////X//////f////////////////////////////+/uf////////////////+/v//v///////////////+f/////////////////////////+/v//v/////////////////////////1////////+/////+////////////////f//P//////////////////////////9/9/////////////1//////////////9//P//+v////////v/////////////////P/////////////////////////9/9///////1/////////////////////////7///////////////+/v//9///////////////////3//5//////7///////6///////////////////////////f///P//3///////////////3//////////////////9/+////////////+/////+///////8//////9///////////+/7/////P//////////////////////f/////////6////////////////////v//////////////////////f///////////////////////////P///////////+///////////////////+///////////P//3/////////////1//////////////////////f//3//+/P/////////////////////+////////////////9////+//////////////7///////////+//////////////7/////+//////v//////+//////////////////////f///////+/v////+//////////////////////v//3///////////f//v/////////////////////////1//////////////////+/////////////////////+////////////f///h//////f////1//////////////////////+/////+f/////////////////////////4//////f///////////////////////////+/////////3////////////ff//P///////////////////////////////P//////////////////9//////1///3+/////////////////////////9P/////P//////////////////////+P9//P+///////////+/////////1/7//v//////////5////////////////9//7///////////////////v/j/////////////////////////////j/////////////////////////////f///////6//////3//////P///////////////////f//////////////////////f///////v//9///////////////////+//////////////P////////////////////////P//////////////////////////5/////////+////////v/f/////P/////////////////////////9///////////P////////3///////////+/v/////P///////////////////////P/////////////////////////1////////////+f///3/////////////////////////////f3/////////////+///////////3///+/P////////////////////////9///////////N//+///////////+/////9////////////////////f/////////7/f////f///////////////////////P///T///////4/v///1////////////////////////7//////////////9///9////////1///////////P///////////+//////v//////f/////////v//////////9/////3//////////////////8//////////////////////////////////////+f///////8/f////////+f//////////////////////////////+/f////////////////////////+//P///////////////////////////////v//1///////////f/////////////8//9//////f///////////////////////f/////////////////////////////P//v/////////////////////////////P///////////////////////////vf//////////////////////////////+P//9//////f/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////4P/j///////////+/////////9///8//P//f///P8//////5///////////P//////f//P/////////////////////////f/////////////////////////P////////9///////////+/////////v/////////////////////////////P/////////////////////////////8/////////////////////////////v////////f/////////////////////////////v//////////////////////////////H/////f///////////////////////////////////////////////////////////7+P///////////////////////////////v/////////P///////////////////////////////P//////////////////////////9/////////////////////////////3/////////////////////////////P/////////////////////////P//////////////////////////////////////////////////////////////8/5////////f////////////////////////////////////////////////////////////9+P/////////////////////////////3//////////////////wAZUf/j+3/v///////////+f//////////////////////////////H+v+x/b/P/////////////////////////3////////////////////////////H//////////////////////////////////////////////////////////////4P//+/3//P//////////////////////////////////////////////////////////////9+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wL/AHhYn1kAAAAASUVORK5CYII=" alt="Prestige AI Logo">
+                <h1>Prestige AI - Daily Newsletter</h1>
+                <p><?php echo date("l, F j, Y"); ?>  - Afternoon Edition</p>
             </td>
         </tr>
     </table>
+
+    <table class="newsletter-table">
+        <tr>
+            <td>
+                <h2 class="news-title">Top Headlines</h2>
+            </td>
+        </tr>
+        <?php
+            $newsItems = [
+                [
+                    "title" => "CENTCOM Forces Launch Airstrikes Against Houthis in Yemen",
+                    "summary" => "U.S. Central Command (CENTCOM) forces executed airstrikes targeting Houthi rebels in Yemen.  This action follows persistent Houthi attacks on shipping lanes and naval vessels in the Red Sea and Gulf of Aden, significantly disrupting international commerce. President Trump has condemned the attacks, emphasizing their impact on the global economy.",
+                    "link" => "https://www.foxnews.com/video/6370098178112"
+                ],
+                [
+                    "title" => "Former Israeli Hostage Speaks Out After 505 Days in Hamas Captivity",
+                    "summary" => "Tal Shoham, recently released after 505 days of captivity by Hamas, detailed his harrowing experience. He described being held in tunnels and various houses, facing starvation, abuse, and constant fear. Shoham's account highlights the brutal conditions endured by hostages and fuels calls for the release of remaining captives, including Evyatar David and Guy Gilboa-Dalal.",
+                    "link" => "https://www.foxnews.com/video/6370073618112"
+                ],
+                [
+                    "title" => "Trump Signals Progress in Russia, Ukraine Ceasefire Talks",
+                    "summary" => "President Trump indicated progress in ongoing ceasefire negotiations between Russia and Ukraine.  While details are scarce, the statement suggests a potential breakthrough after months of conflict. This aligns with Trump's previous pledges to facilitate a resolution to the conflict.",
+                    "link" => "https://www.foxnews.com/video/6370085725112"
+                ],
+                [
+                    "title" => "Cuba's Electrical Grid Collapses, Millions Without Power",
+                    "summary" => "Cuba experienced a nationwide power outage, leaving millions without electricity due to a failure in the aging power grid.  This incident underscores the country's ongoing energy crisis, exacerbated by fuel shortages and US sanctions.",
+                    "link" => "https://www.foxnews.com/world/cuba-still-largely-without-power-after-nationwide-grid-collapse"
+                ],
+                [
+                    "title" => "New Canadian PM Criticizes Trump, Vows to Maintain Tariffs",
+                    "summary" => "Mark Carney, Canada's new Prime Minister, directly criticized President Trump in his acceptance speech indicating Canada's tariffs against the U.S. will remain. He is expected to call an election soon.",
+                    "link" => "https://www.foxnews.com/world/canadas-new-pm-trump-critic-mark-carney-accused-being-out-touch-common-man"
+                ],
+                [
+                    "title" => "How JD Vance Became the Internet's Favourite Distorted Meme Face",
+                    "summary" => "JD Vance has become popular on the internet as users use images of him in a variety of memes of various contexts.",
+                    "link" => "https://www.firstpost.com/web-show/firstpostamerica/how-jd-vance-became-the-internets-favourite-distorted-meme-face-firstpost-america-n18g-vd955586/"
+                ]
+            ];
+
+            foreach ($newsItems as $item) {
+                echo '
+                <tr>
+                    <td>
+                        <h3 class="news-title">' . $item["title"] . '</h3>
+                        <p class="news-summary">' . $item["summary"] . '</p>
+                        <a href="' . $item["link"] . '" style="color: #16d1f2; text-decoration: none;">Read More</a>
+                    </td>
+                </tr>
+                <tr>
+                   <td style="border-bottom: 1px solid #b0b0b0;"></td>
+                </tr>';
+            }
+        ?>
+    </table>
+
+    <div class="footer">
+        <p>Compiled from published news stories from:
+            <a href="https://www.foxnews.com">Fox News</a>,
+            <a href="https://www.bbc.com">BBC</a>,
+            <a href="https://www.firstpost.com">Firstpost</a>
+        </p>
+        <p class="joke">Joke of the Day</p>
+        <p>What shirt should you wear to a tea party? A t-shirt.</p>
+        <p class="copyright">&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
+    </div>
 
 </body>
 </html>
