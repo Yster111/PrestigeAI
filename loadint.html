@@ -58,54 +58,52 @@
             cellspacing: 0;
             cellpadding: 0;
             background-color: #f4f4f4;
-            color: #333;
         }
 
-        .newsletter-header {
-            background-color: #081a56;
-            color: #fff;
-            text-align: center;
+        .newsletter-table {
+            width: 600px;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 20;
+            background-color: #ffffff;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
-        .newsletter-header img {
-            width: 150px;
-            height: auto;
+        .newsletter-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #081a56;
+            padding-top: 10px;
         }
 
-        .newsletter-content {
-            max-width: 800px;
-            margin: auto;
-            background-color: #fff;
-            padding: 20px;
+        .newsletter-date {
+            font-size: 16px;
+            color: #16d1f2;
+            padding-bottom: 10px;
         }
 
-        .newsletter-content h2 {
+        .story-title {
+            color: #081a56;
+            font-size: 16px;
+            margin-top: 0;
+        }
+
+        .story-description {
+            color: #333333;
+            font-size: 14px;
+        }
+
+        .joke-title {
             color: #081a56;
             font-size: 18px;
-            margin-top: 20px;
+            margin-bottom: 10px;
         }
 
-        .newsletter-content p {
+        .joke-text {
+            color: #333333;
             font-size: 14px;
-            color: #555;
-        }
-
-        .joke-section {
-            background-color: #f8f8ff;
-            text-align: center;
-        }
-
-        .joke-section h2 {
-            color: #081a56;
-            margin-top: 10px;
             font-style: italic;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 12px;
-            color: #b0b0b0;
         }
     </style>
 </head>
@@ -150,69 +148,159 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table class="newsletter-header">
+    <table>
         <tr>
-            <td style="padding: 20px;">
-                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo">
-            </td>
-        </tr>
-        <tr>
-            <td style="padding: 10px;">
-                <h1 style="font-size: 24px; margin: 0; color: #fff;">Prestige AI - Daily Newsletter</h1>
-            </td>
-        </tr>
-        <tr>
-            <td style="padding-bottom: 10px">
-                <p style="font-size: 16px; margin: 5px 0 0; color: #16d1f2;">
-                    <script>
-                        document.write(new Date().toLocaleDateString());
-                    </script>
-                    - Afternoon Edition
-                </p>
+            <td align="center">
+                <table class="newsletter-table">
+                    <tr>
+                        <td align="center">
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" class="newsletter-title">
+                            Prestige AI - Daily Newsletter
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" class="newsletter-date">
+                            March 16, 2025 | Sunrise Edition
+                        </td>
+                    </tr>
+                    <tr><td style="border-bottom: 2px solid #081a56;"></td></tr>
+
+                    <!-- News Stories -->
+                    <tr>
+                        <td style="padding-top: 20px;">
+                            <h2 style="color: #081a56; font-size: 20px; margin-bottom: 10px;">Top Stories</h2>
+                            <!-- Story 1 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                                <tr>
+                                    <td valign="top" width="120">
+                                        <a href="https://www.foxnews.com/video/6370098178112" style="text-decoration: none;">
+                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/cd1ce235-07d5-4bab-bddc-3fccf1c13268/d63bde5b-3243-4d18-9eb5-5c82937cdc89/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="CENTCOM forces launch airstrikes against Houthis in Yemen" width="110" style="border: 1px solid #b0b0b0;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <h3 class="story-title"><a href="https://www.foxnews.com/video/6370098178112" style="color: #081a56; text-decoration: none;">CENTCOM forces launch airstrikes against Houthis in Yemen</a></h3>
+                                        <p class="story-description">Following President Trump's orders, U.S. CENTCOM forces executed airstrikes targeting Houthi rebels in Yemen. The strikes were in response to ongoing threats from the Houthis to maritime traffic.</p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Story 2 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                               <tr>
+                                    <td valign="top" width="120">
+                                        <a href="https://www.foxnews.com/video/6370085725112" style="text-decoration: none;">
+                                         <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/cfa4d2b4-4fe7-4ae6-b052-1ead81d964da/3878f072-c55d-4868-8dc7-b695b1075d84/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Trump signals progress in Russia, Ukraine ceasefire talks" width="110" style="border: 1px solid #b0b0b0;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <h3 class="story-title"><a href="https://www.foxnews.com/video/6370085725112" style="text-decoration: none;">Trump signals progress in Russia, Ukraine ceasefire talks</a></h3>
+                                        <p class="story-description">President Trump has indicated potential progress in ceasefire negotiations between Russia and Ukraine. While details remain limited, there are indications that discussions are ongoing.</p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Story 3 -->
+                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                                <tr>
+                                      <td valign="top" width="120">
+                                        <a href="https://www.foxnews.com/world/greenland-government-calls-trumps-acquisition-talks-unacceptable#" style="text-decoration: none;">
+                                           <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/greenland-election-2.jpg?ve=1&tl=1" alt="protest in greenland" width="110" style="border: 1px solid #b0b0b0;">
+                                         </a>
+                                      </td>
+                                    <td valign="top">
+                                        <h3 class="story-title"><a href="https://www.foxnews.com/world/greenland-government-calls-trumps-acquisition-talks-unacceptable#" style="text-decoration: none;">Greenland Rejects Trump's Acquisition Comments</a></h3>
+                                        <p class="story-description">The government of Greenland has firmly rejected President Trump's renewed interest in acquiring the territory, stating that such discussions are "unacceptable." All political parties in Greenland's parliament stand united in this position.</p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Story 4 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                                <tr>
+                                    <td valign="top" width="120">
+                                        <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="text-decoration: none;">
+                                            <img src="https://images.firstpost.com/uploads/2025/02/Apple-to-launch-new-MacBook-Air-with-M4-chip-next-month-2025-02-01d295cffa3adfc6ed844b10bc762bd0-1200x675.jpg?im=FitAndFill=(596,336)" alt="Apple to launch new MacBook Air with M4 chip next month" width="110" style="border: 1px solid #b0b0b0;">
+                                         </a>
+                                    </td>
+                                    <td valign="top">
+                                        <h3 class="story-title"><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color: #081a56; text-decoration:none;">Apple to Launch New MacBook Air with M4 Chip</a></h3>
+                                         <p class="story-description">
+                                         Apple is expected to release new MacBook Air models with the advanced M4 chip in March. Reports are the new lineup is expected to deliver improved performance and efficiency.
+                                         </p>
+                                    </td>
+                                </tr>
+                             </table>
+
+                             <!-- Story 5 -->
+                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                                <tr>
+                                    <td valign="top" width="120">
+                                         <a href="https://www.foxnews.com/world/cuba-still-largely-without-power-after-nationwide-grid-collapse#" style="text-decoration: none;">
+                                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/cuba-blackout.jpg?ve=1&tl=1" alt="Cuba's electrical grid collapses, millions without power" width="110" style="border: 1px solid #b0b0b0;">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <h3 class="story-title"><a href="https://www.foxnews.com/world/cuba-still-largely-without-power-after-nationwide-grid-collapse#" style="color: #081a56; text-decoration: none;">Cuba's Electrical Grid Collapses</a></h3>
+                                        <p class="story-description">Cuba experienced a nationwide power outage after its electrical grid collapsed. Millions are without electricity, raising concerns about the country's aging infrastructure.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Story 6 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                                  <tr>
+                                     <td valign="top" width="120">
+
+                                     <a href="https://www.foxnews.com/world/israel-faces-new-syria-challenge-adjusts-new-strategy-amid-regional-power-struggle-influence#" style="text-decoration: none;">
+                                             <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/eyal-zamir-idf-.jpg?ve=1&tl=1" alt="Eyal Zamir speaks to troops in Syria" width="110" style="border: 1px solid #b0b0b0;">
+                                        </a>
+                                            </td>
+                                            <td valign="top">
+                                           <h3 class="story-title"><a href="https://www.foxnews.com/world/israel-faces-new-syria-challenge-adjusts-new-strategy-amid-regional-power-struggle-influence#" style="color: #081a56; text-decoration: none;">Israel Faces Instability in Syria</a></h3>
+                                        <p class="story-description">Following the overthrow of Bashar al-Assad, Israel has increased its military presence in the Syrian Golan Heights, citing concerns over jihadi groups and regional instability.</p>
+                                    </td>
+                                  </tr>
+                             </table>
+                             <!-- Story 7 -->
+                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="margin-bottom: 15px;">
+                                 <tr>
+                                    <td valign="top" width="120">
+                                           <a href="https://www.foxnews.com/world/trump-announces-decisive-powerful-airstrikes-against-houthi-terrorists-yemen#" style="text-decoration: none;">
+                                               <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/trump-houthis.jpg?ve=1&tl=1" alt="Houthi fighters are pictured next to U.S. President Donald Trump." width="110" style="border: 1px solid #b0b0b0;">
+                                           </a>
+                                       </td>
+                                     <td valign="top">
+                                         <h3 class="story-title"><a href="https://www.foxnews.com/world/trump-announces-decisive-powerful-airstrikes-against-houthi-terrorists-yemen#" style="text-decoration: none;">Trump Orders Airstrikes Against Houthis</a></h3>
+                                          <p class="story-description">President Trump announced that he ordered airstrikes against Houthi rebels in Yemen, citing their ongoing attacks on shipping and describing their actions as terrorism.</p>
+                                     </td>
+                                  </tr>
+                             </table>
+                        </td>
+                    </tr>
+
+                     <tr><td style="border-bottom: 2px solid #081a56; margin-top: 10px; margin-bottom: 10px;"></td></tr>
+                    <tr>
+                        <td style="font-size: 14px; color: #555555;">
+                            This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com/" style="color:#16d1f2; text-decoration:none;">Firstpost</a>.
+                        </td>
+                    </tr>
+                    <!-- Joke of the Day -->
+
+                    <tr>
+                         <td style="padding-top: 20px; padding-bottom: 10px;">
+                             <h2 class="joke-title">Joke of the Day</h2>
+                             <p class="joke-text">
+                                Why don't scientists trust atoms?  Because they make up everything!
+                             </p>
+                          </td>
+                    </tr>
+                </table>
             </td>
         </tr>
     </table>
-
-    <div class="newsletter-content">
-        <p style="font-size: 14px; color: #555;">Today's news, curated for you with precision and insight. Compiled from published stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.</p>
-
-        <h2>Zelenskyy Accuses Putin of Stalling Ceasefire Talks, Pushes Trump for Tougher Sanctions</h2>
-        <p>Ukrainian President Volodymyr Zelenskyy has accused Russian President Vladimir Putin of intentionally delaying ceasefire negotiations and attempting to prolong the conflict. He urged former US president Donald Trump to impose stronger sanctions on Russia to pressure Putin into a deal. Trump acknowledged the possibility of financial actions "very bad for Russia" but reiterated his desire for peace.</p>
-        <a href="https://www.foxnews.com/world/zelenskyy-accuses-putin-trying-stall-ceasefire-talks-pushes-trump-tougher-sanctions" style="color: #16d1f2; text-decoration: none; font-size: 12px;">Read More on Fox News</a>
-
-        <h2>Trump Downplays Three-Way Nuclear Talks, Suggests Denuclearization Could Be on the Table</h2>
-        <p>President Donald Trump downplayed upcoming nuclear talks between China, Russia, and Iran, suggesting the discussions might focus on "de-escalation." He referenced past "strong" talks with Putin on nuclear weapons and expressed optimism about reaching a denuclearization agreement with Russia if he'd been president for the last three years.</p>
-        <a href="https://www.foxnews.com/world/trump-downplays-china-russia-iran-nuclear-talks-says-may-discuss-de-escalation" style="color: #16d1f2; text-decoration: none; font-size: 12px;">Read More on Fox News</a>
-
-        <h2>Detained Captain of Cargo Ship That Collided With US Tanker is Russian National</h2>
-        <p>The captain of the cargo ship Solong, which collided with a US-flagged tanker off the coast of England, is a Russian national. He is in UK police custody on suspicion of manslaughter by gross negligence. The collision resulted in a fire and jet fuel spill. One crew member from the Solong is missing and presumed dead.</p>
-        <a href="https://www.foxnews.com/world/detained-captain-cargo-ship-collided-us-oil-tanker-russian-national-ship-owner-says" style="color: #16d1f2; text-decoration: none; font-size: 12px;">Read More on Fox News</a>
-
-        <h2>United Nations Announces Initiative Aimed at Reducing Spending</h2>
-        <p>UN Secretary-General Antonio Guterres announced the "UN80 Initiative" to improve efficiency and restructure the organization. Critics suggest the initiative is a response to potential US spending cuts, though Guterres denies this. The move comes amid concerns about the UN's financial situation and potential impacts on its operations.</p>
-        <a href="https://www.foxnews.com/world/un80-initiative-appears-show-world-bodys-panic-over-possible-doge-like-cuts" style="color: #16d1f2; text-decoration: none; font-size: 12px;">Read More on Fox News</a>
-
-        <h2>Microsoft Unveils New Chip for Quantum Computing</h2>
-        <p>Microsoft has unveiled a new chip based on a "topoconductor" material, potentially accelerating the development of practical quantum computers. This breakthrough could lead to more stable and scalable quantum systems, with the potential for up to a million qubits. Experts acknowledge the progress but highlight the significant challenges that remain.</p>
-        <a href="https://www.firstpost.com/tech/microsoft-unveils-new-chip-that-could-make-quantum-computing-go-mainstream-in-just-few-years-13864959.html" style="color: #16d1f2; text-decoration: none; font-size: 12px;">Read More on Firstpost</a>
-
-        <h2>NATO chief praises Trump: You broke the deadlock on Ukraine</h2>
-        <p>President Donald Trump and NATO Secretary General Mark Rutte discussed peace talks between Russia and Ukraine in the Oval Office. Later, Fox News would be given exclusive access to the behind-the-scenes audio of the conversation, in which Rutte would praise Trump. "You broke the deadlock" on Ukraine, said the NATO chief, referring to an agreement earlier in the week where Ukraine agreed to conditions for a ceasefire.</p>
-        <a href="https://www.foxnews.com/video/6369984053112" style="color: #16d1f2; text-decoration: none; font-size: 12px;">Read More on Fox News</a>
-
-        <h2>'Liberal rules-based order needs a shake up:' Jaishankar's candid take on new world order, Trump and Russia</h2>
-        <p>Jaishankar says the old liberal way of international affairs is on its way out. He added he prefers a new world order to take its place. He said that despite public outcries, he is on good terms with his opposite numbers in Moscow, and he thinks they would still accept peace talks, if offered by India.</p>
-        <a href="https://www.firstpost.com/india/liberal-rules-based-order-needs-a-shake-up-jaishankars-candid-take-on-new-world-order-trump-and-russia-13871674.html" style="color: #16d1f2; text-decoration: none; font-size: 12px;">Read More on Firstpost</a>
-    </div>
-
-    <div class="joke-section">
-        <h2>Joke of the Day</h2>
-        <p style="font-size: 14px; font-style: italic; padding: 5px;">Why don't scientists trust atoms? Because they make up everything!</p>
-    </div>
-
-    <div class="footer">
-        &copy; 2024 Prestige AI. All rights reserved.
-    </div>
 
 </body>
 </html>
