@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements & Prestige AI - Daily Newsletter</title>
+    <title>Processing Financial Statements</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,31 +51,6 @@
             color: #081a56; /* Dark blue text */
             margin: 10px auto;
         }
-
-        table {
-            width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
-        }
-
-        .newsletter-table {
-            width: 80%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
-            margin: auto;
-        }
-
-        .footer-table {
-            width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
-            background-color: #081a56;
-            color: #ffffff;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
@@ -119,84 +94,124 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f4f4">
         <tr>
-            <td>
-                <h1 style="color: #16d1f2; font-size: 2em; margin: 0.5em 0;">Prestige AI - Daily Newsletter</h1>
-                <p style="margin: 0;">
-                  <?php echo date("l, F j, Y"); ?>  - Afternoon Edition
-                </p>
-            </td>
-        </tr>
-    </table>
+            <td align="center">
+                <table width="600" border="0" cellspacing="0" cellpadding="20" style="background-color: #ffffff; margin: 20px;">
+                    <!-- Header -->
+                    <tr>
+                        <td align="center" style="padding: 20px 0;">
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="200"
+                                style="display: block;">
+                            <h1 style="color: #081a56; font-size: 24px; margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
+                            <p style="color: #16d1f2; font-size: 16px; margin: 5px 0;">
+                                <?php echo date("F j, Y"); ?> - Sunrise Edition
+                            </p>
+                        </td>
+                    </tr>
 
-    <div class="newsletter-table">
-        <h2 style="color:#081a56; font-weight: bold; text-align: left">Top Headlines</h2>
-        <?php
-            $newsItems = [
-                [
-                    "title" => "CENTCOM Forces Launch Airstrikes Against Houthis in Yemen",
-                    "summary" => "U.S. Central Command (CENTCOM) forces executed airstrikes targeting Houthi rebels in Yemen.  This action follows persistent Houthi attacks on shipping lanes and naval vessels in the Red Sea and Gulf of Aden, significantly disrupting international commerce. President Trump has condemned the attacks, emphasizing their impact on the global economy.",
-                    "link" => "https://www.foxnews.com/video/6370098178112"
-                ],
-                [
-                    "title" => "Former Israeli Hostage Speaks Out After 505 Days in Hamas Captivity",
-                    "summary" => "Tal Shoham, recently released after 505 days of captivity by Hamas, detailed his harrowing experience. He described being held in tunnels and various houses, facing starvation, abuse, and constant fear. Shoham's account highlights the brutal conditions endured by hostages and fuels calls for the release of remaining captives, including Evyatar David and Guy Gilboa-Dalal.",
-                    "link" => "https://www.foxnews.com/video/6370073618112"
-                ],
-                [
-                    "title" => "Trump Signals Progress in Russia, Ukraine Ceasefire Talks",
-                    "summary" => "President Trump indicated progress in ongoing ceasefire negotiations between Russia and Ukraine.  While details are scarce, the statement suggests a potential breakthrough after months of conflict. This aligns with Trump's previous pledges to facilitate a resolution to the conflict.",
-                    "link" => "https://www.foxnews.com/video/6370085725112"
-                ],
-                [
-                    "title" => "Cuba's Electrical Grid Collapses, Millions Without Power",
-                    "summary" => "Cuba experienced a nationwide power outage, leaving millions without electricity due to a failure in the aging power grid.  This incident underscores the country's ongoing energy crisis, exacerbated by fuel shortages and US sanctions.",
-                    "link" => "https://www.foxnews.com/world/cuba-still-largely-without-power-after-nationwide-grid-collapse"
-                ],
-                [
-                    "title" => "New Canadian PM Criticizes Trump, Vows to Maintain Tariffs",
-                    "summary" => "Mark Carney, Canada's new Prime Minister, directly criticized President Trump in his acceptance speech indicating Canada's tariffs against the U.S. will remain. He is expected to call an election soon.",
-                    "link" => "https://www.foxnews.com/world/canadas-new-pm-trump-critic-mark-carney-accused-being-out-touch-common-man"
-                ],
-                [
-                    "title" => "How JD Vance Became the Internet's Favourite Distorted Meme Face",
-                    "summary" => "JD Vance has become popular on the internet as users use images of him in a variety of memes of various contexts.",
-                    "link" => "https://www.firstpost.com/web-show/firstpostamerica/how-jd-vance-became-the-internets-favourite-distorted-meme-face-firstpost-america-n18g-vd955586/"
-                ]
-            ];
+                    <!-- News Stories -->
+                    <tr>
+                        <td style="padding: 20px 0; border-top: 1px solid #b0b0b0;">
 
-            foreach ($newsItems as $item) {
-                echo '
-                <tr>
-                    <td>
-                        <h3 style="color: #081a56; font-weight: bold; margin-bottom: 0.5em;">' . $item["title"] . '</h3>
-                        <p style="color: #333333; line-height: 1.5;">' . $item["summary"] . '</p>
-                        <a href="' . $item["link"] . '" style="color: #16d1f2; text-decoration: none;">Read More</a>
-                    </td>
-                </tr>
-                <tr>
-                   <td style="border-bottom: 1px solid #b0b0b0;"></td>
-                </tr>';
-            }
-        ?>
-    </div>
+                            <!-- Story 1 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
+                                <tr>
+                                    <td style="padding-bottom: 10px;">
+                                        <h2 style="color: #081a56; font-size: 18px; margin: 0 0 10px 0;"><a href="https://www.firstpost.com/world/uk-chancellor-rachel-reeves-to-propose-action-plan-to-slash-red-tape-critics-compare-it-doge-13871933.html" style="color: #081a56; text-decoration: none;">UK Chancellor Rachel Reeves to Propose Action Plan to Slash 'Red Tape'</a></h2>
+                                        <p style="color: #333333; font-size: 14px; line-height: 1.5; margin: 0;">
+                                            UK Chancellor Rachel Reeves will announce a plan to cut administrative costs for businesses by 25%, reducing the number of regulators and streamlining regulations, including those related to environmental protection. This comes after criticisms of excessive "red tape," such as the costly bat tunnel built for the HS2 train line.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
 
-    <table class="footer-table">
-        <tr>
-            <td>
-                <p style="margin: 0.5em 0;">Compiled from published news stories from:
-                    <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none; margin: 0 0.5em;">Fox News</a>,
-                    <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none; margin: 0 0.5em;">BBC</a>,
-                    <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none; margin: 0 0.5em;">Firstpost</a>
-                </p>
-                <p style="margin: 1.0em 0; font-size: 1.2em; font-weight: bold; color: #16d1f2">Joke of the Day</p>
-                <p style="margin: 0;">What shirt should you wear to a tea party? A t-shirt.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p style="margin-top: 2em; font-size: 0.8em; color: #b0b0b0;">&copy; <?php echo date("Y"); ?> Prestige AI. All rights reserved.</p>
+                            <!-- Story 2 -->
+                             <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
+                                <tr>
+                                    <td style="padding-bottom: 10px;">
+                                        <h2 style="color: #081a56; font-size: 18px; margin: 0 0 10px 0;"><a href="https://www.foxnews.com/world/greenland-government-calls-trumps-acquisition-talks-unacceptable" style="color: #081a56; text-decoration: none;">Greenland Government Calls Trump's Acquisition Talks 'Unacceptable'</a></h2>
+                                        <p style="color: #333333; font-size: 14px; line-height: 1.5; margin: 0;">
+                                           Greenland's political leaders have unanimously rejected President Trump's renewed interest in acquiring Greenland, calling the remarks unacceptable and emphasizing Greenland's commitment to its people and international law.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Story 3 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
+                                <tr>
+                                    <td style="padding-bottom: 10px;">
+                                      <h2 style="color: #081a56; font-size: 18px; margin: 0 0 10px 0;"><a href="https://www.firstpost.com/tech/tesla-goes-on-a-hiring-spree-as-it-begins-to-ramp-up-production-of-optimus-humanoid-robot-13860392.html" style="color: #081a56; text-decoration: none;">Tesla Ramps Up Hiring for Optimus Humanoid Robot Production</a></h2>
+                                        <p style="color: #333333; font-size: 14px; line-height: 1.5; margin: 0;">
+                                            Tesla is significantly increasing its recruitment efforts for the mass production of its Optimus humanoid robot (Tesla Bot).  Job postings for manufacturing roles in Fremont, California, indicate a push towards commercial availability. Elon Musk emphasizes Optimus as a key future product.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Story 4 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
+                                <tr>
+                                    <td style="padding-bottom: 10px;">
+                                       <h2 style="color: #081a56; font-size: 18px; margin: 0 0 10px 0;"><a href="https://www.foxnews.com/video/6370122790112" style="color: #081a56; text-decoration: none;">Trump Orders Strikes Against Houthis in Yemen</a></h2>
+                                        <p style="color: #333333; font-size: 14px; line-height: 1.5; margin: 0;">
+                                            Former president Trump ordered strikes against Houthi rebels in Yemen. These strikes come amidst ongoing conflict.  (Provides a concise summary).
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Story 5 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
+                                <tr>
+                                    <td style="padding-bottom: 10px;">
+                                       <h2 style="color: #081a56; font-size: 18px; margin: 0 0 10px 0;"><a href="https://www.foxnews.com/world/cuba-still-largely-without-power-after-nationwide-grid-collapse" style="color: #081a56; text-decoration: none;">Cuba Still Largely Without Power After Nationwide Grid Collapse</a></h2>
+                                         <p style="color: #333333; font-size: 14px; line-height: 1.5; margin: 0;">
+                                           Cuba experienced a nationwide power grid collapse, leaving millions without electricity.  The aging infrastructure and economic restrictions are cited as contributing factors. Restoration efforts are underway, but a timeline remains unclear.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                                                        <!-- Story 6 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
+                                <tr>
+                                    <td style="padding-bottom: 10px;">
+                                       <h2 style="color: #081a56; font-size: 18px; margin: 0 0 10px 0;"><a href="https://www.foxnews.com/video/6370119142112" style="color: #081a56; text-decoration: none;">Russia Needs to ‘Unconditionally’ Say Yes to US Peace Proposal: Ukraine Official</a></h2>
+                                         <p style="color: #333333; font-size: 14px; line-height: 1.5; margin: 0;">
+                                            A Ukrainian official stated that Russia needs to unconditionally accept a U.S. peace proposal to end the war. This comes as peace proposal between both nations.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    <!-- Sources -->
+                    <tr>
+                        <td style="padding: 20px 0; border-top: 1px solid #b0b0b0;">
+                            <p style="color: #b0b0b0; font-size: 12px; text-align: center;">
+                                This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/"
+                                    style="color: #16d1f2; text-decoration: none;">Fox News</a>,
+                                <a href="https://www.bbc.co.uk/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and
+                                <a href="https://www.firstpost.com/"
+                                    style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Conclusion -->
+                    <tr>
+                        <td style="padding: 20px 0; border-top: 1px solid #b0b0b0; text-align: center;">
+                            <h3 style="color: #081a56; font-size: 16px; margin-bottom: 10px;">Joke of the Day</h3>
+                            <p style="color: #333333; font-size: 14px; line-height: 1.5;">
+                                Why don't scientists trust atoms?  Because they make up everything!
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
             </td>
         </tr>
     </table>
