@@ -57,50 +57,59 @@
             border: 0;
             cellspacing: 0;
             cellpadding: 0;
-            background-color: #f4f4f4;
         }
 
         .newsletter-table {
-            width: 600px;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
+            max-width: 800px;
+            margin: auto;
             background-color: #ffffff;
         }
 
-        .footer-table {
-            width: 600px;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
-            background-color: #f4f4f4;
+        .newsletter-header {
+            background-color: #081a56;
+            color: #ffffff;
+            padding: 20px;
         }
 
-        h1 {
-            color: #16d1f2;
-            margin: 10px 0;
+        .newsletter-header img {
+            display: block;
+            margin: auto;
         }
 
-        h2 {
+        .newsletter-header h1 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .newsletter-header p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .story-title {
             color: #081a56;
+            margin-top: 0;
         }
 
-        h3 {
+        .story-title a {
             color: #081a56;
-            margin-bottom: 5px;
-        }
-
-        p {
-            color: #333333;
-        }
-
-        a {
-            color: #16d1f2;
             text-decoration: none;
         }
 
-        img {
-            width: 100%;
+        .story-content {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #081a56;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer p {
+            font-size: 12px;
         }
     </style>
 </head>
@@ -145,94 +154,111 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table>
+    <table class="newsletter-header">
         <tr>
-            <td align="center">
-                <table class="newsletter-table">
+            <td align="center" style="padding: 20px;">
+                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
+                <h1>Prestige AI - Daily Newsletter</h1>
+                <p>
+                    <script>
+                        const today = new Date();
+                        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                        document.write(today.toLocaleDateString('en-US', options));
+                    </script>
+                </p>
+                <p>Sunrise Edition</p>
+            </td>
+        </tr>
+    </table>
+
+    <table class="newsletter-table">
+        <tr>
+            <td style="padding: 20px;">
+                <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Today's Top Stories</h2>
+
+                <!-- Story 1 -->
+                <table>
                     <tr>
-                        <td align="center">
-                            <img src="data:image/png;base64,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AQCUUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL0kGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANjakjXgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwJIkEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCUUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL0kGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANjakjXgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwJIkEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCUUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL0kGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANjakjXgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwJIkEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCUUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL0kGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANjakjXgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwJIkEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCUUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL0kGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANjakjXgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwJIkEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCUUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL0kGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANjakjXgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwJIkEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCUUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL0kGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANjakjXgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYPzP0y3L+yR93gAAAABJRU5ErkJggg==" alt="Prestige AI Logo" width="150">
-                            <h1>Prestige AI - Daily Newsletter</h1>
-                            <p>today() | Sunrise Edition</p>
+                        <td valign="top">
+                            <h3 class="story-title"><a href="https://www.foxnews.com/world/putin-orders-partial-ceasefire-after-call-trump-not-one-hoped#">Putin Orders Partial Ceasefire, Trump Hopes For More</a></h3>
+                            <p class="story-content">Russian President Putin ordered a 30-day ceasefire on Ukraine's energy infrastructure after a call with President Trump, but did not extend it to frontlines or civilian populations. Trump expressed a desire for a "Complete Ceasefire." Ukrainian President Zelenskyy expressed skepticism, citing continued Russian attacks. Further negotiations are planned.</p>
                         </td>
                     </tr>
                 </table>
 
-                <table class="newsletter-table">
+                <!-- Story 2 -->
+                <table>
                     <tr>
-                        <td>
-                            <h2>Top Stories</h2>
-
-                            <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                                <h3>Ceasefire over as IDF carries out strikes in Gaza Strip</h3>
-                                <p>The Israeli Defense Forces (IDF) have resumed strikes in the Gaza Strip following the end of a ceasefire. Reports indicate a significant escalation in military activity. Details surrounding the specific targets and the extent of the operations are still emerging.
-                                <a href="https://www.foxnews.com/video/6370167147112">Read More</a>
-                                </p>
-                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/0c135551-9458-4f1f-8a0b-5bacfc213faa/d58f4e78-b9f8-45d7-9891-ca5efa52bcfb/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Ceasefire over as IDF carries out strikes in Gaza Strip">
-                            </div>
-
-                            <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                                <h3>US forces launch sleek fighter jets to target Houthi terrorists: video</h3>
-                                <p>The US military has executed targeted strikes using advanced fighter jets against Houthi terrorist positions in Yemen. A brief video clip accompanied the news, adding a visual dimension to the story. This story highlights ongoing US counter-terrorism operations in the region.
-                                <a href="https://www.foxnews.com/video/6370166742112">Read More</a>
-                                </p>
-                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/ebf6a786-f236-41c7-b8a4-4ed36ea788ae/69ac42d3-fb56-48fd-bd79-c1795f4f4cde/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="US forces launch sleek fighter jets to target Houthi terrorists: video">
-                            </div>
-
-                            <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                                <h3>China sees ‘positive momentum’ after PM Modi backs ‘dialogue over discord’</h3>
-                                <p>China has responded favorably to Indian Prime Minister Narendra Modi's recent remarks advocating for stronger ties between the two nations. The Chinese government's media outlets have framed Modi's comments as constructive and in line with efforts to stabilize the relationship. However it also states that distrust remains.
-                                <a href="https://www.firstpost.com/world/china-sees-positive-momentum-after-pm-modi-backs-dialogue-over-discord-13872006.html">Read More</a>
-                                </p>
-                                <img src="https://images.firstpost.com/uploads/2024/10/mo-xi1-2024-10-5ee3589c3a4a1177031fb9f6a1283da0.jpg?im=FitAndFill=(596,336)" alt="China sees ‘positive momentum’ after PM Modi backs ‘dialogue over discord’">
-                            </div>
-
-                            <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                                <h3>Iran denies destabilizing activities in Yemen region</h3>
-                                <p>Iranian officials have refuted claims of contributing to instability in the Yemen region. This denial comes amid ongoing conflicts and accusations of Iranian involvement in supporting various factions within Yemen.
-                                <a href="https://www.foxnews.com/video/6370167375112">Read More</a>
-                                </p>
-                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/1556434a-27d6-45a9-acd0-6f258ce468d4/455a0c33-2dae-44e7-bd2b-8c1220f3fc40/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Iran denies destabilizing activities in Yemen region">
-                            </div>
-
-                            <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                                <h3>Microsoft prepares itself to host OpenAI's GPT-5 and other models, as AI competition increases</h3>
-                                <p>Microsoft is significantly expanding its server capacity to accommodate OpenAI's upcoming GPT-4.5 and GPT-5 models. GPT-5, in particular, is expected to be a major advancement, integrating multiple AI technologies, including OpenAI's "o3" reasoning model. There is also expected to be a change in the way users interact with chatgpt.
-                                <a href="https://www.firstpost.com/tech/microsoft-prepares-itself-to-host-openais-gpt-5-and-other-models-as-ai-competition-increases-13865357.html">Read More</a>
-                                </p>
-                                <img src="https://images.firstpost.com/uploads/2025/02/Microsoft-prepares-itself-to-host-OpenAIs-GPT-5-and-other-models-increasing-server-capacity-2025-02-5efe3c6d7bc7902237607247bd3dfafd-1200x675.jpg?im=FitAndFill=(596,336)" alt="Microsoft prepares itself to host OpenAI's GPT-5 and other models, as AI competition increases">
-                            </div>
-
-                            <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                                <h3>Apple finally launches its in-house modem with iPhone 16e, moving away from Qualcomm. Here's why it matters</h3>
-                                <p>Apple has announced its first in-house modem chip for the iPhone 16e, marking a significant step towards reducing its reliance on Qualcomm. The key component is designed to improve the devices performance efficiency and battery life.
-                                <a href="https://www.firstpost.com/tech/apple-finally-launches-its-in-house-modem-with-iphone-16e-moving-away-from-qualcomm-heres-why-it-matters-13864983.html">Read More</a>
-                                </p>
-                                <img src="https://images.firstpost.com/uploads/2025/02/Apple-finally-launches-its-in-house-modem-moving-away-from-Qualcomm.-Heres-why-it-matters-2025-02-bedcf39a6c3c335a8b6f853a58f1be44-1200x675.jpg?im=FitAndFill=(596,336)" alt="Apple finally launches its in-house modem with iPhone 16e, moving away from Qualcomm. Here's why it matters">
-                            </div>
-
-                            <div style="margin-bottom: 20px; padding-bottom: 15px;">
-                                <h3>Mass anti-corruption protests put strain on close European ally of Russia</h3>
-                                <p>Large-scale, student-led protests are challenging the long-standing rule of Serbian President Aleksandar Vucic. The protests initially focused on a railway collapse that caused multiple deaths, and expanded to include all systemic corruption.
-                                <a href="https://www.foxnews.com/world/mass-anti-corruption-protests-put-strain-close-european-ally-russia">Read More</a>
-                                </p>
-                                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/01/1200/675/ap25030490198751-scaled.jpg?ve=1&tl=1" alt="Mass anti-corruption protests put strain on close European ally of Russia">
-                            </div>
+                        <td valign="top">
+                            <h3 class="story-title"><a href="https://www.foxnews.com/world/research-team-member-isolated-antarctica-base-accused-attacking-colleague-sexual-harassment#">Assault Allegation Rocks Antarctic Research Base</a></h3>
+                            <p class="story-content">A member of a South African research team at a remote Antarctic base has been accused of physical assault and sexual harassment. The South African government is investigating and providing support to the team. The alleged perpetrator has apologized and is cooperating.</p>
                         </td>
                     </tr>
                 </table>
 
-                <table class="footer-table">
+                <!-- Story 3 -->
+                <table>
                     <tr>
-                        <td>
-                            <p style="color: #555555; font-size:12px;">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/">Fox News</a>,
-                            <a href="https://www.firstpost.com/"> Firstpost</a>.</p>
-
-                            <p style="color:#081a56; font-size: 16px; margin-top:20px"><b>Joke of the Day:</b><br>
-                            Why don't scientists trust atoms? <br> Because they make up everything!</p>
+                        <td valign="top">
+                            <h3 class="story-title"><a href="https://www.foxnews.com/world/israel-shoots-down-houthi-ballistic-missile-after-ceasefire-collapses#">Israel Intercepts Houthi Missile After Ceasefire Collapse</a></h3>
+                            <p class="story-content">The Israeli military intercepted a ballistic missile launched by Iran-backed Houthis in Yemen on Tuesday. The incident followed the collapse of a ceasefire between Israel and Hamas. Israeli airstrikes in Gaza have reportedly killed Hamas' head of government, among others.</p>
                         </td>
                     </tr>
                 </table>
+
+                <!-- Story 4 -->
+                <table>
+                    <tr>
+                        <td valign="top">
+                            <h3 class="story-title"><a href="https://www.firstpost.com/tech/chinas-byd-says-new-ev-charging-system-is-as-fast-as-filling-a-gas-tank-13872399.html">BYD Claims New EV Charging System as Fast as Filling a Gas Tank</a></h3>
+                            <p class="story-content">Chinese EV maker BYD claims its new charging system, the "super e-platform," will recharge vehicles in the time it takes to fill a gas tank, achieving 1,000 kW charging speeds. This would significantly outpace Tesla's Superchargers. The technology will initially be rolled out in two BYD models.</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Story 5 -->
+                <table>
+                    <tr>
+                        <td valign="top">
+                            <h3 class="story-title"><a href="https://www.firstpost.com/tech/nvidias-jensen-huang-to-unveil-cutting-edge-ai-and-quantum-computing-processors-13872267.html">NVIDIA Unveils New AI Tool for Learning American Sign Language</a></h3>
+                            <p class="story-content">NVIDIA has launched a new AI-powered free tool, named Signs, to make learning American Sign Language more accessible. The software uses AI to analyze learners movements and provides feedback.</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Story 6 -->
+                <table>
+                    <tr>
+                        <td valign="top">
+                            <h3 class="story-title"><a href="https://www.bbc.com/news/articles/c204290er1ro">Ecuador's President Calls for International Military Aid to Combat Gangs</a></h3>
+                            <p class="story-content">Ecuador's President Daniel Noboa has called for US, European, and Brazilian armies to assist in his "war" against criminal gangs. He also wants the US to designate Ecuadorean gangs as terrorist groups. Noboa emphasizes the international nature of the drug trafficking problem.</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Story 7 -->
+                <table>
+                    <tr>
+                        <td valign="top">
+                            <h3 class="story-title"><a href="https://www.foxnews.com/tech/massive-floating-solar-power-plant-making-waves">India Launches Massive Floating Solar Power Plant</a></h3>
+                            <p class="story-content">India has launched its largest floating solar park, the Omkareshwar Floating Solar Park, in Madhya Pradesh. The project showcases innovative engineering and is expected to generate substantial clean energy while conserving water.</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p style="color: #b0b0b0; font-size: 12px;">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2;">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2;">BBC</a>, and <a href="https://www.firstpost.com/" style="color: #16d1f2;">Firstpost</a>.</p>
+
+                <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Joke of the Day</h2>
+                <p style="color: #333;">Why don't scientists trust atoms? Because they make up everything!</p>
+
+            </td>
+        </tr>
+    </table>
+
+    <table class="footer">
+        <tr>
+            <td>
+                <p>&copy; 2025 Prestige AI. All rights reserved.</p>
             </td>
         </tr>
     </table>
