@@ -52,80 +52,39 @@
             margin: 10px auto;
         }
 
-        .newsletter-body {
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background-color: #f4f4f4; 
+        .newsletter {
+            background-color: #f4f4f4;
             color: #333;
-        }
-
-        .newsletter-header {
-            background-color: #081a56; 
             padding: 20px;
         }
 
-        .newsletter-header img {
+        .newsletter h2 {
+            color: #081a56;
+            border-bottom: 2px solid #16d1f2;
+            padding-bottom: 5px;
+        }
+
+        .newsletter img {
             display: block;
-        }
-
-        .newsletter-title {
-            color: #16d1f2; 
-            font-size: 24px; 
-            font-weight: bold; 
-            padding-top: 10px;
-        }
-
-        .newsletter-date {
-            color: #b0b0b0; 
-            font-size: 16px; 
-            padding-top: 5px;
-        }
-
-        .newsletter-content {
-            max-width: 600px; 
-            margin: auto; 
-            background-color: #fff;
-        }
-
-        .news-item {
-            border-bottom: 1px solid #b0b0b0;
-            padding: 10px;
-        }
-
-        .news-item img {
-            display: block; 
             border-radius: 4px;
         }
 
-        .news-item h3 {
-            color: #081a56; 
-            margin-top: 0; 
-            font-size: 16px;
+        .newsletter a {
+            color: #081a56;
+            text-decoration: none;
         }
 
-        .news-item p {
+        .newsletter p {
             font-size: 14px;
         }
 
-        .footer {
-            font-size: 12px; 
-            color: #b0b0b0;
-        }
-
-        .joke-section {
-            max-width: 600px; 
-            margin: auto; 
-            background-color: #f4f4f4;
-        }
-
-        .joke-title {
-            font-size: 16px; 
+        .joke {
+            font-size: 16px;
             margin: 2px;
         }
 
-        .joke-text {
-            font-style: italic; 
+        .joke p {
+            font-style: italic;
             font-size: 14px;
         }
     </style>
@@ -171,139 +130,139 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter-body">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="newsletter-header">
+    <div class="newsletter">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #081a56; padding: 20px;">
             <tr>
                 <td align="center">
                     <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
                 </td>
             </tr>
             <tr>
-                <td align="center" class="newsletter-title">
+                <td align="center" style="color: #16d1f2; font-size: 24px; font-weight: bold; padding-top: 10px;">
                     Prestige AI - Daily Newsletter
                 </td>
             </tr>
             <tr>
-                <td align="center" class="newsletter-date">
+                <td align="center" style="color: #b0b0b0; font-size: 16px; padding-top: 5px;">
                     Sunrise Edition -  March 20, 2025
                 </td>
             </tr>
         </table>
 
-        <div class="newsletter-content">
-            <h2 style="color: #081a56; border-bottom: 2px solid #16d1f2; padding-bottom: 5px;">Top Stories</h2>
+        <table width="100%" border="0" cellspacing="0" cellpadding="20" style="max-width: 600px; margin: auto; background-color: #fff;">
+            <tr>
+                <td>
+                    <h2>Top Stories</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0;">
+                        <tr>
+                            <td valign="top" width="120">
+                                <a href="https://www.foxnews.com/video/6370243762112">
+                                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/055c3cc9-ec35-40ca-a239-5bf4565a875e/75e70e5c-9f5d-4c03-98b4-9d214d4cb0bc/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="Students clash with police over detention of Istanbul mayor" width="120">
+                                </a>
+                            </td>
+                            <td valign="top">
+                                <h3><a href="https://www.foxnews.com/video/6370243762112">Students clash with police over detention of Istanbul mayor</a></h3>
+                                <p>Istanbul Mayor Ekrem İmamoğlu, a key rival of President Erdoğan, has been detained on charges of corruption and aiding a terrorist group, sparking protests and accusations of a political crackdown.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-            <!-- News Item 1 -->
-            <div class="news-item">
-                <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                    <tr>
-                        <td valign="top" width="120">
-                            <a href="https://www.foxnews.com/video/6370243762112" style="text-decoration: none;">
-                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/055c3cc9-ec35-40ca-a239-5bf4565a875e/75e70e5c-9f5d-4c03-98b4-9d214d4cb0bc/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="Students clash with police over detention of Istanbul mayor" width="120">
-                            </a>
-                        </td>
-                        <td valign="top">
-                            <h3><a href="https://www.foxnews.com/video/6370243762112" style="color: #081a56; text-decoration: none;">Students clash with police over detention of Istanbul mayor</a></h3>
-                            <p>Istanbul Mayor Ekrem İmamoğlu, a key rival of President Erdoğan, has been detained on charges of corruption and aiding a terrorist group, sparking protests and accusations of a political crackdown.</p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0;">
+                        <tr>
+                            <td valign="top" width="120">
+                                <a href="https://www.foxnews.com/video/6370203146112">
+                                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/65284d85-2a53-4201-8d7c-49535b275873/cf2886a5-065c-482a-a43a-4098bb3e27a2/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Benjamin Hall breaks down 'caveat' to Trump and Putin's partial ceasefire agreement" width="120">
+                                </a>
+                            </td>
+                            <td valign="top">
+                                <h3><a href="https://www.foxnews.com/video/6370203146112">Benjamin Hall breaks down 'caveat' to Trump and Putin's partial ceasefire agreement</a></h3>
+                                <p>Discussions between Trump and Putin regarding a potential ceasefire in Ukraine are underway, but details and conditions remain unclear, raising questions about the agreement's viability and scope.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-            <!-- News Item 2 -->
-            <div class="news-item">
-                <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                    <tr>
-                        <td valign="top" width="120">
-                            <a href="https://www.foxnews.com/video/6370203146112" style="text-decoration: none;">
-                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/65284d85-2a53-4201-8d7c-49535b275873/cf2886a5-065c-482a-a43a-4098bb3e27a2/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Benjamin Hall breaks down 'caveat' to Trump and Putin's partial ceasefire agreement" width="120">
-                            </a>
-                        </td>
-                        <td valign="top">
-                            <h3><a href="https://www.foxnews.com/video/6370203146112" style="color: #081a56; text-decoration: none;">Benjamin Hall breaks down 'caveat' to Trump and Putin's partial ceasefire agreement</a></h3>
-                            <p>Discussions between Trump and Putin regarding a potential ceasefire in Ukraine are underway, but details and conditions remain unclear, raising questions about the agreement's viability and scope.</p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0;">
+                        <tr>
+                            <td valign="top" width="120">
+                                <a href="https://www.foxnews.com/video/6370238332112">
+                                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/916a43fa-de37-4369-bbab-7192c250122e/81459526-35cd-463e-87bc-b24ccee96378/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="British man convicted in $6 million gold toilet heist" width="120">
+                                </a>
+                            </td>
+                            <td valign="top">
+                                <h3><a href="https://www.foxnews.com/video/6370238332112">British man convicted in $6 million gold toilet heist</a></h3>
+                                <p>A British man has been convicted of stealing a fully functioning, 18-carat gold toilet, titled "America," from Winston Churchill's birthplace. The artwork was valued at $6 million.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-            <!-- News Item 3 -->
-            <div class="news-item">
-                <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                    <tr>
-                        <td valign="top" width="120">
-                            <a href="https://www.foxnews.com/video/6370238332112" style="text-decoration: none;">
-                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/916a43fa-de37-4369-bbab-7192c250122e/81459526-35cd-463e-87bc-b24ccee96378/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="British man convicted in $6 million gold toilet heist" width="120">
-                            </a>
-                        </td>
-                        <td valign="top">
-                            <h3><a href="https://www.foxnews.com/video/6370238332112" style="color: #081a56; text-decoration: none;">British man convicted in $6 million gold toilet heist</a></h3>
-                            <p>A British man has been convicted of stealing a fully functioning, 18-carat gold toilet, titled "America," from Winston Churchill's birthplace. The artwork was valued at $6 million.</p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0;">
+                        <tr>
+                            <td valign="top" width="120">
+                                <a href="https://www.foxnews.com/video/6370243523112">
+                                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/7252fa5a-74b5-4a45-8221-4942325ed929/27ce73e3-c70d-46a6-95c2-cadb13ba70c3/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="Footage shows IDF deployed to central Gaza" width="120">
+                                </a>
+                            </td>
+                            <td valign="top">
+                                <h3><a href="https://www.foxnews.com/video/6370243523112">Footage shows IDF deployed to central Gaza</a></h3>
+                                <p>Israeli Defense Forces have deployed troops to central Gaza's Netzarim corridor, marking the first ground operation since the ceasefire collapse. This follows a wave of airstrikes targeting Hamas officials.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-            <!-- News Item 4 -->
-            <div class="news-item">
-                <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                    <tr>
-                        <td valign="top" width="120">
-                            <a href="https://www.foxnews.com/video/6370243523112" style="text-decoration: none;">
-                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/7252fa5a-74b5-4a45-8221-4942325ed929/27ce73e3-c70d-46a6-95c2-cadb13ba70c3/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="Footage shows IDF deployed to central Gaza" width="120">
-                            </a>
-                        </td>
-                        <td valign="top">
-                            <h3><a href="https://www.foxnews.com/video/6370243523112" style="color: #081a56; text-decoration: none;">Footage shows IDF deployed to central Gaza</a></h3>
-                            <p>Israeli Defense Forces have deployed troops to central Gaza's Netzarim corridor, marking the first ground operation since the ceasefire collapse. This follows a wave of airstrikes targeting Hamas officials.</p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0;">
+                        <tr>
+                            <td valign="top" width="120">
+                                <a href="https://www.foxnews.com/video/6370203097112">
+                                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/599677b6-212e-4b3c-87b0-202062e9f123/629620c8-7c41-4a74-b312-0ecb26391d43/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Israel's Chief of Staff visits Gaza" width="120">
+                                </a>
+                            </td>
+                            <td valign="top">
+                                <h3><a href="https://www.foxnews.com/video/6370203097112">Israel's Chief of Staff visits Gaza</a></h3>
+                                <p>Israel's Chief of Staff visited Gaza amid ongoing military operations. This visit comes after a new ground operation was launched in central Gaza and airstrikes continued throughout the region.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-            <!-- News Item 5 -->
-            <div class="news-item">
-                <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                    <tr>
-                        <td valign="top" width="120">
-                            <a href="https://www.foxnews.com/video/6370203097112" style="text-decoration: none;">
-                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/599677b6-212e-4b3c-87b0-202062e9f123/629620c8-7c41-4a74-b312-0ecb26391d43/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Israel's Chief of Staff visits Gaza" width="120">
-                            </a>
-                        </td>
-                        <td valign="top">
-                            <h3><a href="https://www.foxnews.com/video/6370203097112" style="color: #081a56; text-decoration: none;">Israel's Chief of Staff visits Gaza</a></h3>
-                            <p>Israel's Chief of Staff visited Gaza amid ongoing military operations. This visit comes after a new ground operation was launched in central Gaza and airstrikes continued throughout the region.</p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- News Item 6 -->
-            <div class="news-item">
-                <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                    <tr>
-                        <td valign="top" width="120">
-                            <a href="https://www.foxnews.com/video/6370251075112" style="text-decoration: none;">
-                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/f67e231f-0f9d-4541-bcb6-38812e2bad2a/dad2c195-f5fe-4dc6-97eb-455ae159e72e/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="White House vows to win deportation battle in court amid legal setbacks" width="120">
-                            </a>
-                        </td>
-                        <td valign="top">
-                            <h3><a href="https://www.foxnews.com/video/6370251075112" style="color: #081a56; text-decoration: none;">White House vows to win deportation battle in court amid legal setbacks</a></h3>
-                            <p>The White House has stated its commitment to continuing deportation efforts despite recent legal challenges, emphasizing the administration's focus on removing individuals deemed threats to national security.</p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="footer">
-                <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2;">Fox News</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2;">Firstpost</a>.</p>
-            </div>
-        </div>
-
-        <div class="joke-section">
-            <h3 class="joke-title">Joke of the Day</h3>
-            <p class="joke-text">Why don't scientists trust atoms? Because they make up everything!</p>
-        </div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 0px solid #b0b0b0;">
+                        <tr>
+                            <td valign="top" width="120">
+                                <a href="https://www.foxnews.com/video/6370251075112">
+                                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/f67e231f-0f9d-4541-bcb6-38812e2bad2a/dad2c195-f5fe-4dc6-97eb-455ae159e72e/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="White House vows to win deportation battle in court amid legal setbacks" width="120">
+                                </a>
+                            </td>
+                            <td valign="top">
+                                <h3><a href="https://www.foxnews.com/video/6370251075112">White House vows to win deportation battle in court amid legal setbacks</a></h3>
+                                <p>The White House has stated its commitment to continuing deportation efforts despite recent legal challenges, emphasizing the administration's focus on removing individuals deemed threats to national security.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="font-size: 12px; color: #b0b0b0;">
+                        This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2;">Fox News</a>, and
+                        <a href="https://www.firstpost.com" style="color: #16d1f2;">Firstpost</a>.
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="20" style="max-width: 600px; margin: auto; background-color: #f4f4f4;">
+            <tr>
+                <td align="center">
+                    <h3 class="joke">Joke of the Day</h3>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <p class="joke">Why don't scientists trust atoms? Because they make up everything!</p>
+                </td>
+            </tr>
+        </table>
     </div>
 
 </body>
