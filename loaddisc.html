@@ -52,31 +52,57 @@
             margin: 10px auto;
         }
 
-        .newsletter {
-            background-color: #f4f4f4;
-            color: #333;
-            padding: 20px;
-        }
-
-        .newsletter h1, .newsletter h2 {
-            color: #081a56;
-        }
-
-        .newsletter a {
-            color: #16d1f2;
-            text-decoration: none;
-        }
-
-        .newsletter img {
-            border-radius: 5px;
+        table {
             width: 100%;
-            display: block;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 0;
+            background-color: #f4f4f4;
         }
 
-        .joke {
-            background-color: #081a56;
-            color: #fff;
-            padding: 20px;
+        .newsletter-table {
+            width: 600px;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 20;
+            background-color: #ffffff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .newsletter-title {
+            color: #081a56;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .newsletter-date {
+            color: #16d1f2;
+            margin: 5px 0 0 0;
+            font-size: 16px;
+        }
+
+        .news-story-title {
+            color: #081a56;
+            font-size: 16px;
+            margin-top: 0;
+        }
+
+        .news-story-description {
+            font-size: 14px;
+        }
+
+        .joke-title {
+            color: #081a56;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .joke-text {
+            color: #666;
+            margin: 5px 0 0 0;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -121,143 +147,140 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #081a56; color: #fff;">
-            <tr>
-                <td align="center" style="padding: 20px;">
-                    <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                    <h1 style="font-size: 24px; margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
-                    <p style="font-size: 16px; margin: 5px 0;">
-                        <?php echo date("F j, Y"); ?> - Sunrise Edition
-                    </p>
-                </td>
-            </tr>
-        </table>
+    <table>
+        <tr>
+            <td align="center">
+                <table class="newsletter-table">
+                    <tr>
+                        <td align="center">
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding: 20px 0;">
+                            <h1 class="newsletter-title">Prestige AI - Daily Newsletter</h1>
+                            <p class="newsletter-date">
+                                <script>
+                                  document.write(new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+                                </script> - Sunrise Edition
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top: 2px solid #081a56; margin-top: 20px;"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <h2 style="color: #081a56; font-size: 20px;">Top Stories</h2>
+                          <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                              <tr>
+                                  <a href="https://www.foxnews.com/world/israel-orders-idf-seize-more-gaza-territory-hamas-doesnt-release-hostages" >
+                                    <td width="150" valign="top" >
+                                        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/idf-in-gaza-1.jpg?ve=1&tl=1" alt="IDF troops in Gaza Strip" width="140" style="border-radius: 5px;">
+                                    </td>
+                                  </a>
+                                  <td valign="top">
+                                      <h3 class="news-story-title"><a href="https://www.foxnews.com/world/israel-orders-idf-seize-more-gaza-territory-hamas-doesnt-release-hostages" style="color: #081a56; text-decoration: none;">Israel Orders IDF to Seize More Gaza Territory if Hamas Doesn't Release Hostages</a></h3>
+                                      <p class="news-story-description">Israeli Defense Minister Israel Katz has ordered the IDF to seize more territory in Gaza if Hamas continues to refuse to release hostages. The IDF resumed the war in Gaza after a nearly two-month-long ceasefire. Katz stated that as Hamas continues its refusal, it will lose more territory to Israel.</p>
+                                  </td>
+                              </tr>
+                          </table>
+                        </td>
+                    </tr>
+                    <tr><td style="border-top: 1px solid #b0b0b0; margin-top: 10px; margin-bottom: 10px;" ></td></tr>
+                    <tr>
+                        <td>
+                          <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                              <tr>
+                                <a href="https://www.foxnews.com/world/canada-says-china-executed-4-canadians-year-amid-rising-tensions-between-countries" >
+                                  <td width="150" valign="top">
+                                      <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/canada-foreign-affairs-minister-melanie-joly-says-china-executed-4-canadians.jpg?ve=1&tl=1" alt="Canada Foreign Affairs Minister Melanie Joly" width="140" style="border-radius: 5px;">
+                                  </td>
+                                </a>
+                                  <td valign="top">
+                                      <h3 class="news-story-title"><a href="https://www.foxnews.com/world/canada-says-china-executed-4-canadians-year-amid-rising-tensions-between-countries" style="text-decoration:none; color:#081a56;">China Executes Four Canadians for Drug Crimes, Says Ottawa</a></h3>
+                                      <p class="news-story-description">Canadian Foreign Minister Mélanie Joly confirmed that China executed four Canadian dual citizens on drug-related charges. Clemency requests were denied. China's embassy stated the executions were due to drug crimes and that China does not recognize dual citizenship.</p>
+                                  </td>
+                              </tr>
+                          </table>
+                        </td>
+                    </tr>
+                    <tr><td style="border-top: 1px solid #b0b0b0; margin-top: 10px; margin-bottom: 10px;" ></td></tr>
+                    <tr>
+                          <td>
+                              <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                                <tr>
+                                  <a href="https://www.firstpost.com/world/erdogan-vows-to-crush-street-terror-as-turkeys-opposition-holds-massive-protests-against-leaders-arrest-13873480.html">
+                                    <td width="150" valign="top">
+                                        <img src="https://images.firstpost.com/uploads/2025/03/firstpost-news-latest-82-2025-03-69fc2293dca57d1347abc074068bcef2-1200x675.jpg?im=FitAndFill=(596,336)" alt="Protests in Turkey" width="140" style="border-radius: 5px;">
+                                    </td>
+                                  </a>
+                                    <td valign="top">
+                                        <h3 class="news-story-title"><a href="https://www.firstpost.com/world/erdogan-vows-to-crush-street-terror-as-turkeys-opposition-holds-massive-protests-against-leaders-arrest-13873480.html" style="color: #081a56; text-decoration: none;">Erdogan Vows to Crush ‘Street Terror’ as Turkey’s Opposition Holds Protests</a></h3>
+                                        <p class="news-story-description">Protests have erupted in Turkey following the detention of President Erdogan's main political rival, Ekrem Imamoglu. Erdogan has warned that Turkey "will not surrender to street terror" in response to the protests.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                          </td>
+                    </tr>
+                   <tr><td style="border-top: 1px solid #b0b0b0; margin-top: 10px; margin-bottom: 10px;" ></td></tr>
 
-        <table width="100%" border="0" cellspacing="0" cellpadding="20" style="max-width: 600px; margin: auto; background-color: #fff;">
-            <tr>
-                <td style="padding: 20px;">
-                    <h2 style="font-size: 20px; color: #081a56; margin-bottom: 15px;">Top News Stories</h2>
+                    <tr>
+                          <td>
+                              <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                                <tr>
+                                  <a href="https://www.firstpost.com/tech/how-alibaba-came-to-dominate-chinas-ai-scene-13862896.html" >
+                                    <td width="150" valign="top">
+                                        <img src="https://images.firstpost.com/uploads/2025/02/How-Alibaba-came-to-dominate-Chinas-AI-scene-2025-02-2a4e3d44b0535f07fcf571f3738f1810-1200x675.jpg?im=FitAndFill=(596,336)" alt="Alibaba AI" width="140" style="border-radius: 5px;">
+                                    </td>
+                                  </a>
+                                    <td valign="top">
+                                        <h3 class="news-story-title"><a href="https://www.firstpost.com/tech/how-alibaba-came-to-dominate-chinas-ai-scene-13862896.html" style="text-decoration:none; color:#081a56">How Alibaba Came to Dominate China's AI Scene</a></h3>
+                                        <p class="news-story-description">Alibaba has become a major player in China's AI industry, with its shares skyrocketing 46% since mid-January. The company has invested heavily in AI startups and cloud expansion, and its Qwen 2.5 Max model has outperformed competitors in benchmark tests.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                          </td>
+                    </tr>
 
-                    <!-- News Story 1 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td style="padding-bottom: 10px;">
-                                <h3 style="font-size: 18px; color: #16d1f2; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/world/israel-begins-ground-operation-hamas-stronghold-rafah-expands-activities-gaza">Footage shows IDF deployed to central Gaza</a></h3>
-                                <p style="font-size: 14px; line-height: 1.5; margin: 0;">Israel has deployed troops to central Gaza for the first time. Ground operations are underway in the Shavura neighborhood, and parts of central and northern Gaza, targeting terrorist infrastructure. This follows the collapse of a ceasefire with Hamas and renewed rocket attacks.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="https://www.foxnews.com/world/israel-begins-ground-operation-hamas-stronghold-rafah-expands-activities-gaza"><img src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/7252fa5a-74b5-4a45-8221-4942325ed929/27ce73e3-c70d-46a6-95c2-cadb13ba70c3/1280x720/match/image.jpg" alt="IDF in Gaza" width="100%" style="display: block;"></a>
-                            </td>
-                        </tr>
-                    </table>
+                  <tr><td style="border-top: 1px solid #b0b0b0; margin-top: 10px; margin-bottom: 10px;" ></td></tr>
 
-                    <!-- News Story 2 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td style="padding-bottom: 10px;">
-                                <h3 style="font-size: 18px; color: #16d1f2; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/world/canada-says-china-executed-4-canadians-year-amid-rising-tensions-between-countries">China Executes Four Canadians Amid Rising Tensions</a></h3>
-                                <p style="font-size: 14px; line-height: 1.5; margin: 0;">Canadian Foreign Minister Mélanie Joly revealed that China has executed four Canadian dual citizens in recent months on drug-related charges. Canada's requests for clemency were denied. This comes amid increasing tensions between the two nations, including tariff disputes.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="https://www.foxnews.com/world/canada-says-china-executed-4-canadians-year-amid-rising-tensions-between-countries"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/canada-foreign-affairs-minister-melanie-joly-says-china-executed-4-canadians.jpg?ve=1&tl=1" alt="Melanie Joly" width="100%" style="display: block;"></a>
-                            </td>
-                        </tr>
-                    </table>
+                    <tr>
+                       <td>
+                          <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                              <tr>
+                                <a href= "https://www.foxnews.com/world/trumps-hostage-envoy-boehler-met-taliban-kabul-first-person-meeting-since-takeover" >
+                                  <td width="150" valign="top">
+                                      <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/qatar.jpg?ve=1&tl=1" alt="Adam Boehler with Qatari officials" width="140" style="border-radius: 5px;">
+                                  </td>
+                               </a>
+                                  <td valign="top">
+                                      <h3 class="news-story-title"><a href="https://www.foxnews.com/world/trumps-hostage-envoy-boehler-met-taliban-kabul-first-person-meeting-since-takeover" style="color: #081a56; text-decoration: none;">Trump’s Hostage Envoy Boehler Met with Taliban in Kabul</a></h3>
+                                      <p class="news-story-description">Hostage envoy Adam Boehler met with Taliban officials in Kabul, marking the first known in-person meeting between the White House and Afghanistan's "interim government" since the 2021 takeover. The meeting focused on securing the release of George Glezmann and discussing other beneficial issues.</p>
+                                  </td>
+                              </tr>
+                          </table>
+                        </td>
+                      </tr>
 
-                    <!-- News Story 3 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td style="padding-bottom: 10px;">
-                                <h3 style="font-size: 18px; color: #16d1f2; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/world/taliban-frees-american-hostage-george-glezmann-following-negotiations-us-qatar">Taliban Frees American Hostage After Negotiations</a></h3>
-                                <p style="font-size: 14px; line-height: 1.5; margin: 0;">American hostage George Glezmann has been released by the Taliban after over two years in captivity. The release followed negotiations involving the Trump administration and Qatari officials. This was reportedly a "goodwill gesture" by the Taliban.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="https://www.foxnews.com/world/taliban-frees-american-hostage-george-glezmann-following-negotiations-us-qatar"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/george-glezmann.jpg?ve=1&tl=1" alt="George Glezmann" width="100%" style="display: block;"></a>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!-- News Story 4 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td style="padding-bottom: 10px;">
-                                <h3 style="font-size: 18px; color: #16d1f2; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/world/israel-reimposes-blockade-northern-gaza-including-capital-gaza-city">Israel Reimposes Blockade on Northern Gaza, Including Gaza City</a></h3>
-                                <p style="font-size: 14px; line-height: 1.5; margin: 0;">Israeli troops have re-imposed a blockade on Gaza City and are conducting further ground operations in northern Gaza. This comes after a temporary ceasefire collapsed and Hamas launched rockets into Israel. Dozens of Palestinians have been reported killed in recent strikes.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="https://www.foxnews.com/world/israel-reimposes-blockade-northern-gaza-including-capital-gaza-city"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/idf-tanks-facing-gaza-scaled.jpg?ve=1&tl=1" alt="IDF tanks" width="100%" style="display: block;"></a>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!-- News Story 5 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td style="padding-bottom: 10px;">
-                                <h3 style="font-size: 18px; color: #16d1f2; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/world/military-leaders-meet-uk-france-coalition-willing-plan-ukraine">UK-France Led Coalition Plans for Peacekeeping Force in Ukraine</a></h3>
-                                <p style="font-size: 14px; line-height: 1.5; margin: 0;">A "coalition of the willing," led by the UK and France, is planning a peacekeeping force for Ukraine. While details are still being worked out, the coalition reportedly includes several European nations, and discussions have involved President Trump.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="https://www.foxnews.com/world/military-leaders-meet-uk-france-coalition-willing-plan-ukraine"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/zelenskyy-starmer-macron.jpg?ve=1&tl=1" alt="Zelenskyy, Starmer, and Macron" width="100%" style="display: block;"></a>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!-- News Story 6 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td style="padding-bottom: 10px;">
-                                <h3 style="font-size: 18px; color: #16d1f2; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/world/world-leader-agrees-vance-mass-migration-threat-daily-life">Danish PM Agrees with Vance on Mass Migration Threat</a></h3>
-                                <p style="font-size: 14px; line-height: 1.5; margin: 0;">Danish Prime Minister Mette Frederiksen has echoed concerns raised by US Vice President JD Vance about the threat of mass migration to Europe. Frederiksen's government has implemented strict anti-migration policies, aligning with Vance's call for Europe to uphold its fundamental values.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="https://www.foxnews.com/world/world-leader-agrees-vance-mass-migration-threat-daily-life"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/01/1200/675/denmark.png?ve=1&tl=1" alt="Danish Prime Minister Frederiksen" width="100%" style="display: block;"></a>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!-- News Story 7 -->
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                        <tr>
-                            <td style="padding-bottom: 10px;">
-                                <h3 style="font-size: 18px; color: #16d1f2; margin: 0 0 5px 0;"><a href="https://www.foxnews.com/world/new-search-malaysia-airlines-flight-370-approved-more-than-decade-after-disappearance">New Search for MH370 Approved</a></h3>
-                                <p style="font-size: 14px; line-height: 1.5; margin: 0;">Malaysia has approved a new search for Malaysia Airlines Flight 370, which disappeared in 2014. Ocean Infinity, a Texas-based company, will conduct the search on a "no-find, no fee" basis, utilizing improved technology.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="https://www.foxnews.com/world/new-search-malaysia-airlines-flight-370-approved-more-than-decade-after-disappearance"><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/ocean-infinity.jpg?ve=1&tl=1" alt="Ocean Infinity equipment" width="100%" style="display: block;"></a>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <p style="font-size: 14px; line-height: 1.5; margin: 0; color: #b0b0b0; margin-top:25px;">This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/">Fox News</a>, <a href="https://www.bbc.com/">BBC</a>, and <a href="https://www.firstpost.com/">Firstpost</a>.</p>
-                </td>
-            </tr>
-        </table>
-
-        <table width="100%" border="0" cellspacing="0" cellpadding="20" class="joke">
-            <tr>
-                <td align="center">
-                    <h2 style="font-size: 18px; margin-bottom: 10px;">Joke of the Day</h2>
-                    <p style="font-size: 14px; font-style: italic;">Why don't scientists trust atoms? Because they make up everything!</p>
-                </td>
-            </tr>
-        </table>
-    </div>
+                    <tr>
+                        <td style="padding-top: 20px; font-size: 14px;">
+                            <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top: 2px solid #081a56; margin-top: 20px;"></td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding: 20px 0;">
+                            <h4 class="joke-title">Joke of the Day</h4>
+                            <p class="joke-text">Why don't scientists trust atoms? Because they make up everything!</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
 </body>
 </html>
