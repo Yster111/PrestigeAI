@@ -57,78 +57,54 @@
             border: 0;
             cellspacing: 0;
             cellpadding: 0;
-            background-color: #f4f4f4;
         }
 
-        .newsletter-table {
-            width: 600px;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
+        .newsletter-body {
             background-color: #ffffff;
-            border-radius: 5px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .newsletter-title {
-            font-size: 24px;
-            font-weight: bold;
             color: #081a56;
-            padding-bottom: 10px;
         }
 
-        .newsletter-date {
-            font-size: 16px;
-            color: #081a56;
-            padding-bottom: 10px;
+        .newsletter-header {
+            background-color: #081a56;
+            color: #ffffff;
+            padding: 20px;
         }
 
-        .newsletter-edition {
-            font-size: 18px;
+        .newsletter-header img {
+            display: block;
+            margin: auto;
+        }
+
+        .newsletter-content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .newsletter-content h2 {
             color: #16d1f2;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #b0b0b0;
+            border-bottom: 2px solid #16d1f2;
+            padding-bottom: 5px;
         }
 
-        .news-story {
+        .newsletter-content div {
             margin-bottom: 20px;
             border-bottom: 1px solid #b0b0b0;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
 
-        .news-title {
-            font-size: 16px;
-            color: #16d1f2;
-            margin-bottom: 5px;
+        .newsletter-content img {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
         }
 
-        .news-content {
-            font-size: 14px;
-            color: #333;
-            line-height: 1.6;
+        .newsletter-footer {
+            background-color: #f0f0f0;
+            padding: 20px;
         }
 
-        .news-source {
-            font-size: 12px;
-            color: #b0b0b0;
-        }
-
-        .joke-section {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px solid #b0b0b0;
-        }
-
-        .joke-title {
-            font-size: 16px;
-            color: #081a56;
-            font-style: italic;
-        }
-
-        .joke-content {
-            font-size: 14px;
+        .joke {
             color: #333;
         }
     </style>
@@ -174,101 +150,64 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table>
+    <table class="newsletter-body">
         <tr>
-            <td align="center">
-                <table class="newsletter-table">
-                    <tr>
-                        <td align="center">
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="border: none; display: block;">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" class="newsletter-title">
-                            Prestige AI - Daily Newsletter
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" class="newsletter-date">
-                            March 22, 2025
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" class="newsletter-edition">
-                            Sunrise Edition
-                        </td>
-                    </tr>
+            <td class="newsletter-header">
+                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
+                <h1>Prestige AI - Daily Newsletter</h1>
+                <p><?php echo date("F j, Y"); ?> - Afternoon Edition</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="newsletter-content">
+                <h2>Top Stories</h2>
 
-                    <tr>
-                        <td style="font-size: 14px; color: #333; line-height: 1.6; padding-top: 20px;">
-                            <p>This newsletter compiles published news stories from Fox News, BBC, and Firstpost.</p>
+                <div>
+                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/042eef5a-b553-4b73-be1f-e2bd94144d09/323b1784-0f19-4fcb-a4d3-92361c3eeaeb/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Alien Enemies Act">
+                    <h3><a href="https://www.foxnews.com/video/6370421537112" style="color: #081a56; text-decoration: none;">Alien Enemies Act is a 'great tool' to eradicate foreign terrorist organizations off US soil, expert says</a></h3>
+                    <p>An expert discusses the Alien Enemies Act, highlighting its potential as a powerful tool for removing foreign terrorist organizations from U.S. soil. The act's historical context and legal implications are examined.</p>
+                </div>
 
-                            <h2 style="font-size: 18px; color: #081a56; margin-top: 30px; margin-bottom: 15px;">Top Stories</h2>
+                <div>
+                    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/rubio-ukraine-talks-scaled.jpg?ve=1&tl=1" alt="US-Ukraine talks">
+                    <h3><a href="https://www.foxnews.com/world/trump-eyes-control-ukraines-nuclear-plants-us-prepares-ceasefire-talks-russia" style="color:#081a56; text-decoration:none;">Trump Eyes Control of Ukraine's Nuclear Plants as US Prepares for Ceasefire Talks with Russia</a></h3>
+                    <p>As U.S. officials prepare for ceasefire talks with a Russian delegation in Saudi Arabia, discussions include the potential for U.S. ownership of Ukraine's nuclear power plants. Experts suggest this move could be a point of contention with Putin, who has shown interest in controlling Ukraine's energy infrastructure.</p>
+                </div>
 
-                            <!-- News Story 1 -->
-                            <div class="news-story">
-                                <h3 class="news-title"><a href="https://www.foxnews.com/world/doge-usaid-budget-cuts-hit-un-worst-liquidity-crisis-since-its-establishment#" style="color: #16d1f2; text-decoration: none;">USAID Budget Cuts Hit UN, Leading to Worst Liquidity Crisis Since Establishment</a></h3>
-                                <p class="news-content">
-                                    Internal UN emails reveal that USAID funding cuts, linked to President Trump's DOGE initiative, are causing a significant reduction in staffing and operations at the United Nations Department of Safety and Security (UNDSS). The UN is facing its worst liquidity crisis ever, with UNDSS expected to lose 100 employees and reduce its presence in dozens of countries. Concerns are rising about the ability of remaining staff to perform their duties and the potential impact on UN personnel serving in dangerous areas.
-                                </p>
-                                <p class="news-source">Source: <a href="https://www.foxnews.com/world/doge-usaid-budget-cuts-hit-un-worst-liquidity-crisis-since-its-establishment#" style="color: #081a56; text-decoration: none;"> Fox News</a></p>
-                            </div>
+                <div>
+                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/9629e567-1236-4746-bcbe-60f45c6877d0/c7fd29b6-38fe-40e1-b664-c05555911775/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Tsunami of Antisemitism">
+                    <h3><a href="https://www.foxnews.com/video/6370340964112" style="color:#081a56;text-decoration:none;">Israel’s special envoy for combating antisemitism Michal Cotler-Wunsh: “tsunami” of antisemitism</a></h3>
+                    <p>Israel's special envoy discusses the alarming rise in antisemitic incidents globally since October 7, 2023. She warns of a "global tsunami" of antisemitism and highlights the importance of recognizing anti-Zionism as a form of antisemitism.</p>
+                </div>
 
-                            <!-- News Story 2 -->
-                            <div class="news-story">
-                                <h3 class="news-title"><a href="https://www.bbc.com/news/articles/c62zm4eqvp7o" style="color: #16d1f2; text-decoration: none;">Trump Envoy Dismisses Starmer Plan for Ukraine</a></h3>
-                                <p class="news-content">
-                                    Donald Trump's special envoy, Steve Witkoff, has criticized UK Prime Minister Keir Starmer's proposal for an international force to support a ceasefire in Ukraine, calling it "simplistic." Witkoff, who recently met with Vladimir Putin, praised the Russian president and reiterated Russian talking points about Ukraine, questioning the country's legitimacy and territorial integrity. He claimed a ceasefire in the Black Sea was imminent and discussed Trump's desire for US-Russia cooperation.
-                                </p>
-                                <p class="news-source">Source: <a href="https://www.bbc.com/news/articles/c62zm4eqvp7o" style="color: #081a56; text-decoration: none;">BBC News</a></p>
-                            </div>
+                <div>
+                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/2f307494-dc7c-4d92-a7cd-e6769c7810bd/0d6f0bbd-5ea1-434a-bced-fa9574404571/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="Germany closes embassy in Sudan">
+                    <h3><a href="https://www.foxnews.com/world/germany-temporarily-shuts-embassy-south-sudan-amid-fears-civil-war" style="color:#081a56;text-decoration:none;">Fox News Flash Top Headlines for March 22</a></h3>
+                    <p>Germany has temporarily closed its embassy in South Sudan's capital, Juba, due to increasing tensions that have brought the country to the brink of civil war, according to the German foreign ministry.</p>
+                </div>
 
-                            <!-- News Story 3 -->
-                            <div class="news-story">
-                                <h3 class="news-title"><a href="https://www.foxnews.com/world/trump-eyes-control-ukraines-nuclear-plants-us-prepares-ceasefire-talks-russia#" style="color: #16d1f2; text-decoration: none;">Trump Eyes Control of Ukraine's Nuclear Plants as US Prepares for Ceasefire Talks with Russia</a></h3>
-                                <p class="news-content">
-                                    As US officials prepare for ceasefire negotiations with Russia, President Trump has shifted his focus to gaining "ownership" of Ukraine's nuclear power plants. This new ambition follows a preliminary ceasefire agreement with Putin regarding attacks on Ukraine's energy infrastructure. Experts warn that Putin is unlikely to accept this proposal and may view it as a US threat, potentially complicating the peace process.
-                                </p>
-                                <p class="news-source">Source: <a href="https://www.foxnews.com/world/trump-eyes-control-ukraines-nuclear-plants-us-prepares-ceasefire-talks-russia#" style="color: #081a56; text-decoration: none;">Fox News</a></p>
-                            </div>
+                <div>
+                    <img src="https://images.firstpost.com/uploads/2025/03/Screenshot1-2025-03-4265ad03d82dcaf1eb0bc7719ce8cb09-1200x675.jpg?im=FitAndFill=(596,336)" alt="iPhone17">
+                    <h3><a href="https://www.firstpost.com/tech/apple-iphone-17-dummy-leak-reveals-major-design-changes-including-ultra-thin-air-model-13873315.html" style="color:#081a56;text-decoration:none;">Apple iPhone 17: Dummy leak reveals major design changes, including ultra-thin 'air’ model</a></h3>
+                    <p>Leaked dummy models of the upcoming iPhone 17 reveal significant design changes, including a possible ultra-thin "iPhone Air" model. The images showcase variations in camera layouts, hinting at a substantial redesign for Apple's flagship phone.</p>
+                </div>
 
-                            <!-- News Story 4 -->
-                            <div class="news-story">
-                                <h3 class="news-title"><a href="https://www.bbc.com/news/articles/c74kg3e2m08o" style="color: #16d1f2; text-decoration: none;">Trump Revokes Security Clearance for Harris, Clinton, and Critics</a></h3>
-                                <p class="news-content">
-                                    President Trump has revoked security clearances for his political rivals Kamala Harris and Hillary Clinton, along with numerous former officials and critics. The order also includes members of the Biden family and several individuals involved in legal cases against Trump, potentially hindering their ability to access classified information. The move has been criticized as politically motivated.
-                                </p>
-                                <p class="news-source">Source: <a href="https://www.bbc.com/news/articles/c74kg3e2m08o" style="color: #081a56; text-decoration: none;">BBC News</a></p>
-                            </div>
+                <div>
+                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/cf822d52-ba0e-4fcd-831b-65d2d3b3dec0/1589ae4d-6ccf-4df5-87df-c94a607cadd7/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Putin Ceasefire">
+                    <h3><a href="https://www.foxnews.com/video/6370383548112" style="color:#081a56;text-decoration:none;">'If putin wanted to stop the war he could':Dan Hoffman calls on Russian Leader to work towards ceasefire</a></h3>
+                    <p>Dan Hoffman, a former CIA Moscow station chief, casts doubt on Putin's willingness to engage in genuine ceasefire negotiations in Ukraine. He argues that the ultimate resolution to the conflict likely lies on the battlefield and urges US to be wary.</p>
+                </div>
 
-                            <!-- News Story 5 -->
-                            <div class="news-story">
-                                <h3 class="news-title"><a href="https://www.foxnews.com/world/israeli-official-warns-growing-tsunami-antisemitism#" style="color:#16d1f2; text-decoration: none">Israeli Official Warns of Growing "Tsunami" of Antisemitism</a></h3>
-                                <p class="news-content">Israel’s special envoy for combating antisemitism, Michal Cotler-Wunsh, warns of a "global tsunami" of antisemitism, particularly following the October 7th attacks. She argues that anti-Zionism is a "new strain" of this "lethal virus" and that the normalization of this hate poses a threat to freedom and humanity. Cotler-Wunsh calls for consistent application of university policies against anti-Israel demonstrations and widespread adoption of the IHRA definition of antisemitism.</p>
-                                <p class="news-source">Source: <a href="https://www.foxnews.com/world/israeli-official-warns-growing-tsunami-antisemitism#" style="color: #081a56; text-decoration: none;">Fox News</a></p>
-                            </div>
-
-                            <!-- News Story 6 -->
-                            <div class="news-story">
-                                <h3 class="news-title"><a href="https://www.firstpost.com/world/china-seeks-stronger-trade-ties-with-south-korea-and-japan-amid-trump-tariffs-threat-13873585.html" style="color: #16d1f2; text-decoration: none;">China Seeks Stronger Trade Ties with South Korea and Japan Amid Trump's Tariffs Threat</a></h3>
-                                <p class="news-content">Chinese Foreign Minister Wang Yi, during a meeting with his South Korean and Japanese counterparts, pushed for stronger trade ties and regional cooperation, emphasizing the need for stability amidst global "changes and chaos". The talks also included discussions on the Korean peninsula situation, with an emphasis on peaceful resolution and denuclearization.</p>
-                                <p class="news-source">Source: <a href="https://www.firstpost.com/world/china-seeks-stronger-trade-ties-with-south-korea-and-japan-amid-trump-tariffs-threat-13873585.html" style="color: #081a56;text-decoration: none;">Firstpost</a></p>
-                            </div>
-
-                            <!-- News Story 7 -->
-                            <div class="news-story">
-                                <h3 class="news-title"><a href="https://www.bbc.com/news/articles/cewk49j7j1po" style="color: #16d1f2; text-decoration: none;">The Man with a Mind-Reading Chip in His Brain - Thanks to Elon Musk</a></h3>
-                                <p class="news-content">Noland Arbaugh, the first recipient of Neuralink's brain-computer interface, shares his experience with the device that allows him to control a computer with his thoughts. Paralyzed in 2016, Arbaugh can now play games and interact with technology in ways he thought impossible. While privacy concerns exist with this technology, Arbaugh focuses on the potential for increased independence and hopes for advancements that could control devices like wheelchairs or robots.</p>
-                                <p class="news-source">Source: <a href="https://www.bbc.com/news/articles/cewk49j7j1po" style="color: #081a56; text-decoration: none;">BBC News</a></p>
-                            </div>
-
-                            <div class="joke-section">
-                                <h4 class="joke-title">Joke of the Day</h4>
-                                <p class="joke-content">Why don't scientists trust atoms? Because they make up everything!</p>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+                <p style="font-size: 14px; color: #b0b0b0;">
+                    This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
+                    <a href="https://www.bbc.com/" style="color:#16d1f2;text-decoration:none;">BBC</a>, and <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="newsletter-footer">
+                <h3 style="color: #081a56; margin-bottom: 10px;">Joke of the Day</h3>
+                <p class="joke">Why don't scientists trust atoms? Because they make up everything!</p>
             </td>
         </tr>
     </table>
