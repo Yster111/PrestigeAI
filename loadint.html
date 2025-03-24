@@ -54,50 +54,61 @@
 
         table {
             width: 100%;
-            margin-top: 20px;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 0;
+            background-color: #f4f4f4;
         }
 
         .newsletter-table {
+            width: 600px;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 20;
             background-color: #ffffff;
             margin-top: 20px;
+            border-radius: 8px;
         }
 
-        .footer-table {
-            background-color: #f4f4f4;
-            margin-top: 20px;
-        }
-
-        h1 {
-            color: #16d1f2; 
-            font-size: 24px; 
-            margin: 10px 0;
-        }
-
-        h2 {
-            color: #081a56; 
-            border-bottom: 2px solid #16d1f2; 
-            padding-bottom: 5px;
-        }
-
-        h3 {
+        .newsletter-header {
             color: #081a56;
+            margin-top: 10px;
+            font-size: 24px;
         }
 
-        a {
-            color: #081a56; 
-            text-decoration: none;
+        .newsletter-date {
+            color: #16d1f2;
+            margin: 5px 0;
         }
 
-        .footer-text {
-            text-align: center; 
+        .news-title {
+            color: #081a56;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .news-content {
+            color: #333;
             font-size: 14px;
+            line-height: 1.5;
         }
 
-        .joke {
-            margin-top: 20px; 
-            font-style: italic; 
-            font-size: 16px; 
+        .source-links {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .joke-title {
             color: #081a56;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .joke-content {
+            color: #333;
+            font-style: italic;
+            text-align: center;
         }
     </style>
 </head>
@@ -142,81 +153,125 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table class="newsletter-table" align="center" cellpadding="20" cellspacing="0" border="0">
+    <table>
         <tr>
-            <td style="padding: 20px;">
-                <h1>Prestige AI - Daily Newsletter</h1>
-                <p style="margin: 5px 0;">
-                    <span style="font-weight: bold;">Date:</span> <span id="currentDate"></span>
-                    <span style="font-weight: bold; margin-left: 20px;">Sunrise Edition</span>
-                </p>
-                <h2>Top Stories</h2>
+            <td align="center">
+                <table class="newsletter-table">
+                    <tr>
+                        <td align="center">
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
+                            <h1 class="newsletter-header">Prestige AI - Daily Newsletter</h1>
+                            <p class="newsletter-date">
+                                <script>
+                                    const today = new Date();
+                                    document.write(today.toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+                                </script>
+                                 - Afternoon Edition
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top: 2px solid #16d1f2;"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <h2 style="color: #081a56; font-size: 20px;">Top News Stories</h2>
+                          <p style='color: #666;'>Compiled from published news stories from Fox News, BBC, and Firstpost.</p>
+                          </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- News Story 1 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0;">
+                                <tr>
+                                    <td>
+                                        <h3 class="news-title"><a href="https://www.foxnews.com/world/us-peace-talks-ukraine-russia-get-underway-saudi-arabia" style="color: #081a56; text-decoration: none;">US-Russia Peace Talks on Ukraine Underway in Saudi Arabia</a></h3>
+                                        <p class="news-content">Peace talks between U.S. and Russian delegations aimed at ending the war in Ukraine are underway in Saudi Arabia.  Discussions follow a "quite useful" meeting between Ukrainian and American teams.  The focus is initially on a Black Sea ceasefire, with later stages to address ceasefire verification, peacekeeping, and territorial ownership.  Special Envoy Steve Witkoff expressed optimism about progress toward a ceasefire.</p>
+                                    </td>
+                                </tr>
+                            </table>
 
-                <!-- News Story 1 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h3><a href="https://www.foxnews.com/video/6370434650112" target="_blank">Turkish police pepper spray protesters in Istanbul</a></h3>
-                    <p>
-                        Tensions escalated in Istanbul as Mayor Ekrem Imamoglu was jailed pending trial on corruption charges, a move that sparked significant protests. Thousands of supporters gathered, leading to clashes with police who used pepper spray to disperse the crowds. The jailing of Erdogan's political rival comes amid a broader crackdown on opposition figures.
-                    </p>
-                </div>
+                            <!-- News Story 2 -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0;">
+                                <tr>
+                                    <td>
+                                        <h3 class="news-title"><a href="https://www.foxnews.com/world/turkey-jails-istanbul-mayor-before-trial-protests-rage-throughout-city" style="color: #081a56; text-decoration: none;">Istanbul Mayor Jailed Pending Trial, Sparking Protests</a></h3>
+                                        <p class="news-content">Istanbul Mayor Ekrem Imamoglu, a major political rival to President Erdogan, has been jailed pending trial on corruption charges.  The move has ignited large-scale protests across Turkey, with critics calling the charges politically motivated.  Imamoglu denies the accusations and called for nationwide demonstrations. The jailing has shaken Turkish markets.</p>
+                                    </td>
+                                </tr>
+                            </table>
 
-                <!-- News Story 2 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h3><a href="https://www.foxnews.com/video/6370049474112" target="_blank">New Canadian PM says Canada ‘will never ever’ be part of the US</a></h3>
-                    <p>
-                        Canadian Prime Minister Mark Carney has announced a snap election, framing the campaign as a defense of Canadian sovereignty against threats from US President Donald Trump. Trump's trade war and suggestions of annexing Canada have fueled a surge in Canadian nationalism, impacting the political landscape.
-                    </p>
-                </div>
+                             <!-- News Story 3 -->
+                              <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0;">
+                                <tr>
+                                    <td>
+                                        <h3 class="news-title"><a href="https://www.foxnews.com/world/new-canadian-prime-minister-calls-snap-election-respond-trump" style="color: #081a56; text-decoration: none;">Canadian PM Calls Snap Election Amid Trump Threats</a></h3>
+                                        <p class="news-content">Canadian Prime Minister Mark Carney has called a snap election for April 28th, amid escalating trade tensions and annexation threats from U.S. President Donald Trump.  Carney stated the election is crucial for Canada's future and sovereignty. His main challenger, Conservative leader Pierre Poilievre, has vowed to stand up to Trump.</p>
+                                    </td>
+                                </tr>
+                            </table>
 
-                <!-- News Story 3 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h3><a href="https://www.firstpost.com/world/china-calls-on-nations-to-open-markets-amid-looming-trump-tariffs-13873865.html" target="_blank">China calls on nations to open markets amid looming Trump tariffs</a></h3>
-                    <p>
-                        Chinese Premier Li Qiang urged countries to embrace open markets to tackle rising global economic uncertainty during a business forum in Beijing. Li's call comes as China prepares for potential new U.S. tariffs, emphasizing the need for international cooperation and resistance to protectionism.
-                    </p>
-                </div>
+                            <!-- News Story 4 -->
+                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0;">
 
-                <!-- News Story 4 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h3><a href="https://www.foxnews.com/video/6370346351112" target="_blank">Trump argues he has authority to deport migrant criminals</a></h3>
-                    <p>
-                        President Trump asserts his authority to deport migrant criminals, including alleged gang members. Venezuela has agreed to resume accepting deportation flights from the U.S., after a brief suspension. Some deported Venezuelans have been sent to El Salvador, a move criticized by Venezuelan President Maduro.
-                    </p>
-                </div>
+                                <tr>
+                                    <td>
+                                        <h3 class="news-title"><a href="https://www.foxnews.com/world/israel-hezbollah-truce-jeopardy-after-rocket-barrage-kills-6" style="color: #081a56; text-decoration: none;">Israel-Hezbollah Truce in Jeopardy After Rocket Barrage Kills 6</a></h3>
+                                        <p class="news-content">Israeli airstrikes on Lebanon killed six following a rocket attack, jeopardizing the nearly four-month-old ceasefire with Hezbollah. Hezbollah denied responsibility for the rocket attack.  Israeli forces were to have withdrawn from Lebanese territory under the truce, but remain in five locations. The renewed conflict comes as Israel resumes its war with Hamas in Gaza.</p>
+                                    </td>
+                                </tr>
+                            </table>
 
-                <!-- News Story 5 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h3><a href="https://www.foxnews.com/video/6370221779112" target="_blank">US needs to ramp up 'pressure on Putin' to reach ceasefire in Ukraine, expert says</a></h3>
-                    <p>
-                        Russia launched a massive drone attack on Kyiv and other Ukrainian cities, killing at least seven people. The attacks occurred shortly before scheduled U.S.-mediated indirect peace talks between Ukraine and Russia in Saudi Arabia, raising doubts about Russia's commitment to a ceasefire.
-                    </p>
-                </div>
+                            <!-- News Story 5 -->
+                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0;">
+                                <tr>
+                                    <td>
+                                         <h3 class="news-title"><a href="https://www.foxnews.com/world/venezuela-resume-accepting-us-deportation-flights" style="color: #081a56; text-decoration: none;">Venezuela to Resume Accepting US Deportation Flights</a></h3>
+                                        <p class="news-content">Venezuela will resume accepting deportation flights from the US after President Maduro suspended them earlier this month. Jorge Rodríguez, president of Venezuela's Assembly, announced the agreement, emphasizing the protection of Venezuelan migrants' human rights.  Some deported Venezuelans had been sent to El Salvador, which Maduro referred to as "kidnapping."</p>
+                                    </td>
+                                </tr>
+                            </table>
+                             <!-- News Story 6 -->
+                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0;">
+                                <tr>
+                                    <td>
+                                         <h3 class="news-title"><a href="https://www.firstpost.com/tech/another-blow-to-musks-tesla-regulators-order-recall-virtually-all-cybertrucks-over-faulty-body-strips-13873336.html" style="color: #081a56; text-decoration: none;">Tesla Recalls Almost all Cybertrucks</a></h3>
+                                        <p class="news-content">U.S. safety regulators have ordered a recall of over 46,000 Tesla Cybertrucks (virtually all of them) due to a faulty exterior panel that can detach while driving. This marks the eighth recall for the Cybertruck since deliveries began.  The issue involves a stainless steel strip along the windshield. Tesla will replace the panel free of charge.</p>
+                                    </td>
+                                </tr>
+                            </table>
 
-                <!-- News Story 6 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h3><a href="https://www.firstpost.com/tech/apple-iphone-17-dummy-leak-reveals-major-design-changes-including-ultra-thin-air-model-13873315.html" target="_blank">Apple iPhone 17: Dummy leak reveals major design changes, including ultra-thin 'air' model</a></h3>
-                    <p>Leaks surrounding the upcoming iPhone 17 reveal potentially significant design changes. Dummy models suggest a revamped camera layout and an ultra-thin "iPhone Air" model, hinting at Apple's most substantial redesign in years. Public reaction has been mixed, with some criticizing the new camera design.</p>
-                </div>
+                              <!-- News Story 7 -->
+                             <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0;">
+                                <tr>
+                                    <td>
+                                           <h3 class="news-title"><a href="https://www.foxnews.com/world/israel-orders-idf-seize-more-gaza-territory-hamas-doesnt-release-hostages" style="color: #081a56; text-decoration: none">Israel Orders IDF to Expand Territory if Hostages are not released</a></h3>
+                                        <p class="news-content">The Israeli Prime Minster, Benjamin Netanyahu, and defense minister have instructed the IDF to begin claiming Territory if the remaining Hostages are not returned.  This is a major shift, reversing a decades old strategy of withdraw. The US has reversed its previous policy of attempting to limit Israeli Actions and now full supports the IDF, stating Hamas bears total responsibility.</p>
+                                    </td>
+                                </tr>
+                            </table>
 
+                            <!-- Source Links -->
+                            <tr>
+                                <td class="source-links">
+                                <p style='color:#666;'> For Full Stories Please Visit:
+                                <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none; margin: 0 10px;">Fox News</a>
+                                <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none; margin: 0 10px;">BBC</a>
+                                <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none; margin: 0 10px;">Firstpost</a>
+                                </p>
+                                </td>
+                            </tr>
+                    <tr>
+                       <td style="border-top: 2px solid #16d1f2; padding-top:20px">
+                            <h2 class="joke-title">Joke of the Day</h2>
+                            <p class="joke-content">Why don't scientists trust atoms?  Because they make up everything!</p>
+                        </td>
+                    </tr>
+
+                </table>
             </td>
         </tr>
     </table>
 
-    <table class="footer-table" align="center" cellpadding="20" cellspacing="0" border="0">
-        <tr>
-            <td style="padding: 20px; text-align: center; font-size: 14px;">
-                <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" target="_blank">Fox News</a>, <a href="https://www.bbc.com/" target="_blank">BBC</a>, and <a href="https://www.firstpost.com/" target="_blank">Firstpost</a>.</p>
-
-                <p class="joke">
-                    Joke of the Day: Why don't scientists trust atoms? Because they make up everything!
-                </p>
-            </td>
-        </tr>
-    </table>
-    
-    <script>
-        const date = new Date();
-        document.getElementById('currentDate').innerText = date.toDateString();
-    </script>
 </body>
 </html>
