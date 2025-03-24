@@ -54,58 +54,50 @@
 
         table {
             width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
+            margin-top: 20px;
         }
 
-        .newsletter-body {
+        .newsletter-table {
             background-color: #ffffff;
-            color: #081a56;
+            margin-top: 20px;
         }
 
-        .newsletter-header {
-            background-color: #081a56;
-            color: #ffffff;
-            padding: 20px;
+        .footer-table {
+            background-color: #f4f4f4;
+            margin-top: 20px;
         }
 
-        .newsletter-header img {
-            display: block;
-            margin: auto;
+        h1 {
+            color: #16d1f2; 
+            font-size: 24px; 
+            margin: 10px 0;
         }
 
-        .newsletter-content {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .newsletter-content h2 {
-            color: #16d1f2;
-            border-bottom: 2px solid #16d1f2;
+        h2 {
+            color: #081a56; 
+            border-bottom: 2px solid #16d1f2; 
             padding-bottom: 5px;
         }
 
-        .newsletter-content div {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #b0b0b0;
-            padding-bottom: 15px;
+        h3 {
+            color: #081a56;
         }
 
-        .newsletter-content img {
-            display: block;
-            margin-bottom: 10px;
-            width: 100%;
+        a {
+            color: #081a56; 
+            text-decoration: none;
         }
 
-        .newsletter-footer {
-            background-color: #f0f0f0;
-            padding: 20px;
+        .footer-text {
+            text-align: center; 
+            font-size: 14px;
         }
 
         .joke {
-            color: #333;
+            margin-top: 20px; 
+            font-style: italic; 
+            font-size: 16px; 
+            color: #081a56;
         }
     </style>
 </head>
@@ -150,67 +142,81 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table class="newsletter-body">
+    <table class="newsletter-table" align="center" cellpadding="20" cellspacing="0" border="0">
         <tr>
-            <td class="newsletter-header" align="center">
-                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
-                <h1 style="font-size: 24px; margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
+            <td style="padding: 20px;">
+                <h1>Prestige AI - Daily Newsletter</h1>
                 <p style="margin: 5px 0;">
-                    <?php echo date("F j, Y"); ?> - Afternoon Edition
+                    <span style="font-weight: bold;">Date:</span> <span id="currentDate"></span>
+                    <span style="font-weight: bold; margin-left: 20px;">Sunrise Edition</span>
                 </p>
+                <h2>Top Stories</h2>
+
+                <!-- News Story 1 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3><a href="https://www.foxnews.com/video/6370434650112" target="_blank">Turkish police pepper spray protesters in Istanbul</a></h3>
+                    <p>
+                        Tensions escalated in Istanbul as Mayor Ekrem Imamoglu was jailed pending trial on corruption charges, a move that sparked significant protests. Thousands of supporters gathered, leading to clashes with police who used pepper spray to disperse the crowds. The jailing of Erdogan's political rival comes amid a broader crackdown on opposition figures.
+                    </p>
+                </div>
+
+                <!-- News Story 2 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3><a href="https://www.foxnews.com/video/6370049474112" target="_blank">New Canadian PM says Canada ‘will never ever’ be part of the US</a></h3>
+                    <p>
+                        Canadian Prime Minister Mark Carney has announced a snap election, framing the campaign as a defense of Canadian sovereignty against threats from US President Donald Trump. Trump's trade war and suggestions of annexing Canada have fueled a surge in Canadian nationalism, impacting the political landscape.
+                    </p>
+                </div>
+
+                <!-- News Story 3 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3><a href="https://www.firstpost.com/world/china-calls-on-nations-to-open-markets-amid-looming-trump-tariffs-13873865.html" target="_blank">China calls on nations to open markets amid looming Trump tariffs</a></h3>
+                    <p>
+                        Chinese Premier Li Qiang urged countries to embrace open markets to tackle rising global economic uncertainty during a business forum in Beijing. Li's call comes as China prepares for potential new U.S. tariffs, emphasizing the need for international cooperation and resistance to protectionism.
+                    </p>
+                </div>
+
+                <!-- News Story 4 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3><a href="https://www.foxnews.com/video/6370346351112" target="_blank">Trump argues he has authority to deport migrant criminals</a></h3>
+                    <p>
+                        President Trump asserts his authority to deport migrant criminals, including alleged gang members. Venezuela has agreed to resume accepting deportation flights from the U.S., after a brief suspension. Some deported Venezuelans have been sent to El Salvador, a move criticized by Venezuelan President Maduro.
+                    </p>
+                </div>
+
+                <!-- News Story 5 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3><a href="https://www.foxnews.com/video/6370221779112" target="_blank">US needs to ramp up 'pressure on Putin' to reach ceasefire in Ukraine, expert says</a></h3>
+                    <p>
+                        Russia launched a massive drone attack on Kyiv and other Ukrainian cities, killing at least seven people. The attacks occurred shortly before scheduled U.S.-mediated indirect peace talks between Ukraine and Russia in Saudi Arabia, raising doubts about Russia's commitment to a ceasefire.
+                    </p>
+                </div>
+
+                <!-- News Story 6 -->
+                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
+                    <h3><a href="https://www.firstpost.com/tech/apple-iphone-17-dummy-leak-reveals-major-design-changes-including-ultra-thin-air-model-13873315.html" target="_blank">Apple iPhone 17: Dummy leak reveals major design changes, including ultra-thin 'air' model</a></h3>
+                    <p>Leaks surrounding the upcoming iPhone 17 reveal potentially significant design changes. Dummy models suggest a revamped camera layout and an ultra-thin "iPhone Air" model, hinting at Apple's most substantial redesign in years. Public reaction has been mixed, with some criticizing the new camera design.</p>
+                </div>
+
             </td>
         </tr>
     </table>
 
-    <div class="newsletter-content">
-        <h2>Top Stories</h2>
+    <table class="footer-table" align="center" cellpadding="20" cellspacing="0" border="0">
+        <tr>
+            <td style="padding: 20px; text-align: center; font-size: 14px;">
+                <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" target="_blank">Fox News</a>, <a href="https://www.bbc.com/" target="_blank">BBC</a>, and <a href="https://www.firstpost.com/" target="_blank">Firstpost</a>.</p>
 
-        <div>
-            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/042eef5a-b553-4b73-be1f-e2bd94144d09/323b1784-0f19-4fcb-a4d3-92361c3eeaeb/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Alien Enemies Act">
-            <h3><a href="https://www.foxnews.com/video/6370421537112" style="color: #081a56; text-decoration: none;">Alien Enemies Act is a 'great tool' to eradicate foreign terrorist organizations off US soil, expert says</a></h3>
-            <p style="color: #333; line-height: 1.5;">An expert discusses the Alien Enemies Act, highlighting its potential as a powerful tool for removing foreign terrorist organizations from U.S. soil. The act's historical context and legal implications are examined.</p>
-        </div>
-
-        <div>
-            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/rubio-ukraine-talks-scaled.jpg?ve=1&tl=1" alt="US-Ukraine talks">
-            <h3><a href="https://www.foxnews.com/world/trump-eyes-control-ukraines-nuclear-plants-us-prepares-ceasefire-talks-russia" style="color:#081a56; text-decoration:none;">Trump Eyes Control of Ukraine's Nuclear Plants as US Prepares for Ceasefire Talks with Russia</a></h3>
-            <p style="color:#333; line-height:1.5;">As U.S. officials prepare for ceasefire talks with a Russian delegation in Saudi Arabia, discussions include the potential for U.S. ownership of Ukraine's nuclear power plants. Experts suggest this move could be a point of contention with Putin, who has shown interest in controlling Ukraine's energy infrastructure.</p>
-        </div>
-
-        <div>
-            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/9629e567-1236-4746-bcbe-60f45c6877d0/c7fd29b6-38fe-40e1-b664-c05555911775/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Tsunami of Antisemitism">
-            <h3><a href="https://www.foxnews.com/video/6370340964112" style="color:#081a56;text-decoration:none;">Israel’s special envoy for combating antisemitism Michal Cotler-Wunsh: “tsunami” of antisemitism</a></h3>
-            <p style="color:#333;line-height:1.5;">Israel's special envoy discusses the alarming rise in antisemitic incidents globally since October 7, 2023. She warns of a "global tsunami" of antisemitism and highlights the importance of recognizing anti-Zionism as a form of antisemitism.</p>
-        </div>
-
-        <div>
-            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/2f307494-dc7c-4d92-a7cd-e6769c7810bd/0d6f0bbd-5ea1-434a-bced-fa9574404571/1280x720/match/896/500/image.jpg?ve=1&tl=1" alt="Germany closes embassy in Sudan">
-            <h3><a href="https://www.foxnews.com/world/germany-temporarily-shuts-embassy-south-sudan-amid-fears-civil-war" style="color:#081a56;text-decoration:none;">Fox News Flash Top Headlines for March 22</a></h3>
-            <p style="color:#333;line-height:1.5;">Germany has temporarily closed its embassy in South Sudan's capital, Juba, due to increasing tensions that have brought the country to the brink of civil war, according to the German foreign ministry.</p>
-        </div>
-
-        <div>
-            <img src="https://images.firstpost.com/uploads/2025/03/Screenshot1-2025-03-4265ad03d82dcaf1eb0bc7719ce8cb09-1200x675.jpg?im=FitAndFill=(596,336)" alt="iPhone17">
-            <h3><a href="https://www.firstpost.com/tech/apple-iphone-17-dummy-leak-reveals-major-design-changes-including-ultra-thin-air-model-13873315.html" style="color:#081a56;text-decoration:none;">Apple iPhone 17: Dummy leak reveals major design changes, including ultra-thin 'air’ model</a></h3>
-            <p style="color:#333;line-height:1.5;">Leaked dummy models of the upcoming iPhone 17 reveal significant design changes, including a possible ultra-thin "iPhone Air" model. The images showcase variations in camera layouts, hinting at a substantial redesign for Apple's flagship phone.</p>
-        </div>
-
-        <div>
-            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/cf822d52-ba0e-4fcd-831b-65d2d3b3dec0/1589ae4d-6ccf-4df5-87df-c94a607cadd7/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Putin Ceasefire">
-            <h3><a href="https://www.foxnews.com/video/6370383548112" style="color:#081a56;text-decoration:none;">'If putin wanted to stop the war he could':Dan Hoffman calls on Russian Leader to work towards ceasefire</a></h3>
-            <p style="color:#333;line-height:1.5;">Dan Hoffman, a former CIA Moscow station chief, casts doubt on Putin's willingness to engage in genuine ceasefire negotiations in Ukraine. He argues that the ultimate resolution to the conflict likely lies on the battlefield and urges US to be wary.</p>
-        </div>
-
-        <p style="font-size: 14px; color: #b0b0b0;">
-            This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>,
-            <a href="https://www.bbc.com/" style="color:#16d1f2;text-decoration:none;">BBC</a>, and <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
-        </p>
-    </div>
-
-    <div class="newsletter-footer">
-        <h3 style="color: #081a56; margin-bottom: 10px;">Joke of the Day</h3>
-        <p class="joke">Why don't scientists trust atoms? Because they make up everything!</p>
-    </div>
-
+                <p class="joke">
+                    Joke of the Day: Why don't scientists trust atoms? Because they make up everything!
+                </p>
+            </td>
+        </tr>
+    </table>
+    
+    <script>
+        const date = new Date();
+        document.getElementById('currentDate').innerText = date.toDateString();
+    </script>
 </body>
 </html>
