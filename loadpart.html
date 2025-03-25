@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements & Prestige AI - Daily Newsletter</title>
+    <title>Processing Financial Statements and Daily Newsletter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,45 +54,87 @@
 
         table {
             width: 100%;
-            margin: 20px 0;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 0;
         }
 
         .newsletter-table {
+            width: 80%;
+            margin: auto;
             background-color: #ffffff;
+            border-radius: 5px;
             margin-top: 20px;
         }
 
-        .footer-table {
-            background-color: #f4f4f4;
-            margin-top: 20px;
+        .newsletter-header {
+            background-color: #081a56;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
         }
 
-        h1 {
-            color: #16d1f2;
+        .newsletter-header img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .newsletter-header h1 {
             font-size: 24px;
-            margin: 10px 0;
+            margin-top: 10px;
         }
 
-        h2 {
-            color: #081a56;
-            border-bottom: 2px solid #16d1f2;
-            padding-bottom: 5px;
+        .newsletter-header p {
+            font-size: 16px;
+            margin-bottom: 5px;
         }
 
-        h3 {
-            color: #081a56;
+        .newsletter-header .edition {
+            font-size: 14px;
         }
 
-        a {
+        .news-story {
+            border-bottom: 1px solid #b0b0b0;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        .news-story img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            display: block;
+            float: left;
+            margin-right: 15px;
+        }
+
+        .news-story h3 {
             color: #081a56;
-            text-decoration: none;
+            font-size: 18px;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .news-story p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #b0b0b0;
         }
 
         .joke {
-            margin-top: 20px;
-            font-style: italic;
-            font-size: 16px;
+            font-size: 18px;
             color: #081a56;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .joke-text {
+            font-size: 14px;
+            font-style: italic;
         }
     </style>
 </head>
@@ -137,88 +179,75 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table class="newsletter-table" align="center" cellpadding="20" cellspacing="0" border="0">
+    <table class="newsletter-table">
         <tr>
-            <td align="center" style="padding: 20px;">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt/P58AAAB1FBMVEX///8AAAC/v7/X19fm5ub8/Pz5+fnS0tL19fXo6OjIyMhkZGTm5uYODg7Z2dlISEh8fHy8vLzt7e3d3d2tra0bGxs7Ozv39/dJSUkMDAz09PSCgoJQUFBxcXF0dHRvb29hYWFqamrFxcVCQkI5OTlKSkphYWEiIiJCQkJnZ2eLi4tHR0c5OTm3t7ctLS0VFRVNTU2hoaG/v7/V1dW/gH90dHRYWFjCwsKIiIh4eHjAwMBjY2MWFhZubm5hYWFdXV2np6f3d2GmpqYqKio7OzsVFRXm28NGRkZpaWn6dnH69vP8//q6ursSEhL6+vr8+ff89vT99fX+//z+7e798u39+/j////+9PL/////+O/u7eXv//L7/v//////t/j///z///////r+/fz//f3//v7//////f3///////////3/////////////697b/////////8v/////////////////3////////////////7///////////28u7///////////////////////+5447/////r+v/////////////q//////////////////f3////////////2tvz//P///////////////L////////93PL///////////f1/////////////9//////+7////////////8////////9+H//////////f3///////////z///////////vW8f/////55//////////////////////2X5T7AAAADXRSTlMAECAwQFBgcICQoLEh8gIxAAAgAElEQVR4nO2ZfV/bNhDHczmIppYyL9m0bfu2bdudDRp0qEj3586c+/x///OdGZqQYIS8A8lZZJP/bX94vTzQ0lCUzMzM/PzAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgz87OLnK30Wq1Jt07+9lrr+mE+x75tBqtM60oMpkj5O/j/qD7jWptG51R+9O+9lrsV0u19CuyS60c523PjY2sUo+h/Rk1w6uT1f5l9aB9+nI5Xz5uG/9Jq9U2+e7ePjK4fXbQ+s97/7P4nL5TbzJ6gL56iV84Wunm8lH343X7QfQG427XnJ8t16n6Uu/iNptjN/T1p2f/H3JqB6+R755v1Vj7B74zY7f+0yK3VWr/eXfSgL26E2q/2399Uf/x/47/h+5l9eX8XfL8v3+fJ+rS7/1B99u2Uv951G9R1y/2B7n7f6P9gXz1B5+c3l2Uv77rN4i/9Nn+5n6Nfnw/wD/jH5f/wXfp/vVf/uW92tH2+80+nF+F3+n6S/v71W/71/3h+5v9hX9Vn6K/vmK/6m/7E/vC/u/+D79N9+v8bH98v6rL8sXz5E26j71+n6e3sR+r/4PqD+98v43L50n69/1x/G1/1j9637541q+/yM6/7W/jK/v2//8v1f/+L43f/5/n5f/tf/p/s/4P++363/76249O/vH+H08f43O/6v/4Hh8j8/n/Y953/O/5u/x+R/4x/hE/v6/xf+/z/O/5Zfxe/5h/hf/t/jJ/H//57/7v4f/v8H/p/vM/6e7M/jT/9v4sfxz+/z/jH84vj/v8vzv+97/7tT9B//S/f/v89/5x/n9+9D8I/6///U9y/+/xf86P6/v/W/54fy/+L7yPxr/5tTfJ/uP8/PxBfjj/8/fD8df5jfyL/O//5TfL7r/+fvx9y/+/z8v/4F+c/73/nZ6f4/3d9j/J/4f/J+fP+R38T7n/z4+3/4H/xPn3/p9z+/z8g/xf+r/X5i/83h/K/T/8/7L8B+8//u/F6/T/T/877/184/+b3/5F9+OP93fp+H/+X/zP70/fP9/9p9j+d/7v/483z+p3//0Ffmf9z/r+I/8X5f/77B/6fPf/L+7zO/9T/9Bf5P+d/3P/2/x/j/6T75/5fP8/fD91fn7+9D+0//4/h/yPfv/F/7vM/5Pqf//w+f89+5P9fv7H+T/1/X+u/y/V/Gf+9v/4N+L+/u/J///O/3vL97/jP/T7n9/qP//JPrP//J/5/+18I/zM8//384X/wP7z/+P/b+d97k/6/v/Xf4//8/B9g/+v19P87P33f4/wP7/H98+j//84X8B+/+/3v/jfwj/T72/3+j/5f8P8T//85/d+J//n/9j/I/3vT/5/+b+H/+P/W/4fL3/7fxH/v7t/P/xP3j/Pz8Bf5P/V/4T5+f7J8//vv38/H/+f8/35+H/7fxP/yJ5/8/7H+L+P//89/4//F4f5/P/75+x9w//9+/X84f/F/H//0Y/9Bf4v/Z8v/L/3+d/h/X/z/716f/e5//86X+2/D///P38Pw//2y/z+P8//9/34P/f8r/Pz8/96X+G/7/n//j/v/1/Efy/F+P/9n+D/y/z/e/7/z9f5/P/4/Ff+H4P8wT/8H4f/+zP/87f8/0f+H//77+H9j8f/4/zM//X/y5fnfX7z//H49j8U/f/9P+/4/P/d9b/4yP/7/x+P/w99/v59/f/P/w+4f9z/8vx79//5/gD/+/P1/2/+e37/+wP+fD/M1//D+//1+v/d+/v8P/8/7/J5P/+X/z4fv8f/u/w/8/2y/zP/3/6/P/x/+P/w/7P/+x//w/xf95//f9f/h/j//1/37/j/r/4fyH7/+z/3/j/y99/4x/jPw//N7fP/79+P//5//P+/8PPD9//7+P/7/P98n++/P38//z9/+h+G/+39/+/+f/3x/+L+7/794v//+/n8//89P/58/L/1/P8/+Z9+j/8f/p/f/x/H//38/4/f/9/3v95/fv8f/pf5x//p/P//5//7+f/t/e/3H2H9v+P9/+4/5fP8/p75+f//+//2+/P/6x/+B9P/v2/u/x+f/5//j/7/v//X+J/H/v8P/+E/f/L/8/m/99//r/F/x//8+v8/vP9/9+L/R/P/w+/+L//H/+P/M//P+73//3/7f5/+v8/P/9n+/T/L/0x//v+/xP8f6J/+E//f/L/89/v/n/++/P/9/+L9/+B//9+/x/7f9nufy//+/n8/J//6P+B//v8P/3/7/P/3/v9X/D/1/E//j//+X4r/F/0fwvT//1/j5/D/+//x+P/0/B++fp/P/8v/H/z//+/8v/r/+r/9/X9/y/4/+v/+v/94/+t/x/8/X8H8/+f/b8f//7/N/xP/wH5/P/j/+/8A+L//5P+Xn7/9//L//8X/z4//+9b+//8/f/+Xz/+Y//f9//3/4fn85//L//8fp/P/78//7/8v/j///jP/x/7//P/xfn+D/n7//8+/w+v///xP8fP/+v1/8//x8//+Xz/v8/+8//P/wH7vj//8/H//9fof8//49/T8eP/2/z+P/r+/8H+X/vj//n//1+v+X58fD+//9/x/j9f/+/xH9/z7/3/1/f/8/P//57+/wP9/F/j8P/r9w/e//j//+H//f8/+v/8p//+9/+L9/+v//z+//7+/P/+/8v/d9vf9/x/+T/8/f/n389/+f7//r+v8/97/L/yf//9/+Xz//m/+/9//3/V/n/ff7f/m/+P/i//+H//j///f//n+P/n+P8f/P/54/H/+r9f/L//P8zP/x/6/4fP+/8v/j/+X9/+H/x//+vfy/5/8//P/6H///3/w+/8/n5+/+v/+v/w7//w8f031x/8f9+/f8/fD/P//5/+f/Xf4/z//n//8X/z5x//5///E+v/8PH/9+/w/97//f79+P//X/+0v9/8//6P8/+v++f/f5/z8/+/9fP/r+B/3/f8/+L/7+f4/H//j///v/j5/D/8f/6/5//7v/+P/p/0v/P/6Hwv/9x/+j/wH+vP8/M/4//9+Pf/4fz//8/v3v/+n///P/4//P/+f/9///4P9/5////jH////////y8f6J/f+/w/P/7+I/P//////w/z/zP/6/+H///P/H///////////////////D/4H/8+H+//P///////f/f//z///j////////+f//z+H//////7f////////////////////////v////////////////////////////////////////////////////////////+/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/B84Y/Sg2rXF5AAAAABJRU5ErkJggg==" alt="Prestige AI Logo" width="150">
+            <td class="newsletter-header">
+                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo">
                 <h1>Prestige AI - Daily Newsletter</h1>
-                <p>
-                    <span style="font-weight: bold;">Date:</span> <span id="currentDate"></span>
-                    <span style="font-weight: bold; margin-left: 20px;">Sunrise Edition</span>
-                </p>
+                <p><?php echo date("F j, Y"); ?></p>
+                <p class="edition">Sunrise Edition</p>
             </td>
         </tr>
-    </table>
-
-    <table class="newsletter-table" align="center" cellpadding="20" cellspacing="0" border="0">
         <tr>
             <td style="padding: 20px;">
-              <h2>Top Stories</h2>
+                <h2 style="color: #081a56; font-size: 20px; margin-bottom: 20px;">Today's Top Stories</h2>
 
                 <!-- News Story 1 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h3><a href="https://www.foxnews.com/video/6370434650112" target="_blank">Turkish police pepper spray protesters in Istanbul</a></h3>
-                    <p>
-                        Tensions escalated in Istanbul as Mayor Ekrem Imamoglu was jailed pending trial on corruption charges, a move that sparked significant protests. Thousands of supporters gathered, leading to clashes with police who used pepper spray to disperse the crowds.  The jailing of Erdogan's political rival comes amid a broader crackdown on opposition figures.
-                    </p>
+                <div class="news-story">
+                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/bc716bb0-37e0-4bfa-8060-4f841c21f031/59e1353e-8607-4696-a7cf-b41926e42a47/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Stocks rise">
+                    <h3><a href="https://www.foxnews.com/video/6370500869112" style="color: #081a56; text-decoration: none;">Stocks Rise After Trump Teases 'Nicer' Tariff Policy</a></h3>
+                    <p>Stocks experienced a surge following hints from President Trump about a potential easing of tariff policies. The market reacted positively to the prospect of reduced trade tensions.</p>
                 </div>
 
                 <!-- News Story 2 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                  <h3><a href="https://www.foxnews.com/video/6370049474112" target="_blank">New Canadian PM says Canada ‘will never ever’ be part of the US</a></h3>
-                    <p>
-                      Canadian Prime Minister Mark Carney has announced a snap election, framing the campaign as a defense of Canadian sovereignty against threats from US President Donald Trump. Trump's trade war and suggestions of annexing Canada have fueled a surge in Canadian nationalism, impacting the political landscape.
-                    </p>
+                <div class="news-story">
+                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/ab2869a6-7344-4c20-92f4-4cf7b4e2aa47/a9aae128-caf3-4aaa-9415-d9b3017789be/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Hegseth blasts Atlantic">
+                    <h3><a href="https://www.foxnews.com/video/6370498052112" style="color: #081a56; text-decoration: none;">Hegseth Blasts Atlantic Article: 'Nobody Was Texting War Plans'</a></h3>
+                    <p>Pete Hegseth strongly criticized a recent article in The Atlantic, dismissing claims made within it. He emphasized that there were no discussions of war plans via text messages.</p>
                 </div>
 
-              <!-- News Story 3 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                  <h3><a href="https://www.firstpost.com/world/china-calls-on-nations-to-open-markets-amid-looming-trump-tariffs-13873865.html" target="_blank">China calls on nations to open markets amid looming Trump tariffs</a></h3>
-                    <p>
-                      Chinese Premier Li Qiang urged countries to embrace open markets to tackle rising global economic uncertainty during a business forum in Beijing.  Li's call comes as China prepares for potential new U.S. tariffs, emphasizing the need for international cooperation and resistance to protectionism.
-                    </p>
+                <!-- News Story 3 -->
+                <div class="news-story">
+                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/174ac128-f10f-4d5c-b16b-a2654b2b2853/cad79d4b-1ab7-432d-919b-3e333369de59/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Tariffs are not the sole driver">
+                    <h3><a href="https://www.foxnews.com/video/6370491759112" style="color: #081a56; text-decoration: none;">Tariffs Are Not the Sole Driver of Trade Imbalances: Charlie Gasparino</a></h3>
+                    <p>Charlie Gasparino argues that tariffs are not the only factor influencing trade imbalances. He suggests other economic forces are at play.</p>
                 </div>
 
-                 <!-- News Story 4 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h3><a href="https://www.foxnews.com/video/6370346351112" target="_blank">Trump argues he has authority to deport migrant criminals</a></h3>
-                    <p>
-                        President Trump asserts his authority to deport migrant criminals, including alleged gang members.  Venezuela has agreed to resume accepting deportation flights from the U.S., after a brief suspension. Some deported Venezuelans have been sent to El Salvador, a move criticized by Venezuelan President Maduro.
-                    </p>
+                <!-- News Story 4 -->
+                <div class="news-story">
+                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/8aed38df-c9af-443a-a982-6fda6c252a32/e70cc823-8db5-4460-9474-a5feb99149d1/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Gen. Jack Keane says the 'jury is still out'">
+                    <h3><a href="https://www.foxnews.com/video/6370477569112" style="color: #081a56; text-decoration: none;">Gen. Jack Keane Says the 'Jury Is Still Out' on Putin Agreeing to Ceasefire</a></h3>
+                    <p>General Jack Keane comments on the ongoing conflict, stating that it remains uncertain whether Putin will agree to a ceasefire. Discussions are underway, but the outcome is unclear.</p>
                 </div>
 
                 <!-- News Story 5 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h3><a href="https://www.foxnews.com/video/6370221779112" target="_blank">US needs to ramp up 'pressure on Putin' to reach ceasefire in Ukraine, expert says</a></h3>
-                    <p>
-                        Russia launched a massive drone attack on Kyiv and other Ukrainian cities, killing at least seven people.  The attacks occurred shortly before scheduled U.S.-mediated indirect peace talks between Ukraine and Russia in Saudi Arabia, raising doubts about Russia's commitment to a ceasefire.
-                    </p>
+                <div class="news-story">
+                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/be3953a9-d5e4-4506-b6f1-c7fe1409e015/0fac7832-e1b8-4a06-bf9d-0c6fd21708a8/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Video shows pilot's final moments">
+                    <h3><a href="https://www.foxnews.com/video/6370467034112" style="color: #081a56; text-decoration: none;">Video Shows Pilot's Final Moments Before Fatal Air Show Crash in South Africa</a></h3>
+                    <p>Tragic footage captures the final moments of a pilot before a fatal crash at an air show in South Africa. The incident is under investigation.</p>
                 </div>
 
                 <!-- News Story 6 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h3><a href="https://www.firstpost.com/tech/apple-iphone-17-dummy-leak-reveals-major-design-changes-including-ultra-thin-air-model-13873315.html" target="_blank">Apple iPhone 17: Dummy leak reveals major design changes, including ultra-thin 'air' model</a></h3>
-                    <p>Leaks surrounding the upcoming iPhone 17 reveal potentially significant design changes. Dummy models suggest a revamped camera layout and an ultra-thin "iPhone Air" model, hinting at Apple's most substantial redesign in years. Public reaction has been mixed, with some criticizing the new camera design.</p>
+                <div class="news-story">
+                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/84b29740-0016-446b-b188-e068ecbc05f5/8aeb5c5e-45ef-42b4-8a8d-45a8ba69d175/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Auburn basketball coach calls for hostage's release">
+                    <h3><a href="https://www.foxnews.com/video/6370463736112" style="color: #081a56; text-decoration: none;">Auburn Basketball Coach Calls for Hostage's Release from Gaza, Issues Plea to Call Out 'Good and Evil'</a></h3>
+                    <p>Auburn's basketball coach made an impassioned plea for the release of a hostage held in Gaza, urging a distinction between good and evil.</p>
                 </div>
 
+                <!-- News Story 7 -->
+                <div class="news-story">
+                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/e3a07faf-02b6-45fd-a955-23ce1b91cda4/b38faac8-1279-4d13-a063-a492b6e17dfa/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Those who commit attacks on Tesla">
+                    <h3><a href="https://www.foxnews.com/video/6370434865112" style="color: #081a56; text-decoration: none;">Those Who Commit Attacks on Tesla Should Be 'Held Accountable,' Dem Lawmaker Says</a></h3>
+                    <p>A Democratic lawmaker stated that individuals responsible for attacks on Tesla vehicles should face consequences for their actions.</p>
+                </div>
+
+                <p class="footer">This newsletter compiles news from published sources like <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.</p>
+
+                <p class="joke">Joke of the day</p>
+                <p class="joke-text">Why don't scientists trust atoms? Because they make up everything!</p>
             </td>
         </tr>
     </table>
 
-    <table class="footer-table" align="center" cellpadding="20" cellspacing="0" border="0">
-        <tr>
-         <td style="padding: 20px; text-align: center; font-size: 14px;">
-            <p>This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" target="_blank">Fox News</a>, <a href="https://www.bbc.com/" target="_blank">BBC</a>, and <a href="https://www.firstpost.com/" target="_blank">Firstpost</a>.</p>
-
-            <p class="joke">
-              Joke of the Day: Why don't scientists trust atoms? Because they make up everything!
-            </p>
-           </td>
-        </tr>
-    </table>
-   <script>
-   const date = new Date();
-   document.getElementById('currentDate').innerText = date.toDateString();
-  </script>
 </body>
 </html>
