@@ -52,13 +52,6 @@
             margin: 10px auto;
         }
 
-        table {
-            width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
-        }
-
         .newsletter-body {
             font-family: Arial, sans-serif; 
             margin: 0; 
@@ -174,16 +167,12 @@
     </script>
 
     <div class="newsletter-body">
-        <table class="newsletter-header">
-            <tr>
-                <td>
-                    <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo">
-                    <h1>Prestige AI - Daily Newsletter</h1>
-                    <p><?php echo date("F j, Y"); ?></p>
-                    <p>Sunrise Edition</p>
-                </td>
-            </tr>
-        </table>
+        <div class="newsletter-header">
+            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo">
+            <h1>Prestige AI - Daily Newsletter</h1>
+            <p><?php echo date("F j, Y"); ?></p>
+            <p>Sunrise Edition</p>
+        </div>
 
         <div class="newsletter-content">
             <h2 style="color: #081a56; font-size: 20px; margin-bottom: 20px;">Today's Top Stories</h2>
