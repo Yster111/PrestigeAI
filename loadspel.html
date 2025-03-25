@@ -52,53 +52,29 @@
             margin: 10px auto;
         }
 
-        table {
-            width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
-        }
-
-        .newsletter-table {
-            width: 80%;
-            margin-top: 20px;
-            border-radius: 5px;
-            background-color: #ffffff;
-        }
-
-        .newsletter-header {
-            background-color: #081a56;
-            color: #ffffff;
-            text-align: center;
+        .newsletter {
+            background-color: #f4f4f4;
+            color: #333;
             padding: 20px;
         }
 
-        .newsletter-header img {
-            max-width: 200px;
-            height: auto;
-        }
-
-        .newsletter-header h1 {
+        .newsletter h1 {
             font-size: 24px;
             margin-top: 10px;
         }
 
-        .newsletter-header p {
-            font-size: 16px;
-            margin-bottom: 5px;
+        .newsletter h2 {
+            color: #081a56;
+            font-size: 20px;
+            margin-bottom: 20px;
         }
 
-        .newsletter-header .edition {
+        .newsletter p {
             font-size: 14px;
+            line-height: 1.5;
         }
 
-        .news-story {
-            border-bottom: 1px solid #b0b0b0;
-            margin-bottom: 15px;
-            padding: 10px;
-        }
-
-        .news-story img {
+        .newsletter img {
             width: 100%;
             max-width: 200px;
             height: auto;
@@ -107,16 +83,9 @@
             margin-right: 15px;
         }
 
-        .news-story h3 {
+        .newsletter a {
             color: #081a56;
-            font-size: 18px;
-            margin-bottom: 10px;
-            margin-top: 0;
-        }
-
-        .news-story p {
-            font-size: 14px;
-            line-height: 1.5;
+            text-decoration: none;
         }
 
         .footer {
@@ -124,14 +93,14 @@
             color: #b0b0b0;
         }
 
-        .joke-title {
+        .joke {
             font-size: 18px;
             color: #081a56;
             margin-top: 30px;
             margin-bottom: 10px;
         }
 
-        .joke {
+        .joke-text {
             font-size: 14px;
             font-style: italic;
         }
@@ -178,75 +147,109 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table class="newsletter-table">
-        <tr>
-            <td class="newsletter-header">
-                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo">
-                <h1>Prestige AI - Daily Newsletter</h1>
-                <p><?php echo date("F j, Y"); ?></p>
-                <p class="edition">Sunrise Edition</p>
-            </td>
-        </tr>
-        <tr>
-            <td style="padding: 20px;">
-                <h2 style="color: #081a56; font-size: 20px; margin-bottom: 20px;">Today's Top Stories</h2>
+    <div class="newsletter">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #081a56; color: #ffffff; text-align: center;">
+            <tr>
+                <td style="padding: 20px;">
+                    <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" style="max-width: 200px; height: auto;">
+                    <h1>Prestige AI - Daily Newsletter</h1>
+                    <p><?php echo date("F j, Y"); ?></p>
+                    <p>Sunrise Edition</p>
+                </td>
+            </tr>
+        </table>
 
-                <!-- News Story 1 -->
-                <div class="news-story">
-                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/bc716bb0-37e0-4bfa-8060-4f841c21f031/59e1353e-8607-4696-a7cf-b41926e42a47/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Stocks rise">
-                    <h3><a href="https://www.foxnews.com/video/6370500869112" style="color: #081a56; text-decoration: none;">Stocks Rise After Trump Teases 'Nicer' Tariff Policy</a></h3>
-                    <p>Stocks experienced a surge following hints from President Trump about a potential easing of tariff policies. The market reacted positively to the prospect of reduced trade tensions.</p>
-                </div>
+        <table width="80%" border="0" cellspacing="0" cellpadding="20" align="center" style="background-color: #ffffff; margin-top: 20px; border-radius: 5px;">
+            <tr>
+                <td style="padding: 20px;">
+                    <h2>Today's Top Stories</h2>
 
-                <!-- News Story 2 -->
-                <div class="news-story">
-                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/ab2869a6-7344-4c20-92f4-4cf7b4e2aa47/a9aae128-caf3-4aaa-9415-d9b3017789be/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Hegseth blasts Atlantic">
-                    <h3><a href="https://www.foxnews.com/video/6370498052112" style="color: #081a56; text-decoration: none;">Hegseth Blasts Atlantic Article: 'Nobody Was Texting War Plans'</a></h3>
-                    <p>Pete Hegseth strongly criticized a recent article in The Atlantic, dismissing claims made within it. He emphasized that there were no discussions of war plans via text messages.</p>
-                </div>
+                    <!-- News Story 1 -->
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                        <tr>
+                            <td>
+                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/bc716bb0-37e0-4bfa-8060-4f841c21f031/59e1353e-8607-4696-a7cf-b41926e42a47/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Stocks rise">
+                                <h3><a href="https://www.foxnews.com/video/6370500869112">Stocks Rise After Trump Teases 'Nicer' Tariff Policy</a></h3>
+                                <p>Stocks experienced a surge following hints from President Trump about a potential easing of tariff policies. The market reacted positively to the prospect of reduced trade tensions.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-                <!-- News Story 3 -->
-                <div class="news-story">
-                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/174ac128-f10f-4d5c-b16b-a2654b2b2853/cad79d4b-1ab7-432d-919b-3e333369de59/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Tariffs are not the sole driver">
-                    <h3><a href="https://www.foxnews.com/video/6370491759112" style="color: #081a56; text-decoration: none;">Tariffs Are Not the Sole Driver of Trade Imbalances: Charlie Gasparino</a></h3>
-                    <p>Charlie Gasparino argues that tariffs are not the only factor influencing trade imbalances. He suggests other economic forces are at play.</p>
-                </div>
+                    <!-- News Story 2 -->
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                        <tr>
+                            <td>
+                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/ab2869a6-7344-4c20-92f4-4cf7b4e2aa47/a9aae128-caf3-4aaa-9415-d9b3017789be/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Hegseth blasts Atlantic">
+                                <h3><a href="https://www.foxnews.com/video/6370498052112">Hegseth Blasts Atlantic Article: 'Nobody Was Texting War Plans'</a></h3>
+                                <p>Pete Hegseth strongly criticized a recent article in The Atlantic, dismissing claims made within it. He emphasized that there were no discussions of war plans via text messages.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-                <!-- News Story 4 -->
-                <div class="news-story">
-                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/8aed38df-c9af-443a-a982-6fda6c252a32/e70cc823-8db5-4460-9474-a5feb99149d1/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Gen. Jack Keane says the 'jury is still out'">
-                    <h3><a href="https://www.foxnews.com/video/6370477569112" style="color: #081a56; text-decoration: none;">Gen. Jack Keane Says the 'Jury Is Still Out' on Putin Agreeing to Ceasefire</a></h3>
-                    <p>General Jack Keane comments on the ongoing conflict, stating that it remains uncertain whether Putin will agree to a ceasefire. Discussions are underway, but the outcome is unclear.</p>
-                </div>
+                    <!-- News Story 3 -->
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                        <tr>
+                            <td>
+                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/174ac128-f10f-4d5c-b16b-a2654b2b2853/cad79d4b-1ab7-432d-919b-3e333369de59/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Tariffs are not the sole driver">
+                                <h3><a href="https://www.foxnews.com/video/6370491759112">Tariffs Are Not the Sole Driver of Trade Imbalances: Charlie Gasparino</a></h3>
+                                <p>Charlie Gasparino argues that tariffs are not the only factor influencing trade imbalances. He suggests other economic forces are at play.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-                <!-- News Story 5 -->
-                <div class="news-story">
-                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/be3953a9-d5e4-4506-b6f1-c7fe1409e015/0fac7832-e1b8-4a06-bf9d-0c6fd21708a8/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Video shows pilot's final moments">
-                    <h3><a href="https://www.foxnews.com/video/6370467034112" style="color: #081a56; text-decoration: none;">Video Shows Pilot's Final Moments Before Fatal Air Show Crash in South Africa</a></h3>
-                    <p>Tragic footage captures the final moments of a pilot before a fatal crash at an air show in South Africa. The incident is under investigation.</p>
-                </div>
+                    <!-- News Story 4 -->
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                        <tr>
+                            <td>
+                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/8aed38df-c9af-443a-a982-6fda6c252a32/e70cc823-8db5-4460-9474-a5feb99149d1/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Gen. Jack Keane says the 'jury is still out'">
+                                <h3><a href="https://www.foxnews.com/video/6370477569112">Gen. Jack Keane Says the 'Jury Is Still Out' on Putin Agreeing to Ceasefire</a></h3>
+                                <p>General Jack Keane comments on the ongoing conflict, stating that it remains uncertain whether Putin will agree to a ceasefire. Discussions are underway, but the outcome is unclear.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-                <!-- News Story 6 -->
-                <div class="news-story">
-                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/84b29740-0016-446b-b188-e068ecbc05f5/8aeb5c5e-45ef-42b4-8a8d-45a8ba69d175/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Auburn basketball coach calls for hostage's release">
-                    <h3><a href="https://www.foxnews.com/video/6370463736112" style="color: #081a56; text-decoration: none;">Auburn Basketball Coach Calls for Hostage's Release from Gaza, Issues Plea to Call Out 'Good and Evil'</a></h3>
-                    <p>Auburn's basketball coach made an impassioned plea for the release of a hostage held in Gaza, urging a distinction between good and evil.</p>
-                </div>
+                    <!-- News Story 5 -->
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                        <tr>
+                            <td>
+                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/be3953a9-d5e4-4506-b6f1-c7fe1409e015/0fac7832-e1b8-4a06-bf9d-0c6fd21708a8/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Video shows pilot's final moments">
+                                <h3><a href="https://www.foxnews.com/video/6370467034112">Video Shows Pilot's Final Moments Before Fatal Air Show Crash in South Africa</a></h3>
+                                <p>Tragic footage captures the final moments of a pilot before a fatal crash at an air show in South Africa. The incident is under investigation.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-                <!-- News Story 7 -->
-                <div class="news-story">
-                    <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/e3a07faf-02b6-45fd-a955-23ce1b91cda4/b38faac8-1279-4d13-a063-a492b6e17dfa/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Those who commit attacks on Tesla">
-                    <h3><a href="https://www.foxnews.com/video/6370434865112" style="color: #081a56; text-decoration: none;">Those Who Commit Attacks on Tesla Should Be 'Held Accountable,' Dem Lawmaker Says</a></h3>
-                    <p>A Democratic lawmaker stated that individuals responsible for attacks on Tesla vehicles should face consequences for their actions.</p>
-                </div>
+                    <!-- News Story 6 -->
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 1px solid #b0b0b0; margin-bottom: 15px;">
+                        <tr>
+                            <td>
+                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/84b29740-0016-446b-b188-e068ecbc05f5/8aeb5c5e-45ef-42b4-8a8d-45a8ba69d175/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Auburn basketball coach calls for hostage's release">
+                                <h3><a href="https://www.foxnews.com/video/6370463736112">Auburn Basketball Coach Calls for Hostage's Release from Gaza, Issues Plea to Call Out 'Good and Evil'</a></h3>
+                                <p>Auburn's basketball coach made an impassioned plea for the release of a hostage held in Gaza, urging a distinction between good and evil.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-                <p class="footer">This newsletter compiles news from published sources like <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>, <a href="https://www.bbc.com/" style="color: #16d1f2; text-decoration: none;">BBC</a>, and <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.</p>
+                    <!-- News Story 7 -->
+                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border-bottom: 0px solid #b0b0b0; margin-bottom: 15px;">
+                        <tr>
+                            <td>
+                                <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/e3a07faf-02b6-45fd-a955-23ce1b91cda4/b38faac8-1279-4d13-a063-a492b6e17dfa/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Those who commit attacks on Tesla">
+                                <h3><a href="https://www.foxnews.com/video/6370434865112">Those Who Commit Attacks on Tesla Should Be 'Held Accountable,' Dem Lawmaker Says</a></h3>
+                                <p>A Democratic lawmaker stated that individuals responsible for attacks on Tesla vehicles should face consequences for their actions.</p>
+                            </td>
+                        </tr>
+                    </table>
 
-                <p class="joke-title">Joke of the day</p>
-                <p class="joke">Why don't scientists trust atoms? Because they make up everything!</p>
-            </td>
-        </tr>
-    </table>
+                    <p class="footer">This newsletter compiles news from published sources like <a href="https://www.foxnews.com/">Fox News</a>, <a href="https://www.bbc.com/">BBC</a>, and <a href="https://www.firstpost.com/">Firstpost</a>.</p>
+
+                    <p class="joke">Joke of the day</p>
+                    <p class="joke-text">Why don't scientists trust atoms? Because they make up everything!</p>
+
+                </td>
+            </tr>
+        </table>
+    </div>
 
 </body>
 </html>
