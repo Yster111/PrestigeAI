@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Financial Statements</title>
+    <title>Processing Financial Statements and Daily Newsletter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,6 +51,87 @@
             color: #081a56; /* Dark blue text */
             margin: 10px auto;
         }
+
+        table {
+            width: 100%;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .newsletter-table {
+            width: 600px;
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 20;
+            background-color: #ffffff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-header img {
+            display: block;
+        }
+
+        .newsletter-header h1 {
+            color: #081a56;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .newsletter-header p {
+            color: #16d1f2;
+            font-size: 16px;
+            margin: 5px 0 0 0;
+        }
+
+        .story-table {
+            border-bottom: 1px solid #b0b0b0;
+            margin-bottom: 15px;
+        }
+
+        .story-table img {
+            display: block;
+            border-radius: 5px;
+        }
+
+        .story-title {
+            color: #081a56;
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .story-description {
+            color: #333333;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .sources {
+            padding: 10px 0;
+            font-size: 12px;
+            color: #b0b0b0;
+            text-align: center;
+        }
+
+        .joke {
+            padding: 20px 0;
+            border-top: 1px solid #b0b0b0;
+        }
+
+        .joke h2 {
+            color: #081a56;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .joke p {
+            color: #333333;
+            font-size: 14px;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -94,142 +175,131 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f4f4f4;">
+    <table>
         <tr>
             <td align="center">
-                <table width="600" border="0" cellspacing="0" cellpadding="20" style="background-color: #ffffff; margin-top: 20px; border-radius: 5px;">
+                <table class="newsletter-table">
                     <tr>
-                        <td align="center" style="padding: 20px 0;">
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: block;">
-                            <h1 style="color: #081a56; font-size: 24px; margin-top: 10px;">Prestige AI - Daily Newsletter</h1>
-                            <p style="color: #16d1f2; font-size: 16px; margin: 5px 0;">
-                                <?php echo date("F j, Y"); ?> - Sunrise Edition
-                            </p>
+                        <td class="newsletter-header" align="center" style="padding: 20px 0;">
+                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150">
+                            <h1>Prestige AI - Daily Newsletter</h1>
+                            <p><?php echo date("F j, Y"); ?> - Afternoon Edition</p>
                         </td>
                     </tr>
+
                     <tr>
-                        <td style="padding: 20px; border-top: 1px solid #b0b0b0;">
+                        <td style="padding: 20px 0;">
                             <h2 style="color: #081a56; font-size: 20px; margin-bottom: 15px;">Top Stories</h2>
 
-                            <!-- News Story 1 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
+                            <table class="story-table">
                                 <tr>
-                                    <td width="120" valign="top" style="padding-right: 15px;">
-                                        <a href="https://www.foxnews.com/world/rubio-breaks-silence-leaked-signal-chat-someone-made-big-mistake" style="text-decoration: none;">
-                                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/rubio.jpg?ve=1&tl=1" alt="Rubio in Jamaica" width="120" height="68" style="display: block; border: 0;">
+                                    <td valign="top" width="150">
+                                        <a href="https://www.foxnews.com/world/north-koreas-kim-oversees-test-ai-powered-suicide-drones" style="text-decoration: none">
+                                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/kim-jun.jpg?ve=1&tl=1" alt="North Korean leader Kim Jong Un" width="140">
                                         </a>
                                     </td>
                                     <td valign="top">
-                                        <h3 style="color: #081a56; font-size: 16px; margin-top: 0; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/rubio-breaks-silence-leaked-signal-chat-someone-made-big-mistake" style="color: #081a56; text-decoration: none;">Rubio Comments on Leaked Signal Chat</a></h3>
-                                        <p style="color: #333333; font-size: 14px; line-height: 1.5;">Secretary of State Marco Rubio addressed the Signal chat leak, acknowledging a "big mistake" in adding a journalist to a chain that included top national security heads.  He clarified that no classified information was exchanged, but the information was "not intended to be divulged." The White House is investigating.</p>
+                                        <h3 class="story-title"><a href="https://www.foxnews.com/world/north-koreas-kim-oversees-test-ai-powered-suicide-drones" style="color:#081a56;text-decoration:none;">North Korea Tests AI-Powered Suicide Drones</a></h3>
+                                        <p class="story-description">Kim Jong Un oversaw tests of new AI-powered suicide drones, emphasizing AI and unmanned control as top priorities in modern arms development. The tests showcased the drones' ability to track targets and enhance North Korea's intelligence-gathering capabilities.</p>
                                     </td>
                                 </tr>
                             </table>
 
-                            <!-- News Story 2 -->
-                             <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
+                            <table class="story-table">
                                 <tr>
-                                    <td width="120" valign="top" style="padding-right: 15px;">
-                                        <a href="https://www.foxnews.com/video/6370602812112" style="text-decoration: none;">
-                                        <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/ec7185b1-0639-427e-9c67-df1088d28032/b3acbd0e-b7ee-4808-93aa-e17472aa3881/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Tesla robots featured at Capitol Hill robotics event" width="120" height="68" style="display: block; border: 0;">
-                                        </a>
-                                    </td>
-                                     <td valign="top">
-                                        <h3 style="color: #081a56; font-size: 16px; margin-top: 0; margin-bottom: 5px;"><a href="https://www.foxnews.com/video/6370602812112" style="color: #081a56; text-decoration: none;">Tesla Robots at Capitol Hill</a></h3>
-                                        <p style="color: #333333; font-size: 14px; line-height: 1.5;">Tesla robots were showcased at a Capitol Hill robotics event, demonstrating the advancements in robotics technology.</p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <!-- News Story 3 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                                <tr>
-                                    <td width="120" valign="top" style="padding-right: 15px;">
-                                        <a href="https://www.firstpost.com/tech/vietnam-clears-the-way-for-musks-starlink-in-five-year-satellite-internet-trial-13874778.html" style="text-decoration: none;">
-                                            <img src="https://images.firstpost.com/uploads/2024/01/Elon-Musks-Starlink-launches-first-ever-Direct-To-Cell-satellite-will-increase-connectivity-in-remote-areas.jpg?im=FitAndFill=(596,336)" alt="Starlink in Vietnam" width="120" height="68" style="display: block; border: 0;">
-                                        </a>
-                                    </td>
-                                     <td valign="top">
-                                        <h3 style="color: #081a56; font-size: 16px; margin-top: 0; margin-bottom: 5px;"><a href="https://www.firstpost.com/tech/vietnam-clears-the-way-for-musks-starlink-in-five-year-satellite-internet-trial-13874778.html" style="color: #081a56; text-decoration: none;">Starlink Granted Permission to Operate in Vietnam</a></h3>
-                                        <p style="color: #333333; font-size: 14px; line-height: 1.5;">Vietnam has granted Elon Musk's Starlink a five-year trial period to operate, allowing SpaceX to provide satellite internet services.  This marks a significant regulatory shift, with no foreign ownership cap. The move aims to improve internet access in remote areas.</p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <!-- News Story 4 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
-                                <tr>
-                                    <td width="120" valign="top" style="padding-right:15px;">
-                                         <a href="https://www.foxnews.com/world/4-american-soldiers-missing-from-training-area-lithuania-us-military-says" style="text-decoration: none;">
-                                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/lithuania-us-soldiers.jpg?ve=1&tl=1" alt="Missing US Soldiers" width="120" height="68" style="display: block; border-top:0; border-left:0; border-right:0; border-bottom:0;">
+                                    <td valign="top" width="150">
+                                        <a href="https://www.firstpost.com/tech/australian-ai-startup-is-creating-fake-victims-to-fool-real-scammers-13874892.html" style="text-decoration:none;">
+                                            <img src="https://images.firstpost.com/uploads/2023/08/6TIDCQXE4ZLHTGW3OELMLU5JIU-scaled.jpg?im=FitAndFill=(596,336)" alt="Apate.ai logo" width="140">
                                         </a>
                                     </td>
                                     <td valign="top">
-                                         <h3 style="margin-top: 0;color: #081a56;font-size: 16px;margin-bottom: 5px;"><a href="https://www.foxnews.com/world/4-american-soldiers-missing-from-training-area-lithuania-us-military-says" style="color: #081a56; text-decoration: none;">Four US Soldiers Missing in Lithuania</a></h3>
-                                         <p style="color: #333333; font-size: 14px; line-height: 1.5;">Four U.S. Army soldiers are missing after a training accident in Lithuania.  Their armored recovery vehicle was found in a body of water. Search efforts are ongoing.</p>
+                                        <h3 class="story-title"><a href="https://www.firstpost.com/tech/australian-ai-startup-is-creating-fake-victims-to-fool-real-scammers-13874892.html" style="color:#081a56; text-decoration:none;">Australian AI Startup Creates Fake Victims to Fool Scammers</a></h3>
+                                        <p class="story-description">Apate.ai, an Australian cybersecurity startup, is using AI to create synthetic "victims" that waste scammers' time and gather intelligence on their methods. The company's tools mimic human behavior to engage with scammers and undermine their operations.</p>
                                     </td>
                                 </tr>
                             </table>
 
-                             <!-- News Story 5 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
+                            <table class="story-table">
                                 <tr>
-                                    <td width="120" valign="top" style="padding-right: 15px;">
-                                        <a href="https://www.firstpost.com/tech/google-unveils-gemini-2-5-its-most-powerful-thinking-ai-yet-13874592.html" style="text-decoration: none;">
-                                            <img src="https://images.firstpost.com/uploads/2025/03/Google-Gemini-2.5-2025-03-ab0c6bd1c5fa9b669d5151a0f0037b53.jpg?im=FitAndFill=(596,336)" alt="Gemini 2.5" width="120" height="68" style="display: block; border: 0;">
+                                    <td valign="top" width="150">
+                                        <a href="https://www.foxnews.com/world/rubio-breaks-silence-leaked-signal-chat-someone-made-big-mistake" style="text-decoration:none;">
+                                            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/rubio.jpg?ve=1&tl=1" alt="Marco Rubio" width="140">
                                         </a>
                                     </td>
                                     <td valign="top">
-                                        <h3 style="color: #081a56; font-size: 16px; margin-top: 0; margin-bottom: 5px;"><a href="https://www.firstpost.com/tech/google-unveils-gemini-2-5-its-most-powerful-thinking-ai-yet-13874592.html" style="color: #081a56; text-decoration: none;">Google Unveils Gemini 2.5</a></h3>
-                                        <p style="color: #333333; font-size: 14px; line-height: 1.5;">Google has launched Gemini 2.5, its latest AI model family, featuring enhanced reasoning capabilities.  Gemini 2.5 Pro Experimental, the most capable model, can process up to 1 million tokens, showcasing significant advancements in AI.</p>
+                                        <h3 class="story-title"><a href="https://www.foxnews.com/world/rubio-breaks-silence-leaked-signal-chat-someone-made-big-mistake" style="color:#081a56;text-decoration:none">Rubio Addresses Leaked Signal Chat Controversy</a></h3>
+                                        <p class="story-description">Secretary of State Marco Rubio acknowledged a "big mistake" in adding a journalist to a Signal chat group involving top national security officials. While no classified information was reportedly compromised, the incident raised concerns about security protocols.</p>
                                     </td>
                                 </tr>
                             </table>
 
-                             <!-- News Story 6 -->
-                          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
+                            <table class="story-table">
                                 <tr>
-                                    <td width="120" valign="top" style="padding-right:15px;">
-                                         <a href="https://www.foxnews.com/world/brazil-supreme-court-panel-orders-ex-president-bolsonaro-stand-trial-over-alleged-coup-plan" style="text-decoration: none;">
-                                           <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/03/1200/675/brazil-bolsonaro-supreme-court.jpg?ve=1&tl=1" alt="Bolsonaro to Stand Trial" width="120" height="68" style="display: block; border-top:0; border-left:0; border-right:0; border-bottom:0;">
+                                    <td valign="top" width="150">
+                                        <a href="https://www.firstpost.com/tech/vietnam-clears-the-way-for-musks-starlink-in-five-year-satellite-internet-trial-13874778.html" style="text-decoration:none;">
+                                            <img src="https://images.firstpost.com/uploads/2024/01/Elon-Musks-Starlink-launches-first-ever-Direct-To-Cell-satellite-will-increase-connectivity-in-remote-areas.jpg?im=FitAndFill=(596,336)" alt="Starlink satellites" width="140">
                                         </a>
                                     </td>
                                     <td valign="top">
-                                        <h3 style="margin-top: 0;color: #081a56;font-size: 16px;margin-bottom: 5px;"><a href="https://www.foxnews.com/world/brazil-supreme-court-panel-orders-ex-president-bolsonaro-stand-trial-over-alleged-coup-plan" style="color: #081a56; text-decoration: none;">Bolsonaro Ordered to Stand Trial</a></h3>
-                                        <p style="color: #333333; font-size: 14px; margin-bottom: 0; line-height:1.5">Brazil's Supreme Court has ordered former President Jair Bolsonaro to stand trial over an alleged coup attempt after his 2022 election defeat.  He and 33 others are accused of planning to subvert the election results.</p>
+                                        <h3 class="story-title"><a href="https://www.firstpost.com/tech/vietnam-clears-the-way-for-musks-starlink-in-five-year-satellite-internet-trial-13874778.html" style="color:#081a56;text-decoration:none;">Vietnam Approves Starlink Trial</a></h3>
+                                        <p class="story-description">Vietnam has granted Elon Musk's Starlink permission to operate for a five-year trial period, allowing SpaceX to provide satellite internet services to up to 600,000 users. This move could significantly improve internet access in remote areas.</p>
                                     </td>
-
                                 </tr>
                             </table>
 
-                             <!-- News Story 7 -->
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
+                            <table class="story-table">
                                 <tr>
-                                      <td width="120" valign="top" style="padding-right: 15px;">
-                                        <a href="https://www.firstpost.com/tech/apple-iphone-17-dummy-leak-reveals-major-design-changes-including-ultra-thin-air-model-13873315.html" style="text-decoration: none;">
-                                           <img src="https://images.firstpost.com/uploads/2025/03/Screenshot1-2025-03-4265ad03d82dcaf1eb0bc7719ce8cb09-1200x675.jpg?im=FitAndFill=(596,336)" alt="iPhone 17 leak" width="120" height="68" style="display: block; border-top:0; border-left:0; border-right:0; border-bottom:0;">
+                                    <td valign="top" width="150">
+                                        <a href="https://www.firstpost.com/tech/openais-upgraded-gpt-4o-offers-more-realistic-image-and-text-capabilities-13874611.html" style="text-decoration:none;">
+                                            <img src="https://images.firstpost.com/uploads/2024/10/OpenAI-claims-to-have-foiled-China-backed-election-interference-phishing-attacks-2024-10-4916107e2efc029337582706d1955d32-1200x675.jpg?im=FitAndFill=(596,336)" alt="OpenAI logo" width="140">
                                         </a>
                                     </td>
                                     <td valign="top">
-                                        <h3 style="margin-top: 0;color: #081a56;font-size: 16px;margin-bottom: 5px;"><a href="https://www.firstpost.com/tech/apple-iphone-17-dummy-leak-reveals-major-design-changes-including-ultra-thin-air-model-13873315.html" style="color: #081a56; text-decoration: none;">iPhone 17 Design Leaks</a></h3>
-                                        <p style="color: #333333; font-size: 14px; line-height: 1.5;">Leaked dummy models of the iPhone 17 reveal potential design changes, including a possible ultra-thin "iPhone Air" model and a revamped camera layout. </p>
+                                        <h3 class="story-title"><a href="https://www.firstpost.com/tech/openais-upgraded-gpt-4o-offers-more-realistic-image-and-text-capabilities-13874611.html" style="color:#081a56;text-decoration:none">OpenAI Upgrades GPT-4o</a></h3>
+                                        <p class="story-description">OpenAI has released an enhanced version of its GPT-4o AI system, capable of generating more realistic images. The improvements are a result of collaboration with human trainers, refining the model's ability to follow instructions and produce accurate visuals.</p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table class="story-table">
+                                <tr>
+                                    <td valign="top" width="150">
+                                        <a href="https://www.firstpost.com/tech/google-unveils-gemini-2-5-its-most-powerful-thinking-ai-yet-13874592.html" style="text-decoration:none;">
+                                            <img src="https://images.firstpost.com/uploads/2025/03/Google-Gemini-2.5-2025-03-ab0c6bd1c5fa9b669d5151a0f0037b53.jpg?im=FitAndFill=(596,336)" alt="Google Gemini 2.5" width="140">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <h3 class="story-title"><a href="https://www.firstpost.com/tech/google-unveils-gemini-2-5-its-most-powerful-thinking-ai-yet-13874592.html" style="color:#081a56;text-decoration:none;">Google Unveils Gemini 2.5</a></h3>
+                                        <p class="story-description">Google introduces Gemini 2.5, featuring the model 'Gemini 2.5 Pro Experimental'. This iteration enhances reasoning and fact-checking, bringing AI abilities closer to human-like performance, especially in math and coding and is aimed at taking on Open AI's "o" series models.</p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table class="story-table">
+                                <tr>
+                                    <td valign="top" width="150">
+                                        <a href="https://www.foxnews.com/video/6370602812112" style="text-decoration:none;">
+                                            <img src="https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/694940094001/ec7185b1-0639-427e-9c67-df1088d28032/b3acbd0e-b7ee-4808-93aa-e17472aa3881/1280x720/match/320/180/image.jpg?ve=1&tl=1" alt="Tesla robots" width="140">
+                                        </a>
+                                    </td>
+                                    <td valign="top">
+                                        <h3 class="story-title"><a href="https://www.foxnews.com/video/6370602812112" style="color:#081a56;text-decoration:none;">Tesla Robots Featured at Capitol Hill Robotics Event</a></h3>
+                                        <p class="story-description">Tesla's robots were showcased at a robotics event on Capitol Hill, highlighting advancements in automation and robotics technology.</p>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
+
                     <tr>
-                         <td style="padding: 20px; border-top: 1px solid #b0b0b0;">
-                            <p style="color: #777777; font-size: 12px;">
-                                This newsletter is compiled from published news stories from <a href="https://www.foxnews.com" style="color: #16d1f2;">Fox News</a>,
-                                <a href="https://www.bbc.com" style="color: #16d1f2;">BBC</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2;">Firstpost</a>.
-                            </p>
+                        <td class="sources">
+                            This newsletter is compiled from published news stories from <a href="https://www.foxnews.com/" style="color: #16d1f2; text-decoration: none;">Fox News</a>, and <a href="https://www.firstpost.com/" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
                         </td>
                     </tr>
                     <tr>
-                        <td style="padding: 20px; border-top: 1px solid #b0b0b0; text-align: center;">
-                            <h3 style="color: #081a56; font-size: 18px; margin-bottom: 10px;">Joke of the Day</h3>
-                            <p style="color: #333333; font-size: 14px; font-style: italic;">Why don't scientists trust atoms?  Because they make up everything!</p>
+                        <td class="joke">
+                            <h2>Joke of the Day</h2>
+                            <p>Why don't scientists trust atoms? Because they make up everything!</p>
                         </td>
                     </tr>
                 </table>
