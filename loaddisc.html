@@ -54,78 +54,66 @@
 
         table {
             width: 100%;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 0;
-            background-color: #f0f0f0;
-        }
-
-        .newsletter-table {
-            width: 600px;
-            border: 0;
-            cellspacing: 0;
-            cellpadding: 20;
-            background-color: #ffffff;
+            border-collapse: collapse;
         }
 
         .newsletter-header {
-            padding-top: 30px;
-            padding-bottom: 30px;
-            background-color: #081a56;
-            color: #ffffff;
-        }
-
-        .newsletter-header h1 {
-            font-size: 24px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: #16d1f2;
-            font-weight: bold;
-        }
-
-        .newsletter-header p {
-            font-size: 16px;
-            margin: 0;
-            color: #b0b0b0;
-        }
-
-        .story {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #b0b0b0;
-            padding-bottom: 20px;
-        }
-
-        .story h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #081a56;
-            font-weight: bold;
-            line-height: 1.4;
-        }
-
-        .story p {
-            font-size: 14px;
-            color: #555555;
-            line-height: 1.6;
-        }
-
-        .conclusion {
             background-color: #081a56;
             color: #ffffff;
             padding: 20px;
+            text-align: center;
         }
 
-        .conclusion h3 {
-            font-size: 16px;
-            margin-bottom: 10px;
-            color: #16d1f2;
-            font-style: italic;
+        .newsletter-content {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .conclusion p {
+        .news-story {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #b0b0b0;
+            padding-bottom: 15px;
+        }
+
+        .news-title {
+            font-size: 18px;
+            color: #081a56;
+            margin-bottom: 5px;
+        }
+
+        .news-title a {
+            color: #081a56;
+            text-decoration: none;
+        }
+
+        .news-description {
             font-size: 14px;
-            color: #b0b0b0;
-            font-style: italic;
+            color: #555;
+        }
+
+        .joke-section {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .joke-title {
+            font-size: 16px;
+            color: #081a56;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .joke-content {
+            font-size: 14px;
+            color: #555555;
+            margin-bottom: 0;
+            text-align: center;
         }
     </style>
 </head>
@@ -170,137 +158,58 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table>
+    <table role="presentation">
         <tr>
-            <td align="center">
-                <table class="newsletter-table">
-                    <!-- Header -->
-                    <tr>
-                        <td class="newsletter-header" align="center">
-                            <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png"
-                                alt="Prestige AI Logo" width="150" style="display: block;">
-                            <h1>Prestige AI - Daily Newsletter</h1>
-                            <p>
-                                <script>
-                                    document.write(new Date().toLocaleDateString('en-US', {
-                                        weekday: 'long',
-                                        year: 'numeric',
-                                        month: 'long',
-                                        day: 'numeric'
-                                    }));
-                                </script><br>
-                                Sunrise Edition
-                            </p>
-                        </td>
-                    </tr>
-                    <!-- News Stories -->
-                    <tr>
-                        <td style="padding: 20px;">
-                            <p style="font-size: 14px; color: #555555; margin-bottom: 20px;">
-                                Today's news is compiled from published stories from <a href="https://www.firstpost.com"
-                                    style="color: #081a56; text-decoration: none;" target="_blank">Firstpost</a>.
-                            </p>
-                            <!-- Story 1 -->
-                            <div class="story">
-                                <h2>
-                                    <a href="https://www.firstpost.com/world/rubio-warns-venezuela-of-force-if-it-attacks-oil-rich-guyana-as-us-tries-to-gain-an-edge-over-china-13875163.html"
-                                        style="color: #081a56; text-decoration: none;" target="_blank">Rubio warns
-                                        Venezuela of force if it attacks oil-rich Guyana as US tries to gain an edge
-                                        over China</a>
-                                </h2>
-                                <p>
-                                    US diplomat Marco Rubio warned Venezuela against attacking Guyana, emphasizing
-                                    potential consequences. The dispute centers on the Essequibo region, with rising
-                                    tensions and increasing oil production.
-                                </p>
-                            </div>
-
-                            <!-- Story 2 -->
-                            <div class="story">
-                                <h2>
-                                    <a href="https://www.firstpost.com/world/south-korea-28-dead-37800-displaced-as-country-faces-worst-ever-wildfires-13875153.html"
-                                        style="color: #081a56; text-decoration: none;" target="_blank">South Korea: 28
-                                        dead, 37,800 displaced as country faces worst-ever wildfires</a>
-                                </h2>
-                                <p>
-                                    South Korea battles its worst wildfires, with 28 fatalities and thousands
-                                    displaced. The blazes, fueled by strong winds and dry weather, highlight the
-                                    impact of climate change.
-                                </p>
-                            </div>
-
-                            <!-- Story 3 -->
-                            <div class="story">
-                                <h2>
-                                    <a href="https://www.firstpost.com/tech/what-is-wrong-with-ai-turning-your-indian-accent-into-a-north-american-one-13875040.html"
-                                        style="color: #081a56; text-decoration: none;" target="_blank">What's wrong with
-                                        AI turning your Indian accent into a north-American one?</a>
-                                </h2>
-                                <p>
-                                    Krisp introduces an AI feature to translate Indian accents into American accents,
-                                    raising questions about ethics, cultural identity, and potential misuse. The feature
-                                    aims to enhance communication but sparks debate.
-                                </p>
-                            </div>
-
-                            <!-- Story 4 -->
-                            <div class="story">
-                                <h2>
-                                    <a href="https://www.firstpost.com/tech/nvidias-ceo-discusses-the-future-of-co-packaged-optics-and-its-limitations-13872649.html"
-                                        style="color: #081a56; text-decoration: none;" target="_blank">Nvidia's CEO
-                                        discusses the future of co-packaged optics and its limitations</a>
-                                </h2>
-                                <p>
-                                    Nvidia CEO discusses co-packaged optics, a technology to reduce energy consumption,
-                                    but notes it's not reliable enough for flagship GPUs. The company will use it in
-                                    networking chips, improving efficiency.
-                                </p>
-                            </div>
-
-                            <!-- Story 5 -->
-                            <div class="story">
-                                <h2>
-                                    <a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html"
-                                        style="color: #081a56; text-decoration: none;" target="_blank">Apple to launch
-                                        new MacBook Air with M4 chip next month</a>
-                                </h2>
-                                <p>
-                                    Apple plans to launch new MacBook Air models in March with the M4 chip, offering
-                                    improved performance and AI capabilities. The company is also expanding its
-                                    in-house chip production.
-                                </p>
-                            </div>
-
-                            <!-- Story 6 -->
-                            <div class="story">
-                                <h2>
-                                    <a href="https://www.firstpost.com/tech/apple-to-start-sending-teams-equipped-with-portable-imaging-lidar-backpacks-to-refine-its-maps-services-13865273.html"
-                                        style="color: #081a56; text-decoration: none;" target="_blank">Apple to start
-                                        sending teams equipped with portable imaging & LiDAR backpacks to refine its
-                                        Maps services in India</a>
-                                </h2>
-                                <p>
-                                    Apple is deploying teams with portable LiDAR backpacks in major Indian cities to
-                                    improve its Maps services, capturing detailed imagery and data in areas inaccessible
-                                    by vehicles.
-                                </p>
-                            </div>
-
-                        </td>
-                    </tr>
-                    <!-- Conclusion -->
-                    <tr>
-                        <td class="conclusion" align="center;">
-                            <h3>Joke of the Day</h3>
-                            <p>
-                                Why don't scientists trust atoms? <br> Because they make up everything!
-                            </p>
-                        </td>
-                    </tr>
-                </table>
+            <td class="newsletter-header">
+                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: inline-block;">
+                <h1 style="font-size: 24px; margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
+                <p style="font-size: 16px; margin: 5px 0;">
+                    <?php echo date("F j, Y"); ?> - Afternoon Edition
+                </p>
             </td>
         </tr>
     </table>
+
+    <div class="newsletter-content">
+        <p style="font-size: 14px; color: #b0b0b0; margin-bottom: 20px;">
+            Compiled from published news stories from <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
+        </p>
+
+        <div class="news-story">
+            <h2 class="news-title"><a href="https://www.bbc.com/news/articles/c5y41z4351qo">Canada PM Mark Carney Says Old Relationship with US 'Is Over'</a></h2>
+            <p class="news-description">Canadian PM Mark Carney announced that Canada's longstanding close relationship with the US is over, citing US President Trump's tariffs on imported vehicles and parts. Canada will respond with retaliatory tariffs. Carney stated Canada must "fundamentally reimagine" its economy. The Canadian election is scheduled for April 28th.</p>
+        </div>
+
+        <div class="news-story">
+            <h2 class="news-title"><a href="https://www.firstpost.com/tech/chinas-byd-says-new-ev-charging-system-is-as-fast-as-filling-a-gas-tank-13872399.html">China’s BYD Says New EV Charging System is as Fast as Filling a Gas Tank</a></h2>
+            <p class="news-description">BYD claims its new charging system will recharge electric vehicles in the same time it takes to refuel a gasoline car. The "super e-platform" will initially be available on two BYD models, offering 400km of range in just 5 minutes of charging. This development puts pressure on Tesla, BYD's main rival in China.</p>
+        </div>
+
+        <div class="news-story">
+            <h2 class="news-title"><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html">Apple to Launch New MacBook Air with M4 Chip Next Month</a></h2>
+            <p class="news-description">Apple plans to release new MacBook Air models in March, featuring the M4 chip for improved performance and efficiency. This follows the introduction of the C1 chip in the iPhone 16e. The M4 chip is expected to significantly enhance AI capabilities.</p>
+        </div>
+
+        <div class="news-story">
+            <h2 class="news-title"><a href="https://www.foxnews.com/world/rubio-warns-visas-revoked-all-foreign-student-activists-amid-tufts-arrest">Rubio Warns Visas Will Be Revoked for All Foreign Student Activists</a></h2>
+            <p class="news-description">Secretary of State Marco Rubio stated that any foreign student visa holders found to be "creating a ruckus" will have their visas revoked. This follows the arrest of a Tufts University student for allegedly supporting Hamas. Rubio emphasized that the US has revoked around 300 visas to date.</p>
+        </div>
+
+        <div class="news-story">
+            <h2 class="news-title"><a href="https://www.foxnews.com/world/north-koreas-kim-oversees-test-ai-powered-suicide-drones">North Korea's Kim Oversees Test of AI-Powered Suicide Drones</a></h2>
+            <p class="news-description">Kim Jong Un oversaw tests of new AI-powered suicide drones and called for increased production. North Korean state media released photos showing Kim inspecting the drones, which are reportedly capable of reconnaissance and targeted attacks. This comes amid rising tensions and North Korea's increased military cooperation with Russia.</p>
+        </div>
+
+        <div class="news-story">
+            <h2 class="news-title"><a href="https://www.firstpost.com/tech/ai-to-get-more-expensive-to-build-but-cheaper-to-use-sam-altman-13861994.html">AI to get more expensive to build but significantly cheaper to use: Sam Altman</a></h2>
+            <p class="news-description">OpenAI's Sam Altman stated that building the infrastructure and training AI is becoming prohibitively expensive. He also discussed how OpenAI is working with partners to secure funding for the next steps. However, Altman explained that the cost of using AI is dropping fast and will continue to do so.</p>
+        </div>
+    </div>
+
+    <div class="joke-section">
+        <h3 class="joke-title">Joke of the Day</h3>
+        <p class="joke-content">Why did the programmer quit his job? <br><br>He didn't get arrays!</p>
+    </div>
 
 </body>
 </html>
