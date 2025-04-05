@@ -52,23 +52,25 @@
             margin: 10px auto;
         }
 
-        .newsletter {
-            background-color: #f4f4f4;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .newsletter-header {
+            background-color: #081a56;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .newsletter-content {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin: 20px auto;
-            max-width: 600px;
-        }
-
-        .newsletter h1 {
-            font-size: 24px;
-            margin: 10px 0;
-        }
-
-        .newsletter p {
-            font-size: 16px;
-            margin: 5px 0;
         }
 
         .news-story {
@@ -77,25 +79,37 @@
             padding-bottom: 15px;
         }
 
-        .news-story h2 {
+        .news-title {
             font-size: 18px;
             color: #081a56;
             margin-bottom: 5px;
         }
 
-        .news-story p {
+        .news-title a {
+            color: #081a56;
+            text-decoration: none;
+        }
+
+        .news-description {
             font-size: 14px;
             color: #555;
         }
 
-        .joke {
+        .joke-section {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .joke-title {
             font-size: 16px;
             color: #081a56;
             margin-bottom: 10px;
             text-align: center;
         }
 
-        .joke p {
+        .joke-content {
             font-size: 14px;
             color: #555555;
             margin-bottom: 0;
@@ -144,45 +158,57 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <div class="newsletter">
-        <h1>Prestige AI - Daily Newsletter</h1>
-        <p><?php echo date("F j, Y"); ?> - Afternoon Edition</p>
+    <table role="presentation" class="newsletter-header">
+        <tr>
+            <td>
+                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: inline-block;">
+                <h1 style="font-size: 24px; margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
+                <p style="font-size: 16px; margin: 5px 0;">
+                    <?php echo date("F j, Y"); ?> - Afternoon Edition
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <div class="newsletter-content">
         <p style="font-size: 14px; color: #b0b0b0; margin-bottom: 20px;">
             Compiled from published news stories from <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
         </p>
 
         <div class="news-story">
-            <h2><a href="https://www.bbc.com/news/articles/c5y41z4351qo" style="color: #081a56; text-decoration: none;">Canada PM Mark Carney Says Old Relationship with US 'Is Over'</a></h2>
-            <p>Canadian PM Mark Carney announced that Canada's longstanding close relationship with the US is over, citing US President Trump's tariffs on imported vehicles and parts. Canada will respond with retaliatory tariffs. Carney stated Canada must "fundamentally reimagine" its economy. The Canadian election is scheduled for April 28th.</p>
+            <h2 class="news-title"><a href="https://www.bbc.com/news/articles/c5y41z4351qo">Canada PM Mark Carney Says Old Relationship with US 'Is Over'</a></h2>
+            <p class="news-description">Canadian PM Mark Carney announced that Canada's longstanding close relationship with the US is over, citing US President Trump's tariffs on imported vehicles and parts. Canada will respond with retaliatory tariffs. Carney stated Canada must "fundamentally reimagine" its economy. The Canadian election is scheduled for April 28th.</p>
         </div>
 
         <div class="news-story">
-            <h2><a href="https://www.firstpost.com/tech/chinas-byd-says-new-ev-charging-system-is-as-fast-as-filling-a-gas-tank-13872399.html" style="color: #081a56; text-decoration: none;">China’s BYD Says New EV Charging System is as Fast as Filling a Gas Tank</a></h2>
-            <p>BYD claims its new charging system will recharge electric vehicles in the same time it takes to refuel a gasoline car. The "super e-platform" will initially be available on two BYD models, offering 400km of range in just 5 minutes of charging. This development puts pressure on Tesla, BYD's main rival in China.</p>
+            <h2 class="news-title"><a href="https://www.firstpost.com/tech/chinas-byd-says-new-ev-charging-system-is-as-fast-as-filling-a-gas-tank-13872399.html">China’s BYD Says New EV Charging System is as Fast as Filling a Gas Tank</a></h2>
+            <p class="news-description">BYD claims its new charging system will recharge electric vehicles in the same time it takes to refuel a gasoline car. The "super e-platform" will initially be available on two BYD models, offering 400km of range in just 5 minutes of charging. This development puts pressure on Tesla, BYD's main rival in China.</p>
         </div>
 
         <div class="news-story">
-            <h2><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color: #081a56;text-decoration: none;">Apple to Launch New MacBook Air with M4 Chip Next Month</a></h2>
-            <p>Apple plans to release new MacBook Air models in March, featuring the M4 chip for improved performance and efficiency. This follows the introduction of the C1 chip in the iPhone 16e. The M4 chip is expected to significantly enhance AI capabilities.</p>
+            <h2 class="news-title"><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html">Apple to Launch New MacBook Air with M4 Chip Next Month</a></h2>
+            <p class="news-description">Apple plans to release new MacBook Air models in March, featuring the M4 chip for improved performance and efficiency. This follows the introduction of the C1 chip in the iPhone 16e. The M4 chip is expected to significantly enhance AI capabilities.</p>
         </div>
 
         <div class="news-story">
-            <h2><a href="https://www.foxnews.com/world/rubio-warns-visas-revoked-all-foreign-student-activists-amid-tufts-arrest" style="color: #081a56; text-decoration: none;">Rubio Warns Visas Will Be Revoked for All Foreign Student Activists</a></h2>
-            <p>Secretary of State Marco Rubio stated that any foreign student visa holders found to be "creating a ruckus" will have their visas revoked. This follows the arrest of a Tufts University student for allegedly supporting Hamas. Rubio emphasized that the US has revoked around 300 visas to date.</p>
+            <h2 class="news-title"><a href="https://www.foxnews.com/world/rubio-warns-visas-revoked-all-foreign-student-activists-amid-tufts-arrest">Rubio Warns Visas Will Be Revoked for All Foreign Student Activists</a></h2>
+            <p class="news-description">Secretary of State Marco Rubio stated that any foreign student visa holders found to be "creating a ruckus" will have their visas revoked. This follows the arrest of a Tufts University student for allegedly supporting Hamas. Rubio emphasized that the US has revoked around 300 visas to date.</p>
         </div>
 
         <div class="news-story">
-            <h2><a href="https://www.foxnews.com/world/north-koreas-kim-oversees-test-ai-powered-suicide-drones" style="color:#081a56; text-decoration: none;">North Korea's Kim Oversees Test of AI-Powered Suicide Drones</a></h2>
-            <p>Kim Jong Un oversaw tests of new AI-powered suicide drones and called for increased production. North Korean state media released photos showing Kim inspecting the drones, which are reportedly capable of reconnaissance and targeted attacks. This comes amid rising tensions and North Korea's increased military cooperation with Russia.</p>
+            <h2 class="news-title"><a href="https://www.foxnews.com/world/north-koreas-kim-oversees-test-ai-powered-suicide-drones">North Korea's Kim Oversees Test of AI-Powered Suicide Drones</a></h2>
+            <p class="news-description">Kim Jong Un oversaw tests of new AI-powered suicide drones and called for increased production. North Korean state media released photos showing Kim inspecting the drones, which are reportedly capable of reconnaissance and targeted attacks. This comes amid rising tensions and North Korea's increased military cooperation with Russia.</p>
         </div>
 
         <div class="news-story">
-            <h2><a href="https://www.firstpost.com/tech/ai-to-get-more-expensive-to-build-but-cheaper-to-use-sam-altman-13861994.html" style="color: #081a56; text-decoration: none">AI to get more expensive to build but significantly cheaper to use: Sam Altman</a></h2>
-            <p>OpenAI's Sam Altman stated that building the infrastructure and training AI is becoming prohibitively expensive. He also discussed how OpenAI is working with partners to secure funding for the next steps. However, Altman explained that the cost of *using* AI is dropping fast and will continue to do so.</p>
+            <h2 class="news-title"><a href="https://www.firstpost.com/tech/ai-to-get-more-expensive-to-build-but-cheaper-to-use-sam-altman-13861994.html">AI to get more expensive to build but significantly cheaper to use: Sam Altman</a></h2>
+            <p class="news-description">OpenAI's Sam Altman stated that building the infrastructure and training AI is becoming prohibitively expensive. He also discussed how OpenAI is working with partners to secure funding for the next steps. However, Altman explained that the cost of *using* AI is dropping fast and will continue to do so.</p>
         </div>
+    </div>
 
-        <h3 class="joke">Joke of the Day</h3>
-        <p class="joke">Why did the programmer quit his job? <br><br>He didn't get arrays!</p>
+    <div class="joke-section">
+        <h3 class="joke-title">Joke of the Day</h3>
+        <p class="joke-content">Why did the programmer quit his job? <br><br>He didn't get arrays!</p>
     </div>
 
 </body>
