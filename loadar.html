@@ -51,6 +51,76 @@
             color: #081a56; /* Dark blue text */
             margin: 10px auto;
         }
+
+        .newsletter {
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f4f4;
+        }
+
+        .newsletter-table {
+            width: 100%; 
+            background-color: #081a56; 
+            color: #ffffff;
+        }
+
+        .newsletter-table td {
+            padding: 20px; 
+            text-align: center;
+        }
+
+        .newsletter-content {
+            max-width: 600px; 
+            margin: 20px auto; 
+            background-color: #ffffff; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .news-story {
+            margin-bottom: 20px; 
+            border-bottom: 1px solid #b0b0b0; 
+            padding-bottom: 15px;
+        }
+
+        .news-title {
+            font-size: 18px; 
+            color: #081a56; 
+            margin-bottom: 5px;
+        }
+
+        .news-title a {
+            color: #081a56; 
+            text-decoration: none;
+        }
+
+        .news-description {
+            font-size: 14px; 
+            color: #555;
+        }
+
+        .joke-section {
+            max-width: 600px; 
+            margin: 0 auto; 
+            background-color: #f4f4f4; 
+            padding: 20px;
+        }
+
+        .joke-title {
+            font-size: 16px; 
+            color: #081a56; 
+            margin-bottom: 10px; 
+            text-align: center;
+        }
+
+        .joke-content {
+            font-size: 14px; 
+            color: #555555; 
+            margin-bottom: 0; 
+            text-align:center;
+        }
     </style>
 </head>
 <body>
@@ -94,72 +164,60 @@
         let progressInterval = setInterval(updateProgress, intervalTime);
     </script>
 
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #081a56; color: #ffffff;">
-        <tr>
-            <td style="padding: 20px; text-align: center;">
-                <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: inline-block;">
-                <h1 style="font-size: 24px; margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
-                <p style="font-size: 16px; margin: 5px 0;">
-                    <?php echo date("F j, Y"); ?> - Afternoon Edition
-                </p>
-            </td>
-        </tr>
-    </table>
+    <div class="newsletter">
+        <table role="presentation" class="newsletter-table">
+            <tr>
+                <td>
+                    <img src="https://raw.githubusercontent.com/Yster111/PrestigeAI/main/Prestige%20AI%20Logo.png" alt="Prestige AI Logo" width="150" style="display: inline-block;">
+                    <h1 style="font-size: 24px; margin: 10px 0;">Prestige AI - Daily Newsletter</h1>
+                    <p style="font-size: 16px; margin: 5px 0;">
+                        <?php echo date("F j, Y"); ?> - Afternoon Edition
+                    </p>
+                </td>
+            </tr>
+        </table>
 
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; margin: 20px auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-        <tr>
-            <td>
-                <p style="font-size: 14px; color: #b0b0b0; margin-bottom: 20px;">
-                    Compiled from published news stories from <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
-                </p>
+        <div class="newsletter-content">
+            <p style="font-size: 14px; color: #b0b0b0; margin-bottom: 20px;">
+                Compiled from published news stories from <a href="https://www.bbc.com" style="color: #16d1f2; text-decoration: none;">BBC</a>, <a href="https://www.foxnews.com" style="color: #16d1f2; text-decoration: none;">Fox News</a>, and <a href="https://www.firstpost.com" style="color: #16d1f2; text-decoration: none;">Firstpost</a>.
+            </p>
 
-                <!-- News Story 1 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h2 style="font-size: 18px; color: #081a56; margin-bottom: 5px;"><a href="https://www.bbc.com/news/articles/c5y41z4351qo" style="color: #081a56; text-decoration: none;">Canada PM Mark Carney Says Old Relationship with US 'Is Over'</a></h2>
-                    <p style="font-size: 14px; color: #555;">Canadian PM Mark Carney announced that Canada's longstanding close relationship with the US is over, citing US President Trump's tariffs on imported vehicles and parts.  Canada will respond with retaliatory tariffs.  Carney stated Canada must "fundamentally reimagine" its economy.  The Canadian election is scheduled for April 28th.</p>
-                </div>
+            <div class="news-story">
+                <h2 class="news-title"><a href="https://www.bbc.com/news/articles/c5y41z4351qo">Canada PM Mark Carney Says Old Relationship with US 'Is Over'</a></h2>
+                <p class="news-description">Canadian PM Mark Carney announced that Canada's longstanding close relationship with the US is over, citing US President Trump's tariffs on imported vehicles and parts.  Canada will respond with retaliatory tariffs.  Carney stated Canada must "fundamentally reimagine" its economy.  The Canadian election is scheduled for April 28th.</p>
+            </div>
 
-                <!-- News Story 2 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h2 style="font-size: 18px; color: #081a56; margin-bottom: 5px;"><a href="https://www.firstpost.com/tech/chinas-byd-says-new-ev-charging-system-is-as-fast-as-filling-a-gas-tank-13872399.html" style="color: #081a56; text-decoration: none;">China’s BYD Says New EV Charging System is as Fast as Filling a Gas Tank</a></h2>
-                    <p style="font-size: 14px; color: #555;">BYD claims its new charging system will recharge electric vehicles in the same time it takes to refuel a gasoline car.  The "super e-platform" will initially be available on two BYD models, offering 400km of range in just 5 minutes of charging. This development puts pressure on Tesla, BYD's main rival in China.</p>
-                </div>
+            <div class="news-story">
+                <h2 class="news-title"><a href="https://www.firstpost.com/tech/chinas-byd-says-new-ev-charging-system-is-as-fast-as-filling-a-gas-tank-13872399.html">China’s BYD Says New EV Charging System is as Fast as Filling a Gas Tank</a></h2>
+                <p class="news-description">BYD claims its new charging system will recharge electric vehicles in the same time it takes to refuel a gasoline car.  The "super e-platform" will initially be available on two BYD models, offering 400km of range in just 5 minutes of charging. This development puts pressure on Tesla, BYD's main rival in China.</p>
+            </div>
 
-                <!-- News Story 3 -->
-               <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h2 style="font-size: 18px; color: #081a56; margin-bottom: 5px;"><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html" style="color: #081a56;text-decoration: none;">Apple to Launch New MacBook Air with M4 Chip Next Month</a></h2>
-                    <p style="font-size: 14px; color: #555;">Apple plans to release new MacBook Air models in March, featuring the M4 chip for improved performance and efficiency. This follows the introduction of the C1 chip in the iPhone 16e.  The M4 chip is expected to significantly enhance AI capabilities.</p>
-                </div>
+            <div class="news-story">
+                <h2 class="news-title"><a href="https://www.firstpost.com/tech/apple-to-launch-new-macbook-air-with-m4-chip-next-month-13866227.html">Apple to Launch New MacBook Air with M4 Chip Next Month</a></h2>
+                <p class="news-description">Apple plans to release new MacBook Air models in March, featuring the M4 chip for improved performance and efficiency. This follows the introduction of the C1 chip in the iPhone 16e.  The M4 chip is expected to significantly enhance AI capabilities.</p>
+            </div>
 
-                <!-- News Story 4 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h2 style="font-size: 18px; color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/rubio-warns-visas-revoked-all-foreign-student-activists-amid-tufts-arrest" style="color: #081a56; text-decoration: none;">Rubio Warns Visas Will Be Revoked for All Foreign Student Activists</a></h2>
-                    <p style="font-size: 14px; color: #555;">Secretary of State Marco Rubio stated that any foreign student visa holders found to be "creating a ruckus" will have their visas revoked. This follows the arrest of a Tufts University student for allegedly supporting Hamas.  Rubio emphasized that the US has revoked around 300 visas to date.</p>
-                </div>
+            <div class="news-story">
+                <h2 class="news-title"><a href="https://www.foxnews.com/world/rubio-warns-visas-revoked-all-foreign-student-activists-amid-tufts-arrest">Rubio Warns Visas Will Be Revoked for All Foreign Student Activists</a></h2>
+                <p class="news-description">Secretary of State Marco Rubio stated that any foreign student visa holders found to be "creating a ruckus" will have their visas revoked. This follows the arrest of a Tufts University student for allegedly supporting Hamas.  Rubio emphasized that the US has revoked around 300 visas to date.</p>
+            </div>
 
-                 <!-- News Story 5 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                    <h2 style="font-size: 18px; color: #081a56; margin-bottom: 5px;"><a href="https://www.foxnews.com/world/north-koreas-kim-oversees-test-ai-powered-suicide-drones" style="color:#081a56; text-decoration: none;">North Korea's Kim Oversees Test of AI-Powered Suicide Drones</a></h2>
-                    <p style="font-size: 14px; color: #555;">Kim Jong Un oversaw tests of new AI-powered suicide drones and called for increased production. North Korean state media released photos showing Kim inspecting the drones, which are reportedly capable of reconnaissance and targeted attacks. This comes amid rising tensions and North Korea's increased military cooperation with Russia.</p>
-                </div>
+            <div class="news-story">
+                <h2 class="news-title"><a href="https://www.foxnews.com/world/north-koreas-kim-oversees-test-ai-powered-suicide-drones">North Korea's Kim Oversees Test of AI-Powered Suicide Drones</a></h2>
+                <p class="news-description">Kim Jong Un oversaw tests of new AI-powered suicide drones and called for increased production. North Korean state media released photos showing Kim inspecting the drones, which are reportedly capable of reconnaissance and targeted attacks. This comes amid rising tensions and North Korea's increased military cooperation with Russia.</p>
+            </div>
 
-                <!-- News Story 6 -->
-                <div style="margin-bottom: 20px; border-bottom: 1px solid #b0b0b0; padding-bottom: 15px;">
-                  <h2 style="font-size: 18px; color: #081a56; margin-bottom: 5px;"><a href="https://www.firstpost.com/tech/ai-to-get-more-expensive-to-build-but-cheaper-to-use-sam-altman-13861994.html" style="color: #081a56; text-decoration: none">AI to get more expensive to build but significantly cheaper to use: Sam Altman</a></h2>
-                  <p style="font-size: 14px; color:#555">OpenAI's Sam Altman stated that that building the infrastructure and training AI is becoming prohibitively expensive. He also discussed how OpenAI is working with partners to secure funding for the next steps. However, Altman explained that the cost of *using* AI is dropping fast and will continue to do so.</p>
-                </div>
+            <div class="news-story">
+                <h2 class="news-title"><a href="https://www.firstpost.com/tech/ai-to-get-more-expensive-to-build-but-cheaper-to-use-sam-altman-13861994.html">AI to get more expensive to build but significantly cheaper to use: Sam Altman</a></h2>
+                <p class="news-description">OpenAI's Sam Altman stated that that building the infrastructure and training AI is becoming prohibitively expensive. He also discussed how OpenAI is working with partners to secure funding for the next steps. However, Altman explained that the cost of *using* AI is dropping fast and will continue to do so.</p>
+            </div>
+        </div>
 
-            </td>
-        </tr>
-    </table>
+        <div class="joke-section">
+            <h3 class="joke-title">Joke of the Day</h3>
+            <p class="joke-content">Why did the programmer quit his job? <br><br>He didn't get arrays!</p>
+        </div>
+    </div>
 
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; margin: 0 auto; background-color: #f4f4f4; padding: 20px;">
-      <tr>
-        <td>
-          <h3 style="font-size: 16px; color: #081a56; margin-bottom: 10px; text-align: center">Joke of the Day</h3>
-           <p style="font-size: 14px; color: #555555; margin-bottom: 0; text-align:center">Why did the programmer quit his job? <br><br>He didn't get arrays!</p>
-        </td>
-      </tr>
-    </table>
 </body>
 </html>
